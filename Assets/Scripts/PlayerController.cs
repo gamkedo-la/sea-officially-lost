@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour {
     public bool upLooksDown = false;
     public GameObject infoBox;
 
-	Dictionary<string, int> inventory = new Dictionary<string, int>();
+    public InventoryManager playerInventory;
+    public int currentInventoryUsed;
 
 	public Text inventoryDisplay;
 
@@ -27,10 +28,6 @@ public class PlayerController : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         infoText = infoBox.GetComponent<Text>();
 	}
-
-    public void mineResource(ScannableObject scannedObject) {
-        
-    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -45,18 +42,20 @@ public class PlayerController : MonoBehaviour {
         RaycastHit rhInfo;
         if (Physics.Raycast(transform.position, transform.forward, out rhInfo, scanRange)) {
             Debug.Log("We hit: " + rhInfo.collider.name);
-            ScannableObject tempSO = rhInfo.collider.gameObject.GetComponent<ScannableObject>();
-            if (tempSO != null){
+            InventoryManager tempIM = rhInfo.collider.gameObject.GetComponent<InventoryManager>();
+            if (tempIM != null){
 
-                infoText.text = "There are " + tempSO.resourceValue + " units of " + tempSO.resourceType + ".";
+                infoText.text = tempIM.ReportCurrentInventory();
                 infoBox.SetActive(true);
                 if (Input.GetButtonDown("Fire1")) {
-                    
+                    tempIM.TransferInventoryInto(playerInventory);
                 }
 
             }
         } else {
             infoBox.SetActive(false);
         }
+
+        currentInventoryUsed = playerInventory.CountCurrentInventory();
 	}
 }

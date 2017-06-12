@@ -27,16 +27,29 @@ public class InventoryManager : MonoBehaviour {
 		return currentUsedSpace;
     }
 
+    public string ReportCurrentInventory() {
+        string currentInventory = "";
+		foreach (KeyValuePair<string, int> eachType in inventory)
+		{
+			currentInventory += eachType.Key + ":" + eachType.Value + "\n";
+		}
+        return currentInventory;
+    }
+
     public void UpdateText() {
-        inventoryDisplay.text = "Inventory:\n";
-        foreach (KeyValuePair<string, int> eachType in inventory) {
-            inventoryDisplay.text += eachType.Key + ":" + eachType.Value + "\n";
+        if (inventoryDisplay != null) {
+			inventoryDisplay.text = "Inventory:\n";
+			foreach (KeyValuePair<string, int> eachType in inventory)
+			{
+				inventoryDisplay.text += eachType.Key + ":" + eachType.Value + "\n";
+			}
         }
     }
 
-    /*public void UpdateInventory(ScannableObject scannedObject) {
-        CheckAndUpdateInventory(scannedObject.resourceType, scannedObject.resourceValue);
-    }*/
+    public void InitializeInventory(int cap, string type, int count) {
+        capacity = cap;
+        CheckAndUpdateInventory(type, count);
+    }
 
     void CheckAndUpdateInventory(string type, int count) {
         if (inventory.ContainsKey(type)) {
@@ -47,15 +60,15 @@ public class InventoryManager : MonoBehaviour {
         UpdateText();
     }
 
-    public void TransferFromInto(InventoryManager intoInventory) {
-        int mySpaceUsed = CheckCapacity();
-        int theirSpaceUsed = intoInventory.CheckCapacity();
-        if (mySpaceUsed > theirSpaceUsed) {
+    public void TransferInventoryInto(InventoryManager intoInventory) {
+        int mySpaceUsed = CountCurrentInventory();
+        int theirCapacity = intoInventory.CheckCapacity();
+        if (mySpaceUsed > theirCapacity) {
             Debug.Log("Not enough space");
         } else {
 			foreach (KeyValuePair<string, int> eachType in inventory)
 			{
-                CheckAndUpdateInventory(eachType.Key, eachType.Value);
+                intoInventory.CheckAndUpdateInventory(eachType.Key, eachType.Value);
 			}
         }
     }
