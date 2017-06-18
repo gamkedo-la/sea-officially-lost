@@ -10,23 +10,20 @@ public class PlayerController : MonoBehaviour {
     public float yawSpeed = 5.0f;
     public float throttleSpeed = 10.0f;
     public float scanRange = 500.0f;
+    public ParticleSystem scannerBeam;
 
     public bool upLooksDown = false;
-    public GameObject infoBox;
 
     public InventoryManager playerInventory;
     public int currentInventoryUsed;
 
 	public Text inventoryDisplay;
 
-    private Text infoText;
-
     private Rigidbody rb;
 
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
-        infoText = infoBox.GetComponent<Text>();
 	}
 	
 	// Update is called once per frame
@@ -44,17 +41,21 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("We hit: " + rhInfo.collider.name);
             InventoryManager tempIM = rhInfo.collider.gameObject.GetComponent<InventoryManager>();
             if (tempIM != null){
-
-                infoText.text = tempIM.ReportCurrentInventory();
-                infoBox.SetActive(true);
+                
                 if (Input.GetButtonDown("Fire1")) {
                     tempIM.TransferInventoryInto(playerInventory);
                 }
-
+				if (Input.GetButtonDown("Fire2")) {
+					tempIM.ToggleInventoryPanel(true);
+                    scannerBeam.Play();
+				}
+                if (Input.GetButtonUp("Fire2")) {
+                    tempIM.ToggleInventoryPanel(false);
+                    scannerBeam.Stop();
+                }
             }
-        } else {
-            infoBox.SetActive(false);
         }
+
 
         currentInventoryUsed = playerInventory.CountCurrentInventory();
 	}

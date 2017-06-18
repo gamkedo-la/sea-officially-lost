@@ -8,10 +8,15 @@ public class InventoryManager : MonoBehaviour {
     Dictionary<string, int> inventory = new Dictionary<string, int>();
     public int capacity = 10;
 
+    public GameObject inventoryPanel;
     public Text inventoryDisplay;
 
     public void Start() {
         UpdateText();
+    }
+
+    public void ToggleInventoryPanel(bool toggle) {
+        inventoryPanel.SetActive(toggle);
     }
 
     public int CheckCapacity() {
@@ -46,7 +51,9 @@ public class InventoryManager : MonoBehaviour {
         }
     }
 
-    public void InitializeInventory(int cap, string type, int count) {
+    public void InitializeInventory(int cap, string type, int count, GameObject inventoryDisplayObject) {
+        inventoryPanel = inventoryDisplayObject;
+        inventoryDisplay = inventoryPanel.GetComponent<Text>();
         capacity = cap;
         CheckAndUpdateInventory(type, count);
     }
@@ -60,17 +67,22 @@ public class InventoryManager : MonoBehaviour {
         UpdateText();
     }
 
-    public void TransferInventoryInto(InventoryManager intoInventory) {
+    public void TransferInventoryInto(InventoryManager intoInventory, int transferAmount = 1) {
         int mySpaceUsed = CountCurrentInventory();
         int theirCapacity = intoInventory.CheckCapacity();
         if (mySpaceUsed > theirCapacity) {
             Debug.Log("Not enough space");
         } else {
-			foreach (KeyValuePair<string, int> eachType in inventory)
+            List<string> keys = new List<string>(inventory.Keys);
+			foreach (string key in keys)
 			{
-                intoInventory.CheckAndUpdateInventory(eachType.Key, eachType.Value);
+                if (inventory[key] > 0)
+                {
+                    intoInventory.CheckAndUpdateInventory(key, transferAmount);
+                    inventory[key] -= 1;
+                    UpdateText();
+                }
 			}
         }
     }
-
 }
