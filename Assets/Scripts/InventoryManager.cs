@@ -10,9 +10,20 @@ public class InventoryManager : MonoBehaviour {
 
     public GameObject inventoryPanel;
     public Text inventoryDisplay;
+    private bool inventoryKnown = false;
+    public bool unlimitedStorage = false;
 
     public void Start() {
         UpdateText();
+    }
+
+    public void ScannedInventory() {
+        inventoryKnown = true;
+        UpdateText();
+    }
+
+    public bool InventoryKnown() {
+        return inventoryKnown;
     }
 
     public void ToggleInventoryPanel(bool toggle) {
@@ -43,15 +54,22 @@ public class InventoryManager : MonoBehaviour {
 
     public void UpdateText() {
         if (inventoryDisplay != null) {
-			inventoryDisplay.text = "Inventory:\n";
-			foreach (KeyValuePair<string, int> eachType in inventory)
-			{
-				inventoryDisplay.text += eachType.Key + ":" + eachType.Value + "\n";
-			}
+            if (inventoryKnown) {
+				inventoryDisplay.text = "Inventory:\n";
+				foreach (KeyValuePair<string, int> eachType in inventory)
+				{
+					inventoryDisplay.text += eachType.Key + ":" + eachType.Value + "\n";
+				}
+            } else {
+                inventoryDisplay.text = "Unknown contents.  Scan to reveal.";
+            }
+
         }
     }
 
+    // This used for containers that are not the player or the player ship only.
     public void InitializeInventory(int cap, string type, int count, GameObject inventoryDisplayObject) {
+        
         inventoryPanel = inventoryDisplayObject;
         inventoryDisplay = inventoryPanel.GetComponent<Text>();
         capacity = cap;
@@ -70,19 +88,19 @@ public class InventoryManager : MonoBehaviour {
     public void TransferInventoryInto(InventoryManager intoInventory, int transferAmount = 1) {
         int mySpaceUsed = CountCurrentInventory();
         int theirCapacity = intoInventory.CheckCapacity();
-        if (mySpaceUsed > theirCapacity) {
-            Debug.Log("Not enough space");
-        } else {
-            List<string> keys = new List<string>(inventory.Keys);
+        if (mySpaceUsed <= theirCapacity || unlimitedStorage) {
+			List<string> keys = new List<string>(inventory.Keys);
 			foreach (string key in keys)
 			{
-                if (inventory[key] > 0)
-                {
-                    intoInventory.CheckAndUpdateInventory(key, transferAmount);
-                    inventory[key] -= 1;
-                    UpdateText();
-                }
+				if (inventory[key] > 0)
+				{
+					intoInventory.CheckAndUpdateInventory(key, transferAmount);
+					inventory[key] -= 1;
+					UpdateText();
+				}
 			}
+        } else {
+            Debug.Log("Not enough space");
         }
     }
 }

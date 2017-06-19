@@ -9,8 +9,14 @@ public class PlayerController : MonoBehaviour {
     public float rollSpeed = 5.0f;
     public float yawSpeed = 5.0f;
     public float throttleSpeed = 10.0f;
+
+
     public float scanRange = 500.0f;
     public ParticleSystem scannerBeam;
+    public InventoryManager scannedItem;
+    public Slider scanProgress;
+    public InventoryManager playerShip;
+    public float scanAmount = 0.0f;
 
     public bool upLooksDown = false;
 
@@ -19,11 +25,17 @@ public class PlayerController : MonoBehaviour {
 
 	public Text inventoryDisplay;
 
+    private bool scanning = false;
+
     private Rigidbody rb;
+    public float scanRate = 40.0f;
 
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
+        playerInventory.ScannedInventory();
+        playerShip.ScannedInventory();
+
 	}
 	
 	// Update is called once per frame
@@ -35,28 +47,73 @@ public class PlayerController : MonoBehaviour {
 
         rb.AddForce(transform.forward * Input.GetAxis("Throttle") * throttleSpeed * Time.deltaTime);
 
-        // Scanner!
-        RaycastHit rhInfo;
-        if (Physics.Raycast(transform.position, transform.forward, out rhInfo, scanRange)) {
-            Debug.Log("We hit: " + rhInfo.collider.name);
-            InventoryManager tempIM = rhInfo.collider.gameObject.GetComponent<InventoryManager>();
-            if (tempIM != null){
-                
-                if (Input.GetButtonDown("Fire1")) {
-                    tempIM.TransferInventoryInto(playerInventory);
-                }
-				if (Input.GetButtonDown("Fire2")) {
-					tempIM.ToggleInventoryPanel(true);
-                    scannerBeam.Play();
-				}
-                if (Input.GetButtonUp("Fire2")) {
-                    tempIM.ToggleInventoryPanel(false);
-                    scannerBeam.Stop();
-                }
-            }
-        }
+		// Scanner!
+		RaycastHit rhInfo;
+        bool inventoryInFrontOfMe = false;
+        if (Physics.Raycast(transform.position, transform.forward, out rhInfo, scanRange))
+		{
+			Debug.Log("We hit: " + rhInfo.collider.name);
+            scannedItem = rhInfo.collider.gameObject.GetComponent<InventoryManager>();
+            inventoryInFrontOfMe = (scannedItem != null);
 
+		}
+		else
+		{
+            if (scannedItem != null) {
+                scannedItem.ToggleInventoryPanel(false);    
+            }
+		}
+
+		if (inventoryInFrontOfMe)
+		{
+			scannedItem.ToggleInventoryPanel(true);
+
+            if (Input.GetButtonDown("Fire1") && scannedItem.InventoryKnown())
+			{
+
+				scannedItem.TransferInventoryInto(playerInventory);
+			}
+		}
+
+
+
+		if (Input.GetButtonDown("Fire2"))
+		{
+			scannerBeam.Play();
+            scanning = true;
+		}
+		if (Input.GetButtonUp("Fire2"))
+		{
+			
+			//scannedItem = null;
+            scannerBeam.Stop();
+
+            scanning = false;
+		}
 
         currentInventoryUsed = playerInventory.CountCurrentInventory();
+
+        if (scanning) {
+
+            scanAmount += Time.deltaTime * scanRate;
+            if (scanAmount >= scanProgress.maxValue) {
+                scanAmount = scanProgress.maxValue;
+                if (inventoryInFrontOfMe) {
+                    scannedItem.ScannedInventory();
+					Debug.Log("We are scanning and progress hit max: " + scanProgress.value);
+                }
+            }
+
+        } 
+        scanProgress.value = scanAmount;
+
+
 	}
+
+    private void FixedUpdate()
+    {
+        if (scanning == false) {
+            scanAmount *= 0.85f;
+        }
+    }
 }
