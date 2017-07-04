@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
     public Slider scanProgress;
     public InventoryManager playerShip;
     public float scanAmount = 0.0f;
+    public Text rangeNotifier;
 
     public bool upLooksDown = false;
 
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour {
     public int currentInventoryUsed;
 
 	public Text inventoryDisplay;
+    public float sonarRange = 40.0f;
 
     private bool scanning = false;
 
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         playerInventory.ScannedInventory();
         playerShip.ScannedInventory();
+        StartCoroutine(SonarPing());
 
 	}
 	
@@ -116,4 +119,25 @@ public class PlayerController : MonoBehaviour {
             scanAmount *= 0.85f;
         }
     }
+
+    IEnumerator SonarPing() {
+        while (true) {
+            yield return new WaitForSeconds(0.5f);
+            Collider [] sonarHits = Physics.OverlapSphere(transform.position, sonarRange, LayerMask.GetMask("sonarDetects"));
+            Debug.Log(sonarHits.Length);
+            float nearestFoundDist = sonarRange + 1.0f;
+            int nearestHitIndex = -1;
+            for (int i = 0; i < sonarHits.Length; i++) {
+                float thisDist = Vector3.Distance(transform.position, sonarHits[i].transform.position);
+                if (thisDist < nearestFoundDist) {
+                    nearestFoundDist = thisDist;
+                    nearestHitIndex = i;
+                }
+            } // end for loop for sonarHits
+            if (nearestHitIndex != -1) {
+                rangeNotifier.text = "" + (nearestFoundDist / sonarRange);
+            }
+            Debug.Log(sonarHits[nearestHitIndex].name);
+        } // end while true
+    }  // end SonarPing
 }
