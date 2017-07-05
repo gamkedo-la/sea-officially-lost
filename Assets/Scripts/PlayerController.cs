@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour {
     public float pitchSpeed = 5.0f;
     public float rollSpeed = 5.0f;
     public float yawSpeed = 5.0f;
-    public float throttleSpeed = 10.0f;
-
+    public float swimSpeed = 10.0f;
+    public float strafeSpeed = 5.0f;
+    public float riseSpeed = 10.0f;
 
     public float scanRange = 500.0f;
     public ParticleSystem scannerBeam;
@@ -17,7 +18,8 @@ public class PlayerController : MonoBehaviour {
     public Slider scanProgress;
     public InventoryManager playerShip;
     public float scanAmount = 0.0f;
-    public Text rangeNotifier;
+    public Text oxygenLevel;
+    public float oxygenLeft = 50.0f;
 
     public bool upLooksDown = false;
 
@@ -31,6 +33,13 @@ public class PlayerController : MonoBehaviour {
 
     private Rigidbody rb;
     public float scanRate = 40.0f;
+    private float yaw = 0.0f;
+    private float pitch = 0.0f;
+    private float speed = 0.0f;
+    private float speedDecay = 0.8f;
+    private float speedLateral = 0.0f;
+    private float speedRise = 0.0f;
+
 
     // Use this for initialization
     void Start () {
@@ -38,17 +47,56 @@ public class PlayerController : MonoBehaviour {
         playerInventory.ScannedInventory();
         playerShip.ScannedInventory();
         StartCoroutine(SonarPing());
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
 	}
+
+    void ReleaseMouse() {
+        if (Cursor.visible == false) {
+            Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
+        } else {
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
         // Steering control
-        transform.Rotate(Vector3.right, Input.GetAxis("Vertical") * pitchSpeed * Time.deltaTime * (upLooksDown ? 1.0f : -1.0f));
+        /*transform.Rotate(Vector3.right, Input.GetAxis("Vertical") * pitchSpeed * Time.deltaTime * (upLooksDown ? 1.0f : -1.0f));
         transform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * yawSpeed * Time.deltaTime);
-        transform.Rotate(Vector3.forward, Input.GetAxis("Roll") * rollSpeed * Time.deltaTime * -1.0f);
+        transform.Rotate(Vector3.forward, Input.GetAxis("Roll") * rollSpeed * Time.deltaTime * -1.0f);*/
+        yaw += Input.GetAxis("Mouse X") * yawSpeed * Time.deltaTime;
+        pitch += Input.GetAxis("Mouse Y") * pitchSpeed * Time.deltaTime * (upLooksDown ? 1.0f : -1.0f);
+        Quaternion rotNow = Quaternion.identity;
+        rotNow *= Quaternion.AngleAxis(yaw, Vector3.up);
+        rotNow *= Quaternion.AngleAxis(pitch, Vector3.right);
+        transform.rotation = rotNow;
 
-        rb.AddForce(transform.forward * Input.GetAxis("Throttle") * throttleSpeed * Time.deltaTime);
+        speed += Input.GetAxis("Vertical") * swimSpeed * Time.deltaTime;
+		rb.AddForce(transform.forward * speed);
+
+		speedLateral += Input.GetAxis("Horizontal") * strafeSpeed * Time.deltaTime;
+		rb.AddForce(transform.right * speedLateral);
+
+        if (Input.GetButton("Jump")) {
+            speedRise += riseSpeed * Time.deltaTime;
+        }
+
+        rb.AddForce(Vector3.up * speedRise);
+
+        if (Input.GetKeyDown(KeyCode.Minus)) {
+            ReleaseMouse();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Equals)) {
+            oxygenLeft = 1000.0f;
+        }
+
+        oxygenLevel.text = "Oxygen left: " + oxygenLeft;
+        oxygenLeft -= Time.deltaTime;
 
 		// Scanner!
 		RaycastHit rhInfo;
@@ -118,6 +166,9 @@ public class PlayerController : MonoBehaviour {
         if (scanning == false) {
             scanAmount *= 0.85f;
         }
+        speed *= speedDecay;
+        speedLateral *= speedDecay;
+        speedRise *= speedDecay;
     }
 
     IEnumerator SonarPing() {
@@ -134,9 +185,9 @@ public class PlayerController : MonoBehaviour {
                     nearestHitIndex = i;
                 }
             } // end for loop for sonarHits
-            if (nearestHitIndex != -1) {
-                rangeNotifier.text = "" + (nearestFoundDist / sonarRange);
-            }
+            //if (nearestHitIndex != -1) {
+            //    oxygenLevel.text = "" + (nearestFoundDist / sonarRange);
+            //}
             Debug.Log(sonarHits[nearestHitIndex].name);
         } // end while true
     }  // end SonarPing
