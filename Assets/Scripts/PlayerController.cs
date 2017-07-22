@@ -29,6 +29,10 @@ public class PlayerController : MonoBehaviour {
 	public Text inventoryDisplay;
     public float sonarRange = 40.0f;
 
+    public Text insanityMeter;
+    private float insanityCounter = 0.0f;
+    private float insanityRange = 10.0f;
+
     private bool scanning = false;
 
     private Rigidbody rb;
@@ -47,6 +51,7 @@ public class PlayerController : MonoBehaviour {
         playerInventory.ScannedInventory();
         playerShip.ScannedInventory();
         StartCoroutine(SonarPing());
+        StartCoroutine(InsanityUpdate());
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -157,8 +162,7 @@ public class PlayerController : MonoBehaviour {
 
         } 
         scanProgress.value = scanAmount;
-
-
+        insanityMeter.text = "" + insanityCounter;
 	}
 
     private void FixedUpdate()
@@ -191,4 +195,24 @@ public class PlayerController : MonoBehaviour {
             Debug.Log(sonarHits[nearestHitIndex].name);
         } // end while true
     }  // end SonarPing
+
+    internal IEnumerator InsanityUpdate() {
+        while(true) {
+            yield return new WaitForSeconds(0.5f);
+            Collider[] insanityHits = Physics.OverlapSphere(transform.position, insanityRange, LayerMask.GetMask("insanityDetects"));
+            Debug.Log("Insanity hits = " + insanityHits.Length);
+            float insanitySum = 0.0f;
+            for (int i = 0; i < insanityHits.Length; i++) {
+                InsanityFacts tempIF = insanityHits[i].GetComponent<InsanityFacts>();
+                if (tempIF != null) {
+                    Debug.Log(insanityHits[i].name + " had no facts!");
+                }
+                float thisDist = Vector3.Distance(transform.position, insanityHits[i].transform.position);
+                float distPerc = 1.0f - thisDist / insanityRange;
+                insanitySum += distPerc * tempIF.insanityImpact;
+            } // end for loop for sanityHits
+            Debug.Log("InsanitySum = " + insanitySum);
+            insanityCounter = insanitySum;
+        } // end while true
+    } // end sanity update
 }
