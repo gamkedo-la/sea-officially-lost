@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: f3979899efc634c97910156f9ec4b229
+timeCreated: 1500856747
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: EastWestCut
+    100002: InsideCut
+    100004: MainRoom
+    100006: NorthSouthCut
+    100008: //RootNode
+    100010: TopBottomHole
+    100012: 01MainRoom
+    100014: 02CeilingSwitch
+    100016: 02FloorSwitch
+    100018: 03DoorSwitchEast
+    100020: 03DoorSwitchNorth
+    100022: 03DoorSwitchSouth
+    100024: 03DoorSwitchWest
+    400000: EastWestCut
+    400002: InsideCut
+    400004: MainRoom
+    400006: NorthSouthCut
+    400008: //RootNode
+    400010: TopBottomHole
+    400012: 01MainRoom
+    400014: 02CeilingSwitch
+    400016: 02FloorSwitch
+    400018: 03DoorSwitchEast
+    400020: 03DoorSwitchNorth
+    400022: 03DoorSwitchSouth
+    400024: 03DoorSwitchWest
+    2300000: EastWestCut
+    2300002: InsideCut
+    2300004: MainRoom
+    2300006: NorthSouthCut
+    2300008: TopBottomHole
+    2300010: 01MainRoom
+    2300012: 02CeilingSwitch
+    2300014: 02FloorSwitch
+    2300016: 03DoorSwitchEast
+    2300018: 03DoorSwitchNorth
+    2300020: 03DoorSwitchSouth
+    2300022: 03DoorSwitchWest
+    3300000: EastWestCut
+    3300002: InsideCut
+    3300004: MainRoom
+    3300006: NorthSouthCut
+    3300008: TopBottomHole
+    3300010: 01MainRoom
+    3300012: 02CeilingSwitch
+    3300014: 02FloorSwitch
+    3300016: 03DoorSwitchEast
+    3300018: 03DoorSwitchNorth
+    3300020: 03DoorSwitchSouth
+    3300022: 03DoorSwitchWest
+    4300000: EastWestCut
+    4300002: NorthSouthCut
+    4300004: TopBottomHole
+    4300006: InsideCut
+    4300008: MainRoom
+    4300010: 02CeilingSwitch
+    4300012: 03DoorSwitchWest
+    4300014: 03DoorSwitchEast
+    4300016: 03DoorSwitchSouth
+    4300018: 03DoorSwitchNorth
+    4300020: 02FloorSwitch
+    4300022: 01MainRoom
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
