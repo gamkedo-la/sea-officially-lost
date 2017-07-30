@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -49,7 +50,7 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         rb = GetComponent<Rigidbody>();
         playerInventory.ScannedInventory();
-        playerShip.ScannedInventory();
+        //playerShip.ScannedInventory();
         StartCoroutine(SonarPing());
         StartCoroutine(InsanityUpdate());
         Cursor.lockState = CursorLockMode.Locked;
@@ -98,6 +99,10 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Equals)) {
             oxygenLeft = 1000.0f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E)) {
+            SceneManager.LoadScene("Sealab");
         }
 
         oxygenLevel.text = "Oxygen left: " + oxygenLeft;
@@ -162,7 +167,7 @@ public class PlayerController : MonoBehaviour {
 
         } 
         scanProgress.value = scanAmount;
-        insanityMeter.text = "" + insanityCounter;
+        insanityMeter.text = "Insanity: " + insanityCounter;
 	}
 
     private void FixedUpdate()
@@ -192,7 +197,7 @@ public class PlayerController : MonoBehaviour {
             //if (nearestHitIndex != -1) {
             //    oxygenLevel.text = "" + (nearestFoundDist / sonarRange);
             //}
-            Debug.Log(sonarHits[nearestHitIndex].name);
+            //Debug.Log(sonarHits[nearestHitIndex].name);
         } // end while true
     }  // end SonarPing
 
