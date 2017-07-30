@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d62702d7e0b54651afe87f112d3a766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 10
+  rotateSpeed: 15
   maxIntensity: 1
   minIntensity: 0
   pulseSpeed: 0.5
@@ -741,6 +741,11 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 10907e26bfd304263bf7db79c4bdd9ed, type: 3}
+--- !u!108 &999274626 stripped
+Light:
+  m_PrefabParentObject: {fileID: 108247918404947738, guid: 78c97899cac994778a65a0b20adf6b06,
+    type: 2}
+  m_PrefabInternal: {fileID: 1498288404}
 --- !u!1001 &1029642620
 Prefab:
   m_ObjectHideFlags: 0
@@ -1691,6 +1696,29 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe27b7d626e224811aa19cd623cdffaa, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1727073012 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1089702581789920, guid: 78c97899cac994778a65a0b20adf6b06,
+    type: 2}
+  m_PrefabInternal: {fileID: 1498288404}
+--- !u!114 &1727073014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727073012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7a65fcd5f7f414aa39489dbffbcd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashlight: {fileID: 1727073015}
+  cookie: {fileID: 999274626}
+--- !u!108 &1727073015 stripped
+Light:
+  m_PrefabParentObject: {fileID: 108494412401918582, guid: 78c97899cac994778a65a0b20adf6b06,
+    type: 2}
+  m_PrefabInternal: {fileID: 1498288404}
 --- !u!1 &1778190832
 GameObject:
   m_ObjectHideFlags: 0
