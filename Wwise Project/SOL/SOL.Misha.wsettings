@@ -4,6 +4,8 @@
 		<UserProjectSettings Name="" ID="{B938DA11-C434-4F4F-84C3-734D0476397D}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Misha\Desktop\SOL Temp"/>
+				<Property Name="Event Action List\{25AC9E5C-5863-4D10-A36F-86C50E0149EB}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{E09C062A-11C1-4D8B-8449-0CEE9B35E7C8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>

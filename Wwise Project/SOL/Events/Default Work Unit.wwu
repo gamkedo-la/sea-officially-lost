@@ -17,6 +17,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Test_Ambi" ID="{E09C062A-11C1-4D8B-8449-0CEE9B35E7C8}">
+					<ChildrenList>
+						<Action Name="" ID="{94CB3745-374B-44EF-8D6A-4D3C0FB9B976}" ShortID="142451440">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Test Ambi" ID="{0E39244C-A154-48F2-8D31-80CBA01E11CA}" WorkUnitID="{8AF64202-61F0-4502-B197-45BC5B9C15C3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
