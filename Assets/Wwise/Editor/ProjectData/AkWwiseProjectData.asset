@@ -92,6 +92,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /SOL
+  - /SOL/Events
+  - /SOL/Events/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
