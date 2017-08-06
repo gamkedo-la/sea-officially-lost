@@ -1026,6 +1026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995703908}
   - component: {fileID: 995703907}
+  - component: {fileID: 995703909}
   m_Layer: 0
   m_Name: Spotlight
   m_TagString: Untagged
@@ -1096,6 +1097,22 @@ Transform:
   m_Father: {fileID: 376794376}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -144.74301, z: 0}
+--- !u!114 &995703909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 995703906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d62702d7e0b54651afe87f112d3a766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 0
+  maxIntensity: 1
+  minIntensity: 0.25
+  pulseSpeed: 0.4
+  myLight: {fileID: 995703907}
 --- !u!108 &999274626 stripped
 Light:
   m_PrefabParentObject: {fileID: 108247918404947738, guid: 78c97899cac994778a65a0b20adf6b06,
