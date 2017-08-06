@@ -811,7 +811,7 @@ Animator:
   m_GameObject: {fileID: 671423562}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: be6f67ba6d0836b41a2ad02029f77875, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57592c1e97fb80743a5c9eb6cfa87b87, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1070,6 +1070,7 @@ GameObject:
   - component: {fileID: 1125652340}
   - component: {fileID: 1125652342}
   - component: {fileID: 1125652341}
+  - component: {fileID: 1125652343}
   m_Layer: 0
   m_Name: airlockdoorUV:object2
   m_TagString: Untagged
@@ -1132,6 +1133,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1125652339}
   m_Mesh: {fileID: 4300002, guid: be6f67ba6d0836b41a2ad02029f77875, type: 3}
+--- !u!95 &1125652343
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1125652339}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec15510b10d330a48b2795cdd6cbe481, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1197696271 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4669722822700724, guid: fe27b7d626e224811aa19cd623cdffaa,
