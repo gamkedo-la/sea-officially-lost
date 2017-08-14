@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
-  - PhysicalPath: Events\Default Work Unit.wwu
+  - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{27128233-2F1F-4D23-A693-2F4E05968B78}'
-    m_lastTimePsrt1: -1807292523
-    m_lastTimePart2: -1999314839
+    m_lastTimePsrt1: -1716082688
+    m_lastTimePart2: -1999315721
     List:
     - Name: Play_Footsteps
-      Path: Default Work Unit\Play_Footsteps
+      Path: Default Work Unit/Play_Footsteps
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -30,7 +30,7 @@ MonoBehaviour:
       Guid: 5c9eac256358104da36f86c50e0149eb
       maxAttenuation: 0
     - Name: Play_Test_Ambi
-      Path: Default Work Unit\Play_Test_Ambi
+      Path: Default Work Unit/Play_Test_Ambi
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -40,35 +40,35 @@ MonoBehaviour:
       Guid: 2a069ce0c1118b4d84490cee9b35e7c8
       maxAttenuation: 0
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}'
-    m_lastTimePsrt1: -1802499316
-    m_lastTimePart2: -1999314839
+    m_lastTimePsrt1: 1473510016
+    m_lastTimePart2: -1999316344
     List: []
   StateWwu:
-  - PhysicalPath: States\Default Work Unit.wwu
+  - PhysicalPath: States/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{2C5C1DF6-1E3E-45FB-9806-66FE1A6F1E9E}'
-    m_lastTimePsrt1: -1799424070
-    m_lastTimePart2: -1999314839
+    m_lastTimePsrt1: 1473510016
+    m_lastTimePart2: -1999316344
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches\Default Work Unit.wwu
+  - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{9B46163B-E671-4090-827E-4164D5DF94C8}'
-    m_lastTimePsrt1: -1799394065
-    m_lastTimePart2: -1999314839
+    m_lastTimePsrt1: 1473510016
+    m_lastTimePart2: -1999316344
     List: []
   BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{65D5B2D0-10D1-4ABE-B0A0-728A87216A1D}'
-    m_lastTimePsrt1: -1799494072
-    m_lastTimePart2: -1999314839
+    m_lastTimePsrt1: -1706082688
+    m_lastTimePart2: -1999315721
     List:
     - Name: Soundbank
-      Path: Default Work Unit\Soundbank
+      Path: Default Work Unit/Soundbank
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -77,18 +77,18 @@ MonoBehaviour:
       ID: 1661994096
       Guid: e927382bd0523e4294288d09aaef9f73
   RtpcWwu:
-  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{85B03DDE-0204-4EE1-AC6F-D14B7E7AD858}'
-    m_lastTimePsrt1: -1807262521
-    m_lastTimePart2: -1999314839
+    m_lastTimePsrt1: 1473510016
+    m_lastTimePart2: -1999316344
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers\Default Work Unit.wwu
+  - PhysicalPath: Triggers/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{25E27FBF-96B0-4096-AB22-AEADEC16C23F}'
-    m_lastTimePsrt1: -1799374073
-    m_lastTimePart2: -1999314839
+    m_lastTimePsrt1: 1473510016
+    m_lastTimePart2: -1999316344
     List: []
   ExpandedItems:
   - /SOL
