@@ -11,7 +11,7 @@ public class NpcMovement : MonoBehaviour
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-
+        
     }
 
     private void Update()
