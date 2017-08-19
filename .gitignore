@@ -22,6 +22,9 @@ ExportedObj/
 # VS Code config files
 .vscode
 
+# Visual Studio config files
+.vs
+
 # Unity3D generated meta files
 *.pidb.meta
 
@@ -36,4 +39,4 @@ Assets/Textures/Thumbs.db.meta
 Assets/Textures/Terrain/Thumbs.db.meta
 Assets/Sprites/Thumbs.db.meta
 
-Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+Assets/Wwise/Editor/ProjectData/AkWwiseProjectData*
