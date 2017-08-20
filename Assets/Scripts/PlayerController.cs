@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.E)) {
-            SceneManager.LoadScene("Sealab");
+            SceneManager.LoadScene("sealab v2");
         }
 
         oxygenLevel.text = "Oxygen left: " + oxygenLeft;
