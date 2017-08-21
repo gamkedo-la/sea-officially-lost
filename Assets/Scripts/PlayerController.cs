@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
+    public static PlayerController instance;
     public float pitchSpeed = 5.0f;
     public float rollSpeed = 5.0f;
     public float yawSpeed = 5.0f;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour {
     public Text insanityMeter;
     private float insanityCounter = 0.0f;
     private float insanityRange = 10.0f;
+    public int knowledgeLevel = 0;
 
     private bool scanning = false;
 
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour {
         StartCoroutine(InsanityUpdate());
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        instance = this;
 
 	}
 

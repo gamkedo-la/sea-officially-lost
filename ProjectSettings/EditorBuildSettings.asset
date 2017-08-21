@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sealab.unity
     guid: 38bc0a855d02d4abda59520fcbf138a1
+  - enabled: 1
+    path: Assets/Scenes/sealab v2.unity
+    guid: 800ce390246f0014284a26749156a314
