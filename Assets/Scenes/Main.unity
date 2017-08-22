@@ -1501,7 +1501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac73615964d46be4f9ee12c5bb9cd8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio\GeneratedSoundBanks
+  basePath: Audio/GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048
@@ -3585,7 +3585,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1774515987}
-  - component: {fileID: 1774515988}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -3616,21 +3615,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1774515988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1774515986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29085d535771f47d9ad1c5246842b8a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resourceContainer: {fileID: 1991155968246524, guid: 87874f150b507416ab675e9ce5c1d300,
-    type: 2}
-  spawnPoint: {x: 0, y: 0, z: 0}
-  defaultInventoryPanel: {fileID: 276092201}
 --- !u!1 &1779200192
 GameObject:
   m_ObjectHideFlags: 0
