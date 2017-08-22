@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 4632665741798212}
   - component: {fileID: 95460550543474598}
   - component: {fileID: 114972379613269524}
+  - component: {fileID: 114395006398912452}
   m_Layer: 0
   m_Name: Goblin shark
   m_TagString: Untagged
@@ -756,6 +757,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114395006398912452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1220324752079138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff4fb2835d617e4fadaca33718e7762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!114 &114972379613269524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -767,6 +780,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f801b034c443a8d438ca64164a6f9b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_biteLayerIndex: 1
+  m_biteStateName: Bite
+  m_biteTriggerName: Bite
 --- !u!137 &137333760295223462
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
