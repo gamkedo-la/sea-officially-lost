@@ -20,8 +20,10 @@ public class PlayerController : MonoBehaviour {
     public Slider scanProgress;
     public InventoryManager playerShip;
     public float scanAmount = 0.0f;
-    public Text oxygenLevel;
-    public float oxygenLeft = 50.0f;
+
+    //oxygen system
+    //public Text oxygenLevel;
+    //public float oxygenLeft = 50.0f;
 
     public bool upLooksDown = false;
 
@@ -100,16 +102,17 @@ public class PlayerController : MonoBehaviour {
             ReleaseMouse();
         }
 
-        if (Input.GetKeyDown(KeyCode.Equals)) {
+        //oxygen system
+        /*if (Input.GetKeyDown(KeyCode.Equals)) {
             oxygenLeft = 1000.0f;
         }
+
+        oxygenLevel.text = "Oxygen left: " + oxygenLeft;
+        oxygenLeft -= Time.deltaTime;*/
 
         if (Input.GetKeyDown(KeyCode.E)) {
             SceneManager.LoadScene("sealab v2");
         }
-
-        oxygenLevel.text = "Oxygen left: " + oxygenLeft;
-        oxygenLeft -= Time.deltaTime;
 
 		// Scanner!
 		RaycastHit rhInfo;
@@ -119,7 +122,6 @@ public class PlayerController : MonoBehaviour {
 			Debug.Log("We hit: " + rhInfo.collider.name);
             scannedItem = rhInfo.collider.gameObject.GetComponent<InventoryManager>();
             inventoryInFrontOfMe = (scannedItem != null);
-
 		}
 		else
 		{
@@ -134,7 +136,6 @@ public class PlayerController : MonoBehaviour {
 
             if (Input.GetButtonDown("Fire1") && scannedItem.InventoryKnown())
 			{
-
 				scannedItem.TransferInventoryInto(playerInventory);
 			}
 		}
