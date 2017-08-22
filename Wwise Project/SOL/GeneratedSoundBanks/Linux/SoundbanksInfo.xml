@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Linux" BasePlatform="Linux" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\GeneratedSoundBanks\Linux\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\GeneratedSoundBanks\Linux\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1661994096" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
+			<ShortName>Soundbank</ShortName>
+			<Path>Soundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
+				<Event Id="1234110288" Name="Play_Test_Ambi" ObjectPath="\Events\Default Work Unit\Play_Test_Ambi"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="112427783" Language="SFX">
+					<ShortName>temp_footstep_sealab_02.wav</ShortName>
+					<Path>SFX\temp_footstep_sealab_02_1C9C67B2.wem</Path>
+				</File>
+				<File Id="415836917" Language="SFX">
+					<ShortName>temp_footstep_sealab_03.wav</ShortName>
+					<Path>SFX\temp_footstep_sealab_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="560838616" Language="SFX">
+					<ShortName>temp_footstep_sealab_04.wav</ShortName>
+					<Path>SFX\temp_footstep_sealab_04_1C9C67B2.wem</Path>
+				</File>
+				<File Id="714356039" Language="SFX">
+					<ShortName>test1.wav</ShortName>
+					<Path>SFX\test1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="723103660" Language="SFX">
+					<ShortName>temp_footstep_sealab_01.wav</ShortName>
+					<Path>SFX\temp_footstep_sealab_01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="906555434" Language="SFX">
+					<ShortName>test3.wav</ShortName>
+					<Path>SFX\test3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1022138157" Language="SFX">
+					<ShortName>test2.wav</ShortName>
+					<Path>SFX\test2_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
