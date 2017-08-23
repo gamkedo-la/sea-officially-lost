@@ -21,10 +21,6 @@ public class PlayerController : MonoBehaviour {
     public InventoryManager playerShip;
     public float scanAmount = 0.0f;
 
-    //oxygen system
-    //public Text oxygenLevel;
-    //public float oxygenLeft = 50.0f;
-
     public bool upLooksDown = false;
 
     public InventoryManager playerInventory;
@@ -101,14 +97,6 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Minus)) {
             ReleaseMouse();
         }
-
-        //oxygen system
-        /*if (Input.GetKeyDown(KeyCode.Equals)) {
-            oxygenLeft = 1000.0f;
-        }
-
-        oxygenLevel.text = "Oxygen left: " + oxygenLeft;
-        oxygenLeft -= Time.deltaTime;*/
 
         if (Input.GetKeyDown(KeyCode.E)) {
             SceneManager.LoadScene("sealab v2");
