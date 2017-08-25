@@ -769,6 +769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  neighborDistance: 2
 --- !u!114 &114972379613269524
 MonoBehaviour:
   m_ObjectHideFlags: 1

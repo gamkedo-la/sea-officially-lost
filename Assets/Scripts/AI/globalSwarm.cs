@@ -5,7 +5,7 @@ using UnityEngine;
 public class globalSwarm : MonoBehaviour {
 
     public GameObject creaturePrefab;
-    public static int areaSize = 5;
+    public static int areaSize = 10;
 
     public static Vector3 targetPosition = Vector3.zero;
 

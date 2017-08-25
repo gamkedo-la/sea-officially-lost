@@ -9,7 +9,7 @@ public class Swarm : MonoBehaviour {
     float rotationSPeed = 4.0f;
     Vector3 averageDirection;
     Vector3 averageDistance;
-    public float neighborDistance = 4.0f;
+    public float groupPullPower = 2.0f; //how close they must be in order to group up
 
     bool turning = false;
 	// Use this for initialization
@@ -44,7 +44,7 @@ public class Swarm : MonoBehaviour {
         
 	}
 
-    void ApplyRules()
+    void ApplyRules()  //when swarming creatures will try to be in the center while avoiding other creatures
     {
         GameObject[] gos;
         gos = globalSwarm.allCreatures;
@@ -63,7 +63,7 @@ public class Swarm : MonoBehaviour {
             if(go != this.gameObject)
             {
                 distance = Vector3.Distance(go.transform.position, this.transform.position);
-                if(distance <= neighborDistance)
+                if(distance <= groupPullPower)
                 {
                     vCentre += go.transform.position;
                     groupSize++;
