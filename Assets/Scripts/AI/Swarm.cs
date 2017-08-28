@@ -15,13 +15,16 @@ public class Swarm : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+
+
         speed = Random.Range(0.5f,3);
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        Bounds box = new Bounds(myManager.transform.position, myManager.swimLimits*2);
+        Bounds box = new Bounds(myManager.transform.position, myManager.swimLimits * 2);
+
 
         if (!box.Contains(point: transform.position))
         {
@@ -49,13 +52,13 @@ public class Swarm : MonoBehaviour {
     void ApplyRules()  //when swarming creatures will try to be in the center while avoiding other creatures
     {
         GameObject[] gos;
-        gos = globalSwarm.allCreatures;
+        gos = myManager.allCreatures;
 
         Vector3 vCentre = Vector3.zero;
         Vector3 vAvoid = Vector3.zero;
         float gSpeed = 0.1f;
 
-        Vector3 targetPosition = globalSwarm.targetPosition;
+        Vector3 targetPosition = myManager.targetPosition;
 
         float distance;
 

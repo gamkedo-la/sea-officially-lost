@@ -8,10 +8,10 @@ public class globalSwarm : MonoBehaviour {
     public GameObject creaturePrefab;
     public Vector3 swimLimits = new Vector3(10,10,10);
 
-    public static Vector3 targetPosition = Vector3.zero;
+    public Vector3 targetPosition = Vector3.zero;
 
     static int creatureNumber = 10;
-    public static GameObject[] allCreatures = new GameObject[creatureNumber];
+    public GameObject[] allCreatures = new GameObject[creatureNumber];
 
     private void OnDrawGizmosSelected()
     {
@@ -25,7 +25,7 @@ public class globalSwarm : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-         thisSwarm = this;
+        thisSwarm = this;
         targetPosition = this.transform.position;
 
 
@@ -36,6 +36,7 @@ public class globalSwarm : MonoBehaviour {
                                            Random.Range(-swimLimits.y, swimLimits.y)
                                            );
             allCreatures[i] = (GameObject)Instantiate(creaturePrefab, position, Quaternion.identity);
+            allCreatures[i].GetComponent<Swarm>().myManager = this;
         }
 	}
 	
