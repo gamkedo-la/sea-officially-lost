@@ -31,10 +31,9 @@ public class globalSwarm : MonoBehaviour {
 
 		for(int i = 0; i < creatureNumber; i++)
         {
-            Vector3 position = new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
+            Vector3 position =this.transform.position +  new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
                                            Random.Range(-swimLimits.y, swimLimits.y),
-                                           Random.Range(-swimLimits.y, swimLimits.y)
-                                           );
+                                           Random.Range(-swimLimits.z, swimLimits.z));
             allCreatures[i] = (GameObject)Instantiate(creaturePrefab, position, Quaternion.identity);
             allCreatures[i].GetComponent<Swarm>().myManager = this;
         }
@@ -47,7 +46,7 @@ public class globalSwarm : MonoBehaviour {
         {
             targetPosition = this.transform.position + new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
                                            Random.Range(-swimLimits.y, swimLimits.y),
-                                           Random.Range(-swimLimits.y, swimLimits.y)
+                                           Random.Range(-swimLimits.z, swimLimits.z)
                                            );
         }
 	}
