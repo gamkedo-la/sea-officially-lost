@@ -77,6 +77,7 @@ public class PlayerController : MonoBehaviour {
         transform.Rotate(Vector3.forward, Input.GetAxis("Roll") * rollSpeed * Time.deltaTime * -1.0f);*/
         yaw += Input.GetAxis("Mouse X") * yawSpeed * Time.deltaTime;
         pitch += Input.GetAxis("Mouse Y") * pitchSpeed * Time.deltaTime * (upLooksDown ? 1.0f : -1.0f);
+        pitch = Mathf.Clamp(pitch, -40.0f, 40.0f);
         Quaternion rotNow = Quaternion.identity;
         rotNow *= Quaternion.AngleAxis(yaw, Vector3.up);
         rotNow *= Quaternion.AngleAxis(pitch, Vector3.right);
