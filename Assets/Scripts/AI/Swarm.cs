@@ -34,7 +34,7 @@ public class Swarm : MonoBehaviour {
             turning = false;
         if (turning)
         {
-            Vector3 direction = Vector3.zero - transform.position;
+            Vector3 direction = myManager.transform.position - transform.position;
             transform.rotation = Quaternion.Slerp(transform.rotation,
                                                   Quaternion.LookRotation(direction),
                                                   rotationSPeed * Time.deltaTime);
