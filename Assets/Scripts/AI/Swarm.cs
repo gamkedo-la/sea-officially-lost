@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Swarm : MonoBehaviour {
 
-
+    public globalSwarm myManager;
     public float speed = 2.5f;
     float rotationSPeed = 4.0f;
     Vector3 averageDirection;
@@ -21,7 +21,9 @@ public class Swarm : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Vector3.Distance(transform.position, Vector3.zero) >= globalSwarm.areaSize)
+        Bounds box = new Bounds(myManager.transform.position, myManager.swimLimits*2);
+
+        if (!box.Contains(point: transform.position))
         {
             turning = true;
         }
