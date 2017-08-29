@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684ba4c59c6494948b10914d892bce1d, type: 3}
+  m_Name: WolfEye
+  m_EditorClassIdentifier: 
+  Name: Wolf Eye Potion
+  Description: 'Enables sight in dark spaces
+
+'
+  MinimumPlayerLevel: 0
+  Sprite: {fileID: 2800000, guid: a43149fe2ad3bdc4e91523203c1c4240, type: 3}
+  PurchasePrice: []
+  SellPriceReduction: 0.1
+  ItemType: 0
+  Amount: 0

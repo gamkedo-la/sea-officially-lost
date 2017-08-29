@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb44c317670b5247ad1361319d71991, type: 3}
+  m_Name: Compass
+  m_EditorClassIdentifier: 
+  Name: Compass
+  Description: Even at deep water levels this compass won't let you down!
+  MinimumPlayerLevel: 0
+  Sprite: {fileID: 2800000, guid: 7d58f29bde62d794589e335c5e5fb712, type: 3}
+  PurchasePrice: []
+  SellPriceReduction: 0.1
