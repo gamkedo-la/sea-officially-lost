@@ -14,6 +14,8 @@ MonoBehaviour:
   Name: Compass
   Description: Even at deep water levels this compass won't let you down!
   MinimumPlayerLevel: 0
-  Sprite: {fileID: 2800000, guid: 7d58f29bde62d794589e335c5e5fb712, type: 3}
-  PurchasePrice: []
+  Sprite: {fileID: 21300000, guid: 1a88d71bd86bf13459c8cd63f0a55a9d, type: 3}
+  PurchasePrice:
+  - Currency: {fileID: 11400000, guid: f03367d394ce5164dbd3cc9c30b3ae0e, type: 2}
+    Amount: 5
   SellPriceReduction: 0.1

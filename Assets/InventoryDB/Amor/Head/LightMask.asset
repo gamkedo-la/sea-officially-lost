@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Name: LightMask
   m_EditorClassIdentifier: 
   Name: Ultra-Lighting Mask
-  Description: 'This mask provides for the ultimate amount of light at deep water
-    levels
+  Description: 'Provides for the ultimate amount of light at deep water levels
 
 '
   MinimumPlayerLevel: 0
-  Sprite: {fileID: 2800000, guid: cace9adac672904459f89788a1b2445e, type: 3}
-  PurchasePrice: []
+  Sprite: {fileID: 21300000, guid: 2885127e30af4af4198c9d6b79e57699, type: 3}
+  PurchasePrice:
+  - Currency: {fileID: 11400000, guid: f03367d394ce5164dbd3cc9c30b3ae0e, type: 2}
+    Amount: 2
+  - Currency: {fileID: 11400000, guid: e219a527e5069fb4683237f2241cf63e, type: 2}
+    Amount: 3
   SellPriceReduction: 0.1
   ItemType: 0

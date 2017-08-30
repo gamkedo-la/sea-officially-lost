@@ -840,6 +840,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryList: {fileID: 11400000, guid: 84d79f74d71fcaa49b210e4c5b232ff4, type: 2}
   inventoryPanel: {fileID: 1697570499}
+  ItemTemplate: {fileID: 1731420531770108, guid: bd42bc6834bafe24c994bcaf54e02186,
+    type: 2}
+  CurrencyTemplate: {fileID: 1259932355926420, guid: 0ac47294a6473d442905fdd55a9df521,
+    type: 2}
 --- !u!4 &254363954 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400036, guid: 16e5722d0b9f7844ea5478a53c66ddc2, type: 3}

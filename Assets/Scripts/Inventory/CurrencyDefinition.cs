@@ -10,7 +10,7 @@ public class CurrencyDefinition
 {
 
     //public CurrencyType Currency;
-    public Currency[] Currency;
+    public Currency Currency;
     public int Amount = 1;
 
     /*public enum CurrencyType
