@@ -30,6 +30,15 @@ public class InventoryMgr : MonoBehaviour
         }   
     }
 
+    public void ClearBufferInventory()
+    {
+        Transform ScrollViewContent = inventoryPanel.transform.Find("InvPanel/Scroll View/Viewport/Content/Inventory Item Container");
+        foreach(Transform inspectorLiveContainer in ScrollViewContent)
+        {
+            Destroy(inspectorLiveContainer);
+        }
+    }
+
     public void PopulateInventory(Inventory inventoryList)
     {
         Transform ScrollViewContent = inventoryPanel.transform.Find("InvPanel/Scroll View/Viewport/Content");
@@ -51,9 +60,11 @@ public class InventoryMgr : MonoBehaviour
                 newCurrency.transform.Find("Amount").GetComponent<Text>().text = cur.Amount.ToString();
             }
         }
-
-        
     }
 
+    public void CloseInventoryWindow()
+    {
+        inventoryPanel.SetActive(false);
+    }
     
 }
