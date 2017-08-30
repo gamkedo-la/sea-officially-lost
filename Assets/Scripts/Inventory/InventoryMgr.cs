@@ -17,11 +17,13 @@ public class InventoryMgr : MonoBehaviour
     private GameObject ItemTemplate;//Inventory Item Container
     [SerializeField]
     private GameObject CurrencyTemplate;
+    
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            ClearBufferInventory();
             PopulateInventory(inventoryList);
             invPanelToggle =! invPanelToggle;
             if (invPanelToggle)
@@ -32,10 +34,12 @@ public class InventoryMgr : MonoBehaviour
 
     public void ClearBufferInventory()
     {
-        Transform ScrollViewContent = inventoryPanel.transform.Find("InvPanel/Scroll View/Viewport/Content/Inventory Item Container");
-        foreach(Transform inspectorLiveContainer in ScrollViewContent)
+        Transform ScrollViewContent = inventoryPanel.transform.Find("InvPanel/Scroll View/Viewport/Content");
+
+        foreach (Transform inspectorLiveContainerAsChild in ScrollViewContent.transform)
         {
-            Destroy(inspectorLiveContainer);
+            Debug.Log(inspectorLiveContainerAsChild.name);
+            Destroy(inspectorLiveContainerAsChild.gameObject);
         }
     }
 
