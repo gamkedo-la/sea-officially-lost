@@ -8,7 +8,6 @@ using System;
 
 public class InventoryMgr : MonoBehaviour
 {
-    bool invPanelToggle = false;
     [SerializeField]
     private Inventory inventoryList;
     [SerializeField]
@@ -17,19 +16,43 @@ public class InventoryMgr : MonoBehaviour
     private GameObject ItemTemplate;//Inventory Item Container
     [SerializeField]
     private GameObject CurrencyTemplate;
-    
+
+    private Text BagSpaceText;
+
+    private void Awake()
+    {
+        BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
+    }
+
+    private void Start()
+    {
+        BagSpaceText.text = string.Format("{0}/{1}", inventoryList.InventoryItems.Count, inventoryList.TotalBagSlots);
+
+        for (int i=0; i< inventoryList.TotalBagSlots; i++)
+        {
+            
+        }
+    }
+
+    public int GetCoinCurrency()
+    {
+        int currency=inventoryList.CopperCoins;//need to set this to abilities
+        return currency;
+    }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            ClearBufferInventory();
-            PopulateInventory(inventoryList);
-            invPanelToggle =! invPanelToggle;
-            if (invPanelToggle)
-                inventoryPanel.SetActive(true);
-            else inventoryPanel.SetActive(false);
+            ToggleInventoryWindow();
         }   
+    }
+
+    private void ToggleInventoryWindow()
+    {
+        ClearBufferInventory();
+        PopulateInventory(inventoryList);
+        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
     }
 
     public void ClearBufferInventory()

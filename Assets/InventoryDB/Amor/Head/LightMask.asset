@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 883951b442bfcdc4cb27f774171fba0c, type: 3}
   m_Name: LightMask
   m_EditorClassIdentifier: 
-  Name: Ultra-Lighting Mask
+  Name: Ultra-Lighting Helmet
   Description: 'Provides for the ultimate amount of light at deep water levels
 
 '
