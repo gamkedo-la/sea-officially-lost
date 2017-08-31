@@ -45,6 +45,10 @@ public class PlayerController : MonoBehaviour {
     private float speedLateral = 0.0f;
     private float speedRise = 0.0f;
 
+    //inventory related declarations pick-up item variables
+    float m_MaxInteractDistance = 2.0f;
+    GameObject pickedUpItem;
+    private InventoryMgr inventoryMgr;
 
     // Use this for initialization
     void Start () {
@@ -104,8 +108,26 @@ public class PlayerController : MonoBehaviour {
             SceneManager.LoadScene("sealab v2");
         }
 
-		// Scanner!
-		RaycastHit rhInfo;
+        //pick-up item testing for inventory
+        //Debug.DrawRay(transform.position, Vector3.forward * 10, Color.red);
+        if (Input.GetButtonDown("PickUpItem"))
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(transform.position, transform.forward, out hit, m_MaxInteractDistance))
+            {
+                //Debug.Log("I can see " + hit.transform.gameObject.name);
+                if (hit.transform.gameObject.CompareTag("canPickUp"))
+                {
+                    pickedUpItem = hit.transform.gameObject;
+                    Debug.Log("Picked up " + hit.transform.gameObject.name);
+                    inventoryMgr.BuyOnClick(pickedUpItem);
+                }
+            }
+        }
+
+        // Scanner!
+        RaycastHit rhInfo;
         bool inventoryInFrontOfMe = false;
         if (Physics.Raycast(transform.position, transform.forward, out rhInfo, scanRange))
 		{

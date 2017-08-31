@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Linq;
 using System.Text;
 using System;
+using UnityEngine.EventSystems;
 
 public class InventoryMgr : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class InventoryMgr : MonoBehaviour
     private GameObject ItemTemplate;//Inventory Item Container
     [SerializeField]
     private GameObject CurrencyTemplate;
+    [SerializeField]
+    public WorldItems worldItems;
 
     private Text BagSpaceText;
     private Text copperCurrencyText;
@@ -87,6 +90,19 @@ public class InventoryMgr : MonoBehaviour
             Debug.Log(inspectorLiveContainerAsChild.name);
             Destroy(inspectorLiveContainerAsChild.gameObject);
         }
+    }
+
+    public void BuyOnClick(GameObject pickedUpItem)
+    {
+        pickedUpItem.SetActive(true);
+        Item purchasedItem = worldItems.AvailableWorldItems.Find(x => x.Name.Equals(
+        EventSystem.current.currentSelectedGameObject.transform.Find("Name").GetComponent<Text>().text));
+
+        //inventoryList.InventoryItems.Find(x => x.Name.Equals(
+        //EventSystem.current.currentSelectedGameObject.transform.parent.Find("Name").GetComponent<Text>().text));
+        Debug.Log("The famous name is " + EventSystem.current.currentSelectedGameObject.transform.parent.Find("Name").GetComponent<Text>().text);
+        //PurchaseItem(pickedUpItem);
+        //pickedUpItem.SetActive(false);
     }
 
     public void PopulateInventory(Inventory inventoryList)

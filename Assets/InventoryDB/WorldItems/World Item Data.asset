@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eea68906924d324d854c4bda275ad92, type: 3}
+  m_Name: World Item Data
+  m_EditorClassIdentifier: 
+  AvailableWorldItems:
+  - {fileID: 11400000, guid: f1261ac8e4a00f94586cfd2a536efaae, type: 2}
+  - {fileID: 11400000, guid: 6371e54b31411e243a4f9fe14022f07f, type: 2}
+  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
+  - {fileID: 11400000, guid: 32fc8895b460c934b8f42f06b8bee99a, type: 2}
+  - {fileID: 11400000, guid: e52c3827f4dc02f4890ee835f2a84e6c, type: 2}
+  - {fileID: 11400000, guid: 98483222b6d5b52439d524f8e887adfe, type: 2}
+  - {fileID: 11400000, guid: 9b5bb62de3f08954882fd702bcd05186, type: 2}
