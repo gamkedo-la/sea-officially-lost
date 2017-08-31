@@ -22,8 +22,28 @@ public class Item : ScriptableObject
     public Sprite Sprite;
 
     [Header("Trade Properties"), Tooltip("Currency and Price the player can purchase the item for")]
-    public CurrencyDefinition[] PurchasePrice;
+    //public CurrencyDefinition[] PurchasePrice;
+    public List<CurrencyDefinition> PurchasePrice;
 
     [Range(0,1), Tooltip("Deduction the merchant takes to purchase the item back")]
     public float SellPriceReduction = 0.10f;
+
+    public int PurchasePriceInCopper(int coinType)
+    {
+        coinType = 0;
+        if (coinType.Equals("CopperCoins"))
+        {
+            coinType += PurchasePrice.Where(x => x.Currency.Name.Equals("Copper Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+        }
+        if (coinType.Equals("GoldCoins"))
+        {
+            coinType += PurchasePrice.Where(x => x.Currency.Name.Equals("Gold Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+        }
+        if (coinType.Equals("SilverCoins"))
+        {
+            coinType += PurchasePrice.Where(x => x.Currency.Name.Equals("Silver Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+        }
+
+        return coinType;
+    }
 }

@@ -18,5 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9b5bb62de3f08954882fd702bcd05186, type: 2}
   - {fileID: 11400000, guid: f1261ac8e4a00f94586cfd2a536efaae, type: 2}
   - {fileID: 11400000, guid: 32fc8895b460c934b8f42f06b8bee99a, type: 2}
-  CopperCoins: 24223
-  TotalBagSlots: 15
+  CopperCoins: 5
+  GoldCoins: 10
+  SilverCoins: 10
+  TotalBagSlots: 12

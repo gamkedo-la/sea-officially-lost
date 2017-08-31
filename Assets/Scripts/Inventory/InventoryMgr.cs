@@ -18,26 +18,49 @@ public class InventoryMgr : MonoBehaviour
     private GameObject CurrencyTemplate;
 
     private Text BagSpaceText;
+    private Text copperCurrencyText;
+    private Text goldCurrencyText;
+    private Text silverCurrencyText;
 
     private void Awake()
     {
         BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
+        copperCurrencyText = inventoryPanel.transform.Find("Footer/CurrencyDetails/Coin_Copper/Text").GetComponent<Text>();
+        goldCurrencyText = inventoryPanel.transform.Find("Footer/CurrencyDetails/Coin_Gold/Text").GetComponent<Text>();
+        silverCurrencyText = inventoryPanel.transform.Find("Footer/CurrencyDetails/Coin_Silver/Text").GetComponent<Text>();
     }
 
     private void Start()
     {
         BagSpaceText.text = string.Format("{0}/{1}", inventoryList.InventoryItems.Count, inventoryList.TotalBagSlots);
 
-        for (int i=0; i< inventoryList.TotalBagSlots; i++)
-        {
-            
-        }
+        UpdateCurrency();
+    }
+    
+    public void UpdateCurrency()
+    {
+        int[] cur = inventoryList.GetCoinCurrency();
+
+        copperCurrencyText.text = cur[0].ToString();
+        goldCurrencyText.text = cur[1].ToString();
+        silverCurrencyText.text = cur[2].ToString();
+
     }
 
-    public int GetCoinCurrency()
+    public void PurchaseItem(Item purchasedItem)
     {
-        int currency=inventoryList.CopperCoins;//need to set this to abilities
-        return currency;
+        //deduct the money from player
+        inventoryList.CopperCoins -= purchasedItem.PurchasePriceInCopper(inventoryList.CopperCoins);
+        inventoryList.GoldCoins -= purchasedItem.PurchasePriceInCopper(inventoryList.GoldCoins);
+        inventoryList.SilverCoins -= purchasedItem.PurchasePriceInCopper(inventoryList.SilverCoins);
+        UpdateCurrency();
+
+        //add the item to the player's inventory
+        inventoryList.InventoryItems.Add(purchasedItem);
+
+        //add it to the UI Screen
+        
+
     }
 
     private void Update()
