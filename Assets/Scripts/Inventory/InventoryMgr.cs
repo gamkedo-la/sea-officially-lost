@@ -95,12 +95,14 @@ public class InventoryMgr : MonoBehaviour
     public void BuyOnClick(GameObject pickedUpItem)
     {
         pickedUpItem.SetActive(true);
-        Item purchasedItem = worldItems.AvailableWorldItems.Find(x => x.Name.Equals(
-        EventSystem.current.currentSelectedGameObject.transform.Find("Name").GetComponent<Text>().text));
+        //Item purchasedItem = worldItems.AvailableWorldItems.Find(x => x.Name.Equals(
+        //EventSystem.current.currentSelectedGameObject.transform.Find("Name").GetComponent<Text>().text));
+        //Debug.Log("current eventsys " + EventSystem.current.currentSelectedGameObject.transform.name);
+        //Debug.Log("The famous name is " + EventSystem.current.currentSelectedGameObject.transform.Find("Name").name);
 
         //inventoryList.InventoryItems.Find(x => x.Name.Equals(
         //EventSystem.current.currentSelectedGameObject.transform.parent.Find("Name").GetComponent<Text>().text));
-        Debug.Log("The famous name is " + EventSystem.current.currentSelectedGameObject.transform.parent.Find("Name").GetComponent<Text>().text);
+        //Debug.Log("The famous name is " + EventSystem.current.currentSelectedGameObject.transform.parent.Find("Name").GetComponent<Text>().text);
         //PurchaseItem(pickedUpItem);
         //pickedUpItem.SetActive(false);
     }
@@ -131,6 +133,7 @@ public class InventoryMgr : MonoBehaviour
     public void CloseInventoryWindow()
     {
         inventoryPanel.SetActive(false);
+		Debug.Log("Im closing");
     }
     
 }

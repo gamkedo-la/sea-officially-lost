@@ -14,6 +14,11 @@ MonoBehaviour:
   InventoryItems:
   - {fileID: 11400000, guid: 6371e54b31411e243a4f9fe14022f07f, type: 2}
   - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
+  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
+  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
+  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
+  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
+  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
   CopperCoins: 10
   GoldCoins: 10
   SilverCoins: 10
