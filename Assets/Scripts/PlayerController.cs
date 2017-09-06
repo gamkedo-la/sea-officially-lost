@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour {
     //inventory related declarations pick-up item variables
     float m_MaxInteractDistance = 2.0f;
     GameObject pickedUpItem;
-    private InventoryMgr inventoryMgr;
+	public GameObject inventoryMgr;
 
     // Use this for initialization
     void Start () {
@@ -60,10 +60,9 @@ public class PlayerController : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         instance = this;
-
 	}
 
-    void ReleaseMouse() {
+    public void ReleaseMouse() {
         if (Cursor.visible == false) {
             Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
@@ -121,7 +120,7 @@ public class PlayerController : MonoBehaviour {
                 {
                     pickedUpItem = hit.transform.gameObject;
                     Debug.Log("Picked up " + hit.transform.gameObject.name);
-                    inventoryMgr.BuyOnClick(pickedUpItem);
+					inventoryMgr.GetComponent<InventoryMgr>().BuyOnClick(pickedUpItem);
                 }
             }
         }
@@ -151,9 +150,7 @@ public class PlayerController : MonoBehaviour {
 				scannedItem.TransferInventoryInto(playerInventory);
 			}
 		}
-
-
-
+		
 		if (Input.GetButtonDown("Fire2"))
 		{
 			scannerBeam.Play();

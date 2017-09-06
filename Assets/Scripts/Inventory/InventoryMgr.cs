@@ -24,8 +24,10 @@ public class InventoryMgr : MonoBehaviour
     private Text copperCurrencyText;
     private Text goldCurrencyText;
     private Text silverCurrencyText;
+	public GameObject playerController;
 
-    private void Awake()
+
+	private void Awake()
     {
         BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
         copperCurrencyText = inventoryPanel.transform.Find("Footer/CurrencyDetails/Coin_Copper/Text").GetComponent<Text>();
@@ -33,11 +35,12 @@ public class InventoryMgr : MonoBehaviour
         silverCurrencyText = inventoryPanel.transform.Find("Footer/CurrencyDetails/Coin_Silver/Text").GetComponent<Text>();
     }
 
-    private void Start()
+    public void Start()
     {
         BagSpaceText.text = string.Format("{0}/{1}", inventoryList.InventoryItems.Count, inventoryList.TotalBagSlots);
-
-        UpdateCurrency();
+		
+		
+		UpdateCurrency();
     }
     
     public void UpdateCurrency()
@@ -94,17 +97,13 @@ public class InventoryMgr : MonoBehaviour
 
     public void BuyOnClick(GameObject pickedUpItem)
     {
-        
-        Item purchasedItem = worldItems.AvailableWorldItems.Find(x => x.Name.Equals(
-        EventSystem.current.currentSelectedGameObject.transform.Find("Name").GetComponent<Text>().text));
-        Debug.Log("current eventsys " + EventSystem.current.currentSelectedGameObject.transform.name);
-        Debug.Log("The famous name is " + EventSystem.current.currentSelectedGameObject.transform.Find("Name").name);
-
-        //inventoryList.InventoryItems.Find(x => x.Name.Equals(
-        //EventSystem.current.currentSelectedGameObject.transform.parent.Find("Name").GetComponent<Text>().text));
-        //Debug.Log("The famous name is " + EventSystem.current.currentSelectedGameObject.transform.parent.Find("Name").GetComponent<Text>().text);
-        //PurchaseItem(pickedUpItem);
-        //pickedUpItem.SetActive(false);
+		Item purchasedItem = worldItems.AvailableWorldItems.Find(x => x.Name.Equals(
+			pickedUpItem.gameObject.name));
+		
+		Debug.Log("purchItem " + purchasedItem);
+		PurchaseItem(purchasedItem);
+		
+        pickedUpItem.SetActive(false);
     }
 
     public void PopulateInventory(Inventory inventoryList)
@@ -133,7 +132,10 @@ public class InventoryMgr : MonoBehaviour
     public void CloseInventoryWindow()
     {
         inventoryPanel.SetActive(false);
-		Debug.Log("Im closing");
+		//PlayerController playerController = gameObject.GetComponent<PlayerController>();//TODO: WHY CAN'T SET THIS IN START AND playerController.ReleaseMouse() in this method? Most importantly even here, why not work?
+		playerController.GetComponent<PlayerController>().ReleaseMouse();
+		
+		Debug.Log("Im closing and should have executed ReleaseMouse()");
     }
     
 }

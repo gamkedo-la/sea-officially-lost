@@ -20,6 +20,8 @@ MonoBehaviour:
     Amount: 5
   - Currency: {fileID: 11400000, guid: e219a527e5069fb4683237f2241cf63e, type: 2}
     Amount: 25
+  - Currency: {fileID: 11400000, guid: 5ed1948aa33e2ab44ab40b9ee2cf41d3, type: 2}
+    Amount: 25
   SellPriceReduction: 0.1
   ItemType: 1
   Amount: 0
