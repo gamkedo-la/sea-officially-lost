@@ -55,21 +55,37 @@ public class InventoryMgr : MonoBehaviour
 
     public void PurchaseItem(Item purchasedItem)
     {
-        //deduct the money from player
-        inventoryList.CopperCoins -= purchasedItem.PurchasePriceInCopper(inventoryList.CopperCoins);
-        inventoryList.GoldCoins -= purchasedItem.PurchasePriceInCopper(inventoryList.GoldCoins);
-        inventoryList.SilverCoins -= purchasedItem.PurchasePriceInCopper(inventoryList.SilverCoins);
+		//deduct the money from player
+		Debug.Log("copper coins before" + inventoryList.CopperCoins);
+		Debug.Log("copper coins to deduct" + purchasedItem.PurchasePriceInCopper());//HOW FEED COINTYPE SO THE RELEVANT CURRENCY IS USED FOR PURCHASEPRICEINCOPPER
+
+		inventoryList.CopperCoins -= purchasedItem.PurchasePriceInCopper();
+		Debug.Log("copper coins after" + inventoryList.CopperCoins);
+		inventoryList.GoldCoins -= purchasedItem.PurchasePriceInCopper();
+        inventoryList.SilverCoins -= purchasedItem.PurchasePriceInCopper();
         UpdateCurrency();
 
         //add the item to the player's inventory
         inventoryList.InventoryItems.Add(purchasedItem);
 
-        //add it to the UI Screen
-        
+		//add it to the UI Screen
+		Transform ScrollViewContent = inventoryPanel.transform.Find("InvPanel/Scroll View/Viewport/Content");
+		GameObject newItem = Instantiate(ItemTemplate, ScrollViewContent);
+		newItem.transform.localScale = Vector3.one;
 
-    }
+		newItem.transform.Find("Image/ItemImage").GetComponent<Image>().sprite = purchasedItem.Sprite;
+		newItem.transform.Find("ItemName").GetComponent<Text>().text = purchasedItem.Name;
+		newItem.transform.Find("Description").GetComponent<Text>().text = purchasedItem.Description;
 
-    private void Update()
+		GameObject newCurrency = Instantiate(CurrencyTemplate, newItem.transform.Find("Currency/List"));
+                newCurrency.transform.localScale = Vector3.one;
+
+                /*newCurrency.transform.Find("Image").GetComponent<Image>().sprite = inventoryList.InventoryItems.Currency.Image;//TODO CURRENTLY NOT PICKING IT UP
+		newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.InventoryItems.Amount.ToString();*/
+
+	}
+
+	private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -125,7 +141,7 @@ public class InventoryMgr : MonoBehaviour
 
                 newCurrency.transform.Find("Image").GetComponent<Image>().sprite = cur.Currency.Image;
                 newCurrency.transform.Find("Amount").GetComponent<Text>().text = cur.Amount.ToString();
-            }
+			}
         }
     }
 
@@ -134,8 +150,6 @@ public class InventoryMgr : MonoBehaviour
         inventoryPanel.SetActive(false);
 		//PlayerController playerController = gameObject.GetComponent<PlayerController>();//TODO: WHY CAN'T SET THIS IN START AND playerController.ReleaseMouse() in this method? Most importantly even here, why not work?
 		playerController.GetComponent<PlayerController>().ReleaseMouse();
-		
-		Debug.Log("Im closing and should have executed ReleaseMouse()");
     }
     
 }

@@ -28,22 +28,21 @@ public class Item : ScriptableObject
     [Range(0,1), Tooltip("Deduction the merchant takes to purchase the item back")]
     public float SellPriceReduction = 0.10f;
 
-    public int PurchasePriceInCopper(int coinType)
+    public int PurchasePriceInCopper()
     {
-        coinType = 0;
-        if (coinType.Equals("CopperCoins"))
-        {
-            coinType += PurchasePrice.Where(x => x.Currency.Name.Equals("Copper Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-        }
-        if (coinType.Equals("GoldCoins"))
-        {
-            coinType += PurchasePrice.Where(x => x.Currency.Name.Equals("Gold Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-        }
-        if (coinType.Equals("SilverCoins"))
-        {
-            coinType += PurchasePrice.Where(x => x.Currency.Name.Equals("Silver Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-        }
+		int copperCoins = 0;
+		int silverCoins = 0;
+		int goldCoins = 0;
+		//Debug.Log("coinType +" + coinType);
+		//coinType = 0;
+		//if (coinType.Equals("CopperCoins"))
+		//{
+		//Debug.Log("Coin is Copper in coinType.Equals");
+		copperCoins += PurchasePrice.Where(x => x.Currency.Name.Equals("Copper Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+        //}
+		goldCoins+= PurchasePrice.Where(x => x.Currency.Name.Equals("Gold Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+        silverCoins+= PurchasePrice.Where(x => x.Currency.Name.Equals("Silver Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 
-        return coinType;
+		return copperCoins;//TODO: NEED TO SETUP TO RETURN THE THREE
     }
 }

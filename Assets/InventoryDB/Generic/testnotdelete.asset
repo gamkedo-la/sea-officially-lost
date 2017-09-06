@@ -18,4 +18,6 @@ MonoBehaviour:
   PurchasePrice:
   - Currency: {fileID: 11400000, guid: f03367d394ce5164dbd3cc9c30b3ae0e, type: 2}
     Amount: 3
+  - Currency: {fileID: 11400000, guid: e219a527e5069fb4683237f2241cf63e, type: 2}
+    Amount: 3
   SellPriceReduction: 0.1
