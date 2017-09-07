@@ -10,7 +10,7 @@ public class Swarm : MonoBehaviour {
     Vector3 averageDistance;
     public float groupPullPower = 2.0f; //how close they must be in order to group up
 
-    private float visionRange = 5.0f;
+    private float visionRange = 10.0f;
     private float maxAngryTime = 2.0f;
 
     bool turning = false;
