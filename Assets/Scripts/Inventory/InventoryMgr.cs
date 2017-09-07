@@ -53,20 +53,26 @@ public class InventoryMgr : MonoBehaviour
 
     }
 
+	public void UpdateBagSlotsUsed()
+	{
+		BagSpaceText.text = string.Format("{0}/{1}", inventoryList.InventoryItems.Count, inventoryList.TotalBagSlots);
+	}
+
     public void PurchaseItem(Item purchasedItem)
     {
 		//deduct the money from player
 		Debug.Log("copper coins before" + inventoryList.CopperCoins);
 		Debug.Log("copper coins to deduct" + purchasedItem.PurchasePriceInCopper());//HOW FEED COINTYPE SO THE RELEVANT CURRENCY IS USED FOR PURCHASEPRICEINCOPPER
 
-		inventoryList.CopperCoins -= purchasedItem.PurchasePriceInCopper();
+		inventoryList.CopperCoins = Mathf.Max(inventoryList.CopperCoins- purchasedItem.PurchasePriceInCopper(),0);
 		Debug.Log("copper coins after" + inventoryList.CopperCoins);
-		inventoryList.GoldCoins -= purchasedItem.PurchasePriceInCopper();
-        inventoryList.SilverCoins -= purchasedItem.PurchasePriceInCopper();
+		inventoryList.GoldCoins = Mathf.Max(inventoryList.GoldCoins - purchasedItem.PurchasePriceInCopper(),0);
+        inventoryList.SilverCoins = Math.Max(inventoryList.SilverCoins - purchasedItem.PurchasePriceInCopper(),0);
         UpdateCurrency();
 
-        //add the item to the player's inventory
-        inventoryList.InventoryItems.Add(purchasedItem);
+		//add the item to the player's inventory
+		inventoryList.InventoryItems.Add(purchasedItem);
+		UpdateBagSlotsUsed();
 
 		//add it to the UI Screen
 		Transform ScrollViewContent = inventoryPanel.transform.Find("InvPanel/Scroll View/Viewport/Content");
@@ -80,9 +86,8 @@ public class InventoryMgr : MonoBehaviour
 		GameObject newCurrency = Instantiate(CurrencyTemplate, newItem.transform.Find("Currency/List"));
                 newCurrency.transform.localScale = Vector3.one;
 
-                /*newCurrency.transform.Find("Image").GetComponent<Image>().sprite = inventoryList.InventoryItems.Currency.Image;//TODO CURRENTLY NOT PICKING IT UP
-		newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.InventoryItems.Amount.ToString();*/
-
+		/*newCurrency.transform.Find("Image").GetComponent<Image>().sprite = inventoryList.InventoryItems.Currency.Image;//TODO CURRENTLY NOT PICKING IT UP
+newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.InventoryItems.Amount.ToString();*/
 	}
 
 	private void Update()
