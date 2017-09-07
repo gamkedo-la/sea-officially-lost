@@ -12,8 +12,17 @@ public class OxygenSystem : MonoBehaviour {
     float currentOxygenUnits;
     float oxygenUnit;
     private void Awake() {
-        oxygenUnit = oxygenBar.rectTransform.sizeDelta.y / maxOxygenUnits;
-        currentOxygenUnits = oxygenBar.rectTransform.sizeDelta.y;
+        if (oxygenBar)
+        {
+            oxygenUnit = oxygenBar.rectTransform.sizeDelta.y / maxOxygenUnits;
+            currentOxygenUnits = oxygenBar.rectTransform.sizeDelta.y;
+         
+        }
+        else
+        {
+            Debug.Log("oxygen bar not defined for oxygen system");
+        }
+        
     }
 
     //Starts depleting oxygen at one unit person second.

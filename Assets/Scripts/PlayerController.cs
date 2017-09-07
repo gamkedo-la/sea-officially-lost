@@ -72,9 +72,10 @@ public class PlayerController : MonoBehaviour {
 			Cursor.visible = false;
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         // Steering control
         /*transform.Rotate(Vector3.right, Input.GetAxis("Vertical") * pitchSpeed * Time.deltaTime * (upLooksDown ? 1.0f : -1.0f));
         transform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * yawSpeed * Time.deltaTime);
@@ -88,22 +89,25 @@ public class PlayerController : MonoBehaviour {
         transform.rotation = rotNow;
 
         speed += Input.GetAxis("Vertical") * swimSpeed * Time.deltaTime;
-		rb.AddForce(transform.forward * speed);
+        rb.AddForce(transform.forward * speed);
 
-		speedLateral += Input.GetAxis("Horizontal") * strafeSpeed * Time.deltaTime;
-		rb.AddForce(transform.right * speedLateral);
+        speedLateral += Input.GetAxis("Horizontal") * strafeSpeed * Time.deltaTime;
+        rb.AddForce(transform.right * speedLateral);
 
-        if (Input.GetButton("Jump")) {
+        if (Input.GetButton("Jump"))
+        {
             speedRise += riseSpeed * Time.deltaTime;
         }
 
         rb.AddForce(Vector3.up * speedRise);
 
-        if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.Tab)) {
+        if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.Tab))
+        {
             ReleaseMouse();
         }
 
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
             SceneManager.LoadScene("sealab v2");
         }
 
@@ -120,7 +124,7 @@ public class PlayerController : MonoBehaviour {
                 {
                     pickedUpItem = hit.transform.gameObject;
                     Debug.Log("Picked up " + hit.transform.gameObject.name);
-					inventoryMgr.GetComponent<InventoryMgr>().BuyOnClick(pickedUpItem);
+                    inventoryMgr.GetComponent<InventoryMgr>().BuyOnClick(pickedUpItem);
                 }
             }
         }
@@ -129,59 +133,66 @@ public class PlayerController : MonoBehaviour {
         RaycastHit rhInfo;
         bool inventoryInFrontOfMe = false;
         if (Physics.Raycast(transform.position, transform.forward, out rhInfo, scanRange))
-		{
-			Debug.Log("We hit: " + rhInfo.collider.name);
+        {
+            Debug.Log("We hit: " + rhInfo.collider.name);
             scannedItem = rhInfo.collider.gameObject.GetComponent<InventoryManager>();
             inventoryInFrontOfMe = (scannedItem != null);
-		}
-		else
-		{
-            if (scannedItem != null) {
-                scannedItem.ToggleInventoryPanel(false);    
+        }
+        else
+        {
+            if (scannedItem != null)
+            {
+                scannedItem.ToggleInventoryPanel(false);
             }
-		}
+        }
 
-		if (inventoryInFrontOfMe)
-		{
-			scannedItem.ToggleInventoryPanel(true);
+        if (inventoryInFrontOfMe)
+        {
+            scannedItem.ToggleInventoryPanel(true);
 
             if (Input.GetButtonDown("Fire1") && scannedItem.InventoryKnown())
-			{
-				scannedItem.TransferInventoryInto(playerInventory);
-			}
-		}
-		
-		if (Input.GetButtonDown("Fire2"))
-		{
-			scannerBeam.Play();
+            {
+                scannedItem.TransferInventoryInto(playerInventory);
+            }
+        }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            scannerBeam.Play();
             scanning = true;
-		}
-		if (Input.GetButtonUp("Fire2"))
-		{
-			
-			//scannedItem = null;
+        }
+        if (Input.GetButtonUp("Fire2"))
+        {
+
+            //scannedItem = null;
             scannerBeam.Stop();
 
             scanning = false;
-		}
+        }
 
         currentInventoryUsed = playerInventory.CountCurrentInventory();
 
-        if (scanning) {
+        if (scanning)
+        {
 
             scanAmount += Time.deltaTime * scanRate;
-            if (scanAmount >= scanProgress.maxValue) {
+            if (scanAmount >= scanProgress.maxValue)
+            {
                 scanAmount = scanProgress.maxValue;
-                if (inventoryInFrontOfMe) {
+                if (inventoryInFrontOfMe)
+                {
                     scannedItem.ScannedInventory();
-					Debug.Log("We are scanning and progress hit max: " + scanProgress.value);
+                    Debug.Log("We are scanning and progress hit max: " + scanProgress.value);
                 }
             }
 
-        } 
-        scanProgress.value = scanAmount;
-        insanityMeter.text = "Insanity: " + insanityCounter;
-	}
+        }
+        if (scanProgress)
+        {
+            scanProgress.value = scanAmount;
+            insanityMeter.text = "Insanity: " + insanityCounter;
+        }
+    }
 
     private void FixedUpdate()
     {

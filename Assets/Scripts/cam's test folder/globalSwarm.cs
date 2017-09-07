@@ -10,8 +10,10 @@ public class globalSwarm : MonoBehaviour {
 
     public Vector3 targetPosition = Vector3.zero;
 
-    static int creatureNumber = 10;
-    public GameObject[] allCreatures = new GameObject[creatureNumber];
+
+    public int creatureNumber = 10;
+    [HideInInspector]
+    public GameObject[] allCreatures;
 
     private void OnDrawGizmosSelected()
     {
@@ -25,6 +27,7 @@ public class globalSwarm : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        allCreatures = new GameObject[creatureNumber];
         thisSwarm = this;
         targetPosition = this.transform.position;
 
@@ -36,18 +39,23 @@ public class globalSwarm : MonoBehaviour {
                                            Random.Range(-swimLimits.z, swimLimits.z));
             allCreatures[i] = (GameObject)Instantiate(creaturePrefab, position, Quaternion.identity);
             allCreatures[i].GetComponent<Swarm>().myManager = this;
+            allCreatures[i].transform.SetParent(transform);
         }
+        StartCoroutine(changeTargets());
+
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	IEnumerator changeTargets ()
     {
-		if(Random.Range(0,10000) < 50)
+        while(true)
         {
             targetPosition = this.transform.position + new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
                                            Random.Range(-swimLimits.y, swimLimits.y),
                                            Random.Range(-swimLimits.z, swimLimits.z)
                                            );
+            yield return new WaitForSeconds(Random.Range(1.0f, 4.0f));
+      
         }
 	}
 }
