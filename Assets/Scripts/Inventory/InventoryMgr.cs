@@ -33,7 +33,9 @@ public class InventoryMgr : MonoBehaviour
 		nightSightItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/NightSight/Text").GetComponent<Text>();
 		phelpsFinsItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/PhelpsFins/Text").GetComponent<Text>();
 		cinziasLungsItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/CinziasLungs/Text").GetComponent<Text>();
-    }
+		onAwakeItemAttributeCalculation();
+
+	}
 
     public void Start()
     {
@@ -61,11 +63,10 @@ public class InventoryMgr : MonoBehaviour
     public void GetItem(Item addedItem)
     {
 		//add attribute of item 
-		Debug.Log("nightsight before" + inventoryList.NightSight);
-		Debug.Log("nightsight to deduct" + addedItem.ItemAttributeIncreaseAmountCalculation());//HOW FEED ITEMATTRIBUTE SO THE RELEVANT ITEMATTRIBUTE IS USED FOR ItemAttributeIncreaseAmountCalculation
+		//Debug.Log("nightsight before" + inventoryList.NightSight);
 		
-		inventoryList.NightSight= Mathf.Max(inventoryList.NightSight+addedItem.ItemAttributeIncreaseAmountCalculation(),0);
-		Debug.Log("nightsight after" + inventoryList.NightSight);
+		inventoryList.NightSight= Mathf.Max(inventoryList.NightSight+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
+		//Debug.Log("nightsight after" + inventoryList.NightSight);
 		inventoryList.PhelpsFins= Mathf.Max(inventoryList.PhelpsFins+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
         inventoryList.CinziasLungs= Math.Max(inventoryList.CinziasLungs+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
         UpdateItemAttribute();
@@ -86,7 +87,7 @@ public class InventoryMgr : MonoBehaviour
 		GameObject newItemAttribute = Instantiate(ItemAttributeTemplate, newItem.transform.Find("ItemAttribute/List"));
                 newItemAttribute.transform.localScale = Vector3.one;
 
-		/*newCurrency.transform.Find("Image").GetComponent<Image>().sprite = inventoryList.InventoryItems.Currency.Image;//TODO CURRENTLY NOT PICKING IT UP
+		/*newCurrency.transform.Find("Image").GetComponent<Image>().sprite = inventoryList.InventoryItems.Currency.Image;//TODO HOW PICK UP ATTRIBUTE?
 newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.InventoryItems.Amount.ToString();*/
 	}
 
@@ -149,10 +150,21 @@ newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.I
         }
     }
 
+	public void onAwakeItemAttributeCalculation()
+	{
+		Transform ScrollViewContent = inventoryPanel.transform.Find("InvPanel/Scroll View/Viewport/Content");
+		foreach (var item in inventoryList.InventoryItems)
+		{
+			inventoryList.NightSight += item.ItemAttributeIncreaseAmountCalculation();
+			inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmountCalculation();//TODO:which way to have array returned and not run the function 3 times? Currently ItemAttributeIncreaseAmountCalculation only returns NightSight, to set return for each itemattribute
+			inventoryList.CinziasLungs += item.ItemAttributeIncreaseAmountCalculation();
+		}
+	}
+
     public void CloseInventoryWindow()
     {
         inventoryPanel.SetActive(false);
-		//PlayerController playerController = gameObject.GetComponent<PlayerController>();//TODO: WHY CAN'T SET THIS IN START AND playerController.ReleaseMouse() in this method? Most importantly even here, why not work?
+		//PlayerController playerController = gameObject.GetComponent<PlayerController>();//TODO: WHY THIS LINE DOES NOT DO WHAT THE ONE BELOW DOES AND CAN'T SET THIS IN START (not update to optimize)?
 		playerController.GetComponent<PlayerController>().ReleaseMouse();
     }
     

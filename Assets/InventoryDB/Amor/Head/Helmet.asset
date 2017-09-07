@@ -17,5 +17,5 @@ MonoBehaviour:
   Sprite: {fileID: 21300000, guid: f5d57e571c0c6ac4e9aad6151b40c810, type: 3}
   ItemAttributeIncreaseAmount:
   - ItemAttribute: {fileID: 11400000, guid: b1a526d72572f994e8f5ad7125051c4b, type: 2}
-    Amount: 0
+    Amount: 5
   ItemType: 0
