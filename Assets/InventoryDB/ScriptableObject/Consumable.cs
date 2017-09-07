@@ -9,16 +9,17 @@ using System;
 [CreateAssetMenu(menuName = "Item/Consumables", fileName = "Consumable Name")]
 public class Consumable : Item
 {
-    [Header("Consumable Properties")]
-    public Types ItemType;
+    //[Header("Consumable Properties")]
+    //public Types ItemType;
 
-    public int Amount;
-    public enum Types
+    //public int Amount;
+	/*
+	public enum Types
     {
         ManaPotion,
         HealthPotion,
         Poison
-    }
+    }*/
 }
 
 

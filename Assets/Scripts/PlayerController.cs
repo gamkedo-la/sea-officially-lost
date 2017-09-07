@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour {
                 {
                     pickedUpItem = hit.transform.gameObject;
                     Debug.Log("Picked up " + hit.transform.gameObject.name);
-                    inventoryMgr.GetComponent<InventoryMgr>().BuyOnClick(pickedUpItem);
+                    inventoryMgr.GetComponent<InventoryMgr>().GetItem(pickedUpItem);
                 }
             }
         }

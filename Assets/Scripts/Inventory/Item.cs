@@ -21,28 +21,24 @@ public class Item : ScriptableObject
     [Tooltip("Item Image that is displayed on the UI")]
     public Sprite Sprite;
 
-    [Header("Trade Properties"), Tooltip("Currency and Price the player can purchase the item for")]
-    //public CurrencyDefinition[] PurchasePrice;
-    public List<CurrencyDefinition> PurchasePrice;
+    [Header("Trade Properties"), Tooltip("ItemAttribute and AttributeIncreaseAmount the player can gain with this item")]
+    public List<ItemAttributeDefinition> ItemAttributeIncreaseAmount;
 
-    [Range(0,1), Tooltip("Deduction the merchant takes to purchase the item back")]
-    public float SellPriceReduction = 0.10f;
-
-    public int PurchasePriceInCopper()
+    public int ItemAttributeIncreaseAmountCalculation()
     {
-		int copperCoins = 0;
-		int silverCoins = 0;
-		int goldCoins = 0;
+		int nightSight = 0;
+		int phelpsFins = 0;
+		int cinziasLungs = 0;
 		//Debug.Log("coinType +" + coinType);
 		//coinType = 0;
 		//if (coinType.Equals("CopperCoins"))
 		//{
 		//Debug.Log("Coin is Copper in coinType.Equals");
-		copperCoins += PurchasePrice.Where(x => x.Currency.Name.Equals("Copper Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-        //}
-		goldCoins+= PurchasePrice.Where(x => x.Currency.Name.Equals("Gold Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-        silverCoins+= PurchasePrice.Where(x => x.Currency.Name.Equals("Silver Coin")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+		nightSight += ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Night Sight")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+		//}
+		phelpsFins += ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Phelps Fins")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+		cinziasLungs += ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Cinzias Lungs")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 
-		return copperCoins;//TODO: NEED TO SETUP TO RETURN THE THREE
+		return nightSight;//TODO: NEED TO SETUP TO RETURN THE THREE
     }
 }

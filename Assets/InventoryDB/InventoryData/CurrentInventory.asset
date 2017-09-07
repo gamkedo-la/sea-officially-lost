@@ -9,17 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4d8fddeff567614f8a450723b4e3189, type: 3}
-  m_Name: CurrentInventory
+  m_Name: currentInventory
   m_EditorClassIdentifier: 
   InventoryItems:
-  - {fileID: 11400000, guid: 6371e54b31411e243a4f9fe14022f07f, type: 2}
-  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
-  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
-  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
-  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
-  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
-  - {fileID: 11400000, guid: 18374cbbe8c174a48a9b545eabd72acc, type: 2}
-  CopperCoins: -5
-  GoldCoins: -5
-  SilverCoins: -5
+  - {fileID: 11400000, guid: 4f0afae46ae3dcb4093ba5d23cb99510, type: 2}
+  - {fileID: 11400000, guid: 343d3d3ec009f9a489a8c63604f373cf, type: 2}
+  - {fileID: 11400000, guid: 7538aece492c2b1439271b40410724af, type: 2}
+  - {fileID: 11400000, guid: 7538aece492c2b1439271b40410724af, type: 2}
+  NightSight: 16
+  PhelpsFins: 16
+  CinziasLungs: 16
   TotalBagSlots: 12

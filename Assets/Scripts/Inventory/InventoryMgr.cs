@@ -16,23 +16,23 @@ public class InventoryMgr : MonoBehaviour
     [SerializeField]
     private GameObject ItemTemplate;//Inventory Item Container
     [SerializeField]
-    private GameObject CurrencyTemplate;
+    private GameObject ItemAttributeTemplate;
     [SerializeField]
     public WorldItems worldItems;
 
     private Text BagSpaceText;
-    private Text copperCurrencyText;
-    private Text goldCurrencyText;
-    private Text silverCurrencyText;
+    private Text nightSightItemAttributeText;
+    private Text phelpsFinsItemAttributeText;
+    private Text cinziasLungsItemAttributeText;
 	public GameObject playerController;
 
 
 	private void Awake()
     {
         BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
-        copperCurrencyText = inventoryPanel.transform.Find("Footer/CurrencyDetails/Coin_Copper/Text").GetComponent<Text>();
-        goldCurrencyText = inventoryPanel.transform.Find("Footer/CurrencyDetails/Coin_Gold/Text").GetComponent<Text>();
-        silverCurrencyText = inventoryPanel.transform.Find("Footer/CurrencyDetails/Coin_Silver/Text").GetComponent<Text>();
+		nightSightItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/NightSight/Text").GetComponent<Text>();
+		phelpsFinsItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/PhelpsFins/Text").GetComponent<Text>();
+		cinziasLungsItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/CinziasLungs/Text").GetComponent<Text>();
     }
 
     public void Start()
@@ -40,16 +40,16 @@ public class InventoryMgr : MonoBehaviour
         BagSpaceText.text = string.Format("{0}/{1}", inventoryList.InventoryItems.Count, inventoryList.TotalBagSlots);
 		
 		
-		UpdateCurrency();
+		UpdateItemAttribute();
     }
     
-    public void UpdateCurrency()
+    public void UpdateItemAttribute()
     {
-        int[] cur = inventoryList.GetCoinCurrency();
+        int[] attr = inventoryList.GetItemAttributeAmount();
 
-        copperCurrencyText.text = cur[0].ToString();
-        goldCurrencyText.text = cur[1].ToString();
-        silverCurrencyText.text = cur[2].ToString();
+		nightSightItemAttributeText.text = attr[0].ToString();
+		phelpsFinsItemAttributeText.text = attr[1].ToString();
+		cinziasLungsItemAttributeText.text = attr[2].ToString();
 
     }
 
@@ -58,20 +58,20 @@ public class InventoryMgr : MonoBehaviour
 		BagSpaceText.text = string.Format("{0}/{1}", inventoryList.InventoryItems.Count, inventoryList.TotalBagSlots);
 	}
 
-    public void PurchaseItem(Item purchasedItem)
+    public void GetItem(Item addedItem)
     {
-		//deduct the money from player
-		Debug.Log("copper coins before" + inventoryList.CopperCoins);
-		Debug.Log("copper coins to deduct" + purchasedItem.PurchasePriceInCopper());//HOW FEED COINTYPE SO THE RELEVANT CURRENCY IS USED FOR PURCHASEPRICEINCOPPER
-
-		inventoryList.CopperCoins = Mathf.Max(inventoryList.CopperCoins- purchasedItem.PurchasePriceInCopper(),0);
-		Debug.Log("copper coins after" + inventoryList.CopperCoins);
-		inventoryList.GoldCoins = Mathf.Max(inventoryList.GoldCoins - purchasedItem.PurchasePriceInCopper(),0);
-        inventoryList.SilverCoins = Math.Max(inventoryList.SilverCoins - purchasedItem.PurchasePriceInCopper(),0);
-        UpdateCurrency();
+		//add attribute of item 
+		Debug.Log("nightsight before" + inventoryList.NightSight);
+		Debug.Log("nightsight to deduct" + addedItem.ItemAttributeIncreaseAmountCalculation());//HOW FEED ITEMATTRIBUTE SO THE RELEVANT ITEMATTRIBUTE IS USED FOR ItemAttributeIncreaseAmountCalculation
+		
+		inventoryList.NightSight= Mathf.Max(inventoryList.NightSight+addedItem.ItemAttributeIncreaseAmountCalculation(),0);
+		Debug.Log("nightsight after" + inventoryList.NightSight);
+		inventoryList.PhelpsFins= Mathf.Max(inventoryList.PhelpsFins+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
+        inventoryList.CinziasLungs= Math.Max(inventoryList.CinziasLungs+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
+        UpdateItemAttribute();
 
 		//add the item to the player's inventory
-		inventoryList.InventoryItems.Add(purchasedItem);
+		inventoryList.InventoryItems.Add(addedItem);
 		UpdateBagSlotsUsed();
 
 		//add it to the UI Screen
@@ -79,12 +79,12 @@ public class InventoryMgr : MonoBehaviour
 		GameObject newItem = Instantiate(ItemTemplate, ScrollViewContent);
 		newItem.transform.localScale = Vector3.one;
 
-		newItem.transform.Find("Image/ItemImage").GetComponent<Image>().sprite = purchasedItem.Sprite;
-		newItem.transform.Find("ItemName").GetComponent<Text>().text = purchasedItem.Name;
-		newItem.transform.Find("Description").GetComponent<Text>().text = purchasedItem.Description;
+		newItem.transform.Find("Image/ItemImage").GetComponent<Image>().sprite = addedItem.Sprite;
+		newItem.transform.Find("ItemName").GetComponent<Text>().text = addedItem.Name;
+		newItem.transform.Find("Description").GetComponent<Text>().text = addedItem.Description;
 
-		GameObject newCurrency = Instantiate(CurrencyTemplate, newItem.transform.Find("Currency/List"));
-                newCurrency.transform.localScale = Vector3.one;
+		GameObject newItemAttribute = Instantiate(ItemAttributeTemplate, newItem.transform.Find("ItemAttribute/List"));
+                newItemAttribute.transform.localScale = Vector3.one;
 
 		/*newCurrency.transform.Find("Image").GetComponent<Image>().sprite = inventoryList.InventoryItems.Currency.Image;//TODO CURRENTLY NOT PICKING IT UP
 newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.InventoryItems.Amount.ToString();*/
@@ -97,7 +97,6 @@ newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.I
             ToggleInventoryWindow();
         }   
     }
-
     private void ToggleInventoryWindow()
     {
         ClearBufferInventory();
@@ -116,13 +115,13 @@ newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.I
         }
     }
 
-    public void BuyOnClick(GameObject pickedUpItem)
+    public void GetItem(GameObject pickedUpItem)
     {
-		Item purchasedItem = worldItems.AvailableWorldItems.Find(x => x.Name.Equals(
+		Item addedItem = worldItems.AvailableWorldItems.Find(x => x.Name.Equals(
 			pickedUpItem.gameObject.name));
 		
-		Debug.Log("purchItem " + purchasedItem);
-		PurchaseItem(purchasedItem);
+		Debug.Log("purchItem " + addedItem);
+		GetItem(addedItem);
 		
         pickedUpItem.SetActive(false);
     }
@@ -139,13 +138,13 @@ newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.I
             newItem.transform.Find("ItemName").GetComponent<Text>().text = item.Name;
             newItem.transform.Find("Description").GetComponent<Text>().text = item.Description;
 
-            foreach (var cur in item.PurchasePrice)
+            foreach (var attr in item.ItemAttributeIncreaseAmount)
             {
-                GameObject newCurrency = Instantiate(CurrencyTemplate, newItem.transform.Find("Currency/List"));
-                newCurrency.transform.localScale = Vector3.one;
+                GameObject newItemAttribute = Instantiate(ItemAttributeTemplate, newItem.transform.Find("ItemAttribute/List"));
+                newItemAttribute.transform.localScale = Vector3.one;
 
-                newCurrency.transform.Find("Image").GetComponent<Image>().sprite = cur.Currency.Image;
-                newCurrency.transform.Find("Amount").GetComponent<Text>().text = cur.Amount.ToString();
+                newItemAttribute.transform.Find("Image").GetComponent<Image>().sprite = attr.ItemAttribute.Image;
+                newItemAttribute.transform.Find("Amount").GetComponent<Text>().text = attr.Amount.ToString();
 			}
         }
     }

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3937dcf4039a98e438b5dcf542cb7a0b, type: 3}
-  m_Name: SilverCoin
+  m_Name: phelpsFins
   m_EditorClassIdentifier: 
-  Name: Silver Coin
-  Image: {fileID: 21300000, guid: 7d58f29bde62d794589e335c5e5fb712, type: 3}
+  Name: Phelps Fins
+  Image: {fileID: 21300000, guid: 204d5e1f93c7fef4f9eb257b6c27be5b, type: 3}

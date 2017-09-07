@@ -1070,7 +1070,7 @@ GameObject:
   - component: {fileID: 237782478}
   - component: {fileID: 237782477}
   m_Layer: 0
-  m_Name: CurrencyDetails
+  m_Name: ItemAttributeDetails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3005,11 +3005,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061afb3ccb9bab74c94c63e0f85862be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryList: {fileID: 11400000, guid: 84d79f74d71fcaa49b210e4c5b232ff4, type: 2}
+  inventoryList: {fileID: 11400000, guid: 0f5e06b8c0f85604389341f952b36085, type: 2}
   inventoryPanel: {fileID: 1697570499}
   ItemTemplate: {fileID: 1610398985674920, guid: ca3729676feea134ba01c57dc2999e59,
     type: 2}
-  CurrencyTemplate: {fileID: 1070073969947090, guid: 875cc62071b3cc74f87261e741086173,
+  ItemAttributeTemplate: {fileID: 1070073969947090, guid: 875cc62071b3cc74f87261e741086173,
     type: 2}
   worldItems: {fileID: 11400000, guid: 753e678877d93b54fae56db01293dc38, type: 2}
   playerController: {fileID: 233339995}
@@ -3032,7 +3032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &850492983
 Animator:
   serializedVersion: 3
@@ -3624,7 +3624,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1592000395}
   m_HandleRect: {fileID: 1592000394}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4277,7 +4277,6 @@ GameObject:
   - component: {fileID: 1536379350}
   - component: {fileID: 1536379353}
   - component: {fileID: 1536379352}
-  - component: {fileID: 1536379351}
   m_Layer: 0
   m_Name: Bgimage
   m_TagString: Untagged
@@ -4305,18 +4304,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.16052246}
   m_SizeDelta: {x: -896, y: -60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1536379351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114912829261232848, guid: 850c905b10f6aba4fa1042d70fb24a2f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1536379349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff650ef30e560104b85ca2f9a303e1c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1536379352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8706,7 +8693,7 @@ GameObject:
   - component: {fileID: 1908294537}
   - component: {fileID: 1908294536}
   m_Layer: 0
-  m_Name: Coin_Silver
+  m_Name: CinziasLungs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8786,7 +8773,7 @@ GameObject:
   - component: {fileID: 1917786561}
   - component: {fileID: 1917786560}
   m_Layer: 0
-  m_Name: Coin_Copper
+  m_Name: NightSight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12773,7 +12760,7 @@ GameObject:
   - component: {fileID: 2125481460}
   - component: {fileID: 2125481459}
   m_Layer: 0
-  m_Name: Coin_Gold
+  m_Name: PhelpsFins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

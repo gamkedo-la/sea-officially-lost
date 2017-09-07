@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3937dcf4039a98e438b5dcf542cb7a0b, type: 3}
-  m_Name: CopperCoin
+  m_Name: nightSight
   m_EditorClassIdentifier: 
-  Name: Copper Coin
-  Image: {fileID: 21300000, guid: a43149fe2ad3bdc4e91523203c1c4240, type: 3}
+  Name: Night Sight
+  Image: {fileID: 21300000, guid: 8812f25cea9ef8548a3b38a2fcfe11e2, type: 3}

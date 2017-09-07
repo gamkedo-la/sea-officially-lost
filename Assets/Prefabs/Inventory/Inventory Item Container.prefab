@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 222178560812347924}
   - component: {fileID: 114380066409890918}
   m_Layer: 0
-  m_Name: Currency
+  m_Name: ItemAttribute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

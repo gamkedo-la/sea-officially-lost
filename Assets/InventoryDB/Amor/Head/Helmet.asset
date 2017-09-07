@@ -8,13 +8,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fb44c317670b5247ad1361319d71991, type: 3}
-  m_Name: testnotdelete
+  m_Script: {fileID: 11500000, guid: 883951b442bfcdc4cb27f774171fba0c, type: 3}
+  m_Name: Helmet
   m_EditorClassIdentifier: 
-  Name: testnotdelete
+  Name: Helmet
   Description: Item Description
   MinimumPlayerLevel: 0
-  Sprite: {fileID: 21300000, guid: eebb8bba60d4ca34eaa4a447051965b6, type: 3}
+  Sprite: {fileID: 21300000, guid: f5d57e571c0c6ac4e9aad6151b40c810, type: 3}
   ItemAttributeIncreaseAmount:
   - ItemAttribute: {fileID: 11400000, guid: b1a526d72572f994e8f5ad7125051c4b, type: 2}
-    Amount: 3
+    Amount: 0
+  ItemType: 0
