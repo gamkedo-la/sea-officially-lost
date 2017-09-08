@@ -26,8 +26,7 @@ public class InventoryMgr : MonoBehaviour
     private Text breathItemAttributeText;
 	public GameObject playerController;
 
-
-	private void Awake()
+	public void Awake()
     {
         BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
 		nightSightItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/NightSight/Text").GetComponent<Text>();
@@ -83,12 +82,7 @@ public class InventoryMgr : MonoBehaviour
 		newItem.transform.Find("Image/ItemImage").GetComponent<Image>().sprite = addedItem.Sprite;
 		newItem.transform.Find("ItemName").GetComponent<Text>().text = addedItem.Name;
 		newItem.transform.Find("Description").GetComponent<Text>().text = addedItem.Description;
-
-		GameObject newItemAttribute = Instantiate(ItemAttributeTemplate, newItem.transform.Find("ItemAttribute/List"));
-                newItemAttribute.transform.localScale = Vector3.one;
-
-		/*newCurrency.transform.Find("Image").GetComponent<Image>().sprite = inventoryList.InventoryItems.Currency.Image;//TODO HOW PICK UP ATTRIBUTE?
-newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.InventoryItems.Amount.ToString();*/
+		populateAttributesForItem(addedItem, newItem);
 	}
 
 	private void Update()
@@ -138,17 +132,22 @@ newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.I
             newItem.transform.Find("Image/ItemImage").GetComponent<Image>().sprite = item.Sprite;
             newItem.transform.Find("ItemName").GetComponent<Text>().text = item.Name;
             newItem.transform.Find("Description").GetComponent<Text>().text = item.Description;
-
-            foreach (var attr in item.ItemAttributeIncreaseAmount)
-            {
-                GameObject newItemAttribute = Instantiate(ItemAttributeTemplate, newItem.transform.Find("ItemAttribute/List"));
-                newItemAttribute.transform.localScale = Vector3.one;
-
-                newItemAttribute.transform.Find("Image").GetComponent<Image>().sprite = attr.ItemAttribute.Image;
-                newItemAttribute.transform.Find("Amount").GetComponent<Text>().text = attr.Amount.ToString();
-			}
+			populateAttributesForItem(item, newItem);
+            
         }
     }
+
+	public void populateAttributesForItem(Item whichItem, GameObject whichGO)
+	{
+		foreach (var attr in whichItem.ItemAttributeIncreaseAmount)
+		{
+			GameObject newItemAttribute = Instantiate(ItemAttributeTemplate, whichGO.transform.Find("ItemAttribute/List"));
+			newItemAttribute.transform.localScale = Vector3.one;
+
+			newItemAttribute.transform.Find("Image").GetComponent<Image>().sprite = attr.ItemAttribute.Image;
+			newItemAttribute.transform.Find("Amount").GetComponent<Text>().text = attr.Amount.ToString();
+		}
+	}
 
 	public void onAwakeItemAttributeCalculation()
 	{

@@ -14,7 +14,7 @@ MonoBehaviour:
   InventoryItems:
   - {fileID: 11400000, guid: 4f0afae46ae3dcb4093ba5d23cb99510, type: 2}
   - {fileID: 11400000, guid: 343d3d3ec009f9a489a8c63604f373cf, type: 2}
-  NightSight: 45
-  PhelpsFins: 45
-  Breath: 45
+  NightSight: 95
+  PhelpsFins: 95
+  Breath: 95
   TotalBagSlots: 12
