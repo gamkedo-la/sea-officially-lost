@@ -23,7 +23,7 @@ public class InventoryMgr : MonoBehaviour
     private Text BagSpaceText;
     private Text nightSightItemAttributeText;
     private Text phelpsFinsItemAttributeText;
-    private Text cinziasLungsItemAttributeText;
+    private Text breathItemAttributeText;
 	public GameObject playerController;
 
 
@@ -32,7 +32,7 @@ public class InventoryMgr : MonoBehaviour
         BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
 		nightSightItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/NightSight/Text").GetComponent<Text>();
 		phelpsFinsItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/PhelpsFins/Text").GetComponent<Text>();
-		cinziasLungsItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/CinziasLungs/Text").GetComponent<Text>();
+		breathItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/Breath/Text").GetComponent<Text>();
 		onAwakeItemAttributeCalculation();
 
 	}
@@ -51,7 +51,7 @@ public class InventoryMgr : MonoBehaviour
 
 		nightSightItemAttributeText.text = attr[0].ToString();
 		phelpsFinsItemAttributeText.text = attr[1].ToString();
-		cinziasLungsItemAttributeText.text = attr[2].ToString();
+		breathItemAttributeText.text = attr[2].ToString();
 
     }
 
@@ -68,7 +68,7 @@ public class InventoryMgr : MonoBehaviour
 		inventoryList.NightSight= Mathf.Max(inventoryList.NightSight+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
 		//Debug.Log("nightsight after" + inventoryList.NightSight);
 		inventoryList.PhelpsFins= Mathf.Max(inventoryList.PhelpsFins+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
-        inventoryList.CinziasLungs= Math.Max(inventoryList.CinziasLungs+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
+        inventoryList.Breath= Math.Max(inventoryList.Breath+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
         UpdateItemAttribute();
 
 		//add the item to the player's inventory
@@ -157,7 +157,7 @@ newCurrency.transform.Find("Amount").GetComponent<Text>().text = inventoryList.I
 		{
 			inventoryList.NightSight += item.ItemAttributeIncreaseAmountCalculation();
 			inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmountCalculation();//TODO:which way to have array returned and not run the function 3 times? Currently ItemAttributeIncreaseAmountCalculation only returns NightSight, to set return for each itemattribute
-			inventoryList.CinziasLungs += item.ItemAttributeIncreaseAmountCalculation();
+			inventoryList.Breath += item.ItemAttributeIncreaseAmountCalculation();
 		}
 	}
 

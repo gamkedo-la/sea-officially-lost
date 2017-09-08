@@ -28,7 +28,7 @@ public class Item : ScriptableObject
     {
 		int nightSight = 0;
 		int phelpsFins = 0;
-		int cinziasLungs = 0;
+		int breath = 0;
 		//Debug.Log("coinType +" + coinType);
 		//coinType = 0;
 		//if (coinType.Equals("CopperCoins"))
@@ -37,7 +37,7 @@ public class Item : ScriptableObject
 		nightSight += ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Night Sight")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 		//}
 		phelpsFins += ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Phelps Fins")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-		cinziasLungs += ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Cinzias Lungs")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+		breath += ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Breath")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 
 		return nightSight;//TODO: NEED TO SETUP TO RETURN THE THREE
     }

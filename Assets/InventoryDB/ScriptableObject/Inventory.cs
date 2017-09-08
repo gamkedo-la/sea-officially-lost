@@ -9,7 +9,7 @@ public class Inventory : ScriptableObject {
 
     public int NightSight;
     public int PhelpsFins;
-    public int CinziasLungs;
+    public int Breath;
     [Range(12, 24)]
     public int TotalBagSlots;
 
@@ -21,7 +21,7 @@ public class Inventory : ScriptableObject {
 
         itemAttribute[0] = NightSight;
         itemAttribute[1] = PhelpsFins;
-        itemAttribute[2] = CinziasLungs;
+        itemAttribute[2] = Breath;
 
         return itemAttribute;//WHY CAN'T USE return currency;??
     }

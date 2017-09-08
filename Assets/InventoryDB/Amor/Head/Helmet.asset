@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: Helmet
   m_EditorClassIdentifier: 
   Name: Helmet
-  Description: Item Description
+  Description: This helmet crafted from meteorite rock is light and quite indistructible!
+    Reduces damage by 25%.
   MinimumPlayerLevel: 0
   Sprite: {fileID: 21300000, guid: f5d57e571c0c6ac4e9aad6151b40c810, type: 3}
   ItemAttributeIncreaseAmount:
