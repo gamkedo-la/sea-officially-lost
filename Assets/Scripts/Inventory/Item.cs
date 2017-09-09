@@ -21,10 +21,10 @@ public class Item : ScriptableObject
     [Tooltip("Item Image that is displayed on the UI")]
     public Sprite Sprite;
 
-    [Header("Trade Properties"), Tooltip("ItemAttribute and AttributeIncreaseAmount the player can gain with this item")]
+    [Header("Attribute Properties"), Tooltip("ItemAttribute and AttributeIncreaseAmount the player can gain with this item")]
     public List<ItemAttributeDefinition> ItemAttributeIncreaseAmount;
 
-    public int ItemAttributeIncreaseAmountCalculation()
+    /*public int ItemAttributeIncreaseAmountCalculation()
     {
 		int nightSight = 0;
 		int phelpsFins = 0;
@@ -40,5 +40,5 @@ public class Item : ScriptableObject
 		breath += ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Breath")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 
 		return nightSight;//TODO: NEED TO SETUP TO RETURN THE THREE
-    }
+    }*/
 }
