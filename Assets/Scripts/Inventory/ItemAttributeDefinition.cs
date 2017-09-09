@@ -9,5 +9,5 @@ using System;
 public class ItemAttributeDefinition
 {
     public ItemAttribute ItemAttribute;
-    public int Amount = 1;
+    public int Amount = 0;
 }

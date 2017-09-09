@@ -28,12 +28,14 @@ public class InventoryMgr : MonoBehaviour
 
 	public void Awake()
     {
-        BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
+		inventoryList.NightSight = 0;
+		inventoryList.PhelpsFins = 0;
+		inventoryList.Breath = 0;
+		BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
 		nightSightItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/NightSight/Text").GetComponent<Text>();
 		phelpsFinsItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/PhelpsFins/Text").GetComponent<Text>();
 		breathItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/Breath/Text").GetComponent<Text>();
 		onAwakeItemAttributeCalculation();
-
 	}
 
     public void Start()
@@ -64,11 +66,15 @@ public class InventoryMgr : MonoBehaviour
 		//add attribute of item 
 		//Debug.Log("nightsight before" + inventoryList.NightSight);
 		
-		inventoryList.NightSight= Mathf.Max(inventoryList.NightSight+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
-		//Debug.Log("nightsight after" + inventoryList.NightSight);
-		inventoryList.PhelpsFins= Mathf.Max(inventoryList.PhelpsFins+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
-        inventoryList.Breath= Math.Max(inventoryList.Breath+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
-        UpdateItemAttribute();
+		//inventoryList.NightSight= Mathf.Max(inventoryList.NightSight+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
+		inventoryList.NightSight += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Night Sight")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+		inventoryList.PhelpsFins += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Phelps Fins")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+		//inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmountCalculation();//TODO:which way to have array returned and not run the function 3 times? Currently ItemAttributeIncreaseAmountCalculation only returns NightSight, to set return for each itemattribute
+		//inventoryList.Breath += item.ItemAttributeIncreaseAmountCalculation();
+		inventoryList.Breath += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Breath")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+		
+
+		UpdateItemAttribute();
 
 		//add the item to the player's inventory
 		inventoryList.InventoryItems.Add(addedItem);
@@ -154,9 +160,13 @@ public class InventoryMgr : MonoBehaviour
 		Transform ScrollViewContent = inventoryPanel.transform.Find("InvPanel/Scroll View/Viewport/Content");
 		foreach (var item in inventoryList.InventoryItems)
 		{
-			inventoryList.NightSight += item.ItemAttributeIncreaseAmountCalculation();
-			inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmountCalculation();//TODO:which way to have array returned and not run the function 3 times? Currently ItemAttributeIncreaseAmountCalculation only returns NightSight, to set return for each itemattribute
-			inventoryList.Breath += item.ItemAttributeIncreaseAmountCalculation();
+
+			//inventoryList.NightSight += item.ItemAttributeIncreaseAmountCalculation();
+			inventoryList.NightSight += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Night Sight")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+			inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Phelps Fins")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+			//inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmountCalculation();//TODO:which way to have array returned and not run the function 3 times? Currently ItemAttributeIncreaseAmountCalculation only returns NightSight, to set return for each itemattribute
+			//inventoryList.Breath += item.ItemAttributeIncreaseAmountCalculation();
+			inventoryList.Breath += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Breath")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 		}
 	}
 
