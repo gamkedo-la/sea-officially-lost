@@ -9,14 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4d8fddeff567614f8a450723b4e3189, type: 3}
-  m_Name: currentInventory
+  m_Name: CurrentInventory
   m_EditorClassIdentifier: 
   InventoryItems:
   - {fileID: 11400000, guid: 4f0afae46ae3dcb4093ba5d23cb99510, type: 2}
   - {fileID: 11400000, guid: 343d3d3ec009f9a489a8c63604f373cf, type: 2}
-  - {fileID: 11400000, guid: 7538aece492c2b1439271b40410724af, type: 2}
-  - {fileID: 11400000, guid: 7538aece492c2b1439271b40410724af, type: 2}
-  NightSight: 11
+  NightSight: 5
   PhelpsFins: 0
   Breath: 2
   TotalBagSlots: 12
