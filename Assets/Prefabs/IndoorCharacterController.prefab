@@ -21,8 +21,24 @@ GameObject:
   - component: {fileID: 224179582264075234}
   - component: {fileID: 222110236013487572}
   - component: {fileID: 114447088357212362}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1113089026465738
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4235553220576514}
+  - component: {fileID: 108104527425180324}
+  m_Layer: 0
+  m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +71,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4883368473757666}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: light stuff only (no models)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,6 +91,7 @@ GameObject:
   - component: {fileID: 114711019422646034}
   - component: {fileID: 114728790315766108}
   - component: {fileID: 114479866349351566}
+  - component: {fileID: 114580694307227672}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -93,7 +110,7 @@ GameObject:
   - component: {fileID: 223209102889422442}
   - component: {fileID: 114403958485482200}
   - component: {fileID: 114480857703568502}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: flashlightCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,24 +160,8 @@ GameObject:
   - component: {fileID: 33502686118083666}
   - component: {fileID: 23775736840217416}
   - component: {fileID: 114435789078624708}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: model_flashlight
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1974344520090498
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4773846177568666}
-  - component: {fileID: 108825671802745752}
-  m_Layer: 0
-  m_Name: NoCookieLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +178,7 @@ GameObject:
   - component: {fileID: 33444286194636248}
   - component: {fileID: 65343348303763148}
   - component: {fileID: 23289111378667386}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: powerDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,6 +197,19 @@ Transform:
   m_Children:
   - {fileID: 224802445313640142}
   m_Father: {fileID: 4801853506859590}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4235553220576514
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1113089026465738}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.09, y: 0.86, z: -0.91}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4883368473757666}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4313654958285906
@@ -239,19 +253,6 @@ Transform:
   m_Father: {fileID: 4313654958285906}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4773846177568666
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1974344520090498}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.19999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4883368473757666}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4801853506859590
 Transform:
   m_ObjectHideFlags: 1
@@ -292,7 +293,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4399224011944852}
-  - {fileID: 4773846177568666}
+  - {fileID: 4235553220576514}
   m_Father: {fileID: 4801853506859590}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -527,9 +528,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.9744422, g: 1, b: 0.53676474, a: 1}
-  m_Intensity: 12
-  m_Range: 14
-  m_SpotAngle: 68
+  m_Intensity: 2.7
+  m_Range: 30
+  m_SpotAngle: 90
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -539,7 +540,7 @@ Light:
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
-  m_Cookie: {fileID: 2800000, guid: a08d2d395469749cfb32588b44e57aa5, type: 3}
+  m_Cookie: {fileID: 2800000, guid: 594953c20d3cf1c43b3627f1918df4b7, type: 3}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -567,22 +568,22 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!108 &108825671802745752
+--- !u!108 &108104527425180324
 Light:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1974344520090498}
+  m_GameObject: {fileID: 1113089026465738}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 0
+  m_Type: 2
   m_Color: {r: 0.9744422, g: 1, b: 0.53676474, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 89
+  m_Intensity: 0.9
+  m_Range: 1.2
+  m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -595,10 +596,10 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294959071
+    m_Bits: 8192
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_FalloffTable:
     m_Table[0]: 0
     m_Table[1]: 0
@@ -816,6 +817,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+--- !u!114 &114580694307227672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1561443955132866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 4800ae3dfa3838c49999e031f89c7906, type: 2}
 --- !u!114 &114623761571639730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -828,7 +841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashlight: {fileID: 108088426387435862}
-  cookie: {fileID: 108825671802745752}
+  cookie: {fileID: 0}
 --- !u!114 &114711019422646034
 MonoBehaviour:
   m_ObjectHideFlags: 1
