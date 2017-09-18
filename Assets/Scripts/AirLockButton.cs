@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class AirLockButton : MonoBehaviour {
-    
-	
+
+    public string sceneToLoad ;
 	public void ClickAction () {
-		SceneManager.LoadScene("main");
+		SceneManager.LoadScene(sceneToLoad);
 	}
 }

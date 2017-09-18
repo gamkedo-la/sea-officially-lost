@@ -104,13 +104,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
 
-            if (Input.GetMouseButtonDown(0)) {
-                RaycastHit rhInfo;
-                if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, 5.0f, ~LayerMask.GetMask("Ignore Raycast"))) {
-                    Debug.Log("Raycast hit " + rhInfo.collider.gameObject.name);
-                    rhInfo.collider.gameObject.SendMessage("ClickAction", SendMessageOptions.DontRequireReceiver);
-                }
-            }
         }
 
 
