@@ -3442,6 +3442,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1220324752079138, guid: 97abf07061fa7a6438e5813c0046a2d1,
         type: 2}
+    - target: {fileID: 114199074042040204, guid: 67644a50305228f45ad10b0db8fd460b,
+        type: 2}
+      propertyPath: rangeToSpawn
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67644a50305228f45ad10b0db8fd460b, type: 2}
   m_IsPrefabParent: 0

@@ -241,6 +241,11 @@ Prefab:
       propertyPath: creatureNumber
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114199074042040204, guid: 67644a50305228f45ad10b0db8fd460b,
+        type: 2}
+      propertyPath: rangeToSpawn
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67644a50305228f45ad10b0db8fd460b, type: 2}
   m_IsPrefabParent: 0
