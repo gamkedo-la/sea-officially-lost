@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{40A4BCE0-66D9-45A1-B992-9A9C6A7C7E4A}" SchemaVersion="80">
+	<Events>
+		<WorkUnit Name="Audio logs" ID="{40A4BCE0-66D9-45A1-B992-9A9C6A7C7E4A}" PersistMode="Standalone"/>
+	</Events>
+</WwiseDocument>

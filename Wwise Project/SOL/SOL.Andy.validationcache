@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="80">
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Actor-Mixer Hierarchy\Audio Logs.wwu" DateLow="1814620178" DateHigh="30618393"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3570048637" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Actor-Mixer Hierarchy\Sealab_Player.wwu" DateLow="3570663717" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Actor-Mixer Hierarchy\Test Ambience.wwu" DateLow="3571343798" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Actor-Mixer Hierarchy\Whispers.wwu" DateLow="1814505159" DateHigh="30618393"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Attenuations\Default Work Unit.wwu" DateLow="3571998888" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Audio Devices\Default Work Unit.wwu" DateLow="3572678973" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Control Surface Sessions\Default Work Unit.wwu" DateLow="3573339064" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Conversion Settings\Default Work Unit.wwu" DateLow="3573944131" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Conversion Settings\Factory Conversion Settings.wwu" DateLow="3574534208" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Dynamic Dialogue\Default Work Unit.wwu" DateLow="3575114280" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Effects\Default Work Unit.wwu" DateLow="3575704353" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Effects\Factory Effects.wwu" DateLow="3576324438" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Events\Audio logs.wwu" DateLow="407411762" DateHigh="30618391"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Events\Default Work Unit.wwu" DateLow="3576919510" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Events\Whispers.wwu" DateLow="557931123" DateHigh="30618391"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Game Parameters\Default Work Unit.wwu" DateLow="3577504590" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3595741914" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3596447003" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Mixing Sessions\Default Work Unit.wwu" DateLow="3597052082" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Modulators\Default Work Unit.wwu" DateLow="3597647163" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Presets\Default Work Unit.wwu" DateLow="3608978600" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Queries\Default Work Unit.wwu" DateLow="3609543678" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Queries\Factory Queries.wwu" DateLow="3610133745" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\SOL.Andy.wsettings" DateLow="1939891148" DateHigh="30618393"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\SOL.wproj" DateLow="4166019463" DateHigh="30618391"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\SoundBanks\Default Work Unit.wwu" DateLow="3612859095" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3613454302" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\States\Default Work Unit.wwu" DateLow="3614044378" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Switches\Default Work Unit.wwu" DateLow="3614629449" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Triggers\Default Work Unit.wwu" DateLow="3615239533" DateHigh="30618279"/>
+	<ValidationCacheItem File="C:\Users\Andy\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\Virtual Acoustics\Default Work Unit.wwu" DateLow="3615834602" DateHigh="30618279"/>
+</ValidationCache>

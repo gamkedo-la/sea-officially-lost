@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7F62A2E4-43E2-4213-8595-0704D16F4C31}" SchemaVersion="80">
+	<Events>
+		<WorkUnit Name="Whispers" ID="{7F62A2E4-43E2-4213-8595-0704D16F4C31}" PersistMode="Standalone"/>
+	</Events>
+</WwiseDocument>
