@@ -21,6 +21,7 @@
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1936257133" Name="Audio_Log_Test" ObjectPath="\Events\Audio logs\Audio_Log_Test"/>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
 				<Event Id="1234110288" Name="Play_Test_Ambi" ObjectPath="\Events\Default Work Unit\Play_Test_Ambi"/>
 			</IncludedEvents>
@@ -48,6 +49,10 @@
 				<File Id="906555434" Language="SFX">
 					<ShortName>test3.wav</ShortName>
 					<Path>SFX\test3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="994356738" Language="SFX">
+					<ShortName>Shortlogreading.wav</ShortName>
+					<Path>SFX\Shortlogreading_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1022138157" Language="SFX">
 					<ShortName>test2.wav</ShortName>
