@@ -1,0 +1,291 @@
+fileFormatVersion: 2
+guid: 6540295e2d6ed0a47b53842336950637
+timeCreated: 1506115415
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: back top wing
+    100002: back wing
+    100004: backwing
+    100006: //RootNode
+    100008: cargoplane
+    100010: engine
+    100012: engine 1
+    100014: engine001
+    100016: engine001 1
+    100018: frag001
+    100020: frag002
+    100022: frag003
+    100024: frag004
+    100026: frag005
+    100028: frag006
+    100030: frag007
+    100032: frag008
+    100034: frag009
+    100036: frag010
+    100038: frag011
+    100040: gear
+    100042: gear001
+    100044: gear002
+    100046: hull
+    100048: hull_cylinder
+    100050: hullprofile
+    100052: landing gear
+    100054: landing gear001
+    100056: landing gear002
+    100058: prop blade
+    100060: prop blade001
+    100062: prop blade002
+    100064: prop blade003
+    100066: prop blade004
+    100068: prop blade005
+    100070: prop blade006
+    100072: prop blade007
+    100074: schematic-front
+    100076: schematic-sides
+    100078: schematic-top
+    100080: tire
+    100082: tire001
+    100084: tire002
+    100086: tire003
+    100088: tire004
+    100090: tire005
+    100092: wing
+    100094: wing 1
+    100096: wingprofile
+    400000: back top wing
+    400002: back wing
+    400004: backwing
+    400006: cargoplane
+    400008: //RootNode
+    400010: engine
+    400012: engine 1
+    400014: engine001
+    400016: engine001 1
+    400018: frag001
+    400020: frag002
+    400022: frag003
+    400024: frag004
+    400026: frag005
+    400028: frag006
+    400030: frag007
+    400032: frag008
+    400034: frag009
+    400036: frag010
+    400038: frag011
+    400040: gear
+    400042: gear001
+    400044: gear002
+    400046: hull
+    400048: hull_cylinder
+    400050: hullprofile
+    400052: landing gear
+    400054: landing gear001
+    400056: landing gear002
+    400058: prop blade
+    400060: prop blade001
+    400062: prop blade002
+    400064: prop blade003
+    400066: prop blade004
+    400068: prop blade005
+    400070: prop blade006
+    400072: prop blade007
+    400074: schematic-front
+    400076: schematic-sides
+    400078: schematic-top
+    400080: tire
+    400082: tire001
+    400084: tire002
+    400086: tire003
+    400088: tire004
+    400090: tire005
+    400092: wing
+    400094: wing 1
+    400096: wingprofile
+    2300000: back top wing
+    2300002: back wing
+    2300004: backwing
+    2300006: engine 1
+    2300008: engine001 1
+    2300010: frag001
+    2300012: frag002
+    2300014: frag003
+    2300016: frag004
+    2300018: frag005
+    2300020: frag006
+    2300022: frag007
+    2300024: frag008
+    2300026: frag009
+    2300028: frag010
+    2300030: frag011
+    2300032: hull_cylinder
+    2300034: landing gear
+    2300036: landing gear001
+    2300038: landing gear002
+    2300040: prop blade
+    2300042: prop blade001
+    2300044: prop blade002
+    2300046: prop blade003
+    2300048: prop blade004
+    2300050: prop blade005
+    2300052: prop blade006
+    2300054: prop blade007
+    2300056: schematic-front
+    2300058: schematic-top
+    2300060: tire
+    2300062: tire001
+    2300064: tire003
+    2300066: tire005
+    2300068: wing
+    2300070: wing 1
+    2300072: wingprofile
+    3300000: back top wing
+    3300002: back wing
+    3300004: backwing
+    3300006: engine 1
+    3300008: engine001 1
+    3300010: frag001
+    3300012: frag002
+    3300014: frag003
+    3300016: frag004
+    3300018: frag005
+    3300020: frag006
+    3300022: frag007
+    3300024: frag008
+    3300026: frag009
+    3300028: frag010
+    3300030: frag011
+    3300032: hull_cylinder
+    3300034: landing gear
+    3300036: landing gear001
+    3300038: landing gear002
+    3300040: prop blade
+    3300042: prop blade001
+    3300044: prop blade002
+    3300046: prop blade003
+    3300048: prop blade004
+    3300050: prop blade005
+    3300052: prop blade006
+    3300054: prop blade007
+    3300056: schematic-front
+    3300058: schematic-top
+    3300060: tire
+    3300062: tire001
+    3300064: tire003
+    3300066: tire005
+    3300068: wing
+    3300070: wing 1
+    3300072: wingprofile
+    4300000: schematic-front
+    4300002: engine001
+    4300004: prop blade004
+    4300006: prop blade005
+    4300008: prop blade006
+    4300010: prop blade007
+    4300012: hull_cylinder
+    4300014: back wing
+    4300016: back top wing
+    4300018: engine
+    4300020: prop blade
+    4300022: prop blade001
+    4300024: prop blade002
+    4300026: prop blade003
+    4300028: tire001
+    4300030: tire
+    4300032: landing gear
+    4300034: tire003
+    4300036: landing gear001
+    4300038: tire005
+    4300040: landing gear002
+    4300042: schematic-top
+    4300044: backwing
+    4300046: wingprofile
+    4300048: wing
+    4300050: frag001
+    4300052: frag002
+    4300054: frag003
+    4300056: frag004
+    4300058: frag005
+    4300060: frag006
+    4300062: frag007
+    4300064: frag008
+    4300066: frag009
+    4300068: frag010
+    4300070: frag011
+    4300072: wing
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
