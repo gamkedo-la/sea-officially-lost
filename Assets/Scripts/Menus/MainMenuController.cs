@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MainMenuController : MonoBehaviour {
     public float transitionTime;
     public GameObject[] menus;
-    public GameObject credits;
     private GameObject activeMenu;
+
+    [Header("OptionsMenu")]
+    public Text graphicsQualityText;
 
     [Header("Credits")]
     public float creditsPageDuration = 4;
@@ -15,6 +19,7 @@ public class MainMenuController : MonoBehaviour {
 
     private void Start() {
         activeMenu = menus[0];
+        graphicsQualityText.text = QualitySettings.names[QualitySettings.GetQualityLevel()];
     }
 
     private void Update() {
@@ -80,4 +85,19 @@ public class MainMenuController : MonoBehaviour {
         StopCoroutine(creditsCoroutine);
         SwitchToMenu(menus[0]);
     }
+
+    public void DecreaseGraphicsQuality() {
+        QualitySettings.DecreaseLevel(true);
+        graphicsQualityText.text = QualitySettings.names[QualitySettings.GetQualityLevel()];
+        EventSystem.current.SetSelectedGameObject(null);
+
+    }
+
+    public void IncreaseGraphicsQuality() {
+        QualitySettings.IncreaseLevel(true);
+        graphicsQualityText.text = QualitySettings.names[QualitySettings.GetQualityLevel()];
+        EventSystem.current.SetSelectedGameObject(null);
+    }
+
+
 }
