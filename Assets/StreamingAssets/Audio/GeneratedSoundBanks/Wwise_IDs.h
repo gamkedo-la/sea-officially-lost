@@ -18,6 +18,13 @@ namespace AK
         static const AkUniqueID PLAY_TEST_AMBI = 1234110288U;
     } // namespace EVENTS
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID VOLUME_MASTER = 3695994288U;
+        static const AkUniqueID VOLUME_MUSIC = 3891337659U;
+        static const AkUniqueID VOLUME_SFX = 3673881719U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
@@ -28,6 +35,8 @@ namespace AK
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MASTER_SECONDARY_BUS = 805203703U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
 }// namespace AK

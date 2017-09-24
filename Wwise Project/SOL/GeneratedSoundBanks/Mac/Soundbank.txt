@@ -7,9 +7,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	112427783	temp_footstep_sealab_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\temp_footstep_sealab_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_02		348114
 	415836917	temp_footstep_sealab_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\temp_footstep_sealab_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_03		348114
 	560838616	temp_footstep_sealab_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\temp_footstep_sealab_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_04		348114
-	714356039	test1	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Test Ambience\Test Ambi\test1		5303872
+	714356039	test1	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test1		5303872
 	723103660	temp_footstep_sealab_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\temp_footstep_sealab_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_01		348114
-	906555434	test3	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Test Ambience\Test Ambi\test3		5303872
+	906555434	test3	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test3		5303872
 	994356738	Shortlogreading	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Shortlogreading_1C9C67B2.wem		\Actor-Mixer Hierarchy\Audio Logs\Shortlogreading		256064
-	1022138157	test2	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Test Ambience\Test Ambi\test2		5303872
+	1022138157	test2	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test2		5303872
 
