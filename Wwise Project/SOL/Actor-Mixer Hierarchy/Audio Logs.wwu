@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F78F1E58-799C-4B15-BF7E-DC5C2FF2BE67}" SchemaVersion="80">
+	<AudioObjects>
+		<WorkUnit Name="Audio Logs" ID="{F78F1E58-799C-4B15-BF7E-DC5C2FF2BE67}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Long log reading processed" ID="{8166FFD6-7EFB-4C76-983C-D4A7471BD6E5}" ShortID="322862849">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Long log reading processed" ID="{06FE575C-1539-4EE5-9E34-0D7BE29FF384}" ShortID="641368753">
+							<Language>SFX</Language>
+							<AudioFile>Long log reading processed.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Long log reading processed" ID="{06FE575C-1539-4EE5-9E34-0D7BE29FF384}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Long log reading" ID="{190EEA22-D1FE-4C35-B044-39567A95B3EE}" ShortID="733046673">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Long log reading" ID="{343C742F-76A4-494A-A3F6-4FD343133561}" ShortID="673996244">
+							<Language>SFX</Language>
+							<AudioFile>Long log reading.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Long log reading" ID="{343C742F-76A4-494A-A3F6-4FD343133561}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Shortlogreading" ID="{8E680D88-0CD2-4152-8EA4-B7DE3235DBA9}" ShortID="872120400">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Shortlogreading" ID="{93A20E1F-F72A-479A-AE1A-2788F5A58FF0}" ShortID="994356738">
+							<Language>SFX</Language>
+							<AudioFile>Shortlogreading.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Shortlogreading" ID="{93A20E1F-F72A-479A-AE1A-2788F5A58FF0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{40A4BCE0-66D9-45A1-B992-9A9C6A7C7E4A}" SchemaVersion="80">
+	<Events>
+		<WorkUnit Name="Audio logs" ID="{40A4BCE0-66D9-45A1-B992-9A9C6A7C7E4A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Audio_Log_Test" ID="{E6CF7864-21B9-42C0-81E2-67293C8D180F}">
+					<ChildrenList>
+						<Action Name="" ID="{43DF93ED-BA63-43C2-8B8D-475F4D201C8E}" ShortID="931043866">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shortlogreading" ID="{8E680D88-0CD2-4152-8EA4-B7DE3235DBA9}" WorkUnitID="{F78F1E58-799C-4B15-BF7E-DC5C2FF2BE67}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

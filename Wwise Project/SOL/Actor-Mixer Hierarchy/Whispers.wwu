@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{76767C89-ACA1-4ED9-A1C5-05132C419D3E}" SchemaVersion="80">
+	<AudioObjects>
+		<WorkUnit Name="Whispers" ID="{76767C89-ACA1-4ED9-A1C5-05132C419D3E}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Whisperall" ID="{09554C8D-A298-43CA-850D-CE0F7DAD5E54}" ShortID="723694459">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="whisper2" ID="{A98BDC12-12EF-43AA-AFEB-F4CE652B7DF0}" ShortID="526224415">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="whisper2" ID="{08EA858D-58A3-46F6-9A90-90FE3FA9F63A}" ShortID="270989433">
+									<Language>SFX</Language>
+									<AudioFile>whisper2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="whisper2" ID="{08EA858D-58A3-46F6-9A90-90FE3FA9F63A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="whisper2variant" ID="{03B2CC85-E80C-4CB6-8759-84CDA01C2B53}" ShortID="345881640">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="whisper2variant" ID="{5737685A-3EDE-40D7-8570-C406F7E03DEB}" ShortID="492021131">
+									<Language>SFX</Language>
+									<AudioFile>whisper2variant.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="whisper2variant" ID="{5737685A-3EDE-40D7-8570-C406F7E03DEB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="whisperlong" ID="{A1672633-5A89-42A2-8F08-12697F6E978A}" ShortID="228765497">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="whisperlong" ID="{5997015A-8A23-44CC-80FC-DE0C40729F73}" ShortID="1015442664">
+									<Language>SFX</Language>
+									<AudioFile>whisperlong.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="whisperlong" ID="{5997015A-8A23-44CC-80FC-DE0C40729F73}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="whispershort" ID="{432B37FE-9D45-41FC-84BE-2E76B782EDC9}" ShortID="710195419">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="whispershort" ID="{575D9E51-F4BA-4502-958A-6BE4B1C47A15}" ShortID="447140210">
+									<Language>SFX</Language>
+									<AudioFile>whispershort.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="whispershort" ID="{575D9E51-F4BA-4502-958A-6BE4B1C47A15}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

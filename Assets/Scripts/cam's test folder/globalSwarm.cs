@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class globalSwarm : MonoBehaviour {
 
+    private bool isSpawned = false;
+    public float rangeToSpawn = 10.0f;
     public globalSwarm thisSwarm;
     public GameObject creaturePrefab;
     public Vector3 swimLimits = new Vector3(10,10,10);
 
     public Vector3 targetPosition = Vector3.zero;
 
-
+    private UnityEngine.Coroutine targetCoroutine;
     public int creatureNumber = 10;
     [HideInInspector]
     public GameObject[] allCreatures;
@@ -23,9 +25,15 @@ public class globalSwarm : MonoBehaviour {
         Gizmos.DrawSphere(targetPosition, 0.1f);
     }
 
-
-    // Use this for initialization
-    void Start ()
+    void RemoveAllCreatures()
+    {
+        for (int i = 0; i < allCreatures.Length; i++)
+        {
+            Destroy(allCreatures[i]);
+        }
+        StopCoroutine(targetCoroutine);
+    }
+    void SpawnCreatures ()
     {
         allCreatures = new GameObject[creatureNumber];
         thisSwarm = this;
@@ -41,7 +49,7 @@ public class globalSwarm : MonoBehaviour {
             allCreatures[i].GetComponent<Swarm>().myManager = this;
             allCreatures[i].transform.SetParent(transform);
         }
-        StartCoroutine(changeTargets());
+        targetCoroutine = StartCoroutine(changeTargets());
 
 	}
 	
@@ -58,4 +66,28 @@ public class globalSwarm : MonoBehaviour {
       
         }
 	}
+
+    public void Update()
+    {
+        float distToPlayer = Vector3.Distance(transform.position, PlayerController.instance.transform.position);
+
+        if(distToPlayer < rangeToSpawn)
+        {
+            if (isSpawned == false)
+            {
+                Debug.Log("spawning fish from "+ gameObject.name);
+                SpawnCreatures();
+                isSpawned = true;
+            }
+        }
+        else
+        {
+            if (isSpawned)
+            {
+                Debug.Log("removing fish for " + gameObject.name);
+                RemoveAllCreatures();
+                isSpawned = false;
+            }
+        }
+    }
 }
