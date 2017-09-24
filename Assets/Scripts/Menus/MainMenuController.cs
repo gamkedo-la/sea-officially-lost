@@ -10,6 +10,9 @@ public class MainMenuController : MonoBehaviour {
 
     [Header("OptionsMenu")]
     public Text graphicsQualityText;
+    public Slider lookSensitivity;
+    public Toggle lookInversionY;
+    public Toggle lookInversionX;
 
     [Header("Credits")]
     public float creditsPageDuration = 4;
@@ -19,7 +22,11 @@ public class MainMenuController : MonoBehaviour {
 
     private void Start() {
         activeMenu = menus[0];
+
         graphicsQualityText.text = QualitySettings.names[QualitySettings.GetQualityLevel()];
+        lookSensitivity.value = PlayerPrefs.GetFloat("LookSensitivityX", 2f);
+        lookInversionY.isOn = PlayerPrefs.GetInt("LookInveredY", 0) > 0;
+        lookInversionX.isOn = PlayerPrefs.GetInt("LookInveredX", 0) > 0;
     }
 
     private void Update() {
@@ -99,5 +106,17 @@ public class MainMenuController : MonoBehaviour {
         EventSystem.current.SetSelectedGameObject(null);
     }
 
+    public void UpdateLookSensitivityX(float value) {
+        Debug.Log("slider update" + value);
+        PlayerPrefs.SetFloat("LookSensitivityX", value);
+        PlayerPrefs.SetFloat("LookSensitivityY", value);
+    }
 
+    public void SetVerticalInvert(bool value) {
+        PlayerPrefs.SetInt("LookInveredY", value ? 1 : 0);
+    }
+
+    public void SetHorizontalInvert(bool value) {
+        PlayerPrefs.SetInt("LookInveredX", value ? 1 : 0);
+    }
 }

@@ -57,9 +57,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			m_MouseLook.Init(transform , m_Camera.transform);
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
+
+            m_MouseLook.XSensitivity = PlayerPrefs.GetFloat("LookSensitivityX", 2f);
+            m_MouseLook.YSensitivity = PlayerPrefs.GetFloat("LookSensitivityY", 2f);
+            m_MouseLook.invertedX = PlayerPrefs.GetInt("LookInveredX", 0) > 0;
+            m_MouseLook.invertedY = PlayerPrefs.GetInt("LookInveredY", 0) > 0;
         }
 
-		public void ReleaseMouse()
+        public void ReleaseMouse()
 		{
 			if (Cursor.visible == false)
 			{

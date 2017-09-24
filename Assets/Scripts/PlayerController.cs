@@ -7,9 +7,10 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour {
 
     public static PlayerController instance;
-    public float pitchSpeed = 5.0f;
-    public float rollSpeed = 5.0f;
-    public float yawSpeed = 5.0f;
+    [SerializeField] private UnityStandardAssets.Characters.FirstPerson.MouseLook m_MouseLook;
+    public float pitchSpeed = 5.0f; //Might do nothing
+    public float rollSpeed = 5.0f; //Might do nothing
+    public float yawSpeed = 5.0f; //Might do nothing
     public float swimSpeed = 10.0f;
     public float strafeSpeed = 5.0f;
     public float riseSpeed = 10.0f;
@@ -53,6 +54,7 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
+        m_MouseLook.Init(transform, Camera.main.transform);
         playerInventory.ScannedInventory();
         //playerShip.ScannedInventory();
         StartCoroutine(SonarPing());
@@ -60,7 +62,12 @@ public class PlayerController : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         instance = this;
-	}
+
+        m_MouseLook.XSensitivity = PlayerPrefs.GetFloat("LookSensitivityX", 2f);
+        m_MouseLook.YSensitivity = PlayerPrefs.GetFloat("LookSensitivityY", 2f);
+        m_MouseLook.invertedX = PlayerPrefs.GetInt("LookInveredX", 0) > 0;
+        m_MouseLook.invertedY = PlayerPrefs.GetInt("LookInveredY", 0) > 0;
+    }
 
     public void ReleaseMouse() {
         if (Cursor.visible == false) {
@@ -80,16 +87,17 @@ public class PlayerController : MonoBehaviour {
         /*transform.Rotate(Vector3.right, Input.GetAxis("Vertical") * pitchSpeed * Time.deltaTime * (upLooksDown ? 1.0f : -1.0f));
         transform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * yawSpeed * Time.deltaTime);
         transform.Rotate(Vector3.forward, Input.GetAxis("Roll") * rollSpeed * Time.deltaTime * -1.0f);*/
-        yaw += Input.GetAxis("Mouse X") * yawSpeed * Time.deltaTime;
-        pitch += Input.GetAxis("Mouse Y") * pitchSpeed * Time.deltaTime * (upLooksDown ? 1.0f : -1.0f);
-        pitch = Mathf.Clamp(pitch, -40.0f, 40.0f);
-        Quaternion rotNow = Quaternion.identity;
-        rotNow *= Quaternion.AngleAxis(yaw, Vector3.up);
-        rotNow *= Quaternion.AngleAxis(pitch, Vector3.right);
-        transform.rotation = rotNow;
+        m_MouseLook.LookRotation(transform, Camera.main.transform);
+//        yaw += Input.GetAxis("Mouse X") * m_MouseLook. * Time.deltaTime;
+//        pitch += Input.GetAxis("Mouse Y") * PlayerCommon.mouseSensitivity * Time.deltaTime * (PlayerCommon.inverted ? -1.0f : 1.0f);
+//        pitch = Mathf.Clamp(pitch, -40.0f, 40.0f);
+//        Quaternion rotNow = Quaternion.identity;
+//        rotNow *= Quaternion.AngleAxis(yaw, Vector3.up);
+//        rotNow *= Quaternion.AngleAxis(pitch, Vector3.right);
+//        transform.rotation = rotNow;
 
         speed += Input.GetAxis("Vertical") * swimSpeed * Time.deltaTime;
-        rb.AddForce(transform.forward * speed);
+        rb.AddForce(Camera.main.transform.forward * speed);
 
         speedLateral += Input.GetAxis("Horizontal") * strafeSpeed * Time.deltaTime;
         rb.AddForce(transform.right * speedLateral);
@@ -117,7 +125,7 @@ public class PlayerController : MonoBehaviour {
         {
             RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, transform.forward, out hit, m_MaxInteractDistance))
+            if (Physics.Raycast(transform.position, Camera.main.transform.forward, out hit, m_MaxInteractDistance))
             {
                 //Debug.Log("I can see " + hit.transform.gameObject.name);
                 if (hit.transform.gameObject.CompareTag("canPickUp"))
@@ -132,7 +140,7 @@ public class PlayerController : MonoBehaviour {
         // Scanner!
         RaycastHit rhInfo;
         bool inventoryInFrontOfMe = false;
-        if (Physics.Raycast(transform.position, transform.forward, out rhInfo, scanRange))
+        if (Physics.Raycast(transform.position, Camera.main.transform.forward, out rhInfo, scanRange))
         {
             //Debug.Log("We hit: " + rhInfo.collider.name);
             scannedItem = rhInfo.collider.gameObject.GetComponent<InventoryManager>();
@@ -202,6 +210,7 @@ public class PlayerController : MonoBehaviour {
         speed *= speedDecay;
         speedLateral *= speedDecay;
         speedRise *= speedDecay;
+        m_MouseLook.UpdateCursorLock();
     }
 
     IEnumerator SonarPing() {
