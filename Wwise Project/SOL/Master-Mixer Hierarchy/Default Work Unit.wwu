@@ -20,12 +20,13 @@
 										<PointList>
 											<Point>
 												<XPos>0</XPos>
-												<YPos>-200</YPos>
+												<YPos>-30.103</YPos>
 												<Flags>5</Flags>
+												<SegmentShape>Exp1</SegmentShape>
 											</Point>
 											<Point>
 												<XPos>100</XPos>
-												<YPos>0</YPos>
+												<YPos>4.3023</YPos>
 												<Flags>37</Flags>
 											</Point>
 										</PointList>

@@ -16,6 +16,10 @@ namespace AK
         static const AkUniqueID AUDIO_LOG_TEST = 1936257133U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_TEST_AMBI = 1234110288U;
+        static const AkUniqueID PLAY_UI_MENU_CLICK_INTO = 676271428U;
+        static const AkUniqueID PLAY_UI_MENU_CLICK_OUTFROM = 4230331670U;
+        static const AkUniqueID PLAY_UI_MENU_HOVER = 2880217405U;
+        static const AkUniqueID PLAY_UI_MENU_UNHOVER = 3244201150U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

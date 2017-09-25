@@ -24,6 +24,10 @@
 				<Event Id="1936257133" Name="Audio_Log_Test" ObjectPath="\Events\Audio logs\Audio_Log_Test"/>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
 				<Event Id="1234110288" Name="Play_Test_Ambi" ObjectPath="\Events\Default Work Unit\Play_Test_Ambi"/>
+				<Event Id="676271428" Name="Play_UI_Menu_Click_Into" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Click_Into"/>
+				<Event Id="4230331670" Name="Play_UI_Menu_Click_Outfrom" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Click_Outfrom"/>
+				<Event Id="2880217405" Name="Play_UI_Menu_Hover" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Hover"/>
+				<Event Id="3244201150" Name="Play_UI_Menu_Unhover" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Unhover"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="112427783" Language="SFX">

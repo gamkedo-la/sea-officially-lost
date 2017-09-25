@@ -5,8 +5,12 @@
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Misha\Desktop\SOL Temp"/>
 				<Property Name="Event Action List\{25AC9E5C-5863-4D10-A36F-86C50E0149EB}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{5E097A37-933B-403B-A90C-92A9D2D95026}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{9C0411B3-4E33-4E72-87B6-B6719D55D3E8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{E09C062A-11C1-4D8B-8449-0CEE9B35E7C8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{E6CF7864-21B9-42C0-81E2-67293C8D180F}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{E72B1168-8039-4833-885B-EDD0018748E9}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{FBC3B815-C25B-4D25-BBE2-0BFD81FACA9A}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -22,6 +26,7 @@
 						<Value Platform="Linux">GeneratedSoundBanks\Linux\</Value>
 					</ValueList>
 				</Property>
+				<Property Name="Game Profiler\Voice Monitor\LastBus" Type="string" Value="{00000000-0000-0000-0000-000000000000}"/>
 				<Property Name="General\LatestLanguage" Type="int32" Value="684519430"/>
 				<Property Name="General\LatestPlatform" Type="string" Value="Linux"/>
 				<Property Name="General\SourceControlPluginID" Type="string" Value="{C403A906-0C19-4ED5-808E-748707065301}"/>
@@ -55,7 +60,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value="2KQUFaYdKkGhfnXKDCFJ866N0zQyYn9PlqE9CY+unWw="/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="BouFm61U10Cw0Bty49rFy41MVQmYospDhQ3OD32tXlQCQvaK8GECRbGXRbxbnBXDTCQ5DlSh8kiNMYDLoB4RyuCKdU9mmUdKiBhyI2By1iVYHo/3nHkVS79+3Fwv8r5niXx2dqGs2U6hxQUTLEGdPg=="/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="AkL2ivBhAkWxl0W8W5wVw0wkOQ5UofJIjTGAy6AeEco4gkO5UTxAT7wIS28jHIFj"/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="4LykQNlmoUW5kpqcanx+SjOCEicfLyNNppMvTgWWi3g="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>

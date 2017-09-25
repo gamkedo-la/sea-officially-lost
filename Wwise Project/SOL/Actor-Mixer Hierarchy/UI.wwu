@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B9438238-3C51-4F40-BC08-4B6F231C8163}" SchemaVersion="80">
+	<AudioObjects>
+		<WorkUnit Name="UI" ID="{B9438238-3C51-4F40-BC08-4B6F231C8163}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Menu_Hover" ID="{E09FA96D-C569-46C2-81E8-AE7D37C2C478}" ShortID="234533718">
+					<PropertyList>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{CD26C59C-E519-409E-AC81-13A1D91DA662}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9020240C-2B52-4B73-AE27-383D2FED5FF9}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Menu_Unhover" ID="{90A86BC6-44C0-4F4B-B902-B200BEAD3662}" ShortID="235564285">
+					<PropertyList>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{96D9188A-A93F-46F0-96A3-3B6E9239FA6E}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9020240C-2B52-4B73-AE27-383D2FED5FF9}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Menu_Click_Into" ID="{B05FACF6-7521-4DCB-8265-94F47A3A3FFF}" ShortID="421875717">
+					<PropertyList>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{8A75899A-473D-448A-B56B-6FF06D43E510}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9020240C-2B52-4B73-AE27-383D2FED5FF9}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Menu_Click_Outfrom" ID="{633B49DB-1815-4521-A721-02D311E9C134}" ShortID="829557944">
+					<PropertyList>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{27CAC041-DD62-447C-B630-AF8529AD0A7A}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{9020240C-2B52-4B73-AE27-383D2FED5FF9}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
