@@ -10,24 +10,31 @@ public class RippleImageEffect : MonoBehaviour {
     private bool rippleActive = false;
     public float rippleDuration;
     private float rippleTimer;
-    private float rippleStrength = 0.03f;
+    public float maxRippleStrength = 0.03f;
+    private float currentRippleStrength;
 
     private void Start() {
-        rippleRadius = 0;
-        rippleProperties = new Vector4(0.5f, 0.5f, rippleRadius, rippleWidth);
+        StopRipple();
     }
 
     private void Update() {
         if (rippleActive) {
             rippleTimer += Time.deltaTime;
             rippleProperties.z += Time.deltaTime * rippleSpeed;
+
+            currentRippleStrength = Mathf.Cos((rippleTimer / rippleDuration) * Mathf.PI / 2) * maxRippleStrength;
+
             rippleEffect.SetVector("_CircleProperties", rippleProperties);
-            rippleEffect.SetFloat("_EffectPower", Mathf.Cos((rippleTimer / rippleDuration)*Mathf.PI/2) * rippleStrength);
+            rippleEffect.SetFloat("_EffectPower", currentRippleStrength);
+
             if (rippleTimer > rippleDuration) {
-                rippleActive = false;
-                rippleEffect.SetFloat("_EffectPower", 0);
+                StopRipple();
             }
         }
+    }
+
+    private void OnRenderImage(RenderTexture source, RenderTexture destination) {
+        Graphics.Blit(source, destination, rippleEffect);
     }
 
     public void Ripple(RectTransform rect) {
@@ -35,24 +42,26 @@ public class RippleImageEffect : MonoBehaviour {
         rectPosition.x /= Camera.main.pixelWidth;
         rectPosition.y /= Camera.main.pixelHeight;
 
-        rippleRadius = 0;
-        rippleProperties = new Vector4(rectPosition.x, rectPosition.y, rippleRadius, rippleWidth);
-        rippleEffect.SetVector("_CircleProperties", rippleProperties);
-        rippleEffect.SetFloat("_EffectPower", rippleStrength);
-        rippleActive = true;
-        rippleTimer = 0;
+        Ripple(rectPosition.x, rectPosition.y);
     }
 
     public void Ripple(float x, float y) {
         rippleRadius = 0;
+
         rippleProperties = new Vector4(x, y, rippleRadius, rippleWidth);
+
         rippleEffect.SetVector("_CircleProperties", rippleProperties);
-        rippleEffect.SetFloat("_EffectPower", rippleStrength);
+        rippleEffect.SetFloat("_EffectPower", maxRippleStrength);
+
         rippleActive = true;
         rippleTimer = 0;
     }
 
-    private void OnRenderImage(RenderTexture source, RenderTexture destination) {
-        Graphics.Blit(source, destination, rippleEffect);
+    private void StopRipple() {
+        rippleActive = false;
+        rippleRadius = 0;
+
+        rippleEffect.SetFloat("_EffectPower", 0);
+        rippleProperties = new Vector4(0.5f, 0.5f, rippleRadius, rippleWidth);
     }
 }

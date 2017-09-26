@@ -20,8 +20,14 @@ public class MainMenuController : MonoBehaviour {
     private bool creditsActive;
     private IEnumerator creditsCoroutine;
 
+    [Header("SpecialEffects")]
+    public Animator lightBeamAnimator;
+    public ParticleSystem breathingBubbles;
+    public ParticleSystem deepSeaDust;
+
     private void Start() {
         activeMenu = menus[0];
+        activeMenu.SetActive(true);
 
         graphicsQualityText.text = QualitySettings.names[QualitySettings.GetQualityLevel()];
         lookSensitivity.value = PlayerPrefs.GetFloat("LookSensitivityX", 2f);
@@ -36,11 +42,44 @@ public class MainMenuController : MonoBehaviour {
         }
     }
 
-    public void StartGame(string startSceneName) {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(startSceneName);
+    public void StartLoadingGame(string startSceneName) {
+        Debug.LogWarning("ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
+        AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(startSceneName);
+        asyncLoad.allowSceneActivation = false;
+        IEnumerator testEffect = StartGameEffect(3f, asyncLoad);
+        SwitchToMenu(null);
+
+        lightBeamAnimator.SetTrigger("StartGame");
+        var bubbleEmission = breathingBubbles.emission;
+        var bubbleShape = breathingBubbles.shape;
+
+        bubbleEmission.rateOverTimeMultiplier = 50; //10
+        bubbleShape.angle = 50; //5
+
+        breathingBubbles.GetComponent<BreathingController>().breathingTimeScale = 0;
+        breathingBubbles.Play();
+
+        StartCoroutine(testEffect);
+    }
+
+    IEnumerator StartGameEffect(float duration, AsyncOperation asyncLoad) {
+        var dustMain = deepSeaDust.main;
+        var dustEmission = deepSeaDust.emission;
+        var bubbleMain = breathingBubbles.main;
+
+        for (float timer = 0f; timer < duration; timer += Time.deltaTime) {
+            dustMain.simulationSpeed += Time.deltaTime * (timer/duration + 1) * (timer/duration + 1) * 2; //1
+            dustEmission.rateOverTimeMultiplier += Time.deltaTime * (timer / duration + 1) * (timer / duration + 1) * 2; //3
+            bubbleMain.gravityModifierMultiplier = dustMain.simulationSpeed * -0.1f;
+            yield return null;
+        }
+        yield return new WaitForSeconds(duration / 2);
+
+        asyncLoad.allowSceneActivation = true;
     }
 
     public void QuitGame() {
+        lightBeamAnimator.SetTrigger("QuitGame");
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
@@ -48,12 +87,13 @@ public class MainMenuController : MonoBehaviour {
 #endif
     }
 
+
     public void SwitchToMenu(GameObject menu) {
-        IEnumerator fadeCoroutine = Fade(menu);
+        IEnumerator fadeCoroutine = FadeBetweenMenus(menu);
         StartCoroutine(fadeCoroutine);
     }
 
-    IEnumerator Fade(GameObject menu) {
+    IEnumerator FadeBetweenMenus(GameObject menu) {
         CanvasGroup canvas = activeMenu.GetComponent<CanvasGroup>();
         for(float t = transitionTime/2; t > 0; t -= Time.deltaTime) {
             canvas.alpha = Mathf.Clamp(t*2, 0, 1);
@@ -62,6 +102,11 @@ public class MainMenuController : MonoBehaviour {
 
         activeMenu.SetActive(false);
         canvas.alpha = 1;
+
+        if(menu == null) {
+            yield break;
+        }
+
         activeMenu = menu;
         activeMenu.SetActive(true);
         canvas = activeMenu.GetComponent<CanvasGroup>();

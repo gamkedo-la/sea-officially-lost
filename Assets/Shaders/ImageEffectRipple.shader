@@ -51,17 +51,6 @@
 				float2 uvOffset;
 				float dist = distance(i.uv, pos);
 
-				/*
-				if(!(dist < radius - width) && dist < radius){
-					uvOffset = normalize(i.uv - pos) * _EffectPower;
-					i.uv = i.uv - uvOffset * (radius - dist)/width * (dist - radius + width)/width;
-				}
-				if(!(dist < radius - width - width) && dist < radius - width){
-					uvOffset = normalize(i.uv - pos) * _EffectPower;
-					i.uv = i.uv - uvOffset * ((radius - width) - dist)/width * (dist - (radius - width) + width)/width;
-				}
-				*/
-
 				uvOffset = normalize(i.uv - pos) * _EffectPower; // Get direction and power of effect
 				uvOffset *= (dist < radius); // Eval to zero outside the radius
 				uvOffset *= sin((radius - dist)*width); // Make a wave pattern

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 114087246269919276}
   - component: {fileID: 114213203019495132}
   - component: {fileID: 114048927981691490}
+  - component: {fileID: 114796697515000338}
   m_Layer: 0
   m_Name: PlayerPrefabUnderwater
   m_TagString: Untagged
@@ -524,11 +525,11 @@ MonoBehaviour:
   m_MouseLook:
     XSensitivity: 2
     YSensitivity: 2
-    xInverted: 0
-    yInverted: 0
+    invertedX: 0
+    invertedY: 0
     clampVerticalRotation: 1
-    MinimumX: -85
-    MaximumX: 85
+    MinimumX: -40
+    MaximumX: 40
     smooth: 0
     smoothTime: 5
     lockCursor: 1
@@ -633,6 +634,17 @@ MonoBehaviour:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &114796697515000338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1906341235768902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d354dc53eb9aa4e32bb78ac518087209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114868334277426084
 MonoBehaviour:
   m_ObjectHideFlags: 1

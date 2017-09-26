@@ -2325,7 +2325,7 @@ Prefab:
     - target: {fileID: 198977984975926176, guid: c5a5bbf9219464f16b42d4c2aa8bd5df,
         type: 2}
       propertyPath: randomSeed
-      value: -1695689582
+      value: -342903735
       objectReference: {fileID: 0}
     - target: {fileID: 198977984975926176, guid: c5a5bbf9219464f16b42d4c2aa8bd5df,
         type: 2}
@@ -2370,7 +2370,7 @@ Prefab:
     - target: {fileID: 198977984975926176, guid: c5a5bbf9219464f16b42d4c2aa8bd5df,
         type: 2}
       propertyPath: EmissionModule.rateOverTime.maxCurve.m_Curve.Array.data[0].value
-      value: 0.26126075
+      value: 0.5225214
       objectReference: {fileID: 0}
     - target: {fileID: 198977984975926176, guid: c5a5bbf9219464f16b42d4c2aa8bd5df,
         type: 2}
@@ -2380,7 +2380,7 @@ Prefab:
     - target: {fileID: 198977984975926176, guid: c5a5bbf9219464f16b42d4c2aa8bd5df,
         type: 2}
       propertyPath: EmissionModule.rateOverTime.maxCurve.m_Curve.Array.data[1].value
-      value: 0.49549675
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198977984975926176, guid: c5a5bbf9219464f16b42d4c2aa8bd5df,
         type: 2}
@@ -2396,6 +2396,11 @@ Prefab:
         type: 2}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198977984975926176, guid: c5a5bbf9219464f16b42d4c2aa8bd5df,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5a5bbf9219464f16b42d4c2aa8bd5df, type: 2}
@@ -2576,6 +2581,27 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 542629113}
+--- !u!1 &564351628 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: a27bcb6eb78c14967bd0d8e7d391edd8, type: 3}
+  m_PrefabInternal: {fileID: 1237157449}
+--- !u!95 &564351629
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564351628}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81cc11cb63731b946bb5acc0fae2280d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &586829878
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,6 +3334,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4092258188538552, guid: c5a5bbf9219464f16b42d4c2aa8bd5df,
     type: 2}
   m_PrefabInternal: {fileID: 508932581}
+--- !u!198 &783209248 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198977984975926176, guid: c5a5bbf9219464f16b42d4c2aa8bd5df,
+    type: 2}
+  m_PrefabInternal: {fileID: 508932581}
 --- !u!114 &783209249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3319,6 +3350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ff21f161bc09541975d45c7c49b2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breathingTimeScale: 1
   breathTime: 8.3
 --- !u!1 &787028030
 GameObject:
@@ -3480,6 +3512,9 @@ MonoBehaviour:
   creditsPages:
   - {fileID: 1352223557}
   - {fileID: 1791506363}
+  lightBeamAnimator: {fileID: 564351629}
+  breathingBubbles: {fileID: 783209248}
+  deepSeaDust: {fileID: 1601068280}
 --- !u!1 &797329088
 GameObject:
   m_ObjectHideFlags: 0
@@ -3980,6 +4015,7 @@ MonoBehaviour:
   rippleEffect: {fileID: 2100000, guid: fe0ed4bc8828fb74f8dfc3b49f01562d, type: 2}
   rippleSpeed: 0.8
   rippleDuration: 1
+  maxRippleStrength: 0.03
 --- !u!1 &903350896
 GameObject:
   m_ObjectHideFlags: 0
@@ -4492,6 +4528,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 790454288}
+        m_MethodName: StartLoadingGame
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Main
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 891301740}
         m_MethodName: Ripple
         m_Mode: 2
@@ -4500,18 +4547,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Main
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 790454288}
-        m_MethodName: StartGame
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Main
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -4958,7 +4994,7 @@ MonoBehaviour:
         m_MethodName: SwitchToMenu
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 690982106}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5307,6 +5343,10 @@ Prefab:
     - target: {fileID: 400002, guid: a27bcb6eb78c14967bd0d8e7d391edd8, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: a27bcb6eb78c14967bd0d8e7d391edd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a27bcb6eb78c14967bd0d8e7d391edd8, type: 3}
@@ -7138,7 +7178,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1100310768
+  randomSeed: 438750932
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11028,7 +11068,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -21.586994}
+  m_AnchoredPosition: {x: 400, y: -21.587006}
   m_SizeDelta: {x: 800, y: 42.86282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1969508778
@@ -11122,7 +11162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -78.329575}
+  m_AnchoredPosition: {x: 400, y: -78.32959}
   m_SizeDelta: {x: 800, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1985930347
