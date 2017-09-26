@@ -31,6 +31,62 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_UI_Menu_Click_Into" ID="{E72B1168-8039-4833-885B-EDD0018748E9}">
+					<ChildrenList>
+						<Action Name="" ID="{676C03CF-1C42-4155-B742-47927DCC0E95}" ShortID="356843540">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Click_Into" ID="{B05FACF6-7521-4DCB-8265-94F47A3A3FFF}" WorkUnitID="{B9438238-3C51-4F40-BC08-4B6F231C8163}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_Menu_Hover" ID="{5E097A37-933B-403B-A90C-92A9D2D95026}">
+					<ChildrenList>
+						<Action Name="" ID="{ACC1C195-FD66-4E24-BA08-7D93CCEF7D40}" ShortID="427516758">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Hover" ID="{E09FA96D-C569-46C2-81E8-AE7D37C2C478}" WorkUnitID="{B9438238-3C51-4F40-BC08-4B6F231C8163}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_Menu_Unhover" ID="{9C0411B3-4E33-4E72-87B6-B6719D55D3E8}">
+					<ChildrenList>
+						<Action Name="" ID="{7A575D19-0567-4F42-88B1-623D39959438}" ShortID="1034327039">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Unhover" ID="{90A86BC6-44C0-4F4B-B902-B200BEAD3662}" WorkUnitID="{B9438238-3C51-4F40-BC08-4B6F231C8163}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_Menu_Click_Outfrom" ID="{FBC3B815-C25B-4D25-BBE2-0BFD81FACA9A}">
+					<ChildrenList>
+						<Action Name="" ID="{48626675-F0A2-4E52-A882-BDCEF4EC6FB8}" ShortID="758947958">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Click_Outfrom" ID="{633B49DB-1815-4521-A721-02D311E9C134}" WorkUnitID="{B9438238-3C51-4F40-BC08-4B6F231C8163}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

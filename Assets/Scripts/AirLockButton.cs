@@ -7,6 +7,6 @@ public class AirLockButton : MonoBehaviour {
 
     public string sceneToLoad ;
 	public void ClickAction () {
-		SceneManager.LoadScene(sceneToLoad);
+		//SceneManager.LoadScene(sceneToLoad);
 	}
 }

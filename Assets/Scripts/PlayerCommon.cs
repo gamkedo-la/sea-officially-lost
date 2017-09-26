@@ -20,5 +20,25 @@ public class PlayerCommon : MonoBehaviour {
 				rhInfo.collider.gameObject.SendMessage("ClickAction", SendMessageOptions.DontRequireReceiver);
 			}
 		}
+
+		if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.Tab))
+		{
+			ReleaseMouse();
+		}
+	}
+
+	public void ReleaseMouse()
+	{
+		if (Cursor.visible == false)
+		{
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
+			Debug.Log("Cursor visible " + Cursor.visible);
+		}
+		else
+		{
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+		}
 	}
 }

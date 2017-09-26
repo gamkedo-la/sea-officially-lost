@@ -64,21 +64,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MouseLook.invertedY = PlayerPrefs.GetInt("LookInveredY", 0) > 0;
         }
 
-        public void ReleaseMouse()
-		{
-			if (Cursor.visible == false)
-			{
-				Cursor.lockState = CursorLockMode.None;
-				Cursor.visible = true;
-				Debug.Log("Cursor visible " + Cursor.visible);
-			}
-			else
-			{
-				Cursor.lockState = CursorLockMode.Locked;
-				Cursor.visible = false;
-			}
-		}
-
 
         // Update is called once per frame
         private void Update()
@@ -89,11 +74,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
-
-			if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.Tab))
-			{
-				ReleaseMouse();
-			}
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
