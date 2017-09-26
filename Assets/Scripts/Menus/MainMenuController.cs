@@ -117,6 +117,14 @@ public class MainMenuController : MonoBehaviour {
         }
     }
 
+    public void OpenSubmenuSound() {
+        AkSoundEngine.PostEvent("Play_UI_Menu_Click_Into", gameObject);
+    }
+
+    public void CloseSubmenuSound() {
+        AkSoundEngine.PostEvent("Play_UI_Menu_Click_Outfrom", gameObject);
+    }
+
     public void StartCredits() {
         creditsCoroutine = Credits();
         StartCoroutine(creditsCoroutine);

@@ -3,8 +3,8 @@
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
-		_CircleProperties ("CircleProperties", Vector) = (0, 0, 0, 0)
-		_EffectPower ("Power", float) = 0.1
+		[PerRendererData]_CircleProperties ("CircleProperties", Vector) = (0, 0, 0, 0)
+		[PerRendererData]_EffectPower ("Power", float) = 0.1
 	}
 	SubShader
 	{
