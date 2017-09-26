@@ -54,6 +54,10 @@
 					<ShortName>test3.wav</ShortName>
 					<Path>SFX\test3_1C9C67B2.wem</Path>
 				</File>
+				<File Id="919001583" Language="SFX">
+					<ShortName>dummy_clip.wav</ShortName>
+					<Path>SFX\dummy_clip_1C9C67B2.wem</Path>
+				</File>
 				<File Id="994356738" Language="SFX">
 					<ShortName>Shortlogreading.wav</ShortName>
 					<Path>SFX\Shortlogreading_1C9C67B2.wem</Path>

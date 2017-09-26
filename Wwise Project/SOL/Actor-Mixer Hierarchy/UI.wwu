@@ -21,6 +21,30 @@
 							<ObjectRef Name="SFX" ID="{9020240C-2B52-4B73-AE27-383D2FED5FF9}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="dummy clip" ID="{49C6F602-33E3-49F4-ABCF-681BFFE6E032}" ShortID="173087290">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dummy_clip" ID="{392F77D3-6E71-464B-8334-80BA9824ABCF}" ShortID="635718565">
+									<Language>SFX</Language>
+									<AudioFile>dummy_clip.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="919001583"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dummy_clip" ID="{392F77D3-6E71-464B-8334-80BA9824ABCF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Menu_Unhover" ID="{90A86BC6-44C0-4F4B-B902-B200BEAD3662}" ShortID="235564285">
 					<PropertyList>
@@ -40,6 +64,30 @@
 							<ObjectRef Name="SFX" ID="{9020240C-2B52-4B73-AE27-383D2FED5FF9}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="dummy clip" ID="{93863D24-844C-4E4E-B5DD-61C9CFF9CBD9}" ShortID="964478557">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dummy_clip" ID="{51A49DD4-C2BB-4B9E-BA48-9377A87983E3}" ShortID="618485328">
+									<Language>SFX</Language>
+									<AudioFile>dummy_clip.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="919001583"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dummy_clip" ID="{51A49DD4-C2BB-4B9E-BA48-9377A87983E3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Menu_Click_Into" ID="{B05FACF6-7521-4DCB-8265-94F47A3A3FFF}" ShortID="421875717">
 					<PropertyList>
@@ -59,6 +107,27 @@
 							<ObjectRef Name="SFX" ID="{9020240C-2B52-4B73-AE27-383D2FED5FF9}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="dummy clip" ID="{2A8A87EF-C288-4FB9-93C8-77261974F593}" ShortID="889702685">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dummy_clip" ID="{E0F85D85-9743-4025-BF7D-B9022DB12D4A}" ShortID="919001583">
+									<Language>SFX</Language>
+									<AudioFile>dummy_clip.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dummy_clip" ID="{E0F85D85-9743-4025-BF7D-B9022DB12D4A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Menu_Click_Outfrom" ID="{633B49DB-1815-4521-A721-02D311E9C134}" ShortID="829557944">
 					<PropertyList>
@@ -78,6 +147,30 @@
 							<ObjectRef Name="SFX" ID="{9020240C-2B52-4B73-AE27-383D2FED5FF9}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="dummy clip" ID="{77D4DF7C-FA5E-45E7-A1AC-DFA3F3043ED3}" ShortID="894944666">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dummy_clip" ID="{583F2CAE-8EDE-40D8-9234-F36F131CAE47}" ShortID="1045766189">
+									<Language>SFX</Language>
+									<AudioFile>dummy_clip.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="919001583"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dummy_clip" ID="{583F2CAE-8EDE-40D8-9234-F36F131CAE47}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
