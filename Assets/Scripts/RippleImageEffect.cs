@@ -2,7 +2,8 @@
 
 [ExecuteInEditMode]
 public class RippleImageEffect : MonoBehaviour {
-    public Material rippleEffect;
+    public Material rippleMaterial;
+    private Material rippleMaterialInstance;
     private Vector4 rippleProperties;
     private float rippleRadius;
     private float rippleWidth = 40f;
@@ -14,6 +15,8 @@ public class RippleImageEffect : MonoBehaviour {
     private float currentRippleStrength;
 
     private void Start() {
+        rippleMaterialInstance = new Material(rippleMaterial);
+
         StopRipple();
     }
 
@@ -24,8 +27,8 @@ public class RippleImageEffect : MonoBehaviour {
 
             currentRippleStrength = Mathf.Cos((rippleTimer / rippleDuration) * Mathf.PI / 2) * maxRippleStrength;
 
-            rippleEffect.SetVector("_CircleProperties", rippleProperties);
-            rippleEffect.SetFloat("_EffectPower", currentRippleStrength);
+            rippleMaterialInstance.SetVector("_CircleProperties", rippleProperties);
+            rippleMaterialInstance.SetFloat("_EffectPower", currentRippleStrength);
 
             if (rippleTimer > rippleDuration) {
                 StopRipple();
@@ -34,7 +37,7 @@ public class RippleImageEffect : MonoBehaviour {
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination) {
-        Graphics.Blit(source, destination, rippleEffect);
+        Graphics.Blit(source, destination, rippleMaterialInstance);
     }
 
     public void Ripple(RectTransform rect) {
@@ -50,8 +53,8 @@ public class RippleImageEffect : MonoBehaviour {
 
         rippleProperties = new Vector4(x, y, rippleRadius, rippleWidth);
 
-        rippleEffect.SetVector("_CircleProperties", rippleProperties);
-        rippleEffect.SetFloat("_EffectPower", maxRippleStrength);
+        rippleMaterialInstance.SetVector("_CircleProperties", rippleProperties);
+        rippleMaterialInstance.SetFloat("_EffectPower", maxRippleStrength);
 
         rippleActive = true;
         rippleTimer = 0;
@@ -61,7 +64,7 @@ public class RippleImageEffect : MonoBehaviour {
         rippleActive = false;
         rippleRadius = 0;
 
-        rippleEffect.SetFloat("_EffectPower", 0);
+        rippleMaterialInstance.SetFloat("_EffectPower", 0);
         rippleProperties = new Vector4(0.5f, 0.5f, rippleRadius, rippleWidth);
     }
 }
