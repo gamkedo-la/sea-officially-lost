@@ -14,6 +14,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	714356039	test1	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test1		5303872
 	723103660	temp_footstep_sealab_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\temp_footstep_sealab_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_01		348114
 	906555434	test3	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test3		5303872
+	919001583	dummy clip	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\dummy_clip_1C9C67B2.wem		\Actor-Mixer Hierarchy\UI\Menu_Hover\dummy clip		88264
 	994356738	Shortlogreading	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Shortlogreading_1C9C67B2.wem		\Actor-Mixer Hierarchy\Audio Logs\Shortlogreading		256064
 	1022138157	test2	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test2		5303872
 
