@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class WaterManager : MonoBehaviour {
+public class InternalWaterManager : MonoBehaviour {
 
     public Transform startPosition;
     public Transform endPosition;
