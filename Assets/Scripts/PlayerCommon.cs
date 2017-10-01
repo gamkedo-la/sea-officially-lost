@@ -6,11 +6,17 @@ public class PlayerCommon : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        UnityEngine.PostProcessing.PostProcessingProfile profile = Instantiate(Camera.main.GetComponent<UnityEngine.PostProcessing.PostProcessingBehaviour>().profile);
+        Camera.main.GetComponent<UnityEngine.PostProcessing.PostProcessingBehaviour>().profile = profile;
+        UnityEngine.PostProcessing.ColorGradingModel.Settings colorGrading = profile.colorGrading.settings;
+        colorGrading.basic.postExposure = (PlayerPrefs.GetInt("Brightness", 50) - 50) / 50;
+        profile.colorGrading.settings = colorGrading;
+
+        Camera.main.fieldOfView = PlayerPrefs.GetInt("FieldOfView", 60);
+    }
+
+    // Update is called once per frame
+    void Update () {
 		if (Input.GetMouseButtonDown(0))
 		{
 			RaycastHit rhInfo;

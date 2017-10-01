@@ -62,8 +62,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MouseLook.YSensitivity = 1 + PlayerPrefs.GetInt("LookSensitivityY", 20)/20;
             m_MouseLook.invertedX = PlayerPrefs.GetInt("LookInveredX", 0) > 0;
             m_MouseLook.invertedY = PlayerPrefs.GetInt("LookInveredY", 0) > 0;
-
-            Camera.main.fieldOfView = PlayerPrefs.GetInt("FieldOfView", 60);
         }
 
 

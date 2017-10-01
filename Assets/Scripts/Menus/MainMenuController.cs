@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.PostProcessing;
 
 public class MainMenuController : MonoBehaviour {
     public float transitionTime;
@@ -12,6 +13,8 @@ public class MainMenuController : MonoBehaviour {
     public WwiseSyncs wwiseSyncs;
     private GameObject activeMenu;
     private GameObject currentMenuObject;
+    private PostProcessingProfile postProcessingProfile;
+    ColorGradingModel.Settings colorGrading;
     private bool mouseInput;
 
     [Header("OptionsMenu")]
@@ -67,8 +70,14 @@ public class MainMenuController : MonoBehaviour {
 
         graphicsQualityText.text = QualitySettings.names[QualitySettings.GetQualityLevel()];
 
-        brightnessSlider.value = PlayerPrefs.GetInt("Brightness", 50);
         brightnessText.text = brightnessMessage + brightnessSlider.value;
+        postProcessingProfile = Instantiate(Camera.main.GetComponent<PostProcessingBehaviour>().profile);
+        Camera.main.GetComponent<PostProcessingBehaviour>().profile = postProcessingProfile;
+        colorGrading = postProcessingProfile.colorGrading.settings;
+        brightnessSlider.value = PlayerPrefs.GetInt("Brightness", 50);
+        colorGrading.basic.postExposure = (brightnessSlider.value - 50)/50;
+        postProcessingProfile.colorGrading.settings = colorGrading;
+
 
         fieldOfViewSlider.value = PlayerPrefs.GetInt("FieldOfView", 60);
         fieldOfViewText.text = fieldOfViewMessage + fieldOfViewSlider.value;
@@ -258,7 +267,8 @@ public class MainMenuController : MonoBehaviour {
 
         brightnessText.text = brightnessMessage + (int)value;
 
-        //set main menu brightness in runtime here
+        colorGrading.basic.postExposure = (brightnessSlider.value - 50) / 50;
+        postProcessingProfile.colorGrading.settings = colorGrading;
     }
 
     public void UpdateMasterVolume(float value) {
