@@ -5,22 +5,40 @@ using UnityEngine.EventSystems;
 
 public class MainMenuController : MonoBehaviour {
     public float transitionTime;
+    private float startGameEffectTime = 5f;
+    private float quitGameEffectTime = 5f;
     public GameObject[] menus;
+    public EventSystem menuEventSystem;
+    public WwiseSyncs wwiseSyncs;
     private GameObject activeMenu;
+    private GameObject currentMenuObject;
+    private bool mouseInput;
 
     [Header("OptionsMenu")]
+    public GameObject graphicsQualityPanel;
+    public Button graphicsQualityDecrease;
+    public Button graphicsQualityIncrease;
     public Text graphicsQualityText;
-    public Text lookSensitivityText;
     public Text brightnessText;
     public Text fieldOfViewText;
-    public Slider lookSensitivitySlider;
+    public Text masterVolumeText;
+    public Text effectsVolumeText;
+    public Text musicVolumeText;
+    public Text lookSensitivityText;
     public Slider brightnessSlider;
     public Slider fieldOfViewSlider;
+    public Slider masterVolumeSlider;
+    public Slider effectsVolumeSlider;
+    public Slider musicVolumeSlider;
+    public Slider lookSensitivitySlider;
     public Toggle lookInversionY;
     public Toggle lookInversionX;
-    private string lookSensitivityMessage;
     private string brightnessMessage;
     private string fieldOfViewMessage;
+    private string masterVolumeMessage;
+    private string effectsVolumeMessage;
+    private string musicVolumeMessage;
+    private string lookSensitivityMessage;
 
     [Header("Credits")]
     public float creditsPageDuration = 4;
@@ -32,35 +50,64 @@ public class MainMenuController : MonoBehaviour {
     [Header("SpecialEffects")]
     public Animator lightBeamAnimator;
     public ParticleSystem breathingBubbles;
-    public ParticleSystem deepSeaDust;
+    public ParticleSystem deepSeaDustVertical;
+    public ParticleSystem deepSeaDustHorizontal;
 
     private void Start() {
         activeMenu = menus[0];
-//        activeMenu.SetActive(true);
+        activeMenu.SetActive(true);
+        currentMenuObject = FindFirstEnabledSelectable(activeMenu);
 
-        lookSensitivityMessage = lookSensitivityText.text;
         brightnessMessage = brightnessText.text;
         fieldOfViewMessage = fieldOfViewText.text;
+        masterVolumeMessage = masterVolumeText.text;
+        effectsVolumeMessage = effectsVolumeText.text;
+        musicVolumeMessage = musicVolumeText.text;
+        lookSensitivityMessage = lookSensitivityText.text;
 
         graphicsQualityText.text = QualitySettings.names[QualitySettings.GetQualityLevel()];
-
-        lookSensitivitySlider.value = PlayerPrefs.GetInt("LookSensitivityX", 20);
-        lookInversionY.isOn = PlayerPrefs.GetInt("LookInveredY", 0) > 0;
-        lookInversionX.isOn = PlayerPrefs.GetInt("LookInveredX", 0) > 0;
-        lookSensitivityText.text = lookSensitivityMessage + lookSensitivitySlider.value;
 
         brightnessSlider.value = PlayerPrefs.GetInt("Brightness", 50);
         brightnessText.text = brightnessMessage + brightnessSlider.value;
 
         fieldOfViewSlider.value = PlayerPrefs.GetInt("FieldOfView", 60);
         fieldOfViewText.text = fieldOfViewMessage + fieldOfViewSlider.value;
+
+        masterVolumeSlider.value = PlayerPrefs.GetInt("MasterVolume", 100);
+        UpdateMasterVolume(masterVolumeSlider.value);
+        effectsVolumeSlider.value = PlayerPrefs.GetInt("EffectsVolume", 100);
+        UpdateEffectsVolume(effectsVolumeSlider.value);
+        musicVolumeSlider.value = PlayerPrefs.GetInt("MusicVolume", 100);
+        UpdateMusicVolume(musicVolumeSlider.value);
+
+        lookSensitivitySlider.value = PlayerPrefs.GetInt("LookSensitivityX", 20);
+        lookInversionY.isOn = PlayerPrefs.GetInt("LookInveredY", 0) > 0;
+        lookInversionX.isOn = PlayerPrefs.GetInt("LookInveredX", 0) > 0;
+        lookSensitivityText.text = lookSensitivityMessage + lookSensitivitySlider.value;
     }
 
     private void Update() {
-        if(Input.anyKeyDown && creditsActive) {
-            nextCredits = true;
-            //Camera.main.GetComponent<RippleImageEffect>().Ripple(0.5f, 0.5f);
-            //StopCredits();
+        if (Input.anyKeyDown) {
+            //Skips to next credits page
+            if (creditsActive) {
+                nextCredits = true;
+            }
+
+            //If nothing is selected on vertical navigation then select the top item
+            if (Input.GetAxisRaw("Vertical") != 0 && menuEventSystem.currentSelectedGameObject == null) {
+                menuEventSystem.SetSelectedGameObject(currentMenuObject);
+                mouseInput = false;
+            }
+
+            //Special behavior handling for graphics quality selector
+            if (Input.GetAxisRaw("Horizontal") < 0 && menuEventSystem.currentSelectedGameObject == graphicsQualityPanel) {
+                graphicsQualityDecrease.animator.SetTrigger("Pressed");
+                graphicsQualityDecrease.onClick.Invoke();
+            }
+            else if (Input.GetAxisRaw("Horizontal") > 0 && menuEventSystem.currentSelectedGameObject == graphicsQualityPanel) {
+                graphicsQualityIncrease.animator.SetTrigger("Pressed");
+                graphicsQualityIncrease.onClick.Invoke();
+            }
         }
     }
 
@@ -68,61 +115,39 @@ public class MainMenuController : MonoBehaviour {
         Debug.LogWarning("ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
         AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(startSceneName);
         asyncLoad.allowSceneActivation = false;
-        IEnumerator startGameEffect = StartGameEffect(3f, asyncLoad);
+        IEnumerator startGameEffect = StartGameEffect(startGameEffectTime, asyncLoad);
         SwitchToMenu(null);
 
         lightBeamAnimator.SetTrigger("StartGame");
-        var bubbleEmission = breathingBubbles.emission;
-        var bubbleShape = breathingBubbles.shape;
-
-        bubbleEmission.rateOverTimeMultiplier = 50; //10
-        bubbleShape.angle = 50; //5
-
-        breathingBubbles.GetComponent<BreathingController>().breathingTimeScale = 0;
-        breathingBubbles.Play();
 
         StartCoroutine(startGameEffect);
     }
 
     IEnumerator StartGameEffect(float duration, AsyncOperation asyncLoad) {
-        var dustMain = deepSeaDust.main;
-        var dustEmission = deepSeaDust.emission;
-        var bubbleMain = breathingBubbles.main;
-
-        for (float timer = 0f; timer < duration; timer += Time.deltaTime) {
-            dustMain.simulationSpeed += Time.deltaTime * (timer/duration + 1) * (timer/duration + 1) * 2; //1
-            dustEmission.rateOverTimeMultiplier += Time.deltaTime * (timer / duration + 1) * (timer / duration + 1) * 2; //3
-            bubbleMain.gravityModifierMultiplier = dustMain.simulationSpeed * -0.1f;
-            yield return null;
-        }
-        yield return new WaitForSeconds(duration / 2);
+        yield return new WaitForSeconds(duration);
 
         asyncLoad.allowSceneActivation = true;
     }
 
     public void QuitGame() {
-        IEnumerator quitGameEffect = QuitGameEffect(3f);
+        IEnumerator quitGameEffect = QuitGameEffect(quitGameEffectTime);
         SwitchToMenu(null);
 
         lightBeamAnimator.SetTrigger("QuitGame");
+        var bubbleEmission = breathingBubbles.emission;
+        var bubbleShape = breathingBubbles.shape;
+
+        bubbleEmission.rateOverTimeMultiplier = 50;
+        bubbleShape.angle = 50;
 
         breathingBubbles.GetComponent<BreathingController>().breathingTimeScale = 0;
+        breathingBubbles.Play();
 
         StartCoroutine(quitGameEffect);
     }
 
     IEnumerator QuitGameEffect(float duration) {
-        var dustMain = deepSeaDust.main;
-        var dustEmission = deepSeaDust.emission;
-        var bubbleMain = breathingBubbles.main;
-
-        for (float timer = 0f; timer < duration; timer += Time.deltaTime) {
-            dustMain.simulationSpeed += Time.deltaTime * (timer / duration + 1) * (timer / duration + 1) * 2; //1
-            dustEmission.rateOverTimeMultiplier += Time.deltaTime * (timer / duration + 1) * (timer / duration + 1) * 2; //3
-            bubbleMain.gravityModifierMultiplier = dustMain.simulationSpeed * -0.1f;
-            yield return null;
-        }
-        yield return new WaitForSeconds(duration / 2);
+        yield return new WaitForSeconds(duration);
 
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
@@ -132,13 +157,22 @@ public class MainMenuController : MonoBehaviour {
     }
 
     public void SwitchToMenu(GameObject menu) {
+        if(Input.GetAxisRaw("Submit") != 0) {
+            mouseInput = false;
+        }
+        else {
+            mouseInput = true;
+        }
+
         IEnumerator fadeCoroutine = FadeBetweenMenus(menu);
         StartCoroutine(fadeCoroutine);
     }
 
     IEnumerator FadeBetweenMenus(GameObject menu) {
         CanvasGroup canvas = activeMenu.GetComponent<CanvasGroup>();
-        for(float t = transitionTime/2; t > 0; t -= Time.deltaTime) {
+        //menuEventSystem.SetSelectedGameObject(null);
+
+        for (float t = transitionTime/2; t > 0; t -= Time.deltaTime) {
             canvas.alpha = Mathf.Clamp(t*2, 0, 1);
             yield return null;
         }
@@ -153,6 +187,11 @@ public class MainMenuController : MonoBehaviour {
         activeMenu = menu;
         activeMenu.SetActive(true);
         canvas = activeMenu.GetComponent<CanvasGroup>();
+
+        currentMenuObject = FindFirstEnabledSelectable(activeMenu);
+        if (!mouseInput) {
+            menuEventSystem.SetSelectedGameObject(currentMenuObject);
+        }
 
         for (float t = 0; t < transitionTime; t += Time.deltaTime) {
             canvas.alpha = Mathf.Clamp(t * 2, 0, 1);
@@ -203,47 +242,77 @@ public class MainMenuController : MonoBehaviour {
     public void DecreaseGraphicsQuality() {
         QualitySettings.DecreaseLevel(true);
         graphicsQualityText.text = QualitySettings.names[QualitySettings.GetQualityLevel()];
-        EventSystem.current.SetSelectedGameObject(null);
+        //EventSystem.current.SetSelectedGameObject(null);
 
     }
 
     public void IncreaseGraphicsQuality() {
         QualitySettings.IncreaseLevel(true);
         graphicsQualityText.text = QualitySettings.names[QualitySettings.GetQualityLevel()];
-        EventSystem.current.SetSelectedGameObject(null);
-    }
-
-    public void UpdateLookSensitivityX(float value) {
-        PlayerPrefs.SetInt("LookSensitivityX", (int)value);
-        PlayerPrefs.SetInt("LookSensitivityY", (int)value);
-        //PlayerPrefs.Save();
-
-        lookSensitivityText.text = lookSensitivityMessage + (int)value;
+        //EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void UpdateBrightness(float value) {
         PlayerPrefs.SetInt("Brightness", (int)value);
-        //PlayerPrefs.Save();
+        PlayerPrefs.Save();
 
         brightnessText.text = brightnessMessage + (int)value;
 
         //set main menu brightness in runtime here
     }
 
+    public void UpdateMasterVolume(float value) {
+        wwiseSyncs.VolumeMaster(value);
+        masterVolumeText.text = masterVolumeMessage + (int)value;
+        PlayerPrefs.SetInt("MasterVolume", (int)value);
+    }
+
+    public void UpdateEffectsVolume(float value) {
+        wwiseSyncs.VolumeSFX(value);
+        effectsVolumeText.text = effectsVolumeMessage + (int)value;
+        PlayerPrefs.SetInt("EffectsVolume", (int)value);
+    }
+
+    public void UpdateMusicVolume(float value) {
+        wwiseSyncs.VolumeMusic(value);
+        musicVolumeText.text = musicVolumeMessage + (int)value;
+        PlayerPrefs.SetInt("MusicVolume", (int)value);
+    }
+
+    public void UpdateLookSensitivityX(float value) {
+        PlayerPrefs.SetInt("LookSensitivityX", (int)value);
+        PlayerPrefs.SetInt("LookSensitivityY", (int)value);
+        PlayerPrefs.Save();
+
+        lookSensitivityText.text = lookSensitivityMessage + (int)value;
+    }
+
     public void UpdateFieldOfView(float value) {
         PlayerPrefs.SetInt("FieldOfView", (int)value);
-        //PlayerPrefs.Save();
+        PlayerPrefs.Save();
 
         fieldOfViewText.text = fieldOfViewMessage + (int)value;
     }
 
     public void SetVerticalInvert(bool value) {
         PlayerPrefs.SetInt("LookInveredY", value ? 1 : 0);
-        //PlayerPrefs.Save();
+        PlayerPrefs.Save();
     }
 
     public void SetHorizontalInvert(bool value) {
         PlayerPrefs.SetInt("LookInveredX", value ? 1 : 0);
-        //PlayerPrefs.Save();
+        PlayerPrefs.Save();
+    }
+
+    private GameObject FindFirstEnabledSelectable(GameObject gameObject) {
+        GameObject go = null;
+        var selectables = gameObject.GetComponentsInChildren<Selectable>(true);
+        foreach (var selectable in selectables) {
+            if (selectable.IsActive() && selectable.IsInteractable()) {
+                go = selectable.gameObject;
+                break;
+            }
+        }
+        return go;
     }
 }
