@@ -11,8 +11,10 @@ public class ExternalWaterManager : MonoBehaviour
     public GameObject water;
     public GameObject closedDoor;
     public PlayerController playerController;
+    public Transform playerSpawn;
 
     private Quaternion playerStartLook;
+    private Vector3 playerStartPosition;
     private float startTime = -1.0f;
     private float endTime = -1.0f;
     private bool camAboveWater = false;
@@ -31,7 +33,8 @@ public class ExternalWaterManager : MonoBehaviour
             float fillProgress = (Time.timeSinceLevelLoad - startTime) / (endTime - startTime);
             fillProgress = Mathf.Min(fillProgress, 1.0f);
             water.transform.position = Vector3.Lerp(startPosition.position, endPosition.position, fillProgress);
-            Camera.main.transform.rotation = Quaternion.Slerp(playerStartLook, Quaternion.LookRotation((closedDoor.transform.position - Camera.main.transform.position)), fillProgress * 2);
+            Camera.main.transform.rotation = Quaternion.Slerp(playerStartLook, playerSpawn.rotation, fillProgress * 2);
+            PlayerCommon.instance.transform.position = Vector3.Lerp(playerStartPosition, playerSpawn.transform.position, Mathf.Min(fillProgress * 6.0f, 1.0f));
             if (camAboveWater)
             {
                 if (water.transform.position.y < Camera.main.transform.position.y)
@@ -61,6 +64,7 @@ public class ExternalWaterManager : MonoBehaviour
 
             playerController.enabled = false;
             playerStartLook = Camera.main.transform.rotation;
+            playerStartPosition = PlayerCommon.instance.transform.position;
         }
 
     }

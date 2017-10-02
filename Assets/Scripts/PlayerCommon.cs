@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerCommon : MonoBehaviour {
 
+    public static PlayerCommon instance;
+
+    void Awake() {
+        instance = this;
+    }
+
 	// Use this for initialization
 	void Start () {
         UnityEngine.PostProcessing.PostProcessingProfile profile = Instantiate(Camera.main.GetComponent<UnityEngine.PostProcessing.PostProcessingBehaviour>().profile);
