@@ -743,8 +743,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1320631500973970}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3245, y: -0.47641, z: 36.228}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 45.04, y: 3.58, z: 163.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4470840955423260}
@@ -1980,8 +1980,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.87, y: 3.18, z: 0.51}
+  m_Center: {x: -1.27, y: 1.68, z: -0.45}
 --- !u!65 &65941913821903596
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2405,7 +2405,7 @@ MonoBehaviour:
   closedDoor: {fileID: 1897680053577272}
   waterEffect: {fileID: 0}
   playerSpawn: {fileID: 4306874626773072}
-  startsWet: 0
+  startsWet: 1
 --- !u!114 &114648456164804972
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+using UnityEngine.SceneManagement;
 
 public class WaterManager : MonoBehaviour {
 
@@ -14,6 +14,7 @@ public class WaterManager : MonoBehaviour {
     public ParticleSystem waterEffect;
     public Transform playerSpawn;
     public bool startsWet;
+    public string sceneToLoad;
 
     private Quaternion playerStartLook;
     private Vector3 playerStartPosition;
@@ -26,6 +27,7 @@ public class WaterManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        PlayerCommon.instance.transform.position = FudgedPlayerSpawnPosition();
         if (startsWet) {
             startPosition = upperPosition;
             endPosition = lowerPosition;
@@ -43,16 +45,13 @@ public class WaterManager : MonoBehaviour {
             fillProgress = Mathf.Min(fillProgress, 1.0f);
             water.transform.position = Vector3.Lerp(startPosition.position, endPosition.position, fillProgress);
             Camera.main.transform.rotation = Quaternion.Slerp(playerStartLook, playerSpawn.rotation, fillProgress * 2);
-            float heightFudgeFactor;
             float positionChangeMultiplier;
             if (startsWet) {
-                heightFudgeFactor = 1.218f;//(-1.229f) - (-0.81641f);
                 positionChangeMultiplier = 2.5f;
             } else {
                 positionChangeMultiplier = 6.0f;
-                heightFudgeFactor = (-1.229f) - (-0.81641f);
             }
-            PlayerCommon.instance.transform.position = Vector3.Lerp(playerStartPosition, playerSpawn.transform.position + Vector3.up * heightFudgeFactor, Mathf.Min(fillProgress * positionChangeMultiplier, 1.0f));
+            PlayerCommon.instance.transform.position = Vector3.Lerp(playerStartPosition, FudgedPlayerSpawnPosition(), Mathf.Min(fillProgress * positionChangeMultiplier, 1.0f));
             if (camAboveWater) {
                 if (startsWet) {
 					if (water.transform.position.y < Camera.main.transform.position.y)
@@ -77,8 +76,25 @@ public class WaterManager : MonoBehaviour {
 				}
 
             }
+            if (fillProgress >= 1.0f) {
+                SceneManager.LoadScene(sceneToLoad);
+            }
         }
 	}
+
+    Vector3 FudgedPlayerSpawnPosition() {
+        float heightFudgeFactor;
+		if (startsWet)
+		{
+			heightFudgeFactor = 1.218f;	
+		}
+		else
+		{
+			heightFudgeFactor = (-1.229f) - (-0.81641f);
+		}
+        return playerSpawn.transform.position + Vector3.up * heightFudgeFactor;
+
+    }
 
     public void ClickAction() {
         RaiseWater();
