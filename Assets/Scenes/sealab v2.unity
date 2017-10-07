@@ -1074,12 +1074,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 95845823366877326, guid: 1799019b0fdae4dec8ff9b2fca1e60f3,
+    - target: {fileID: 95797070912250528, guid: 1799019b0fdae4dec8ff9b2fca1e60f3,
         type: 2}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ec15510b10d330a48b2795cdd6cbe481, type: 2}
-    - target: {fileID: 95797070912250528, guid: 1799019b0fdae4dec8ff9b2fca1e60f3,
+    - target: {fileID: 95845823366877326, guid: 1799019b0fdae4dec8ff9b2fca1e60f3,
         type: 2}
       propertyPath: m_Controller
       value: 
@@ -1089,11 +1089,6 @@ Prefab:
       propertyPath: waterEffect
       value: 
       objectReference: {fileID: 674766340}
-    - target: {fileID: 114564471960541644, guid: 1799019b0fdae4dec8ff9b2fca1e60f3,
-        type: 2}
-      propertyPath: sceneToLoad
-      value: Main
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1799019b0fdae4dec8ff9b2fca1e60f3, type: 2}
   m_IsPrefabParent: 0

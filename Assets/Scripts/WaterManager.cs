@@ -9,7 +9,7 @@ public class WaterManager : MonoBehaviour {
     public Transform upperPosition;
     public Transform lowerPosition;
     public float fillTime = 5.0f;
-    public GameObject water;
+    public GameObject waterBase;
     public GameObject closedDoor;
     public ParticleSystem waterEffect;
     public Transform playerSpawn;
@@ -24,9 +24,11 @@ public class WaterManager : MonoBehaviour {
     private float endTime = -1.0f;
     private bool camAboveWater = true;
     private float waterCameraAdjust = 1.218f;
+    private GameObject water;
 
 	// Use this for initialization
 	void Start () {
+        water = Instantiate(waterBase, waterBase.transform.position, Quaternion.identity);
         PlayerCommon.instance.transform.position = FudgedPlayerSpawnPosition();
         if (startsWet) {
             startPosition = upperPosition;

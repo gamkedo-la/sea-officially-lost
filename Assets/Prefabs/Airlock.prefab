@@ -743,8 +743,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1320631500973970}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 45.04, y: 3.58, z: 163.53}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3245, y: -0.47641, z: 36.228}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4470840955423260}
@@ -2401,11 +2401,12 @@ MonoBehaviour:
   upperPosition: {fileID: 4508827742820554}
   lowerPosition: {fileID: 4932537400770372}
   fillTime: 5
-  water: {fileID: 1966483096677086}
+  waterBase: {fileID: 1966483096677086}
   closedDoor: {fileID: 1897680053577272}
   waterEffect: {fileID: 0}
   playerSpawn: {fileID: 4306874626773072}
   startsWet: 1
+  sceneToLoad: Main
 --- !u!114 &114648456164804972
 MonoBehaviour:
   m_ObjectHideFlags: 1

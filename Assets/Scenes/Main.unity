@@ -947,6 +947,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 260.075
       objectReference: {fileID: 0}
+    - target: {fileID: 114564471960541644, guid: 1799019b0fdae4dec8ff9b2fca1e60f3,
+        type: 2}
+      propertyPath: waterBase
+      value: 
+      objectReference: {fileID: 969718823}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1799019b0fdae4dec8ff9b2fca1e60f3, type: 2}
   m_IsPrefabParent: 0
@@ -2824,6 +2829,11 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Player Inventory
+--- !u!1 &969718823 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1966483096677086, guid: 1799019b0fdae4dec8ff9b2fca1e60f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 296152721}
 --- !u!4 &969992611 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400036, guid: 16e5722d0b9f7844ea5478a53c66ddc2, type: 3}
