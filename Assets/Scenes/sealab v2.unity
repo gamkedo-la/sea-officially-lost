@@ -1089,6 +1089,11 @@ Prefab:
       propertyPath: waterEffect
       value: 
       objectReference: {fileID: 674766340}
+    - target: {fileID: 114564471960541644, guid: 1799019b0fdae4dec8ff9b2fca1e60f3,
+        type: 2}
+      propertyPath: startsWet
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1799019b0fdae4dec8ff9b2fca1e60f3, type: 2}
   m_IsPrefabParent: 0
