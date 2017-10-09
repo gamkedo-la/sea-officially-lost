@@ -6,6 +6,7 @@ TagManager:
   tags:
   - fps cam
   - canPickUp
+  - compassTarget
   layers:
   - Default
   - TransparentFX
