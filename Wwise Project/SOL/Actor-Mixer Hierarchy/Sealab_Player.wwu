@@ -4,6 +4,13 @@
 		<WorkUnit Name="Sealab_Player" ID="{4F758AE0-9966-4A47-8818-72236072D625}" OwnerID="{9B858B06-54AD-40D7-B0D0-1B72E3DAC5CB}" PersistMode="Nested">
 			<ChildrenList>
 				<RandomSequenceContainer Name="Footsteps" ID="{80688907-EE52-4C8F-AC55-77A5F2E7282D}" ShortID="700637149">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
