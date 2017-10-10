@@ -4,10 +4,11 @@ Shader "Custom/SonarScanShader"
 {
 	Properties
 	{
-		_MainTex ("Texture", 2D) = "white" {}
+		_MainTex ("Texture", 2D) = "black" {}
 		_ScanDistance("Scan Distance", float) = 0
 		_ScanWidth("Scan Width", float) = 10
-		_LeadSharp("Leading Edge Sharpness", float) = 10
+		_Range("Range", float) = 1
+		//_LeadSharp("Leading Edge Sharpness", float) = 10
 		_LeadColor("Leading Edge Color", Color) = (1, 1, 1, 0)
 		_MidColor("Mid Color", Color) = (1, 1, 1, 0)
 		_TrailColor("Trail Color", Color) = (1, 1, 1, 0)
@@ -47,7 +48,8 @@ Shader "Custom/SonarScanShader"
 			float4 _WorldSpaceScannerPos;
 			float _ScanDistance;
 			float _ScanWidth;
-			float _LeadSharp;
+			float _Range;
+			//float _LeadSharp;
 			float4 _LeadColor;
 			float4 _MidColor;
 			float4 _TrailColor;
@@ -98,9 +100,9 @@ Shader "Custom/SonarScanShader"
 				half4 edge = lerp(_MidColor, _LeadColor, lead);
 				scannerCol = lerp(_TrailColor, edge, diff);// + horzBars(i.uv) * half4(1, 1, 1, 1);
 
-				float distFade = saturate(1 - dist*0.005);
+				float distFade = saturate(1 - dist*_Range); //Range is actually 1/range. Smaller numbers give greater range
 
-				return col + scannerCol * scanMask * diff * diff * distFade * distFade;
+				return col + scannerCol * scanMask * diff * diff * pow(distFade, 2);
 			}
 			ENDCG
 		}

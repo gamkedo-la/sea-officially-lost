@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114971404276139624}
   - component: {fileID: 114574883358397150}
   - component: {fileID: 114298545838207952}
+  - component: {fileID: 114199694111968264}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -512,6 +513,20 @@ MonoBehaviour:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &114199694111968264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149676119277710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d262b45c211f014bac417aa656d5c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scanners:
+  - {fileID: 114298545838207952}
+  cam: {fileID: 20263591756469940}
 --- !u!114 &114202712492752768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -601,7 +616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scannerOrigin: {fileID: 4168401195506138}
   effectMaterial: {fileID: 2100000, guid: 7f515986ad459be469e2eda2597ee413, type: 2}
-  maxScanDistance: 0
+  maxScanDistance: 200
+  scanDistance: 0
   scanSpeed: 40
   scanWidth: 25
   cooldownTime: 10
@@ -654,7 +670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_positionOffsetData:
-    positionOffset: {x: -4.884383, y: -0.0000076293945, z: -34.508667}
+    positionOffset: {x: 0, y: 0, z: 0}
     KeepMe: 0
   isEnvironmentAware: 0
   isStaticObject: 0
