@@ -11,22 +11,6 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1906341235768902}
   m_IsPrefabParent: 1
---- !u!1 &1013817325386978
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4454480033770648}
-  - component: {fileID: 114502510485122760}
-  m_Layer: 0
-  m_Name: CompassUIManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1036847228364212
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,6 +136,7 @@ GameObject:
   - component: {fileID: 114087246269919276}
   - component: {fileID: 114213203019495132}
   - component: {fileID: 114048927981691490}
+  - component: {fileID: 114340342503977722}
   m_Layer: 0
   m_Name: PlayerPrefabUnderwater
   m_TagString: Untagged
@@ -202,19 +187,6 @@ Transform:
   m_Father: {fileID: 4887103560485698}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4454480033770648
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1013817325386978}
-  m_LocalRotation: {x: -0, y: 0.7550314, z: -0, w: 0.6556887}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4619777954752906}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4619777954752906
 Transform:
   m_ObjectHideFlags: 1
@@ -229,7 +201,6 @@ Transform:
   - {fileID: 4168401195506138}
   - {fileID: 4829394443031966}
   - {fileID: 4893774566367680}
-  - {fileID: 4454480033770648}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -98.05601, z: 0}
@@ -634,6 +605,20 @@ MonoBehaviour:
   scanSpeed: 40
   scanWidth: 25
   cooldownTime: 10
+--- !u!114 &114340342503977722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1906341235768902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5652613725f604c33abc1b362277ac97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftBoundry: {fileID: 0}
+  rightBoundry: {fileID: 0}
+  sonarRange: 40
 --- !u!114 &114414260894801614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -645,20 +630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3aaaa0329f9401b94f835bade66e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114502510485122760
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1013817325386978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5652613725f604c33abc1b362277ac97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftBoundry: {fileID: 0}
-  rightBoundry: {fileID: 0}
-  sonarRange: 40
 --- !u!114 &114574883358397150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -683,7 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_positionOffsetData:
-    positionOffset: {x: 0, y: 0, z: 0}
+    positionOffset: {x: -4.884383, y: -0.0000076293945, z: -34.508667}
     KeepMe: 0
   isEnvironmentAware: 0
   isStaticObject: 0
