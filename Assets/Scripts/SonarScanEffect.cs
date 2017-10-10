@@ -3,10 +3,11 @@
 [ExecuteInEditMode]
 public class SonarScanEffect : MonoBehaviour {
 
-    public Transform ScannerOrigin;
-    public Material EffectMaterial;
-    public float ScanDistance;
-    public float sharpness;
+    public Transform scannerOrigin;
+    public Material effectMaterial;
+    private Material localEffectMaterial;
+    public float maxScanDistance; //TODO make this variable meaningful
+    private float scanDistance;
     public float scanSpeed;
     public float scanWidth;
     public float cooldownTime;
@@ -18,18 +19,17 @@ public class SonarScanEffect : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        cooldownCounter = 0;
     }
 
     // Update is called once per frame
     void Update() {
         if (_scanning) {
-            ScanDistance += Time.deltaTime * scanSpeed;
+            scanDistance += Time.deltaTime * scanSpeed;
             //            ScanDistance += Time.deltaTime * TimeElapsed * scanSpeed;
             //		TimeElapsed += Time.deltaTime;
-            if (ScanDistance > 1000) {
+            if (scanDistance > 1000) {
                 _scanning = false;
-                ScanDistance = 0;
+                scanDistance = 0;
             }
         }
 
@@ -43,19 +43,23 @@ public class SonarScanEffect : MonoBehaviour {
     }
 
     void OnEnable() {
-        EffectMaterial.SetFloat("_ScanWidth", scanWidth);
+        cooldownCounter = 0;
+
+        localEffectMaterial = Material.Instantiate(effectMaterial);
+
+        localEffectMaterial.SetFloat("_ScanWidth", scanWidth);
 
         _camera = GetComponent<Camera>();
         _camera.depthTextureMode = DepthTextureMode.Depth;
-        if (ScannerOrigin == null) {
-            ScannerOrigin = _camera.transform;
+        if (scannerOrigin == null) {
+            scannerOrigin = _camera.transform;
         }
     }
 
     void OnRenderImage(RenderTexture src, RenderTexture dst) {
-        EffectMaterial.SetVector("_WorldSpaceScannerPos", ScannerOrigin.position);
-        EffectMaterial.SetFloat("_ScanDistance", ScanDistance);
-        RaycastCornerBlit(src, dst, EffectMaterial);
+        localEffectMaterial.SetVector("_WorldSpaceScannerPos", scannerOrigin.position);
+        localEffectMaterial.SetFloat("_ScanDistance", scanDistance);
+        RaycastCornerBlit(src, dst, localEffectMaterial);
     }
 
 
@@ -123,7 +127,7 @@ public class SonarScanEffect : MonoBehaviour {
     public void Scan() {
         cooldownCounter = cooldownTime;
         _scanning = true;
-        ScanDistance = 0;
+        scanDistance = 0;
         TimeElapsed = 0.0f;
     }
 

@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1906341235768902}
   m_IsPrefabParent: 1
+--- !u!1 &1013817325386978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4454480033770648}
+  - component: {fileID: 114502510485122760}
+  m_Layer: 0
+  m_Name: CompassUIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1036847228364212
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,6 +58,7 @@ GameObject:
   - component: {fileID: 114578672678651466}
   - component: {fileID: 114971404276139624}
   - component: {fileID: 114574883358397150}
+  - component: {fileID: 114298545838207952}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -135,7 +152,6 @@ GameObject:
   - component: {fileID: 114087246269919276}
   - component: {fileID: 114213203019495132}
   - component: {fileID: 114048927981691490}
-  - component: {fileID: 114796697515000338}
   m_Layer: 0
   m_Name: PlayerPrefabUnderwater
   m_TagString: Untagged
@@ -186,6 +202,19 @@ Transform:
   m_Father: {fileID: 4887103560485698}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4454480033770648
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1013817325386978}
+  m_LocalRotation: {x: -0, y: 0.7550314, z: -0, w: 0.6556887}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4619777954752906}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4619777954752906
 Transform:
   m_ObjectHideFlags: 1
@@ -193,13 +222,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1906341235768902}
   m_LocalRotation: {x: -0, y: -0.7550314, z: -0, w: 0.6556887}
-  m_LocalPosition: {x: 73.34, y: 14.77, z: 209.01}
+  m_LocalPosition: {x: 140.1, y: 129.7, z: 218.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4807368749215770}
   - {fileID: 4168401195506138}
   - {fileID: 4829394443031966}
   - {fileID: 4893774566367680}
+  - {fileID: 4454480033770648}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -98.05601, z: 0}
@@ -540,16 +570,12 @@ MonoBehaviour:
   strafeSpeed: 5
   riseSpeed: 10
   scanRange: 500
-  scannerBeam: {fileID: 0}
-  scannedItem: {fileID: 0}
-  scanProgress: {fileID: 0}
-  playerShip: {fileID: 0}
   scanAmount: 0
+  oxygenLevel: {fileID: 0}
   upLooksDown: 0
   playerInventory: {fileID: 114252315162712742}
   currentInventoryUsed: 0
   inventoryDisplay: {fileID: 0}
-  sonarRange: 40
   insanityMeter: {fileID: 0}
   knowledgeLevel: 99
   scanRate: 60
@@ -591,6 +617,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1533a27fb0f942b682d441ac38ac5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114298545838207952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149676119277710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c8d0f9832319f4cba15f217e9e2ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scannerOrigin: {fileID: 4168401195506138}
+  effectMaterial: {fileID: 2100000, guid: 7f515986ad459be469e2eda2597ee413, type: 2}
+  maxScanDistance: 0
+  scanSpeed: 40
+  scanWidth: 25
+  cooldownTime: 10
 --- !u!114 &114414260894801614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -602,6 +645,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3aaaa0329f9401b94f835bade66e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114502510485122760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1013817325386978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5652613725f604c33abc1b362277ac97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftBoundry: {fileID: 0}
+  rightBoundry: {fileID: 0}
+  sonarRange: 40
 --- !u!114 &114574883358397150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -634,17 +691,6 @@ MonoBehaviour:
     initialListenerList: []
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &114796697515000338
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1906341235768902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d354dc53eb9aa4e32bb78ac518087209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114868334277426084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -748,7 +794,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 464653904
+  randomSeed: 530101151
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3926,7 +3972,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 699783859
+  randomSeed: -1508500752
   InitialModule:
     serializedVersion: 3
     enabled: 1

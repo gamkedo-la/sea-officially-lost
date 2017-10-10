@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MyScanMaterial
+  m_Name: SonarScanMaterial
   m_Shader: {fileID: 4800000, guid: ff7a6a69f9f620e48a48032517f80dbc, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -66,13 +66,13 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ScanDistance: 0
-    - _ScanWidth: 10
+    - _ScanWidth: 25
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LeadColor: {r: 1, g: 1, b: 1, a: 0}
-    - _MidColor: {r: 0.18940164, g: 0.33088237, b: 0, a: 0}
-    - _TrailColor: {r: 0, g: 1, b: 0.95862055, a: 0}
+    - _LeadColor: {r: 0.58965516, g: 0.58965516, b: 0.58965516, a: 0}
+    - _MidColor: {r: 0.1882353, g: 0.32941177, b: 0, a: 0}
+    - _TrailColor: {r: 0, g: 1, b: 0.95686275, a: 0}
