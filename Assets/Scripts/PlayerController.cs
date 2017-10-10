@@ -15,12 +15,10 @@ public class PlayerController : MonoBehaviour {
     public float strafeSpeed = 5.0f;
     public float riseSpeed = 10.0f;
 
+
     public float scanRange = 500.0f;
-    public ParticleSystem scannerBeam;
-    public InventoryManager scannedItem;
-    public Slider scanProgress;
-    public InventoryManager playerShip;
     public float scanAmount = 0.0f;
+    public Text oxygenLevel;
 
     public bool upLooksDown = false;
 
@@ -28,7 +26,7 @@ public class PlayerController : MonoBehaviour {
     public int currentInventoryUsed;
 
 	public Text inventoryDisplay;
-    public float sonarRange = 40.0f;
+
 
     public Text insanityMeter;
     private float insanityCounter = 0.0f;
@@ -57,7 +55,7 @@ public class PlayerController : MonoBehaviour {
         m_MouseLook.Init(transform, Camera.main.transform);
         playerInventory.ScannedInventory();
         //playerShip.ScannedInventory();
-        StartCoroutine(SonarPing());
+
         StartCoroutine(InsanityUpdate());
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -67,6 +65,8 @@ public class PlayerController : MonoBehaviour {
         m_MouseLook.YSensitivity = 1 + PlayerPrefs.GetInt("LookSensitivityY", 20)/20;
         m_MouseLook.invertedX = PlayerPrefs.GetInt("LookInveredX", 0) > 0;
         m_MouseLook.invertedY = PlayerPrefs.GetInt("LookInveredY", 0) > 0;
+
+
     }
 
     public void ReleaseMouse() {
@@ -137,69 +137,6 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        // Scanner!
-        RaycastHit rhInfo;
-        bool inventoryInFrontOfMe = false;
-        if (Physics.Raycast(transform.position, Camera.main.transform.forward, out rhInfo, scanRange))
-        {
-            //Debug.Log("We hit: " + rhInfo.collider.name);
-            scannedItem = rhInfo.collider.gameObject.GetComponent<InventoryManager>();
-            inventoryInFrontOfMe = (scannedItem != null);
-        }
-        else
-        {
-            if (scannedItem != null)
-            {
-                scannedItem.ToggleInventoryPanel(false);
-            }
-        }
-
-        if (inventoryInFrontOfMe)
-        {
-            scannedItem.ToggleInventoryPanel(true);
-
-            if (Input.GetButtonDown("Fire1") && scannedItem.InventoryKnown())
-            {
-                scannedItem.TransferInventoryInto(playerInventory);
-            }
-        }
-
-        if (Input.GetButtonDown("Fire2"))
-        {
-            scannerBeam.Play();
-            scanning = true;
-        }
-        if (Input.GetButtonUp("Fire2"))
-        {
-
-            //scannedItem = null;
-            scannerBeam.Stop();
-
-            scanning = false;
-        }
-
-        currentInventoryUsed = playerInventory.CountCurrentInventory();
-
-        if (scanning)
-        {
-
-            scanAmount += Time.deltaTime * scanRate;
-            if (scanAmount >= scanProgress.maxValue)
-            {
-                scanAmount = scanProgress.maxValue;
-                if (inventoryInFrontOfMe)
-                {
-                    scannedItem.ScannedInventory();
-                    Debug.Log("We are scanning and progress hit max: " + scanProgress.value);
-                }
-            }
-
-        }
-        if (scanProgress)
-        {
-            scanProgress.value = scanAmount;
-            insanityMeter.text = "Insanity: " + insanityCounter;
-        }
     }
 
     private void FixedUpdate()
@@ -212,27 +149,6 @@ public class PlayerController : MonoBehaviour {
         speedRise *= speedDecay;
         m_MouseLook.UpdateCursorLock();
     }
-
-    IEnumerator SonarPing() {
-        while (true) {
-            yield return new WaitForSeconds(0.5f);
-            Collider [] sonarHits = Physics.OverlapSphere(transform.position, sonarRange, LayerMask.GetMask("sonarDetects"));
-            //Debug.Log(sonarHits.Length);
-            float nearestFoundDist = sonarRange + 1.0f;
-            int nearestHitIndex = -1;
-            for (int i = 0; i < sonarHits.Length; i++) {
-                float thisDist = Vector3.Distance(transform.position, sonarHits[i].transform.position);
-                if (thisDist < nearestFoundDist) {
-                    nearestFoundDist = thisDist;
-                    nearestHitIndex = i;
-                }
-            } // end for loop for sonarHits
-            //if (nearestHitIndex != -1) {
-            //    oxygenLevel.text = "" + (nearestFoundDist / sonarRange);
-            //}
-            //Debug.Log(sonarHits[nearestHitIndex].name);
-        } // end while true
-    }  // end SonarPing
 
     internal IEnumerator InsanityUpdate() {
         while(true) {

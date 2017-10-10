@@ -696,6 +696,69 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: cc9dcb3cc708135489e88cc5638c9237, type: 3}
   m_PrefabInternal: {fileID: 740446142}
+--- !u!1 &351892409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 351892412}
+  - component: {fileID: 351892411}
+  - component: {fileID: 351892410}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &351892410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 351892409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac73615964d46be4f9ee12c5bb9cd8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basePath: Audio\GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+  preparePoolSize: 0
+  memoryCutoffThreshold: 0.95
+  monitorPoolSize: 128
+  monitorQueuePoolSize: 64
+  callbackManagerBufferSize: 4
+  engineLogging: 1
+--- !u!114 &351892411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 351892409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a43e966e04bd6b24bb49da72860d42c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &351892412
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 351892409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &356333396
 Prefab:
   m_ObjectHideFlags: 0
@@ -1089,6 +1152,11 @@ Prefab:
       propertyPath: waterEffect
       value: 
       objectReference: {fileID: 674766340}
+    - target: {fileID: 114564471960541644, guid: 1799019b0fdae4dec8ff9b2fca1e60f3,
+        type: 2}
+      propertyPath: startsWet
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1799019b0fdae4dec8ff9b2fca1e60f3, type: 2}
   m_IsPrefabParent: 0
@@ -4893,7 +4961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac73615964d46be4f9ee12c5bb9cd8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio/GeneratedSoundBanks
+  basePath: Audio\GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048
@@ -6404,7 +6472,7 @@ MonoBehaviour:
   loadAsynchronous: 0
   decodeBank: 0
   saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
+  unloadTriggerList: 
 --- !u!4 &1833749249
 Transform:
   m_ObjectHideFlags: 0
