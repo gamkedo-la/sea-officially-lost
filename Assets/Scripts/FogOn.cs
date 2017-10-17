@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class FogOn : MonoBehaviour {
 
+    public bool fogEnabled = false;
     // Use this for initialization
     void Awake()
     {
         Debug.Log("Turning on fog via script");
-        RenderSettings.fog = true;
+        RenderSettings.fog = fogEnabled;
     }
 }
