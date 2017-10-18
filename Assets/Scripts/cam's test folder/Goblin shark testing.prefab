@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 95460550543474598}
   - component: {fileID: 114972379613269524}
   - component: {fileID: 114287708785488990}
+  - component: {fileID: 114369981751025358}
   m_Layer: 0
   m_Name: Goblin shark testing
   m_TagString: Untagged
@@ -769,7 +770,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  neighborDistance: 2
+  groupPullPower: 2
+  myManager: {fileID: 0}
+--- !u!114 &114369981751025358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1220324752079138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947630f358e255b4088189cb9db4aa2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.5
+  groupPullPower: 2
+  myManager: {fileID: 0}
 --- !u!114 &114972379613269524
 MonoBehaviour:
   m_ObjectHideFlags: 1

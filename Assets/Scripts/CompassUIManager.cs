@@ -47,7 +47,7 @@ public class CompassUIManager : MonoBehaviour {
 					{
 						float range = compassFOV * 2;
 						float angPerc = (angleToTarget - (-compassFOV)) / range;
-						Debug.Log("angle Perc " + angPerc);
+						//Debug.Log("angle Perc " + angPerc);
 						cisScript.myIcon.enabled = true;
 						cisScript.myIcon.transform.position = (1.0f - angPerc) * leftBoundry.transform.position + angPerc * rightBoundry.transform.position;
 					}

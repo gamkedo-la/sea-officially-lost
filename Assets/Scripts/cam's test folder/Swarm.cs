@@ -130,6 +130,26 @@ public class Swarm : MonoBehaviour {
                 transform.rotation = Quaternion.Slerp(transform.rotation,
                                                       Quaternion.LookRotation(direction),
                                                       rotationSPeed * Time.deltaTime);
+
+
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "Main Level - Seabed")
+        {
+            turning = true;
+        }
+        /*Debug.Log("creature collided with " + other.name);
+        if (other.name == "Main Level - Seabed")
+        {
+            Vector3 forward = Vector3.Normalize (transform.TransformDirection(Vector3.forward));
+            Vector3 toOther = Vector3.Normalize(other.transform.position - transform.position);
+            Debug.Log("Dot Product is "+Vector3.Dot(forward, toOther));
+            /*if (Vector3.Dot(forward, toOther) == 1)
+                Debug.Log("Seabed in front of shark");
+
+        */}
+//}
 }
