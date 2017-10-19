@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Swarm : MonoBehaviour {
+public class Swarm : MonoBehaviour
+{
 
     public float speed = 2.5f;
     float rotationSPeed = 4.0f;
@@ -12,6 +13,7 @@ public class Swarm : MonoBehaviour {
 
     private float visionRange = 10.0f;
     private float maxAngryTime = 2.0f;
+    private Vector3 desiredPosition;
 
     bool turning = false;
     float timeStillAlerted = 0.0f;
@@ -19,21 +21,28 @@ public class Swarm : MonoBehaviour {
     [HideInInspector]
     public globalSwarm myManager;
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         StartCoroutine(AICheckForPlayer());
 
-        speed = Random.Range(0.5f,3);
-	}
+        speed = Random.Range(0.5f, 3);
+        desiredPosition = transform.position;
+        float terrainY = Terrain.activeTerrain.SampleHeight(transform.position);
+        if (terrainY > transform.position.y) {
+            Debug.Log("I was under the terrain!");
+            desiredPosition.y = Mathf.Max(desiredPosition.y, (terrainY + 4.0f));
+            transform.position = desiredPosition;
+        }
+    }
 
-	IEnumerator AICheckForPlayer()
+    IEnumerator AICheckForPlayer()
     {
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(0.5f, 1.0f));
             float distToPlayer = Vector3.Distance(transform.position, PlayerController.instance.transform.position);
-           // Debug.Log(distToPlayer);
-           if(distToPlayer < visionRange)
+            // Debug.Log(distToPlayer);
+            if (distToPlayer < visionRange)
             {
                 timeStillAlerted = maxAngryTime;
             }
@@ -41,7 +50,7 @@ public class Swarm : MonoBehaviour {
     }
     private void FixedUpdate()
     {
-        if(timeStillAlerted > 0.0f)
+        if (timeStillAlerted > 0.0f)
         {
             Quaternion angleToPlayer = Quaternion.LookRotation(PlayerController.instance.transform.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, angleToPlayer, 5.0f * Time.deltaTime);
@@ -51,7 +60,7 @@ public class Swarm : MonoBehaviour {
         }
     }
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         if (timeStillAlerted > 0.0f) // aware of player, chasing, ignoring boundaries
         {
@@ -83,8 +92,8 @@ public class Swarm : MonoBehaviour {
             }
         }
         transform.Translate(0, 0, Time.deltaTime * speed);
-        
-	}
+
+    }
 
     void ApplyRules()  //when swarming creatures will try to be in the center while avoiding other creatures
     {
@@ -100,16 +109,16 @@ public class Swarm : MonoBehaviour {
         float distance;
 
         int groupSize = 0;
-        foreach(GameObject go in gos)
+        foreach (GameObject go in gos)
         {
-            if(go != this.gameObject)
+            if (go != this.gameObject)
             {
                 distance = Vector3.Distance(go.transform.position, this.transform.position);
-                if(distance <= groupPullPower)
+                if (distance <= groupPullPower)
                 {
                     vCentre += go.transform.position;
                     groupSize++;
-                    if(distance < 1.0f)
+                    if (distance < 1.0f)
                     {
                         vAvoid = vAvoid + (this.transform.position - go.transform.position);
                     }
@@ -120,7 +129,7 @@ public class Swarm : MonoBehaviour {
             }
         }
 
-        if(groupSize > 0)
+        if (groupSize > 0)
         {
             vCentre = vCentre / groupSize + (targetPosition - this.transform.position);
             speed = gSpeed / groupSize;
@@ -135,21 +144,35 @@ public class Swarm : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Main Level - Seabed")
-        {
-            turning = true;
-        }
-        /*Debug.Log("creature collided with " + other.name);
+
+        Debug.Log("creature collided with " + other.name);
+
         if (other.name == "Main Level - Seabed")
         {
             Vector3 forward = Vector3.Normalize (transform.TransformDirection(Vector3.forward));
             Vector3 toOther = Vector3.Normalize(other.transform.position - transform.position);
             Debug.Log("Dot Product is "+Vector3.Dot(forward, toOther));
-            /*if (Vector3.Dot(forward, toOther) == 1)
+            if (Vector3.Dot(forward, toOther) == 1) {
                 Debug.Log("Seabed in front of shark");
+            }
+        }
+    }*/
 
-        */}
-//}
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Main Level - Seabed") {
+            string tempLog = "";
+            tempLog += "Points colliding: " + collision.contacts.Length;
+            for (int i = 0; i < collision.contacts.Length; i++) {
+                tempLog += "\nNormal at " + i + " is " + collision.contacts[i].normal;
+            }
+            Debug.Log(tempLog);
+            if (collision.contacts[0].normal.z < 0.0f) {
+                Debug.Log("need to turn on turning!");
+                turning = true;
+            }
+        }
+    }
 }
