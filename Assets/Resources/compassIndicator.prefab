@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.97794116, g: 0.28762972, b: 0.28762972, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -72,6 +72,14 @@ MonoBehaviour:
   - {fileID: 21300002, guid: f024b09570dff443491ac18bd04c9993, type: 3}
   - {fileID: 21300004, guid: f024b09570dff443491ac18bd04c9993, type: 3}
   - {fileID: 21300006, guid: f024b09570dff443491ac18bd04c9993, type: 3}
+  - {fileID: 21300006, guid: f024b09570dff443491ac18bd04c9993, type: 3}
+  - {fileID: 21300006, guid: f024b09570dff443491ac18bd04c9993, type: 3}
+  - {fileID: 21300006, guid: f024b09570dff443491ac18bd04c9993, type: 3}
+  - {fileID: 21300006, guid: f024b09570dff443491ac18bd04c9993, type: 3}
+  - {fileID: 21300000, guid: 1a98936d98b7542cc94dd8618183a638, type: 3}
+  - {fileID: 21300002, guid: 1a98936d98b7542cc94dd8618183a638, type: 3}
+  - {fileID: 21300004, guid: 1a98936d98b7542cc94dd8618183a638, type: 3}
+  - {fileID: 21300006, guid: 1a98936d98b7542cc94dd8618183a638, type: 3}
 --- !u!222 &222026837531898396
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -86,7 +94,7 @@ RectTransform:
   m_GameObject: {fileID: 1814196650597788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

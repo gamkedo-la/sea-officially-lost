@@ -14,7 +14,11 @@ public class CompassIconSet : MonoBehaviour {
         future_base_beacon,
         plane_wreck_beacon,
         cave_beacon,
-        waypoint
+        waypoint,
+        n,
+        e,
+        s,
+        w
     };
 
     public Image myIcon;
@@ -35,4 +39,9 @@ public class CompassIconSet : MonoBehaviour {
         myIcon.transform.SetParent(GameObject.Find("radarBackground").transform);
         myIcon.sprite = tempGO.GetComponent<CompassIconSwitcher>().GetImage((int)myKind);
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("I got entered by: " + other.name + " and my name is: " + name);
+    }
 }
