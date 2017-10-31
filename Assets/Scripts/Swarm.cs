@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Swarm : MonoBehaviour
 {
+    public bool doesPopOnPlayer = true;
     private GameObject burstEffect;
     public float speed = 2.5f;
     float rotationSPeed = 4.0f;
@@ -179,10 +180,11 @@ public class Swarm : MonoBehaviour
 
         Debug.Log(collision.gameObject.name);
 
-        if (PcScript)
+        if (PcScript && doesPopOnPlayer)
         {
             Destroy(gameObject);
             Instantiate(burstEffect, transform.position, Quaternion.identity);
+            PlayerController.instance.TempInsanityBump();
             Debug.Log("destroy fish");
         }
 

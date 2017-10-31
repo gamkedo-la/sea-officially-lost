@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947630f358e255b4088189cb9db4aa2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doesPopOnPlayer: 1
   speed: 2.5
   groupPullPower: 2
   myManager: {fileID: 0}

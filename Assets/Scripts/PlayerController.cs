@@ -150,6 +150,11 @@ public class PlayerController : MonoBehaviour {
         m_MouseLook.UpdateCursorLock();
     }
 
+    public void TempInsanityBump()
+    {
+        Debug.Log("to do: add insanity in temp way that will fall off");
+    }
+
     internal IEnumerator InsanityUpdate() {
         while(true) {
             yield return new WaitForSeconds(0.5f);
