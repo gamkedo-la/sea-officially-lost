@@ -26,7 +26,7 @@ public class CompassUIManager : MonoBehaviour {
 	{
 		while (true)
 		{
-			yield return new WaitForSeconds(0.5f);
+            yield return new WaitForEndOfFrame();
 			Collider[] sonarHits = Physics.OverlapSphere(transform.position, sonarRange, LayerMask.GetMask("sonarDetects"));
 			//Debug.Log(sonarHits.Length);
 			float nearestFoundDist = sonarRange + 1.0f;
@@ -38,7 +38,7 @@ public class CompassUIManager : MonoBehaviour {
 				{
 					float bearing = Mathf.Atan2(sonarHits[i].transform.position.x - transform.position.x, sonarHits[i].transform.position.z - transform.position.z) * Mathf.Rad2Deg;
 					float angleToTarget = Mathf.DeltaAngle(transform.localEulerAngles.y, bearing);
-					float compassFOV = 90;
+					float compassFOV = 45;
                     CompassIconSet cisScript = sonarHits[i].GetComponent<CompassIconSet>();
                     if (cisScript == null) {
                         Debug.Log("The impossible has happened and something with sonarDetects layer and tag doesn't have CompassIconSet script: " + sonarHits[i].name);
