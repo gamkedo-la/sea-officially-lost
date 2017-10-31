@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Swarm : MonoBehaviour
 {
-
+    private GameObject burstEffect;
     public float speed = 2.5f;
     float rotationSPeed = 4.0f;
     Vector3 averageDirection;
@@ -23,6 +23,7 @@ public class Swarm : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        burstEffect = (GameObject)Resources.Load("SeaWormBurst");
         StartCoroutine(AICheckForPlayer());
 
         speed = Random.Range(0.5f, 3);
@@ -174,5 +175,16 @@ public class Swarm : MonoBehaviour
                 turning = true;
             }
         }
+        PlayerCommon PcScript = collision.gameObject.GetComponentInParent<PlayerCommon>();
+
+        Debug.Log(collision.gameObject.name);
+
+        if (PcScript)
+        {
+            Destroy(gameObject);
+            Instantiate(burstEffect, transform.position, Quaternion.identity);
+            Debug.Log("destroy fish");
+        }
+
     }
 }
