@@ -45,6 +45,7 @@ public class SonarScanEffect : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.C) && cooldownCounter <= 0) {
             Scan();
+            AkSoundEngine.PostEvent("Play_Radar_Ping", gameObject);
         }
     }
 
