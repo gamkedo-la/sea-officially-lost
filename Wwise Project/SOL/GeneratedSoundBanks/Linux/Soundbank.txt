@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	556212125	Play_Radar_Ping			\Default Work Unit\Play_Radar_Ping	
 	676271428	Play_UI_Menu_Click_Into			\Default Work Unit\Play_UI_Menu_Click_Into	
 	1234110288	Play_Test_Ambi			\Default Work Unit\Play_Test_Ambi	
 	1936257133	Audio_Log_Test			\Audio logs\Audio_Log_Test	
@@ -11,10 +12,16 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	112427783	temp_footstep_sealab_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\temp_footstep_sealab_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_02		348114
 	415836917	temp_footstep_sealab_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\temp_footstep_sealab_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_03		348114
 	560838616	temp_footstep_sealab_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\temp_footstep_sealab_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_04		348114
+	642063104	radar_ping_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\radar_ping_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_01		672020
+	642514946	radar_ping_05	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\radar_ping_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_05		575532
+	679807533	radar_ping_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\radar_ping_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_02		617572
 	714356039	test1	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\test1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test1		5303872
 	723103660	temp_footstep_sealab_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\temp_footstep_sealab_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_01		348114
 	906555434	test3	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\test3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test3		5303872
 	919001583	dummy clip	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\dummy_clip_1C9C67B2.wem		\Actor-Mixer Hierarchy\UI\Menu_Hover\dummy clip		88264
+	945657493	radar_ping_06	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\radar_ping_06_1C9C67B2.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_06		758296
 	994356738	Shortlogreading	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\Shortlogreading_1C9C67B2.wem		\Actor-Mixer Hierarchy\Audio Logs\Shortlogreading		256064
 	1022138157	test2	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\test2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test2		5303872
+	1030448513	radar_ping_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\radar_ping_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_04		601956
+	1066899461	radar_ping_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\radar_ping_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_03		757604
 

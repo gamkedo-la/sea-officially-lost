@@ -6,6 +6,7 @@
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Misha\Desktop\SOL Temp"/>
 				<Property Name="Event Action List\{25AC9E5C-5863-4D10-A36F-86C50E0149EB}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{5E097A37-933B-403B-A90C-92A9D2D95026}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{75DE0DB3-7CBF-4AA6-AB3F-7A397CF13694}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{9C0411B3-4E33-4E72-87B6-B6719D55D3E8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{E09C062A-11C1-4D8B-8449-0CEE9B35E7C8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{E6CF7864-21B9-42C0-81E2-67293C8D180F}\x64_Expand States" Type="string" Value=""/>
@@ -60,7 +61,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value="2KQUFaYdKkGhfnXKDCFJ866N0zQyYn9PlqE9CY+unWw="/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="BouFm61U10Cw0Bty49rFywJC9orwYQJFsZdFvFucFcNMJDkOVKHySI0xgMugHhHK4Ip1T2aZR0qIGHIjYHLWJTiCQ7lRPEBPvAhLbyMcgWM="/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="VDhUoHARbEOkQ4/hWXtqgeDpNLvOgJ5MqWndyIGGr/U="/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="4LykQNlmoUW5kpqcanx+SjOCEicfLyNNppMvTgWWi3g="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>

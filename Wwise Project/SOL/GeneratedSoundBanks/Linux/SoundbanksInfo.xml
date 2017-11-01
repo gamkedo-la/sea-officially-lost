@@ -23,6 +23,7 @@
 			<IncludedEvents>
 				<Event Id="1936257133" Name="Audio_Log_Test" ObjectPath="\Events\Audio logs\Audio_Log_Test"/>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
+				<Event Id="556212125" Name="Play_Radar_Ping" ObjectPath="\Events\Default Work Unit\Play_Radar_Ping"/>
 				<Event Id="1234110288" Name="Play_Test_Ambi" ObjectPath="\Events\Default Work Unit\Play_Test_Ambi"/>
 				<Event Id="676271428" Name="Play_UI_Menu_Click_Into" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Click_Into"/>
 				<Event Id="4230331670" Name="Play_UI_Menu_Click_Outfrom" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Click_Outfrom"/>
@@ -42,6 +43,18 @@
 					<ShortName>temp_footstep_sealab_04.wav</ShortName>
 					<Path>SFX\temp_footstep_sealab_04_1C9C67B2.wem</Path>
 				</File>
+				<File Id="642063104" Language="SFX">
+					<ShortName>radar_ping_01.wav</ShortName>
+					<Path>SFX\radar_ping_01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="642514946" Language="SFX">
+					<ShortName>radar_ping_05.wav</ShortName>
+					<Path>SFX\radar_ping_05_1C9C67B2.wem</Path>
+				</File>
+				<File Id="679807533" Language="SFX">
+					<ShortName>radar_ping_02.wav</ShortName>
+					<Path>SFX\radar_ping_02_1C9C67B2.wem</Path>
+				</File>
 				<File Id="714356039" Language="SFX">
 					<ShortName>test1.wav</ShortName>
 					<Path>SFX\test1_1C9C67B2.wem</Path>
@@ -58,6 +71,10 @@
 					<ShortName>dummy_clip.wav</ShortName>
 					<Path>SFX\dummy_clip_1C9C67B2.wem</Path>
 				</File>
+				<File Id="945657493" Language="SFX">
+					<ShortName>radar_ping_06.wav</ShortName>
+					<Path>SFX\radar_ping_06_1C9C67B2.wem</Path>
+				</File>
 				<File Id="994356738" Language="SFX">
 					<ShortName>Shortlogreading.wav</ShortName>
 					<Path>SFX\Shortlogreading_1C9C67B2.wem</Path>
@@ -65,6 +82,14 @@
 				<File Id="1022138157" Language="SFX">
 					<ShortName>test2.wav</ShortName>
 					<Path>SFX\test2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1030448513" Language="SFX">
+					<ShortName>radar_ping_04.wav</ShortName>
+					<Path>SFX\radar_ping_04_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1066899461" Language="SFX">
+					<ShortName>radar_ping_03.wav</ShortName>
+					<Path>SFX\radar_ping_03_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

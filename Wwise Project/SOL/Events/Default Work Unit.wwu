@@ -87,6 +87,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Radar_Ping" ID="{75DE0DB3-7CBF-4AA6-AB3F-7A397CF13694}">
+					<ChildrenList>
+						<Action Name="" ID="{56A143CF-94AB-4DC9-90C6-91E997AC1CBD}" ShortID="1875693">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Radar_Ping" ID="{BB34E9E0-80CE-4C9E-A969-DDC88186AFF5}" WorkUnitID="{A0543854-1170-436C-A443-8FE1597B6A81}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
