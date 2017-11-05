@@ -150,16 +150,12 @@ public class PlayerController : MonoBehaviour {
         m_MouseLook.UpdateCursorLock();
     }
 
-    public void TempInsanityBump()
-    {
-        Debug.Log("to do: add insanity in temp way that will fall off");
-    }
 
     internal IEnumerator InsanityUpdate() {
         while(true) {
             yield return new WaitForSeconds(0.5f);
             Collider[] insanityHits = Physics.OverlapSphere(transform.position, insanityRange, LayerMask.GetMask("insanityDetects"));
-            //Debug.Log("Insanity hits = " + insanityHits.Length);
+            Debug.Log("Insanity hits = " + insanityHits.Length);
             float insanitySum = 0.0f;
             for (int i = 0; i < insanityHits.Length; i++) {
                 InsanityFacts tempIF = insanityHits[i].GetComponent<InsanityFacts>();
@@ -170,7 +166,7 @@ public class PlayerController : MonoBehaviour {
                 float distPerc = 1.0f - thisDist / insanityRange;
                 insanitySum += distPerc * tempIF.insanityImpact;
             } // end for loop for sanityHits
-            //Debug.Log("InsanitySum = " + insanitySum);
+            Debug.Log("InsanitySum = " + insanitySum);
             insanityCounter = insanitySum;
         } // end while true
     } // end sanity update

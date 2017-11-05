@@ -184,7 +184,6 @@ public class Swarm : MonoBehaviour
         {
             Destroy(gameObject);
             Instantiate(burstEffect, transform.position, Quaternion.identity);
-            PlayerController.instance.TempInsanityBump();
             Debug.Log("destroy fish");
         }
 
