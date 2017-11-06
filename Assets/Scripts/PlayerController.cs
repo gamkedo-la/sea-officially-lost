@@ -29,8 +29,6 @@ public class PlayerController : MonoBehaviour {
 
 
     public Text insanityMeter;
-    private float insanityCounter = 0.0f;
-    private float insanityRange = 10.0f;
     public int knowledgeLevel = 0;
 
     private bool scanning = false;
@@ -56,7 +54,6 @@ public class PlayerController : MonoBehaviour {
         playerInventory.ScannedInventory();
         //playerShip.ScannedInventory();
 
-        StartCoroutine(InsanityUpdate());
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         instance = this;
@@ -150,24 +147,4 @@ public class PlayerController : MonoBehaviour {
         m_MouseLook.UpdateCursorLock();
     }
 
-
-    internal IEnumerator InsanityUpdate() {
-        while(true) {
-            yield return new WaitForSeconds(0.5f);
-            Collider[] insanityHits = Physics.OverlapSphere(transform.position, insanityRange, LayerMask.GetMask("insanityDetects"));
-            Debug.Log("Insanity hits = " + insanityHits.Length);
-            float insanitySum = 0.0f;
-            for (int i = 0; i < insanityHits.Length; i++) {
-                InsanityFacts tempIF = insanityHits[i].GetComponent<InsanityFacts>();
-                if (tempIF != null) {
-                    Debug.Log(insanityHits[i].name + " had no facts!");
-                }
-                float thisDist = Vector3.Distance(transform.position, insanityHits[i].transform.position);
-                float distPerc = 1.0f - thisDist / insanityRange;
-                insanitySum += distPerc * tempIF.insanityImpact;
-            } // end for loop for sanityHits
-            Debug.Log("InsanitySum = " + insanitySum);
-            insanityCounter = insanitySum;
-        } // end while true
-    } // end sanity update
 }
