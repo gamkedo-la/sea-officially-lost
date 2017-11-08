@@ -42,10 +42,10 @@ public class PlayerController : MonoBehaviour {
     private float speedLateral = 0.0f;
     private float speedRise = 0.0f;
 
-    //inventory related declarations pick-up item variables
+    /*//inventory related declarations pick-up item variables
     float m_MaxInteractDistance = 2.0f;
     GameObject pickedUpItem;
-	public GameObject inventoryMgr;
+	public GameObject inventoryMgr;*/
 
     // Use this for initialization
     void Start () {
@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour {
 
         //pick-up item testing for inventory
         //Debug.DrawRay(transform.position, Vector3.forward * 10, Color.red);
-        if (Input.GetButtonDown("PickUpItem"))
+        /*if (Input.GetButtonDown("PickUpItem"))
         {
             RaycastHit hit;
 
@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour {
                     inventoryMgr.GetComponent<InventoryMgr>().GetItem(pickedUpItem);
                 }
             }
-        }
+        }*/
 
     }
 

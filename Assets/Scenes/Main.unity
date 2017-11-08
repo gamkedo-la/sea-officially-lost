@@ -9618,6 +9618,11 @@ Prefab:
       propertyPath: inventoryMgr
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114048927981691490, guid: af48f265192fefc42accef760a2f5239,
+        type: 2}
+      propertyPath: inventoryMgr
+      value: 
+      objectReference: {fileID: 834249697}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af48f265192fefc42accef760a2f5239, type: 2}
   m_IsPrefabParent: 0

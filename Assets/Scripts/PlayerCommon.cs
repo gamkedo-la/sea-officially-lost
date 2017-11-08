@@ -14,10 +14,15 @@ public class PlayerCommon : MonoBehaviour {
     private float insanityCounter = 0.0f;
     private float insanityRange = 10.0f;
 
+    //inventory related declarations pick-up item variables
+    float m_MaxInteractDistance = 2.0f;
+    GameObject pickedUpItem;
+    public GameObject inventoryMgr;
+
     void Awake() {
         instance = this;
     }
-
+    
 	// Use this for initialization
 	void Start () {
         ppProfile = Instantiate(Camera.main.GetComponent<PostProcessingBehaviour>().profile);
@@ -47,9 +52,25 @@ public class PlayerCommon : MonoBehaviour {
 		{
 			ReleaseMouse();
 		}
-	}
 
-	public void ReleaseMouse()
+        //pick up item for inventory
+        if (Input.GetButtonDown("PickUpItem"))
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Camera.main.transform.forward, out hit, m_MaxInteractDistance))
+            {
+                Debug.Log("I can see " + hit.transform.gameObject.name);
+                if (hit.transform.gameObject.CompareTag("canPickUp"))
+                {
+                    pickedUpItem = hit.transform.gameObject;
+                    Debug.Log("Picked up " + hit.transform.gameObject.name);
+                    inventoryMgr.GetComponent<InventoryMgr>().GetItem(pickedUpItem);
+                }
+            }
+        }
+    }
+
+    public void ReleaseMouse()
 	{
 		if (Cursor.visible == false)
 		{
