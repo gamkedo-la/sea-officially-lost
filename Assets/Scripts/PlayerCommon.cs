@@ -18,7 +18,7 @@ public class PlayerCommon : MonoBehaviour {
     float m_MaxInteractDistance = 2.0f;
     GameObject pickedUpItem;
     public GameObject inventoryMgr;
-
+   
     void Awake() {
         instance = this;
     }
@@ -53,7 +53,7 @@ public class PlayerCommon : MonoBehaviour {
 			ReleaseMouse();
 		}
 
-        //pick up item for inventory
+        //pick up item for attributes inventory
         if (Input.GetButtonDown("PickUpItem"))
         {
             RaycastHit hit;

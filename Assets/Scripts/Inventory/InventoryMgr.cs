@@ -29,7 +29,8 @@ public class InventoryMgr : MonoBehaviour
 
 	public void Awake()
     {
-		inventoryList.OxygenCapacity = 0;
+        ClearInventoryList();
+        inventoryList.OxygenCapacity = 0;
 		inventoryList.SwimSpeed = 0;
 		inventoryList.SonarRange = 0;
         inventoryList.AnxietyConstraint = 0;
@@ -40,6 +41,12 @@ public class InventoryMgr : MonoBehaviour
         anxietyConstraintItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/AnxietyConstraint/Text").GetComponent<Text>();
         onAwakeItemAttributeCalculation();
 	}
+
+    //clear inventory list at start
+    public void ClearInventoryList()
+    {
+        inventoryList.InventoryItems = new List<Item>();
+    }
 
     public void Start()
     {
