@@ -21,21 +21,24 @@ public class InventoryMgr : MonoBehaviour
     public WorldItems worldItems;
 
     private Text BagSpaceText;
-    private Text nightSightItemAttributeText;
-    private Text phelpsFinsItemAttributeText;
-    private Text breathItemAttributeText;
-	public GameObject playerController;
+    private Text oxygenCapacityItemAttributeText;
+    private Text swimSpeedItemAttributeText;
+    private Text sonarRangeItemAttributeText;
+    private Text anxietyConstraintItemAttributeText;
+    public GameObject playerController;
 
 	public void Awake()
     {
-		inventoryList.NightSight = 0;
-		inventoryList.PhelpsFins = 0;
-		inventoryList.Breath = 0;
-		BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
-		nightSightItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/NightSight/Text").GetComponent<Text>();
-		phelpsFinsItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/PhelpsFins/Text").GetComponent<Text>();
-		breathItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/Breath/Text").GetComponent<Text>();
-		onAwakeItemAttributeCalculation();
+		inventoryList.OxygenCapacity = 0;
+		inventoryList.SwimSpeed = 0;
+		inventoryList.SonarRange = 0;
+        inventoryList.AnxietyConstraint = 0;
+        BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
+		oxygenCapacityItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/OxygenCapacity/Text").GetComponent<Text>();
+		swimSpeedItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/SwimSpeed/Text").GetComponent<Text>();
+		sonarRangeItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/SonarRange/Text").GetComponent<Text>();
+        anxietyConstraintItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/AnxietyConstraint/Text").GetComponent<Text>();
+        onAwakeItemAttributeCalculation();
 	}
 
     public void Start()
@@ -50,9 +53,10 @@ public class InventoryMgr : MonoBehaviour
     {
         int[] attr = inventoryList.GetItemAttributeAmount();
 
-		nightSightItemAttributeText.text = attr[0].ToString();
-		phelpsFinsItemAttributeText.text = attr[1].ToString();
-		breathItemAttributeText.text = attr[2].ToString();
+		oxygenCapacityItemAttributeText.text = attr[0].ToString();
+		swimSpeedItemAttributeText.text = attr[1].ToString();
+		sonarRangeItemAttributeText.text = attr[2].ToString();
+        anxietyConstraintItemAttributeText.text = attr[3].ToString();
 
     }
 
@@ -63,18 +67,20 @@ public class InventoryMgr : MonoBehaviour
 
     public void GetItem(Item addedItem)
     {
-		//add attribute of item 
-		//Debug.Log("nightsight before" + inventoryList.NightSight);
-		
-		//inventoryList.NightSight= Mathf.Max(inventoryList.NightSight+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
-		inventoryList.NightSight += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Night Sight")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-		inventoryList.PhelpsFins += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Phelps Fins")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+        //add attribute of item 
+        //Debug.Log("nightsight before" + inventoryList.NightSight);
+        //Debug.Log("oxygen capacity before" + inventoryList.OxygenCapacity);
+
+        //inventoryList.NightSight= Mathf.Max(inventoryList.NightSight+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
+        inventoryList.OxygenCapacity += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Oxygen Capacity")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+		inventoryList.SwimSpeed += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Swim Speed")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 		//inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmountCalculation();//TODO:which way to have array returned and not run the function 3 times? Currently ItemAttributeIncreaseAmountCalculation only returns NightSight, to set return for each itemattribute
 		//inventoryList.Breath += item.ItemAttributeIncreaseAmountCalculation();
-		inventoryList.Breath += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Breath")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-		
+		inventoryList.SonarRange += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Sonar Range")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+        inventoryList.AnxietyConstraint += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Anxiety Constraint")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 
-		UpdateItemAttribute();
+
+        UpdateItemAttribute();
 
 		//add the item to the player's inventory
 		inventoryList.InventoryItems.Add(addedItem);
@@ -162,12 +168,13 @@ public class InventoryMgr : MonoBehaviour
 		{
 
 			//inventoryList.NightSight += item.ItemAttributeIncreaseAmountCalculation();
-			inventoryList.NightSight += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Night Sight")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-			inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Phelps Fins")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+			inventoryList.OxygenCapacity += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Oxygen Capacity")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+			inventoryList.SwimSpeed += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Swim Speed")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 			//inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmountCalculation();//TODO:which way to have array returned and not run the function 3 times? Currently ItemAttributeIncreaseAmountCalculation only returns NightSight, to set return for each itemattribute
 			//inventoryList.Breath += item.ItemAttributeIncreaseAmountCalculation();
-			inventoryList.Breath += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Breath")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-		}
+			inventoryList.SonarRange += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Sonar Range")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+            inventoryList.AnxietyConstraint += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Anxiety Constraint")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+        }
 	}
 
     public void CloseInventoryWindow()

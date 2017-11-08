@@ -7,22 +7,24 @@ public class Inventory : ScriptableObject {
 
 	public List<Item> InventoryItems = new List<Item>();
 
-	public int NightSight;
-	public int PhelpsFins;
-	public int Breath;
-	[Range(12, 24)]
+	public int OxygenCapacity;
+	public int SwimSpeed;
+	public int SonarRange;
+    public int AnxietyConstraint;
+    [Range(12, 24)]
 	public int TotalBagSlots;
-	public enum attrEnum {NIGHT_SIGHT,PHELPS_FINS,BREATH };//TODO: EXPLORE ENUM
+	public enum attrEnum {OXYGEN_CAPACITY,SWIM_SPEED,SONAR_RANGE,ANXIETY_CONSTRAINT};//TODO: EXPLORE ENUM
 
 	public int [] GetItemAttributeAmount()
     {
         /*int currency=inventoryList.CopperCoins;//need to set this to abilities
         return currency;*/
-        int[] itemAttribute = new int[] { 0, 0, 0 };
+        int[] itemAttribute = new int[] { 0, 0, 0, 0 };
 
-        itemAttribute[0] = NightSight;
-        itemAttribute[1] = PhelpsFins;
-        itemAttribute[2] = Breath;
+        itemAttribute[0] = OxygenCapacity;
+        itemAttribute[1] = SwimSpeed;
+        itemAttribute[2] = SonarRange;
+        itemAttribute[3] = AnxietyConstraint;
 
         return itemAttribute;//WHY CAN'T USE return currency;??
     }

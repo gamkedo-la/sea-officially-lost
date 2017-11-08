@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fb44c317670b5247ad1361319d71991, type: 3}
-  m_Name: testnotdelete
+  m_Name: Sonar Range
   m_EditorClassIdentifier: 
-  Name: testnotdelete
-  Description: Item Description
+  Name: Sonar Range Enhancer
+  Description: This item doubles sonar's range
   MinimumPlayerLevel: 0
-  Sprite: {fileID: 21300000, guid: eebb8bba60d4ca34eaa4a447051965b6, type: 3}
+  Sprite: {fileID: 21300000, guid: 7d58f29bde62d794589e335c5e5fb712, type: 3}
   ItemAttributeIncreaseAmount:
   - ItemAttribute: {fileID: 11400000, guid: 005b01946a1c0d643bfcb30f43793546, type: 2}
-    Amount: 3
+    Amount: 2
