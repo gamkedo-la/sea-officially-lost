@@ -4057,7 +4057,7 @@ Prefab:
     - target: {fileID: 224352718030029232, guid: 850c905b10f6aba4fa1042d70fb24a2f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 27.533962
+      value: 27.533936
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 850c905b10f6aba4fa1042d70fb24a2f, type: 2}
@@ -10127,7 +10127,7 @@ Prefab:
     - target: {fileID: 114213203019495132, guid: af48f265192fefc42accef760a2f5239,
         type: 2}
       propertyPath: fogEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114340342503977722, guid: af48f265192fefc42accef760a2f5239,
         type: 2}
@@ -10159,6 +10159,17 @@ Prefab:
       propertyPath: inventoryMgr
       value: 
       objectReference: {fileID: 834249697}
+    - target: {fileID: 114048927981691490, guid: af48f265192fefc42accef760a2f5239,
+        type: 2}
+      propertyPath: sharkMan
+      value: 
+      objectReference: {fileID: 1880349915694908, guid: 95a3902c08f344c4d94212a0331c2ce5,
+        type: 2}
+    - target: {fileID: 114048927981691490, guid: af48f265192fefc42accef760a2f5239,
+        type: 2}
+      propertyPath: insanityTimeBeforeSharkSummon
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af48f265192fefc42accef760a2f5239, type: 2}
   m_IsPrefabParent: 0

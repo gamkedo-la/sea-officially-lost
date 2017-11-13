@@ -13,6 +13,11 @@ public class PlayerCommon : MonoBehaviour {
     public Text insanityMeter;
     private float insanityCounter = 0.0f;
     private float insanityRange = 10.0f;
+    private float insanityTimeAboveThreshold = 0.0f;
+    private float insanityThreshold = 0.9f;
+    public float insanityTimeBeforeSharkSummon = 10.0f;
+    public GameObject sharkMan;
+    private GameObject summonedShark;
 
     //inventory related declarations pick-up item variables
     float m_MaxInteractDistance = 2.0f;
@@ -52,6 +57,10 @@ public class PlayerCommon : MonoBehaviour {
 		{
 			ReleaseMouse();
 		}
+
+        if(Input.GetKeyDown(KeyCode.F)) {
+            insanityCounter = 5.0f;
+        }
 
         //pick up item for attributes inventory
         if (Input.GetButtonDown("PickUpItem"))
@@ -112,7 +121,30 @@ public class PlayerCommon : MonoBehaviour {
 
             float insanityFallOffPerc = 0.1f;
             insanityCounter = insanitySum * insanityFallOffPerc + insanityCounter * (1.0f - insanityFallOffPerc);
+            if (insanityCounter > insanityThreshold) {
+                insanityTimeAboveThreshold += Time.deltaTime;
+                //Debug.Log("Time above threshold: " + insanityTimeAboveThreshold);
+                if (insanityTimeAboveThreshold >= insanityTimeBeforeSharkSummon) {
+                    if (summonedShark == null) {
+                        Vector3 desiredPosition = transform.position + transform.forward * 25.0f;
+                        float terrainY = Terrain.activeTerrain.SampleHeight(transform.position);
+                        float tooCloseToGround = 2.0f;
+                        if (terrainY > desiredPosition.y + tooCloseToGround)
+                        {
+                            Debug.Log("I was under the terrain!");
+                            desiredPosition.y = Mathf.Max(desiredPosition.y, (terrainY + tooCloseToGround));
+                        }
+                        summonedShark = GameObject.Instantiate(sharkMan, desiredPosition, Quaternion.LookRotation(-transform.forward));    
+                        Debug.Log("Shark got summoned!");
+                    } else {
+                        Debug.Log("Shark already present, you really don't want more than one.");
+                    }
 
+                }
+            } else {
+                Debug.Log("Resetting threshold to 0");
+                insanityTimeAboveThreshold = 0.0f;
+            }
             grainSettings.intensity = insanityCounter;
             vignetteSettings.intensity = insanityCounter;
             ppProfile.grain.settings = grainSettings;
