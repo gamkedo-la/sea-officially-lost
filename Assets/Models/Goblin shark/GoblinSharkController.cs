@@ -32,7 +32,7 @@ public class GoblinSharkController : MonoBehaviour
         //m_baseLayerState = m_anim.GetCurrentAnimatorStateInfo(0).fullPathHash;
         //m_biteLayerState = m_anim.GetCurrentAnimatorStateInfo(1).fullPathHash;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             var state = m_anim.GetCurrentAnimatorStateInfo(m_biteLayerIndex);
 
