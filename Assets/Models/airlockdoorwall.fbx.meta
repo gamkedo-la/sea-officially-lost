@@ -1,0 +1,240 @@
+fileFormatVersion: 2
+guid: d40fce54748a0e342bef13702d1a1602
+timeCreated: 1510685440
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: airlockwalldoorUV:object1
+    100004: airlockwalldoorUV:object10
+    100006: airlockwalldoorUV:object11
+    100008: airlockwalldoorUV:object12
+    100010: airlockwalldoorUV:object13
+    100012: airlockwalldoorUV:object14
+    100014: airlockwalldoorUV:object15
+    100016: airlockwalldoorUV:object16
+    100018: airlockwalldoorUV:object17
+    100020: airlockwalldoorUV:object18
+    100022: airlockwalldoorUV:object19
+    100024: airlockwalldoorUV:object2
+    100026: airlockwalldoorUV:object20
+    100028: airlockwalldoorUV:object21
+    100030: airlockwalldoorUV:object22
+    100032: airlockwalldoorUV:object23
+    100034: airlockwalldoorUV:object24
+    100036: airlockwalldoorUV:object25
+    100038: airlockwalldoorUV:object26
+    100040: airlockwalldoorUV:object27
+    100042: airlockwalldoorUV:object28
+    100044: airlockwalldoorUV:object29
+    100046: airlockwalldoorUV:object3
+    100048: airlockwalldoorUV:object30
+    100050: airlockwalldoorUV:object31
+    100052: airlockwalldoorUV:object4
+    100054: airlockwalldoorUV:object5
+    100056: airlockwalldoorUV:object6
+    100058: airlockwalldoorUV:object7
+    100060: airlockwalldoorUV:object8
+    100062: airlockwalldoorUV:object9
+    400000: //RootNode
+    400002: airlockwalldoorUV:object1
+    400004: airlockwalldoorUV:object10
+    400006: airlockwalldoorUV:object11
+    400008: airlockwalldoorUV:object12
+    400010: airlockwalldoorUV:object13
+    400012: airlockwalldoorUV:object14
+    400014: airlockwalldoorUV:object15
+    400016: airlockwalldoorUV:object16
+    400018: airlockwalldoorUV:object17
+    400020: airlockwalldoorUV:object18
+    400022: airlockwalldoorUV:object19
+    400024: airlockwalldoorUV:object2
+    400026: airlockwalldoorUV:object20
+    400028: airlockwalldoorUV:object21
+    400030: airlockwalldoorUV:object22
+    400032: airlockwalldoorUV:object23
+    400034: airlockwalldoorUV:object24
+    400036: airlockwalldoorUV:object25
+    400038: airlockwalldoorUV:object26
+    400040: airlockwalldoorUV:object27
+    400042: airlockwalldoorUV:object28
+    400044: airlockwalldoorUV:object29
+    400046: airlockwalldoorUV:object3
+    400048: airlockwalldoorUV:object30
+    400050: airlockwalldoorUV:object31
+    400052: airlockwalldoorUV:object4
+    400054: airlockwalldoorUV:object5
+    400056: airlockwalldoorUV:object6
+    400058: airlockwalldoorUV:object7
+    400060: airlockwalldoorUV:object8
+    400062: airlockwalldoorUV:object9
+    2300000: airlockwalldoorUV:object1
+    2300002: airlockwalldoorUV:object10
+    2300004: airlockwalldoorUV:object11
+    2300006: airlockwalldoorUV:object12
+    2300008: airlockwalldoorUV:object13
+    2300010: airlockwalldoorUV:object14
+    2300012: airlockwalldoorUV:object15
+    2300014: airlockwalldoorUV:object16
+    2300016: airlockwalldoorUV:object17
+    2300018: airlockwalldoorUV:object18
+    2300020: airlockwalldoorUV:object19
+    2300022: airlockwalldoorUV:object2
+    2300024: airlockwalldoorUV:object20
+    2300026: airlockwalldoorUV:object21
+    2300028: airlockwalldoorUV:object22
+    2300030: airlockwalldoorUV:object23
+    2300032: airlockwalldoorUV:object24
+    2300034: airlockwalldoorUV:object25
+    2300036: airlockwalldoorUV:object26
+    2300038: airlockwalldoorUV:object27
+    2300040: airlockwalldoorUV:object28
+    2300042: airlockwalldoorUV:object29
+    2300044: airlockwalldoorUV:object3
+    2300046: airlockwalldoorUV:object30
+    2300048: airlockwalldoorUV:object31
+    2300050: airlockwalldoorUV:object4
+    2300052: airlockwalldoorUV:object5
+    2300054: airlockwalldoorUV:object6
+    2300056: airlockwalldoorUV:object7
+    2300058: airlockwalldoorUV:object8
+    2300060: airlockwalldoorUV:object9
+    3300000: airlockwalldoorUV:object1
+    3300002: airlockwalldoorUV:object10
+    3300004: airlockwalldoorUV:object11
+    3300006: airlockwalldoorUV:object12
+    3300008: airlockwalldoorUV:object13
+    3300010: airlockwalldoorUV:object14
+    3300012: airlockwalldoorUV:object15
+    3300014: airlockwalldoorUV:object16
+    3300016: airlockwalldoorUV:object17
+    3300018: airlockwalldoorUV:object18
+    3300020: airlockwalldoorUV:object19
+    3300022: airlockwalldoorUV:object2
+    3300024: airlockwalldoorUV:object20
+    3300026: airlockwalldoorUV:object21
+    3300028: airlockwalldoorUV:object22
+    3300030: airlockwalldoorUV:object23
+    3300032: airlockwalldoorUV:object24
+    3300034: airlockwalldoorUV:object25
+    3300036: airlockwalldoorUV:object26
+    3300038: airlockwalldoorUV:object27
+    3300040: airlockwalldoorUV:object28
+    3300042: airlockwalldoorUV:object29
+    3300044: airlockwalldoorUV:object3
+    3300046: airlockwalldoorUV:object30
+    3300048: airlockwalldoorUV:object31
+    3300050: airlockwalldoorUV:object4
+    3300052: airlockwalldoorUV:object5
+    3300054: airlockwalldoorUV:object6
+    3300056: airlockwalldoorUV:object7
+    3300058: airlockwalldoorUV:object8
+    3300060: airlockwalldoorUV:object9
+    4300000: airlockwalldoorUV:object1
+    4300002: airlockwalldoorUV:object10
+    4300004: airlockwalldoorUV:object11
+    4300006: airlockwalldoorUV:object12
+    4300008: airlockwalldoorUV:object13
+    4300010: airlockwalldoorUV:object14
+    4300012: airlockwalldoorUV:object15
+    4300014: airlockwalldoorUV:object16
+    4300016: airlockwalldoorUV:object17
+    4300018: airlockwalldoorUV:object18
+    4300020: airlockwalldoorUV:object19
+    4300022: airlockwalldoorUV:object2
+    4300024: airlockwalldoorUV:object20
+    4300026: airlockwalldoorUV:object21
+    4300028: airlockwalldoorUV:object22
+    4300030: airlockwalldoorUV:object23
+    4300032: airlockwalldoorUV:object24
+    4300034: airlockwalldoorUV:object25
+    4300036: airlockwalldoorUV:object26
+    4300038: airlockwalldoorUV:object27
+    4300040: airlockwalldoorUV:object28
+    4300042: airlockwalldoorUV:object29
+    4300044: airlockwalldoorUV:object3
+    4300046: airlockwalldoorUV:object30
+    4300048: airlockwalldoorUV:object31
+    4300050: airlockwalldoorUV:object4
+    4300052: airlockwalldoorUV:object5
+    4300054: airlockwalldoorUV:object6
+    4300056: airlockwalldoorUV:object7
+    4300058: airlockwalldoorUV:object8
+    4300060: airlockwalldoorUV:object9
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
