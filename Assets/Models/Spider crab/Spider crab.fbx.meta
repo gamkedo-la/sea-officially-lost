@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: 7e639abd3b52719469137a1ee439f137
+timeCreated: 1510997197
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Body
+    100004: Claw arm 1.L
+    100006: Claw arm 1.R
+    100008: Claw arm 2.L
+    100010: Claw arm 2.R
+    100012: Claw arm 3.L
+    100014: Claw arm 3.R
+    100016: Claw arm IK.L
+    100018: Claw arm IK.L_end
+    100020: Claw arm IK.R
+    100022: Claw arm IK.R_end
+    100024: Claw pole target.L
+    100026: Claw pole target.L_end
+    100028: Claw pole target.R
+    100030: Claw pole target.R_end
+    100032: Eye stalk.L
+    100034: Eye stalk.L_end
+    100036: Eye stalk.R
+    100038: Eye stalk.R_end
+    100040: First leg 1.L
+    100042: First leg 1.R
+    100044: First leg 2.L
+    100046: First leg 2.L_end
+    100048: First leg 2.R
+    100050: First leg 2.R_end
+    100052: First leg IK.L
+    100054: First leg IK.L_end
+    100056: First leg IK.R
+    100058: First leg IK.R_end
+    100060: First leg pole target.L
+    100062: First leg pole target.L_end
+    100064: First leg pole target.R
+    100066: First leg pole target.R_end
+    100068: Fourth leg 1.L
+    100070: Fourth leg 1.R
+    100072: Fourth leg 2.L
+    100074: Fourth leg 2.L_end
+    100076: Fourth leg 2.R
+    100078: Fourth leg 2.R_end
+    100080: Fourth leg IK.L
+    100082: Fourth leg IK.L_end
+    100084: Fourth leg IK.R
+    100086: Fourth leg IK.R_end
+    100088: Fourth leg pole target.L
+    100090: Fourth leg pole target.L_end
+    100092: Fourth leg pole target.R
+    100094: Fourth leg pole target.R_end
+    100096: Mandible 1.L
+    100098: Mandible 1.R
+    100100: Mandible 2.L
+    100102: Mandible 2.L_end
+    100104: Mandible 2.R
+    100106: Mandible 2.R_end
+    100108: Pincer.L
+    100110: Pincer.L_end
+    100112: Pincer.R
+    100114: Pincer.R_end
+    100116: Root
+    100118: Second leg 1.L
+    100120: Second leg 1.R
+    100122: Second leg 2.L
+    100124: Second leg 2.L_end
+    100126: Second leg 2.R
+    100128: Second leg 2.R_end
+    100130: Second leg IK.L
+    100132: Second leg IK.L_end
+    100134: Second leg IK.R
+    100136: Second leg IK.R_end
+    100138: Second leg pole target.L
+    100140: Second leg pole target.L_end
+    100142: Second leg pole target.R
+    100144: Second leg pole target.R_end
+    100146: Spider crab
+    100148: //RootNode
+    100150: Third leg 1.L
+    100152: Third leg 1.R
+    100154: Third leg 2.L
+    100156: Third leg 2.L_end
+    100158: Third leg 2.R
+    100160: Third leg 2.R_end
+    100162: Third leg IK.L
+    100164: Third leg IK.L_end
+    100166: Third leg IK.R
+    100168: Third leg IK.R_end
+    100170: Third leg pole target.L
+    100172: Third leg pole target.L_end
+    100174: Third leg pole target.R
+    100176: Third leg pole target.R_end
+    400000: Armature
+    400002: Body
+    400004: Claw arm 1.L
+    400006: Claw arm 1.R
+    400008: Claw arm 2.L
+    400010: Claw arm 2.R
+    400012: Claw arm 3.L
+    400014: Claw arm 3.R
+    400016: Claw arm IK.L
+    400018: Claw arm IK.L_end
+    400020: Claw arm IK.R
+    400022: Claw arm IK.R_end
+    400024: Claw pole target.L
+    400026: Claw pole target.L_end
+    400028: Claw pole target.R
+    400030: Claw pole target.R_end
+    400032: Eye stalk.L
+    400034: Eye stalk.L_end
+    400036: Eye stalk.R
+    400038: Eye stalk.R_end
+    400040: First leg 1.L
+    400042: First leg 1.R
+    400044: First leg 2.L
+    400046: First leg 2.L_end
+    400048: First leg 2.R
+    400050: First leg 2.R_end
+    400052: First leg IK.L
+    400054: First leg IK.L_end
+    400056: First leg IK.R
+    400058: First leg IK.R_end
+    400060: First leg pole target.L
+    400062: First leg pole target.L_end
+    400064: First leg pole target.R
+    400066: First leg pole target.R_end
+    400068: Fourth leg 1.L
+    400070: Fourth leg 1.R
+    400072: Fourth leg 2.L
+    400074: Fourth leg 2.L_end
+    400076: Fourth leg 2.R
+    400078: Fourth leg 2.R_end
+    400080: Fourth leg IK.L
+    400082: Fourth leg IK.L_end
+    400084: Fourth leg IK.R
+    400086: Fourth leg IK.R_end
+    400088: Fourth leg pole target.L
+    400090: Fourth leg pole target.L_end
+    400092: Fourth leg pole target.R
+    400094: Fourth leg pole target.R_end
+    400096: Mandible 1.L
+    400098: Mandible 1.R
+    400100: Mandible 2.L
+    400102: Mandible 2.L_end
+    400104: Mandible 2.R
+    400106: Mandible 2.R_end
+    400108: Pincer.L
+    400110: Pincer.L_end
+    400112: Pincer.R
+    400114: Pincer.R_end
+    400116: Root
+    400118: Second leg 1.L
+    400120: Second leg 1.R
+    400122: Second leg 2.L
+    400124: Second leg 2.L_end
+    400126: Second leg 2.R
+    400128: Second leg 2.R_end
+    400130: Second leg IK.L
+    400132: Second leg IK.L_end
+    400134: Second leg IK.R
+    400136: Second leg IK.R_end
+    400138: Second leg pole target.L
+    400140: Second leg pole target.L_end
+    400142: Second leg pole target.R
+    400144: Second leg pole target.R_end
+    400146: Spider crab
+    400148: //RootNode
+    400150: Third leg 1.L
+    400152: Third leg 1.R
+    400154: Third leg 2.L
+    400156: Third leg 2.L_end
+    400158: Third leg 2.R
+    400160: Third leg 2.R_end
+    400162: Third leg IK.L
+    400164: Third leg IK.L_end
+    400166: Third leg IK.R
+    400168: Third leg IK.R_end
+    400170: Third leg pole target.L
+    400172: Third leg pole target.L_end
+    400174: Third leg pole target.R
+    400176: Third leg pole target.R_end
+    4300000: Spider crab
+    7400000: Armature|Action
+    7400002: Armature|Eye stalks idle
+    7400004: Armature|Idle
+    7400006: Armature|Idle feeding
+    7400008: Armature|Left claw closed
+    7400010: Armature|Left claw closing
+    7400012: Armature|Left claw open
+    7400014: Armature|Left claw opening
+    7400016: Armature|Mandibles chewing
+    7400018: Armature|Right claw closed
+    7400020: Armature|Right claw closing
+    7400022: Armature|Right claw open
+    7400024: Armature|Right claw opening
+    9500000: //RootNode
+    13700000: Spider crab
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.2
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
