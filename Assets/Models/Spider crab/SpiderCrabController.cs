@@ -60,4 +60,10 @@ public class SpiderCrabController : MonoBehaviour
     {
         m_anim.SetTrigger(m_chewHash);
     }
+
+
+    //void OnAnimatorIK(int layerIndex)
+    //{
+    //    print("OnAnimatorIK called on layer " + layerIndex);
+    //}
 }
