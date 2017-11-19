@@ -10,8 +10,29 @@ public class RobotJoint : MonoBehaviour
     public float MinAngle = -360f;
     public float MaxAngle = 360f;
 
+    public bool RootJoint;
+
+
     void Awake()
     {
-        StartOffset = Vector3.Scale(transform.localPosition, transform.lossyScale);
+        if (transform.parent == null || transform.parent.GetComponent<RobotJoint>() == null)
+        {
+            StartOffset = Vector3.zero;
+            RootJoint = true;
+        }
+        else
+        {
+            var worldOffset = transform.position - transform.parent.position;
+            StartOffset = transform.parent.InverseTransformDirection(worldOffset);
+        }
+    }
+
+
+    public Vector3 Angle()
+    {
+        if (RootJoint)
+            return transform.eulerAngles;
+        else
+            return transform.localEulerAngles;
     }
 }

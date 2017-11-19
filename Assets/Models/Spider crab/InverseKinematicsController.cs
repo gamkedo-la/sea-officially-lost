@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class InverseKinematicsController : MonoBehaviour
 {
+    [SerializeField] bool m_showGizmos;
     [SerializeField] Transform m_target;
     [SerializeField] RobotJoint[] Joints;
-    [SerializeField] float SamplingDistance = 0.01f;
+    [SerializeField] float SamplingDistance = 1f;
     [SerializeField] float DistanceThreshold = 0.1f;
-    [SerializeField] float LearningRate = 0.1f;
+    [SerializeField] float LearningRate = 10f;
 
     private Vector3[] angles;
+    private Vector3 testPoint;
 
 
     void Update()
@@ -20,15 +22,19 @@ public class InverseKinematicsController : MonoBehaviour
             angles = new Vector3[Joints.Length];
 
             for (int i = 0; i < angles.Length; i++)
-                angles[i] = Joints[i].transform.localEulerAngles;
+                angles[i] = Joints[i].Angle();
 
             InverseKinematics(m_target.position, angles);
 
             for (int i = 0; i < Joints.Length; i++)
             {
                 var joint = Joints[i];
-                var angle = angles[i]; 
-                joint.transform.localRotation = Quaternion.Euler(angle);
+                var angle = angles[i];
+
+                if (joint.RootJoint)
+                    joint.transform.rotation = Quaternion.Euler(angle);
+                else
+                    joint.transform.localRotation = Quaternion.Euler(angle);
             }
         }
     }
@@ -48,6 +54,8 @@ public class InverseKinematicsController : MonoBehaviour
 
             prevPoint = nextPoint;
         }
+
+        testPoint = prevPoint;
 
         return prevPoint;
     }
@@ -83,7 +91,11 @@ public class InverseKinematicsController : MonoBehaviour
 
     private void InverseKinematics(Vector3 target, Vector3[] angles)
     {
-        if (DistanceFromTarget(target, angles) < DistanceThreshold)
+        float distanceFromTarget = DistanceFromTarget(target, angles);
+
+        //print(distanceFromTarget);
+
+        if (distanceFromTarget < DistanceThreshold)
             return;
 
         for (int i = Joints.Length - 1; i >= 0; i--)
@@ -129,5 +141,15 @@ public class InverseKinematicsController : MonoBehaviour
         //print("Final angle: " + angle);
 
         return angle;
+    }
+
+
+    void OnDrawGizmos()
+    {
+        if (!m_showGizmos)
+            return;
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(testPoint, 0.6f);
     }
 }
