@@ -27,11 +27,11 @@ public class SpiderCrabController : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(IdelFeedingTranstion());
+        StartCoroutine(IdleFeedingTranstion());
     }
 
 
-    private IEnumerator IdelFeedingTranstion()
+    private IEnumerator IdleFeedingTranstion()
     {
         m_anim.SetBool(m_feedingHash, false);
 

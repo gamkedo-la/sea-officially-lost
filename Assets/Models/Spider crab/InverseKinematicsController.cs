@@ -5,6 +5,7 @@ using UnityEngine;
 public class InverseKinematicsController : MonoBehaviour
 {
     [SerializeField] bool m_showGizmos;
+    [SerializeField] float m_gizmoRadius = 0.2f;
     [SerializeField] Transform m_target;
     [SerializeField] RobotJoint[] Joints;
     [SerializeField] float SamplingDistance = 1f;
@@ -13,16 +14,17 @@ public class InverseKinematicsController : MonoBehaviour
 
     private Vector3[] angles;
     private Vector3 testPoint;
+    private Quaternion rotation;
 
 
-    void Update()
+    void LateUpdate()
     {
         if (m_target != null)
         {
             angles = new Vector3[Joints.Length];
 
             for (int i = 0; i < angles.Length; i++)
-                angles[i] = Joints[i].Angle();
+                angles[i] = Joints[i].Angle;
 
             InverseKinematics(m_target.position, angles);
 
@@ -31,10 +33,7 @@ public class InverseKinematicsController : MonoBehaviour
                 var joint = Joints[i];
                 var angle = angles[i];
 
-                if (joint.RootJoint)
-                    joint.transform.rotation = Quaternion.Euler(angle);
-                else
-                    joint.transform.localRotation = Quaternion.Euler(angle);
+                joint.Angle = angle;
             }
         }
     }
@@ -150,6 +149,6 @@ public class InverseKinematicsController : MonoBehaviour
             return;
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(testPoint, 0.6f);
+        Gizmos.DrawSphere(testPoint, m_gizmoRadius);
     }
 }
