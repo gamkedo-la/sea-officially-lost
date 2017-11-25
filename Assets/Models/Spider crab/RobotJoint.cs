@@ -32,7 +32,12 @@ public class RobotJoint : MonoBehaviour
         }
 
         if (RootJoint)
+        {
             angle = transform.eulerAngles;
+            Axis = Vector3.zero;
+            MinAngle = 0;
+            MaxAngle = 0;
+        }
         else
             angle = transform.localEulerAngles;
     }
@@ -48,9 +53,7 @@ public class RobotJoint : MonoBehaviour
         {
             angle = value;
 
-            if (RootJoint)
-                transform.rotation = Quaternion.Euler(angle);
-            else
+            if (!RootJoint)
                 transform.localRotation = Quaternion.Euler(angle);
         }
     }

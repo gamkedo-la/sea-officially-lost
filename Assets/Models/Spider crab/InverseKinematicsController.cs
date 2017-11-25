@@ -118,8 +118,10 @@ public class InverseKinematicsController : MonoBehaviour
 
     private float AxisAngle(Vector3 rotation, Vector3 axis)
     {
-        var angle = Vector3.Scale(rotation, axis).magnitude;
-
+        //print("rotation: " + rotation);
+        var angle = Vector3.Dot(rotation, axis);
+        angle = angle > 180f ? angle - 360f : angle;
+        //print("angle: " + angle);
         return angle;
     }
 

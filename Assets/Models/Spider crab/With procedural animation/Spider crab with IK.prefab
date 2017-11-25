@@ -1289,6 +1289,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4582986243674706}
+  - component: {fileID: 114438044550968178}
   m_Layer: 0
   m_Name: Claw arm root.L
   m_TagString: Untagged
@@ -1335,9 +1336,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4738951901281532}
   - component: {fileID: 95172694168209922}
+  - component: {fileID: 114654513704751940}
   - component: {fileID: 114298626880858780}
   m_Layer: 0
-  m_Name: Spider crab for procedural animation
+  m_Name: Spider crab with IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1394,14 +1396,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1375903907392118}
-  m_LocalRotation: {x: -0.37945604, y: 0, z: 0, w: 0.92520976}
+  m_LocalRotation: {x: -0.42261827, y: 0, z: 0, w: 0.9063079}
   m_LocalPosition: {x: -8.754432e-10, y: 0.024764474, z: -2.2351741e-10}
   m_LocalScale: {x: 0.9999999, y: 1, z: 1}
   m_Children:
   - {fileID: 4993857899875260}
   m_Father: {fileID: 4812036227146894}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -44.6, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -50, y: 0, z: 0}
 --- !u!4 &4035777599980838
 Transform:
   m_ObjectHideFlags: 1
@@ -1450,14 +1452,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1092730639747314}
-  m_LocalRotation: {x: 0, y: -0.20287272, z: 0, w: 0.97920513}
+  m_LocalRotation: {x: 0, y: -0.2044961, z: 0, w: 0.97886735}
   m_LocalPosition: {x: -1.4901161e-10, y: 0.00068139983, z: -2.9802322e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4900126327736938}
   m_Father: {fileID: 4582986243674706}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -23.41, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -23.6, z: 0}
 --- !u!4 &4062184065330624
 Transform:
   m_ObjectHideFlags: 1
@@ -2349,14 +2351,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1661013486554774}
-  m_LocalRotation: {x: 0.26134688, y: 0, z: 0, w: 0.96524495}
+  m_LocalRotation: {x: 0.31887656, y: 0, z: 0, w: 0.9477963}
   m_LocalPosition: {x: -7.4505804e-11, y: 0.00080387347, z: 2.9802322e-10}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1}
   m_Children:
   - {fileID: 4034878072664854}
   m_Father: {fileID: 4900126327736938}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 30.3, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 37.19, y: 0, z: 0}
 --- !u!4 &4814190179279198
 Transform:
   m_ObjectHideFlags: 1
@@ -2473,14 +2475,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298314536427654}
-  m_LocalRotation: {x: 0, y: 0, z: 0.34447905, w: 0.938794}
+  m_LocalRotation: {x: 0, y: 0, z: 0.40912685, w: 0.9124775}
   m_LocalPosition: {x: 4.0978193e-10, y: 0.0006814003, z: 0}
   m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
   m_Children:
   - {fileID: 4812036227146894}
   m_Father: {fileID: 4060857685200976}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.3}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 48.3}
 --- !u!4 &4904034214377914
 Transform:
   m_ObjectHideFlags: 1
@@ -2595,7 +2597,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1415190717398722}
-  m_LocalRotation: {x: -0.41389897, y: 0, z: 0, w: 0.91032284}
+  m_LocalRotation: {x: -0.42261827, y: 0, z: 0, w: 0.9063079}
   m_LocalPosition: {x: 4.656613e-10, y: 0.008689283, z: 5.9604643e-10}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Children:
@@ -2603,7 +2605,7 @@ Transform:
   - {fileID: 4216348769039336}
   m_Father: {fileID: 4034878072664854}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -48.9, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -50, y: 0, z: 0}
 --- !u!23 &23450363494692808
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -2672,8 +2674,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: {x: 0, y: 0, z: 1}
-  MinAngle: -360
-  MaxAngle: 360
+  MinAngle: 10
+  MaxAngle: 50
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
 --- !u!114 &114298626880858780
@@ -2687,10 +2689,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ecddb5e5ac83b34b8bffb60410e2d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showGizmos: 0
+  m_showGizmos: 1
   m_gizmoRadius: 0.2
   m_target: {fileID: 4309329407370916}
   Joints:
+  - {fileID: 114438044550968178}
   - {fileID: 114607545796578696}
   - {fileID: 114095228536265112}
   - {fileID: 114782663122074806}
@@ -2716,6 +2719,22 @@ MonoBehaviour:
   MaxAngle: 360
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
+--- !u!114 &114438044550968178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936095963534592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6d0d9ea38cf994e8266783a8f71c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Axis: {x: 0, y: 0, z: 0}
+  MinAngle: 0
+  MaxAngle: 0
+  StartOffset: {x: 0, y: 0, z: 0}
+  RootJoint: 0
 --- !u!114 &114607545796578696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2728,10 +2747,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: {x: 0, y: 1, z: 0}
-  MinAngle: -360
-  MaxAngle: 360
+  MinAngle: -60
+  MaxAngle: 30
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
+--- !u!114 &114654513704751940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1965656541049258}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c76a1ed435d4c844b976e2b67437214c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gizmoRadius: 0.2
+  m_showTargetGizmo: 1
+  m_target: {fileID: 0}
+  m_showMouthPositionGizmo: 0
+  m_mouthPosition: {fileID: 0}
+  m_showFoodPositionGizmo: 0
+  m_foodPositions: []
 --- !u!114 &114782663122074806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2744,8 +2781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: {x: 1, y: 0, z: 0}
-  MinAngle: -360
-  MaxAngle: 360
+  MinAngle: 0
+  MaxAngle: 40
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
 --- !u!114 &114870846312153752
@@ -2760,8 +2797,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: {x: 1, y: 0, z: 0}
-  MinAngle: -360
-  MaxAngle: 360
+  MinAngle: -97
+  MaxAngle: 0
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
 --- !u!114 &114981975108413162
@@ -2776,8 +2813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: {x: 1, y: 0, z: 0}
-  MinAngle: -360
-  MaxAngle: 360
+  MinAngle: -97
+  MaxAngle: 0
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
 --- !u!135 &135041704110716910
