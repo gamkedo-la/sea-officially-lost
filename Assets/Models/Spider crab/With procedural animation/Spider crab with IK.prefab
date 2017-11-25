@@ -3422,12 +3422,14 @@ MonoBehaviour:
   m_feedingDistanceThreshold: 0.01
   m_feedingLearningRate: 10
   m_showTargetGizmo: 1
-  m_targetGizmoColour: {r: 1, g: 0, b: 0, a: 1}
+  m_targetLeftGizmoColour: {r: 1, g: 0, b: 0.22758627, a: 1}
+  m_targetRightGizmoColour: {r: 1, g: 0.39310342, b: 0, a: 1}
   m_targetGizmoRadius: 0.13
   m_targetLeft: {fileID: 4272417288466328}
   m_targetRight: {fileID: 4309329407370916}
   m_showRestPointGizmo: 1
-  m_restPointGizmoColour: {r: 0, g: 0, b: 1, a: 1}
+  m_restPointLeftGizmoColour: {r: 0, g: 0.20689654, b: 1, a: 1}
+  m_restPointRightGizmoColour: {r: 0.33103466, g: 0, b: 1, a: 1}
   m_restPointGizmoRadius: 0.1
   m_restPointLeft: {fileID: 4057624253601498}
   m_restPointRight: {fileID: 4423165313442710}
