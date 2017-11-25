@@ -15,14 +15,16 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     [Header("Targets")]
     [SerializeField] bool m_showTargetGizmo = true;
-    [SerializeField] Color m_targetGizmoColour = Color.red;
+    [SerializeField] Color m_targetLeftGizmoColour = Color.red;
+    [SerializeField] Color m_targetRightGizmoColour = Color.red;
     [SerializeField] float m_targetGizmoRadius = 0.13f;
     [SerializeField] Transform m_targetLeft;
     [SerializeField] Transform m_targetRight;
 
     [Header("Rest points")]
     [SerializeField] bool m_showRestPointGizmo;
-    [SerializeField] Color m_restPointGizmoColour = Color.blue;
+    [SerializeField] Color m_restPointLeftGizmoColour = Color.blue;
+    [SerializeField] Color m_restPointRightGizmoColour = Color.blue;
     [SerializeField] float m_restPointGizmoRadius = 0.1f;
     [SerializeField] Transform m_restPointLeft;
     [SerializeField] Transform m_restPointRight;
@@ -179,13 +181,13 @@ public class SpiderCrabWithIKController : MonoBehaviour
     {
         if (m_showTargetGizmo && m_targetLeft != null)
         {
-            Gizmos.color = m_targetGizmoColour;
+            Gizmos.color = m_targetLeftGizmoColour;
             Gizmos.DrawSphere(m_targetLeft.position, m_targetGizmoRadius);
         }
 
         if (m_showTargetGizmo && m_targetRight != null)
         {
-            Gizmos.color = m_targetGizmoColour;
+            Gizmos.color = m_targetRightGizmoColour;
             Gizmos.DrawSphere(m_targetRight.position, m_targetGizmoRadius);
         }
 
@@ -216,13 +218,13 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
         if (m_showRestPointGizmo && m_restPointLeft != null)
         {
-            Gizmos.color = m_restPointGizmoColour;
+            Gizmos.color = m_restPointLeftGizmoColour;
             Gizmos.DrawSphere(m_restPointLeft.position, m_restPointGizmoRadius);
         }
 
         if (m_showRestPointGizmo && m_restPointRight != null)
         {
-            Gizmos.color = m_restPointGizmoColour;
+            Gizmos.color = m_restPointRightGizmoColour;
             Gizmos.DrawSphere(m_restPointRight.position, m_restPointGizmoRadius);
         }
     }
