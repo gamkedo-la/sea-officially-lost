@@ -13,40 +13,45 @@ public class SpiderCrabWithIKController : MonoBehaviour
     [SerializeField] float m_feedingDistanceThreshold = 0.1f;
     [SerializeField] float m_feedingLearningRate = 10f;
 
-    [Header("Gizmo settings")]
-    [SerializeField] float m_gizmoRadius = 0.2f;
-
     [Header("Targets")]
     [SerializeField] bool m_showTargetGizmo = true;
     [SerializeField] Color m_targetGizmoColour = Color.red;
+    [SerializeField] float m_targetGizmoRadius = 0.13f;
     [SerializeField] Transform m_targetLeft;
     [SerializeField] Transform m_targetRight;
 
     [Header("Rest points")]
     [SerializeField] bool m_showRestPointGizmo;
-    [SerializeField] Color m_restPointGizmoColour = Color.magenta;
+    [SerializeField] Color m_restPointGizmoColour = Color.blue;
+    [SerializeField] float m_restPointGizmoRadius = 0.1f;
     [SerializeField] Transform m_restPointLeft;
     [SerializeField] Transform m_restPointRight;
 
     [Header("Mouth position")]
     [SerializeField] bool m_showMouthPositionGizmo;
     [SerializeField] Color m_mouthGizmoColour = Color.yellow;
+    [SerializeField] float m_mouthPositionGizmoRadius = 0.1f;
     [SerializeField] Transform m_mouthPosition;
     
     [Header("Food positions")]
     [SerializeField] bool m_showFoodPositionGizmo;
-    [SerializeField] Color m_foodGizmoColour = Color.green;
-    [SerializeField] Transform[] m_foodPositions;
+    [SerializeField] Color m_foodLeftGizmoColour = Color.green;
+    [SerializeField] Color m_foodRightGizmoColour = Color.cyan;
+    [SerializeField] float m_foodPositionGizmoRadius = 0.1f;
+    [SerializeField] Transform[] m_foodPositionsLeft;
+    [SerializeField] Transform[] m_foodPositionsRight;
 
     [Header("Feeding behaviour")]
     [SerializeField] Vector2 m_idleTimeMinMax = new Vector2(10f, 30f);
     [SerializeField] Vector2 m_feedingTimeMinMax = new Vector2(10f, 30f);
     [SerializeField] float m_settlingTime = 3f;
+    [SerializeField] float m_secondClawDelay = 2f;
 
     private Animator m_anim;
     private int m_chewHash;
     private bool m_feeding = false;
-    private Coroutine m_feedingCoroutine;
+    private Coroutine m_feedingCoroutineLeft;
+    private Coroutine m_feedingCoroutineRight;
 
 
     void Awake()
@@ -78,48 +83,6 @@ public class SpiderCrabWithIKController : MonoBehaviour
     }
 
 
-    void OnDrawGizmos()
-    {
-        if (m_showTargetGizmo && m_targetLeft != null)
-        {
-            Gizmos.color = m_targetGizmoColour;
-            Gizmos.DrawSphere(m_targetLeft.position, m_gizmoRadius);
-        }
-
-        if (m_showTargetGizmo && m_targetRight != null)
-        {
-            Gizmos.color = m_targetGizmoColour;
-            Gizmos.DrawSphere(m_targetRight.position, m_gizmoRadius);
-        }
-
-        if (m_showRestPointGizmo && m_restPointLeft != null)
-        {
-            Gizmos.color = m_restPointGizmoColour;
-            Gizmos.DrawSphere(m_restPointLeft.position, m_gizmoRadius);
-        }
-
-        if (m_showRestPointGizmo && m_restPointRight != null)
-        {
-            Gizmos.color = m_restPointGizmoColour;
-            Gizmos.DrawSphere(m_restPointRight.position, m_gizmoRadius);
-        }
-
-        if (m_showMouthPositionGizmo && m_mouthPosition != null)
-        {
-            Gizmos.color = m_mouthGizmoColour;
-            Gizmos.DrawSphere(m_mouthPosition.position, m_gizmoRadius);
-        }
-
-        if (m_showFoodPositionGizmo)
-        {
-            Gizmos.color = m_foodGizmoColour;
-
-            for (int i = 0; i < m_foodPositions.Length; i++)
-                Gizmos.DrawSphere(m_foodPositions[i].position, m_gizmoRadius);
-        }
-    }
-
-
     private IEnumerator IdleFeedingTranstion()
     {
         while (true)
@@ -131,7 +94,7 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
             m_feeding = true;
             SetIkSettings(m_feedingDistanceThreshold, m_feedingLearningRate);
-            m_feedingCoroutine = StartCoroutine(Feeding());
+            StartFeedingCoroutines();
 
             float feedingTime = Random.Range(m_feedingTimeMinMax.x, m_feedingTimeMinMax.y);
             //print("Feeding time: " + feedingTime);
@@ -140,7 +103,8 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
             m_feeding = false;
             SetIkSettings(m_idleDistanceThreshold, m_idleLearningRate);
-            StopCoroutine(m_feedingCoroutine);
+            StopCoroutine(m_feedingCoroutineLeft);
+            StopCoroutine(m_feedingCoroutineRight);
 
             SetTargetPosition(m_targetLeft, m_restPointLeft);
             SetTargetPosition(m_targetRight, m_restPointRight);
@@ -150,20 +114,35 @@ public class SpiderCrabWithIKController : MonoBehaviour
     }
 
 
-    private IEnumerator Feeding()
+    private void StartFeedingCoroutines()
     {
+        if (Random.value > 0.5)
+        {
+            m_feedingCoroutineLeft = StartCoroutine(Feeding(m_targetLeft, 0f, m_foodPositionsLeft));
+            m_feedingCoroutineRight = StartCoroutine(Feeding(m_targetRight, m_secondClawDelay, m_foodPositionsRight));
+        }
+        else
+        {
+            m_feedingCoroutineRight = StartCoroutine(Feeding(m_targetRight, 0f, m_foodPositionsRight));
+            m_feedingCoroutineLeft = StartCoroutine(Feeding(m_targetLeft, m_secondClawDelay, m_foodPositionsLeft));
+        }
+    }
+
+
+    private IEnumerator Feeding(Transform target, float delay, Transform[] foodPositions)
+    {
+        yield return new WaitForSeconds(delay);
+
         while (m_feeding)
         {
-            int foodPositionIndex = Random.Range(0, m_foodPositions.Length);
-            var foodPosition = m_foodPositions[foodPositionIndex];
+            int foodPositionIndex = Random.Range(0, foodPositions.Length);
+            var foodPosition = foodPositions[foodPositionIndex];
 
-            SetTargetPosition(m_targetLeft, foodPosition);
-            SetTargetPosition(m_targetRight, foodPosition);
+            SetTargetPosition(target, foodPosition);
 
             yield return new WaitForSeconds(m_settlingTime);
 
-            SetTargetPosition(m_targetLeft, m_mouthPosition);
-            SetTargetPosition(m_targetRight, m_mouthPosition);
+            SetTargetPosition(target, m_mouthPosition);
 
             yield return new WaitForSeconds(m_settlingTime);
         }
@@ -192,6 +171,59 @@ public class SpiderCrabWithIKController : MonoBehaviour
         {
             m_ikControllerRight.DistanceThreshold = distanceThreshold;
             m_ikControllerRight.LearningRate = learningRate;
+        }
+    }
+
+
+    void OnDrawGizmos()
+    {
+        if (m_showTargetGizmo && m_targetLeft != null)
+        {
+            Gizmos.color = m_targetGizmoColour;
+            Gizmos.DrawSphere(m_targetLeft.position, m_targetGizmoRadius);
+        }
+
+        if (m_showTargetGizmo && m_targetRight != null)
+        {
+            Gizmos.color = m_targetGizmoColour;
+            Gizmos.DrawSphere(m_targetRight.position, m_targetGizmoRadius);
+        }
+
+        if (m_showMouthPositionGizmo && m_mouthPosition != null)
+        {
+            Gizmos.color = m_mouthGizmoColour;
+            Gizmos.DrawSphere(m_mouthPosition.position, m_mouthPositionGizmoRadius);
+        }
+
+        if (m_showFoodPositionGizmo)
+        {
+            if (m_foodPositionsLeft != null)
+            {
+                Gizmos.color = m_foodLeftGizmoColour;
+
+                for (int i = 0; i < m_foodPositionsLeft.Length; i++)
+                    Gizmos.DrawSphere(m_foodPositionsLeft[i].position, m_foodPositionGizmoRadius);
+            }
+
+            if (m_foodPositionsRight != null)
+            {
+                Gizmos.color = m_foodRightGizmoColour;
+
+                for (int i = 0; i < m_foodPositionsRight.Length; i++)
+                    Gizmos.DrawSphere(m_foodPositionsRight[i].position, m_foodPositionGizmoRadius);
+            }
+        }
+
+        if (m_showRestPointGizmo && m_restPointLeft != null)
+        {
+            Gizmos.color = m_restPointGizmoColour;
+            Gizmos.DrawSphere(m_restPointLeft.position, m_restPointGizmoRadius);
+        }
+
+        if (m_showRestPointGizmo && m_restPointRight != null)
+        {
+            Gizmos.color = m_restPointGizmoColour;
+            Gizmos.DrawSphere(m_restPointRight.position, m_restPointGizmoRadius);
         }
     }
 }

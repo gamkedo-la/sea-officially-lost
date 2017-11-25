@@ -15,6 +15,7 @@ public class InverseKinematicsController : MonoBehaviour
     private Vector3[] angles;
     private Vector3 testPoint;
     private Quaternion rotation;
+    private float m_distanceFromTarget;
 
 
     void LateUpdate()
@@ -60,12 +61,17 @@ public class InverseKinematicsController : MonoBehaviour
     }
 
 
-    private float DistanceFromTarget(Vector3 target, Vector3[] angles)
+    private float FindDistanceFromTarget(Vector3 target, Vector3[] angles)
     {
         Vector3 point = ForwardKinematics(angles);
         return Vector3.Distance(point, target);
     }
 
+
+    public float DistanceFromTarget
+    {
+        get { return m_distanceFromTarget; }
+    }
 
     private float PartialGradient(Vector3 target, Vector3[] angles, int i)
     {
@@ -74,10 +80,10 @@ public class InverseKinematicsController : MonoBehaviour
         var angle = angles[i];
 
         // Gradient : [F(x+SamplingDistance) - F(x)] / h
-        float f_x = DistanceFromTarget(target, angles);
+        float f_x = FindDistanceFromTarget(target, angles);
 
         angles[i] += SamplingDistance * Joints[i].Axis;
-        float f_x_plus_d = DistanceFromTarget(target, angles);
+        float f_x_plus_d = FindDistanceFromTarget(target, angles);
 
         float gradient = (f_x_plus_d - f_x) / SamplingDistance;
 
@@ -90,11 +96,11 @@ public class InverseKinematicsController : MonoBehaviour
 
     private void InverseKinematics(Vector3 target, Vector3[] angles)
     {
-        float distanceFromTarget = DistanceFromTarget(target, angles);
+        m_distanceFromTarget = FindDistanceFromTarget(target, angles);
 
         //print(distanceFromTarget);
 
-        if (distanceFromTarget < DistanceThreshold)
+        if (m_distanceFromTarget < DistanceThreshold)
             return;
 
         for (int i = Joints.Length - 1; i >= 0; i--)
@@ -109,8 +115,10 @@ public class InverseKinematicsController : MonoBehaviour
             axisAngle = Mathf.Clamp(axisAngle, Joints[i].MinAngle, Joints[i].MaxAngle);
             angles[i] = SetAxisAngle(axisAngle, angles[i], Joints[i].Axis);
 
+            m_distanceFromTarget = FindDistanceFromTarget(target, angles);
+
             // Early termination
-            if (DistanceFromTarget(target, angles) < DistanceThreshold)
+            if (m_distanceFromTarget < DistanceThreshold)
                 return;
         }
     }
