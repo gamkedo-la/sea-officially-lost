@@ -9,8 +9,8 @@ public class InverseKinematicsController : MonoBehaviour
     [SerializeField] Transform m_target;
     [SerializeField] RobotJoint[] Joints;
     [SerializeField] float SamplingDistance = 1f;
-    [SerializeField] float DistanceThreshold = 0.1f;
-    [SerializeField] float LearningRate = 10f;
+    public float DistanceThreshold = 0.1f;
+    public float LearningRate = 10f;
 
     private Vector3[] angles;
     private Vector3 testPoint;
