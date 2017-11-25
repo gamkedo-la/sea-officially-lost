@@ -6,7 +6,8 @@ using UnityEngine;
 public class SpiderCrabWithIKController : MonoBehaviour
 {
     [Header("IK settings")]
-    [SerializeField] InverseKinematicsController m_ikController;
+    [SerializeField] InverseKinematicsController m_ikControllerLeft;
+    [SerializeField] InverseKinematicsController m_ikControllerRight;
     [SerializeField] float m_idleDistanceThreshold = 0f;
     [SerializeField] float m_idleLearningRate = 2f;
     [SerializeField] float m_feedingDistanceThreshold = 0.1f;
@@ -15,15 +16,17 @@ public class SpiderCrabWithIKController : MonoBehaviour
     [Header("Gizmo settings")]
     [SerializeField] float m_gizmoRadius = 0.2f;
 
-    [Header("Target")]
+    [Header("Targets")]
     [SerializeField] bool m_showTargetGizmo = true;
     [SerializeField] Color m_targetGizmoColour = Color.red;
-    [SerializeField] Transform m_target;
+    [SerializeField] Transform m_targetLeft;
+    [SerializeField] Transform m_targetRight;
 
-    [Header("Rest point")]
+    [Header("Rest points")]
     [SerializeField] bool m_showRestPointGizmo;
     [SerializeField] Color m_restPointGizmoColour = Color.magenta;
-    [SerializeField] Transform m_restPoint;
+    [SerializeField] Transform m_restPointLeft;
+    [SerializeField] Transform m_restPointRight;
 
     [Header("Mouth position")]
     [SerializeField] bool m_showMouthPositionGizmo;
@@ -55,7 +58,8 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     void Start()
     {
-        SetTargetPosition(m_restPoint);
+        SetTargetPosition(m_targetLeft, m_restPointLeft);
+        SetTargetPosition(m_targetRight, m_restPointRight);
         SetIkSettings(m_idleDistanceThreshold, m_idleLearningRate);
         StartCoroutine(IdleFeedingTranstion());
     }
@@ -76,16 +80,28 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        if (m_showTargetGizmo && m_target != null)
+        if (m_showTargetGizmo && m_targetLeft != null)
         {
             Gizmos.color = m_targetGizmoColour;
-            Gizmos.DrawSphere(m_target.position, m_gizmoRadius);
+            Gizmos.DrawSphere(m_targetLeft.position, m_gizmoRadius);
         }
 
-        if (m_showRestPointGizmo && m_restPoint != null)
+        if (m_showTargetGizmo && m_targetRight != null)
+        {
+            Gizmos.color = m_targetGizmoColour;
+            Gizmos.DrawSphere(m_targetRight.position, m_gizmoRadius);
+        }
+
+        if (m_showRestPointGizmo && m_restPointLeft != null)
         {
             Gizmos.color = m_restPointGizmoColour;
-            Gizmos.DrawSphere(m_restPoint.position, m_gizmoRadius);
+            Gizmos.DrawSphere(m_restPointLeft.position, m_gizmoRadius);
+        }
+
+        if (m_showRestPointGizmo && m_restPointRight != null)
+        {
+            Gizmos.color = m_restPointGizmoColour;
+            Gizmos.DrawSphere(m_restPointRight.position, m_gizmoRadius);
         }
 
         if (m_showMouthPositionGizmo && m_mouthPosition != null)
@@ -126,7 +142,8 @@ public class SpiderCrabWithIKController : MonoBehaviour
             SetIkSettings(m_idleDistanceThreshold, m_idleLearningRate);
             StopCoroutine(m_feedingCoroutine);
 
-            SetTargetPosition(m_restPoint);
+            SetTargetPosition(m_targetLeft, m_restPointLeft);
+            SetTargetPosition(m_targetRight, m_restPointRight);
 
             yield return null;
         }
@@ -140,33 +157,41 @@ public class SpiderCrabWithIKController : MonoBehaviour
             int foodPositionIndex = Random.Range(0, m_foodPositions.Length);
             var foodPosition = m_foodPositions[foodPositionIndex];
 
-            SetTargetPosition(foodPosition);
+            SetTargetPosition(m_targetLeft, foodPosition);
+            SetTargetPosition(m_targetRight, foodPosition);
 
             yield return new WaitForSeconds(m_settlingTime);
 
-            SetTargetPosition(m_mouthPosition);
+            SetTargetPosition(m_targetLeft, m_mouthPosition);
+            SetTargetPosition(m_targetRight, m_mouthPosition);
 
             yield return new WaitForSeconds(m_settlingTime);
         }
     }
 
 
-    private void SetTargetPosition(Transform targetPosition)
+    private void SetTargetPosition(Transform target, Transform targetPosition)
     {
-        if (m_target != null && targetPosition != null)
+        if (target != null && targetPosition != null)
         {
-            m_target.parent = targetPosition;
-            m_target.localPosition = Vector3.zero;
+            target.parent = targetPosition;
+            target.localPosition = Vector3.zero;
         }
     }
 
 
     private void SetIkSettings(float distanceThreshold, float learningRate)
     {
-        if (m_ikController == null)
-            return;
+        if (m_ikControllerLeft != null)
+        {
+            m_ikControllerLeft.DistanceThreshold = distanceThreshold;
+            m_ikControllerLeft.LearningRate = learningRate;
+        }
 
-        m_ikController.DistanceThreshold = distanceThreshold;
-        m_ikController.LearningRate = learningRate;
+        if (m_ikControllerRight != null)
+        {
+            m_ikControllerRight.DistanceThreshold = distanceThreshold;
+            m_ikControllerRight.LearningRate = learningRate;
+        }
     }
 }
