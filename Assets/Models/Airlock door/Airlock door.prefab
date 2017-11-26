@@ -13,7 +13,7 @@ Prefab:
   m_IsPrefabParent: 1
 --- !u!1 &1006352900585590
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -38,6 +38,8 @@ GameObject:
   - component: {fileID: 4985269371941544}
   - component: {fileID: 33409449532705348}
   - component: {fileID: 23845715141185610}
+  - component: {fileID: 65036788170285552}
+  - component: {fileID: 54909391572115188}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -54,6 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4469014724648170}
   - component: {fileID: 95171941939145472}
+  - component: {fileID: 114741919897087116}
   m_Layer: 0
   m_Name: Airlock door
   m_TagString: Untagged
@@ -67,11 +70,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1006352900585590}
-  m_LocalRotation: {x: 0.70663327, y: 0.02587366, z: 0.02587366, w: 0.70663327}
-  m_LocalPosition: {x: -1.2797827, y: 1.8446375, z: -0.072174065}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5443723, y: 0.6526891, z: 0.54826385}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4469014724648170}
+  m_Father: {fileID: 4985269371941544}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4469014724648170
@@ -84,7 +87,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4299373558535264}
   - {fileID: 4985269371941544}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,13 +97,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1237247145736694}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 0.26458973, y: 2.3929014, z: -0.7248632}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4299373558535264}
   m_Father: {fileID: 4469014724648170}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
 --- !u!23 &23486571010232276
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -180,6 +183,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1237247145736694}
   m_Mesh: {fileID: 4300002, guid: be6f67ba6d0836b41a2ad02029f77875, type: 3}
+--- !u!54 &54909391572115188
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1237247145736694}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65036788170285552
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1237247145736694}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.916056, y: 0.8560256, z: 3.4999998}
+  m_Center: {x: -1.3071009, y: 0.304475, z: 0.6309806}
 --- !u!95 &95171941939145472
 Animator:
   serializedVersion: 3
@@ -189,7 +219,7 @@ Animator:
   m_GameObject: {fileID: 1952759143399514}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: be6f67ba6d0836b41a2ad02029f77875, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dccb7d7c2068b7f4398295faa074ff64, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -197,3 +227,14 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114741919897087116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1952759143399514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a4bbafa15a0f6478a4c500d2345aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
