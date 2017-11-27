@@ -6827,6 +6827,22 @@ Prefab:
       propertyPath: imageToFade
       value: 
       objectReference: {fileID: 1045130419}
+    - target: {fileID: 4138868443381360, guid: 348613d24acc642038475f5e4503e98f, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 11.260399
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138868443381360, guid: 348613d24acc642038475f5e4503e98f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138868443381360, guid: 348613d24acc642038475f5e4503e98f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333050442995402, guid: 348613d24acc642038475f5e4503e98f, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.1131958
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 348613d24acc642038475f5e4503e98f, type: 2}
   m_IsPrefabParent: 0

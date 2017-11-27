@@ -81617,15 +81617,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4890692077862992, guid: 348613d24acc642038475f5e4503e98f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 175.4
       objectReference: {fileID: 0}
     - target: {fileID: 4890692077862992, guid: 348613d24acc642038475f5e4503e98f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 4890692077862992, guid: 348613d24acc642038475f5e4503e98f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 71.76
       objectReference: {fileID: 0}
     - target: {fileID: 4890692077862992, guid: 348613d24acc642038475f5e4503e98f, type: 2}
       propertyPath: m_LocalRotation.x
