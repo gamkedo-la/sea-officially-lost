@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour {
     private float speedDecay = 0.8f;
     private float speedLateral = 0.0f;
     private float speedRise = 0.0f;
+    private bool mouseInitHappened = false;
 
     /*//inventory related declarations pick-up item variables
     float m_MaxInteractDistance = 2.0f;
@@ -50,7 +51,7 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
-        m_MouseLook.Init(transform, Camera.main.transform);
+
         playerInventory.ScannedInventory();
         //playerShip.ScannedInventory();
 
@@ -80,6 +81,10 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (mouseInitHappened == false) {
+            mouseInitHappened = true;
+            m_MouseLook.Init(transform, Camera.main.transform);
+        }
         // Steering control
         /*transform.Rotate(Vector3.right, Input.GetAxis("Vertical") * pitchSpeed * Time.deltaTime * (upLooksDown ? 1.0f : -1.0f));
         transform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * yawSpeed * Time.deltaTime);
