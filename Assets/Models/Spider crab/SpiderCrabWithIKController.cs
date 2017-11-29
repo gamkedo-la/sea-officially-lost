@@ -95,8 +95,8 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     void Update()
     {
-
-
+        CheckLeftPincerState();
+        CheckRightPincerState();
 
         if (!m_allowAnimationTestKeys)
             return;
@@ -123,7 +123,55 @@ public class SpiderCrabWithIKController : MonoBehaviour
     }
 
 
-    private void Chew()
+    private void CheckLeftPincerState()
+    {
+        float distanceToTarget = m_ikControllerLeft.DistanceFromTarget;
+
+        switch (m_leftClawTargetType)
+        {
+            case TargetType.Idle:
+                break;
+
+            case TargetType.Food:
+                LeftPincer(distanceToTarget < m_targetDistanceToTriggerPincer);
+                break;
+
+            case TargetType.Mouth:
+                LeftPincer(distanceToTarget > m_targetDistanceToTriggerPincer);
+                break;
+
+            case TargetType.Attack:
+                LeftPincer(distanceToTarget < m_targetDistanceToTriggerPincer);
+                break;
+        }
+    }
+
+
+    private void CheckRightPincerState()
+    {
+        float distanceToTarget = m_ikControllerRight.DistanceFromTarget;
+
+        switch (m_rightClawTargetType)
+        {
+            case TargetType.Idle:
+                break;
+
+            case TargetType.Food:
+                RightPincer(distanceToTarget < m_targetDistanceToTriggerPincer);
+                break;
+
+            case TargetType.Mouth:
+                RightPincer(distanceToTarget > m_targetDistanceToTriggerPincer);
+                break;
+
+            case TargetType.Attack:
+                RightPincer(distanceToTarget < m_targetDistanceToTriggerPincer);
+                break;
+        }
+    }
+
+
+    public void Chew()
     {
         m_anim.SetTrigger(m_chewHash);
     }

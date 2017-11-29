@@ -202,9 +202,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4605182359818828}
+  - component: {fileID: 135876903253354996}
+  - component: {fileID: 54643264306216026}
   m_Layer: 0
   m_Name: MouthPosition
-  m_TagString: Untagged
+  m_TagString: crab mouth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,6 +250,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4974523441347044}
   - component: {fileID: 114405939994885440}
+  - component: {fileID: 135822278319321594}
+  - component: {fileID: 54028898157146908}
+  - component: {fileID: 114907178469132554}
   m_Layer: 0
   m_Name: Claw tip.L
   m_TagString: Untagged
@@ -1527,6 +1532,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4593423266452074}
   - component: {fileID: 114399468022187450}
+  - component: {fileID: 135323362650080398}
+  - component: {fileID: 54046190446794744}
+  - component: {fileID: 114649897127847428}
   m_Layer: 0
   m_Name: Claw tip.R
   m_TagString: Untagged
@@ -2678,7 +2686,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1965656541049258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3189,6 +3197,51 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1448323934887246}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54028898157146908
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198335928225992}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54046190446794744
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925104789587488}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54643264306216026
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173344532630554}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!95 &95172694168209922
 Animator:
   serializedVersion: 3
@@ -3272,7 +3325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: {x: 1, y: 0, z: 0}
-  MinAngle: -97
+  MinAngle: -98
   MaxAngle: 0
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
@@ -3288,7 +3341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: {x: 1, y: 0, z: 0}
-  MinAngle: -97
+  MinAngle: -98
   MaxAngle: 0
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
@@ -3404,6 +3457,17 @@ MonoBehaviour:
   MaxAngle: 60
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
+--- !u!114 &114649897127847428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925104789587488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a699caead6bd744b21d360b675feaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114654513704751940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3422,13 +3486,13 @@ MonoBehaviour:
   m_idleLearningRate: 2
   m_feedingDistanceThreshold: 0.01
   m_feedingLearningRate: 10
-  m_showTargetGizmo: 1
+  m_showTargetGizmo: 0
   m_targetLeftGizmoColour: {r: 1, g: 0, b: 0.22758627, a: 1}
   m_targetRightGizmoColour: {r: 1, g: 0.39310342, b: 0, a: 1}
   m_targetGizmoRadius: 0.13
   m_targetLeft: {fileID: 4272417288466328}
   m_targetRight: {fileID: 4309329407370916}
-  m_showRestPointGizmo: 1
+  m_showRestPointGizmo: 0
   m_restPointLeftGizmoColour: {r: 0, g: 0.20689654, b: 1, a: 1}
   m_restPointRightGizmoColour: {r: 0.33103466, g: 0, b: 1, a: 1}
   m_restPointGizmoRadius: 0.1
@@ -3438,7 +3502,7 @@ MonoBehaviour:
   m_mouthGizmoColour: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   m_mouthPositionGizmoRadius: 0.1
   m_mouthPosition: {fileID: 4605182359818828}
-  m_showFoodPositionGizmo: 1
+  m_showFoodPositionGizmo: 0
   m_foodLeftGizmoColour: {r: 0, g: 1, b: 0, a: 1}
   m_foodRightGizmoColour: {r: 0, g: 1, b: 1, a: 1}
   m_foodPositionGizmoRadius: 0.1
@@ -3541,10 +3605,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: {x: 1, y: 0, z: 0}
-  MinAngle: -97
+  MinAngle: -98
   MaxAngle: 0
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
+--- !u!114 &114907178469132554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198335928225992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a699caead6bd744b21d360b675feaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114981975108413162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3557,7 +3632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: {x: 1, y: 0, z: 0}
-  MinAngle: -97
+  MinAngle: -98
   MaxAngle: 0
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
@@ -3573,6 +3648,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135323362650080398
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925104789587488}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.002
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135440523906663744
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -3584,6 +3671,30 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135822278319321594
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198335928225992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.002
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135876903253354996
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173344532630554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.002
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137084521058248332
 SkinnedMeshRenderer:
