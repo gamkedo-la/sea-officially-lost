@@ -37,7 +37,7 @@ public class PlayerCommon : MonoBehaviour {
         ppProfile.colorGrading.settings = colorGrading;
 
         Camera.main.fieldOfView = PlayerPrefs.GetInt("FieldOfView", 60);
-
+        Debug.Log("Player common started!");
         StartCoroutine(InsanityUpdate());
     }
 

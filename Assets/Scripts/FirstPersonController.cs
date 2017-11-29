@@ -41,6 +41,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		private float m_NextStep;
 		private bool m_Jumping;
 		private AudioSource m_AudioSource;
+        private bool mouseLookInitYet = false;
 
 		// Use this for initialization
 		private void Start()
@@ -54,7 +55,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			m_NextStep = m_StepCycle / 2f;
 			m_Jumping = false;
 			m_AudioSource = GetComponent<AudioSource>();
-			m_MouseLook.Init(transform, m_Camera.transform);
+			
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
 
@@ -68,6 +69,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		// Update is called once per frame
 		private void Update()
 		{
+            if (mouseLookInitYet == false) {
+                mouseLookInitYet = true;
+                m_MouseLook.Init(transform, m_Camera.transform);
+            }
 			RotateView();
 			// the jump state needs to read here to make sure it is not missed
 			if (!m_Jump)
