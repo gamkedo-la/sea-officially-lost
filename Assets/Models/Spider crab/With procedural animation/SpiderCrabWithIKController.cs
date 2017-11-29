@@ -5,6 +5,18 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class SpiderCrabWithIKController : MonoBehaviour
 {
+    private enum TargetType 
+    {
+        Idle,
+        Food,
+        Mouth,
+        Attack,
+    }
+
+
+    [Header("Animation test")]
+    [SerializeField] bool m_allowAnimationTestKeys;
+
     [Header("IK settings")]
     [SerializeField] InverseKinematicsController m_ikControllerLeft;
     [SerializeField] InverseKinematicsController m_ikControllerRight;
@@ -48,18 +60,27 @@ public class SpiderCrabWithIKController : MonoBehaviour
     [SerializeField] Vector2 m_feedingTimeMinMax = new Vector2(10f, 30f);
     [SerializeField] float m_settlingTime = 3f;
     [SerializeField] float m_secondClawDelay = 2f;
+    [SerializeField] float m_targetDistanceToTriggerPincer = 0.2f;
 
     private Animator m_anim;
     private int m_chewHash;
+    private int m_leftPincerClosedHash;
+    private int m_rightPincerClosedHash;
     private bool m_feeding = false;
+    private bool m_leftPincerClosed;
+    private bool m_rightPincerClosed;
     private Coroutine m_feedingCoroutineLeft;
     private Coroutine m_feedingCoroutineRight;
+    private TargetType m_leftClawTargetType;
+    private TargetType m_rightClawTargetType;
 
 
     void Awake()
     {
         m_anim = GetComponent<Animator>();
         m_chewHash = Animator.StringToHash("Chew");
+        m_leftPincerClosedHash = Animator.StringToHash("Left pincer closed");
+        m_rightPincerClosedHash = Animator.StringToHash("Right pincer closed");
     }
 
 
@@ -74,14 +95,49 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            m_feeding = !m_feeding;
+
+
+
+        if (!m_allowAnimationTestKeys)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            m_leftPincerClosed = !m_leftPincerClosed;
+            LeftPincer(m_leftPincerClosed);
+            print("Left pincer closed: " + m_leftPincerClosed);
+        } 
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            m_rightPincerClosed = !m_rightPincerClosed;
+            RightPincer(m_rightPincerClosed);
+            print("Right pincer closed: " + m_leftPincerClosed);
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Chew();
+            print("Chew");
+        }
     }
 
 
     private void Chew()
     {
         m_anim.SetTrigger(m_chewHash);
+    }
+
+
+    private void LeftPincer(bool closed)
+    {
+        m_anim.SetBool(m_leftPincerClosedHash, closed);
+    } 
+
+
+    private void RightPincer(bool closed)
+    {
+        m_anim.SetBool(m_rightPincerClosedHash, closed);
     }
 
 
@@ -111,6 +167,12 @@ public class SpiderCrabWithIKController : MonoBehaviour
             SetTargetPosition(m_targetLeft, m_restPointLeft);
             SetTargetPosition(m_targetRight, m_restPointRight);
 
+            m_leftClawTargetType = TargetType.Idle;
+            m_rightClawTargetType = TargetType.Idle;
+
+            LeftPincer(false);
+            RightPincer(false);
+            
             yield return null;
         }
     }
@@ -142,9 +204,20 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
             SetTargetPosition(target, foodPosition);
 
+            // Bleurgh, this is horrible
+            if (target == m_targetLeft)
+                m_leftClawTargetType = TargetType.Food;
+            else
+                m_rightClawTargetType = TargetType.Food;
+
             yield return new WaitForSeconds(m_settlingTime);
 
             SetTargetPosition(target, m_mouthPosition);
+
+            if (target == m_targetLeft)
+                m_leftClawTargetType = TargetType.Mouth;
+            else
+                m_rightClawTargetType = TargetType.Mouth;
 
             yield return new WaitForSeconds(m_settlingTime);
         }

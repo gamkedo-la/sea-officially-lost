@@ -13,19 +13,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Left pincer closed
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Right pincer closed
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -66,7 +66,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Left pincer layer
     m_StateMachine: {fileID: 1107095639859195900}
-    m_Mask: {fileID: 31900000, guid: e2d1a17ccd63d45498a8434f5404c3f1, type: 2}
+    m_Mask: {fileID: 31900000, guid: 636f97828c23b8b4092580d572077472, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
@@ -78,7 +78,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Right pincer layer
     m_StateMachine: {fileID: 1107059736416508618}
-    m_Mask: {fileID: 31900000, guid: 636f97828c23b8b4092580d572077472, type: 2}
+    m_Mask: {fileID: 31900000, guid: e2d1a17ccd63d45498a8434f5404c3f1, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
