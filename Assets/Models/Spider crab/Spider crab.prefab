@@ -3549,7 +3549,7 @@ MonoBehaviour:
   m_idleLearningRate: 2
   m_feedingDistanceThreshold: 0.01
   m_feedingLearningRate: 10
-  m_attackLearningRate: 40
+  m_attackLearningRate: 30
   m_attackDistanceThreshold: 0.1
   m_showTargetGizmo: 0
   m_targetLeftGizmoColour: {r: 1, g: 0, b: 0.22758627, a: 1}
@@ -3588,7 +3588,7 @@ MonoBehaviour:
   m_settlingTime: 3
   m_secondClawDelay: 3
   m_feedingTargetDistanceToTriggerPincer: 0.2
-  m_attackTargetDistanceToTriggerPincer: 0.75
+  m_attackTargetDistanceToTriggerPincer: 0.5
 --- !u!114 &114685337528353838
 MonoBehaviour:
   m_ObjectHideFlags: 1

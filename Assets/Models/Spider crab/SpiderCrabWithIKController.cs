@@ -144,6 +144,7 @@ public class SpiderCrabWithIKController : MonoBehaviour
         switch (m_leftClawTargetType)
         {
             case TargetType.Idle:
+                m_anim.SetBool(m_leftPincerClosedHash, false);
                 break;
 
             case TargetType.Food:
@@ -168,6 +169,7 @@ public class SpiderCrabWithIKController : MonoBehaviour
         switch (m_rightClawTargetType)
         {
             case TargetType.Idle:
+                m_anim.SetBool(m_rightPincerClosedHash, false);
                 break;
 
             case TargetType.Food:
@@ -315,10 +317,10 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     public void AttackTriggerEnter(Collider other)
     {
-        StopAllCoroutines();
-        m_leftClawTargetType = TargetType.Attack;
+        StopAllCoroutines();       
         SetTargetPosition(m_targetLeft, other.transform);
         SetIkSettings(m_ikControllerLeft, m_attackDistanceThreshold, m_attackLearningRate);
+        m_leftClawTargetType = TargetType.Attack;
     }
 
 
