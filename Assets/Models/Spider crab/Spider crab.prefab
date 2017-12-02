@@ -1768,7 +1768,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1290601173638472}
   m_LocalRotation: {x: 0.000000014901159, y: -1.7053024e-13, z: -1.3500311e-12, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0296, z: -0.0215}
+  m_LocalPosition: {x: -0, y: 0.0239, z: -0.0203}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4035777599980838}
@@ -3549,6 +3549,8 @@ MonoBehaviour:
   m_idleLearningRate: 2
   m_feedingDistanceThreshold: 0.01
   m_feedingLearningRate: 10
+  m_attackLearningRate: 40
+  m_attackDistanceThreshold: 0.1
   m_showTargetGizmo: 0
   m_targetLeftGizmoColour: {r: 1, g: 0, b: 0.22758627, a: 1}
   m_targetRightGizmoColour: {r: 1, g: 0.39310342, b: 0, a: 1}
@@ -3585,7 +3587,8 @@ MonoBehaviour:
   m_feedingTimeMinMax: {x: 10, y: 20}
   m_settlingTime: 3
   m_secondClawDelay: 3
-  m_targetDistanceToTriggerPincer: 0.2
+  m_feedingTargetDistanceToTriggerPincer: 0.2
+  m_attackTargetDistanceToTriggerPincer: 0.75
 --- !u!114 &114685337528353838
 MonoBehaviour:
   m_ObjectHideFlags: 1

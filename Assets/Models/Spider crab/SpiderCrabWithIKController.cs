@@ -24,6 +24,8 @@ public class SpiderCrabWithIKController : MonoBehaviour
     [SerializeField] float m_idleLearningRate = 2f;
     [SerializeField] float m_feedingDistanceThreshold = 0.1f;
     [SerializeField] float m_feedingLearningRate = 10f;
+    [SerializeField] float m_attackLearningRate = 20f;
+    [SerializeField] float m_attackDistanceThreshold = 0f;
 
     [Header("Targets")]
     [SerializeField] bool m_showTargetGizmo = true;
@@ -60,7 +62,11 @@ public class SpiderCrabWithIKController : MonoBehaviour
     [SerializeField] Vector2 m_feedingTimeMinMax = new Vector2(10f, 30f);
     [SerializeField] float m_settlingTime = 3f;
     [SerializeField] float m_secondClawDelay = 2f;
-    [SerializeField] float m_targetDistanceToTriggerPincer = 0.2f;
+    [SerializeField] float m_feedingTargetDistanceToTriggerPincer = 0.2f;
+
+    [Header("Attack behaviour")]
+    [SerializeField] float m_attackTargetDistanceToTriggerPincer = 0.5f;
+
 
     private Animator m_anim;
     private int m_chewHash;
@@ -86,6 +92,14 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     void Start()
     {
+        SetDefaultState();
+    }
+
+
+    private void SetDefaultState()
+    {
+        m_leftClawTargetType = TargetType.Idle;
+        m_rightClawTargetType = TargetType.Idle;
         SetTargetPosition(m_targetLeft, m_restPointLeft);
         SetTargetPosition(m_targetRight, m_restPointRight);
         SetIkSettings(m_idleDistanceThreshold, m_idleLearningRate);
@@ -133,15 +147,15 @@ public class SpiderCrabWithIKController : MonoBehaviour
                 break;
 
             case TargetType.Food:
-                LeftPincer(distanceToTarget < m_targetDistanceToTriggerPincer);
+                LeftPincer(distanceToTarget < m_feedingTargetDistanceToTriggerPincer);
                 break;
 
             case TargetType.Mouth:
-                LeftPincer(distanceToTarget > m_targetDistanceToTriggerPincer);
+                LeftPincer(distanceToTarget > m_feedingTargetDistanceToTriggerPincer);
                 break;
 
             case TargetType.Attack:
-                LeftPincer(distanceToTarget < m_targetDistanceToTriggerPincer);
+                LeftPincer(distanceToTarget < m_attackTargetDistanceToTriggerPincer);
                 break;
         }
     }
@@ -157,15 +171,15 @@ public class SpiderCrabWithIKController : MonoBehaviour
                 break;
 
             case TargetType.Food:
-                RightPincer(distanceToTarget < m_targetDistanceToTriggerPincer);
+                RightPincer(distanceToTarget < m_feedingTargetDistanceToTriggerPincer);
                 break;
 
             case TargetType.Mouth:
-                RightPincer(distanceToTarget > m_targetDistanceToTriggerPincer);
+                RightPincer(distanceToTarget > m_feedingTargetDistanceToTriggerPincer);
                 break;
 
             case TargetType.Attack:
-                RightPincer(distanceToTarget < m_targetDistanceToTriggerPincer);
+                RightPincer(distanceToTarget < m_attackTargetDistanceToTriggerPincer);
                 break;
         }
     }
@@ -284,29 +298,33 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     private void SetIkSettings(float distanceThreshold, float learningRate)
     {
-        if (m_ikControllerLeft != null)
-        {
-            m_ikControllerLeft.DistanceThreshold = distanceThreshold;
-            m_ikControllerLeft.LearningRate = learningRate;
-        }
+        SetIkSettings(m_ikControllerLeft, distanceThreshold, learningRate);
+        SetIkSettings(m_ikControllerRight, distanceThreshold, learningRate);
+    }
 
-        if (m_ikControllerRight != null)
+
+    private void SetIkSettings(InverseKinematicsController ikController, float distanceThreshold, float learningRate)
+    {
+        if (ikController != null)
         {
-            m_ikControllerRight.DistanceThreshold = distanceThreshold;
-            m_ikControllerRight.LearningRate = learningRate;
+            ikController.DistanceThreshold = distanceThreshold;
+            ikController.LearningRate = learningRate;
         }
     }
 
 
     public void AttackTriggerEnter(Collider other)
     {
-        print("Attack triggered by: " + other.name);
+        StopAllCoroutines();
+        m_leftClawTargetType = TargetType.Attack;
+        SetTargetPosition(m_targetLeft, other.transform);
+        SetIkSettings(m_ikControllerLeft, m_attackDistanceThreshold, m_attackLearningRate);
     }
 
 
     public void AttackTriggerExit(Collider other)
     {
-        print("Attack trigger exit: " + other.name);
+        SetDefaultState();
     }
 
 
