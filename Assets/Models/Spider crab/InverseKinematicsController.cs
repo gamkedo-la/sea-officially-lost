@@ -12,7 +12,7 @@ public class InverseKinematicsController : MonoBehaviour
     public float DistanceThreshold = 0.1f;
     public float LearningRate = 10f;
 
-    private Vector3[] angles;
+    private Vector3[] m_angles;
     private Vector3 testPoint;
     private Quaternion rotation;
     private float m_distanceFromTarget;
@@ -22,17 +22,17 @@ public class InverseKinematicsController : MonoBehaviour
     {
         if (m_target != null)
         {
-            angles = new Vector3[Joints.Length];
+            m_angles = new Vector3[Joints.Length];
 
-            for (int i = 0; i < angles.Length; i++)
-                angles[i] = Joints[i].Angle;
+            for (int i = 0; i < m_angles.Length; i++)
+                m_angles[i] = Joints[i].Angle;
 
-            InverseKinematics(m_target.position, angles);
+            InverseKinematics(m_target.position, m_angles);
 
             for (int i = 0; i < Joints.Length; i++)
             {
                 var joint = Joints[i];
-                var angle = angles[i];
+                var angle = m_angles[i];
 
                 joint.Angle = angle;
             }
@@ -58,6 +58,12 @@ public class InverseKinematicsController : MonoBehaviour
         testPoint = prevPoint;
 
         return prevPoint;
+    }
+
+
+    public float FindDistanceFromTartget(Transform target)
+    {
+        return FindDistanceFromTarget(transform.position, m_angles);
     }
 
 

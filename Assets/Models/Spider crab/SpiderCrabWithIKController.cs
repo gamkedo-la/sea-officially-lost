@@ -96,13 +96,19 @@ public class SpiderCrabWithIKController : MonoBehaviour
     }
 
 
-    private void SetDefaultState()
+    private void SetDefaultSettings()
     {
         m_leftClawTargetType = TargetType.Idle;
         m_rightClawTargetType = TargetType.Idle;
         SetTargetPosition(m_targetLeft, m_restPointLeft);
         SetTargetPosition(m_targetRight, m_restPointRight);
         SetIkSettings(m_idleDistanceThreshold, m_idleLearningRate);
+    }
+
+
+    private void SetDefaultState()
+    {
+        SetDefaultSettings();
         StartCoroutine(IdleFeedingTranstion());
     }
 
@@ -317,10 +323,24 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     public void AttackTriggerEnter(Collider other)
     {
-        StopAllCoroutines();       
-        SetTargetPosition(m_targetLeft, other.transform);
-        SetIkSettings(m_ikControllerLeft, m_attackDistanceThreshold, m_attackLearningRate);
-        m_leftClawTargetType = TargetType.Attack;
+        StopAllCoroutines();
+        SetDefaultSettings();
+        
+        float distanceFromLeftPincer = m_ikControllerLeft.FindDistanceFromTartget(other.transform);
+        float distanceFromRightPincer = m_ikControllerRight.FindDistanceFromTartget(other.transform);
+
+        if (distanceFromLeftPincer < distanceFromRightPincer)
+        {
+            SetTargetPosition(m_targetLeft, other.transform);
+            SetIkSettings(m_ikControllerLeft, m_attackDistanceThreshold, m_attackLearningRate);
+            m_leftClawTargetType = TargetType.Attack;
+        }
+        else
+        {
+            SetTargetPosition(m_targetRight, other.transform);
+            SetIkSettings(m_ikControllerRight, m_attackDistanceThreshold, m_attackLearningRate);
+            m_rightClawTargetType = TargetType.Attack;
+        }
     }
 
 
