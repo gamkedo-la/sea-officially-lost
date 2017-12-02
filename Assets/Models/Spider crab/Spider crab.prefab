@@ -379,7 +379,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4053502428898766}
   - component: {fileID: 135614379154008240}
-  - component: {fileID: 54663041279935206}
+  - component: {fileID: 54248643634943252}
+  - component: {fileID: 114685337528353838}
   m_Layer: 16
   m_Name: Attack trigger
   m_TagString: Untagged
@@ -1630,6 +1631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4738951901281532}
   - component: {fileID: 95172694168209922}
+  - component: {fileID: 54470971526361542}
   - component: {fileID: 114654513704751940}
   m_Layer: 0
   m_Name: Spider crab
@@ -3258,12 +3260,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &54643264306216026
+--- !u!54 &54248643634943252
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1173344532630554}
+  m_GameObject: {fileID: 1290601173638472}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -3273,12 +3275,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &54663041279935206
+--- !u!54 &54470971526361542
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1290601173638472}
+  m_GameObject: {fileID: 1965656541049258}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54643264306216026
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173344532630554}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -3569,6 +3586,17 @@ MonoBehaviour:
   m_settlingTime: 3
   m_secondClawDelay: 3
   m_targetDistanceToTriggerPincer: 0.2
+--- !u!114 &114685337528353838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1290601173638472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a36ebb47f0a10f48ae24e4e16854409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114782663122074806
 MonoBehaviour:
   m_ObjectHideFlags: 1

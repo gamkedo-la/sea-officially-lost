@@ -298,6 +298,18 @@ public class SpiderCrabWithIKController : MonoBehaviour
     }
 
 
+    public void AttackTriggerEnter(Collider other)
+    {
+        print("Attack triggered by: " + other.name);
+    }
+
+
+    public void AttackTriggerExit(Collider other)
+    {
+        print("Attack trigger exit: " + other.name);
+    }
+
+
     void OnDrawGizmos()
     {
         if (m_showTargetGizmo && m_targetLeft != null)
