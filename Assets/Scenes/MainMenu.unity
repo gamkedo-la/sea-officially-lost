@@ -1244,8 +1244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: f7e1664c
   useOtherObject: 0
-  valueGuid: 2a069ce0c1118b4d84490cee9b35e7c8
-  eventID: 1234110288
+  valueGuid: 4ea1b325d07a8e459721dd7bfb0f5b3a
+  eventID: -2066813397
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 0
@@ -1288,8 +1288,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: f7e1664c
   useOtherObject: 0
-  valueGuid: e927382bd0523e4294288d09aaef9f73
-  bankName: Soundbank
+  valueGuid: b7a0ce9334411a48a048d4fb31eb5e04
+  bankName: Menu
   loadAsynchronous: 0
   decodeBank: 0
   saveDecodedBank: 0
@@ -15296,7 +15296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -21.587}
+  m_AnchoredPosition: {x: 400.00006, y: -21.586998}
   m_SizeDelta: {x: 800.0001, y: 42.86282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1969508778

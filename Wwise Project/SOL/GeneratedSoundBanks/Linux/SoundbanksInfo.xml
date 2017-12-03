@@ -25,10 +25,6 @@
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
 				<Event Id="556212125" Name="Play_Radar_Ping" ObjectPath="\Events\Default Work Unit\Play_Radar_Ping"/>
 				<Event Id="1234110288" Name="Play_Test_Ambi" ObjectPath="\Events\Default Work Unit\Play_Test_Ambi"/>
-				<Event Id="676271428" Name="Play_UI_Menu_Click_Into" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Click_Into"/>
-				<Event Id="4230331670" Name="Play_UI_Menu_Click_Outfrom" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Click_Outfrom"/>
-				<Event Id="2880217405" Name="Play_UI_Menu_Hover" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Hover"/>
-				<Event Id="3244201150" Name="Play_UI_Menu_Unhover" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Unhover"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="112427783" Language="SFX">
@@ -67,10 +63,6 @@
 					<ShortName>test3.wav</ShortName>
 					<Path>SFX\test3_1C9C67B2.wem</Path>
 				</File>
-				<File Id="919001583" Language="SFX">
-					<ShortName>dummy_clip.wav</ShortName>
-					<Path>SFX\dummy_clip_1C9C67B2.wem</Path>
-				</File>
 				<File Id="945657493" Language="SFX">
 					<ShortName>radar_ping_06.wav</ShortName>
 					<Path>SFX\radar_ping_06_1C9C67B2.wem</Path>
@@ -90,6 +82,49 @@
 				<File Id="1066899461" Language="SFX">
 					<ShortName>radar_ping_03.wav</ShortName>
 					<Path>SFX\radar_ping_03_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="2607556080" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Menu</ObjectPath>
+			<ShortName>Menu</ShortName>
+			<Path>Menu.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1694011421" Name="Play_Menu_Game_Start" ObjectPath="\Events\Default Work Unit\Play_Menu_Game_Start"/>
+				<Event Id="2228153899" Name="Play_Menu_Music" ObjectPath="\Events\Default Work Unit\Play_Menu_Music"/>
+				<Event Id="676271428" Name="Play_UI_Menu_Click_Into" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Click_Into"/>
+				<Event Id="4230331670" Name="Play_UI_Menu_Click_Outfrom" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Click_Outfrom"/>
+				<Event Id="2880217405" Name="Play_UI_Menu_Hover" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Hover"/>
+				<Event Id="3244201150" Name="Play_UI_Menu_Unhover" ObjectPath="\Events\Default Work Unit\Play_UI_Menu_Unhover"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="62193752" Language="SFX">
+					<ShortName>KAIB_WATR_CU_Single Water Drop_000799.wav</ShortName>
+					<Path>SFX\KAIB_WATR_CU_Single Water Drop_000799_404B944F.wem</Path>
+				</File>
+				<File Id="115028901" Language="SFX">
+					<ShortName>KAIB_WATR_CU_Single Water Drop Tiny Bubble Sizzle_000798.wav</ShortName>
+					<Path>SFX\KAIB_WATR_CU_Single Water Drop Tiny Bubble Sizzle_000798_AFB86641.wem</Path>
+				</File>
+				<File Id="121551250" Language="SFX">
+					<ShortName>KAIB_WATR_CU_Water Drip Two Plops_000811.wav</ShortName>
+					<Path>SFX\KAIB_WATR_CU_Water Drip Two Plops_000811_1187F09F.wem</Path>
+				</File>
+				<File Id="193534015" Language="SFX">
+					<ShortName>WATER  BUBBLES BLOW UNDER WATER 01.wav</ShortName>
+					<Path>SFX\WATER  BUBBLES BLOW UNDER WATER 01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="914446825" Language="SFX">
+					<ShortName>scaryqueen.wav</ShortName>
+					<Path>SFX\scaryqueen_A5117E86.wem</Path>
+				</File>
+				<File Id="945168352" Language="SFX">
+					<ShortName>KAIB_WATR_CU_Small Rock Water Impact Plop Underwater Perspective_000801.wav</ShortName>
+					<Path>SFX\KAIB_WATR_CU_Small Rock Water Impact Plop Underwater Perspective_000801_39637D23.wem</Path>
+				</File>
+				<File Id="1037656393" Language="SFX">
+					<ShortName>KAIB_WATR_CU_Single Water Drip_000797.wav</ShortName>
+					<Path>SFX\KAIB_WATR_CU_Single Water Drip_000797_97E7EBF9.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

@@ -128,6 +128,7 @@ public class MainMenuController : MonoBehaviour {
         SwitchToMenu(null);
 
         lightBeamAnimator.SetTrigger("StartGame");
+        AkSoundEngine.PostEvent("Play_Menu_Game_Start", gameObject);
 
         StartCoroutine(startGameEffect);
     }

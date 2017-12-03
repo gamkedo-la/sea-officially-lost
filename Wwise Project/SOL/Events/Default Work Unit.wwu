@@ -101,6 +101,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Menu_Music" ID="{25B3A14E-7AD0-458E-9721-DD7BFB0F5B3A}">
+					<ChildrenList>
+						<Action Name="" ID="{9D2CF028-0765-4C06-A353-7A5D4CE01245}" ShortID="987026757">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Music" ID="{A7B36A30-BEDB-4AC7-833D-1C8F62844C5B}" WorkUnitID="{8AF64202-61F0-4502-B197-45BC5B9C15C3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu_Game_Start" ID="{1AC55F8A-0B80-4FE7-A089-8348982CF57F}">
+					<ChildrenList>
+						<Action Name="" ID="{8A7294B0-3226-4D97-B6C4-A218117D1D03}" ShortID="950988547">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Game_Start" ID="{0BB5F30F-61F7-46B1-8C58-B57763354E5D}" WorkUnitID="{B9438238-3C51-4F40-BC08-4B6F231C8163}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

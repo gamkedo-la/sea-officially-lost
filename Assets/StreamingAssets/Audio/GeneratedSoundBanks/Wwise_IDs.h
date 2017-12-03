@@ -15,6 +15,8 @@ namespace AK
     {
         static const AkUniqueID AUDIO_LOG_TEST = 1936257133U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_MENU_GAME_START = 1694011421U;
+        static const AkUniqueID PLAY_MENU_MUSIC = 2228153899U;
         static const AkUniqueID PLAY_RADAR_PING = 556212125U;
         static const AkUniqueID PLAY_TEST_AMBI = 1234110288U;
         static const AkUniqueID PLAY_UI_MENU_CLICK_INTO = 676271428U;
@@ -33,6 +35,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID MENU = 2607556080U;
         static const AkUniqueID SOUNDBANK = 1661994096U;
     } // namespace BANKS
 

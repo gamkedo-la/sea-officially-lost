@@ -5,14 +5,22 @@
 			<ChildrenList>
 				<SoundBank Name="Soundbank" ID="{2B3827E9-52D0-423E-9428-8D09AAEF9F73}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Play_UI_Menu_Hover" ID="{5E097A37-933B-403B-A90C-92A9D2D95026}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Audio_Log_Test" ID="{E6CF7864-21B9-42C0-81E2-67293C8D180F}" WorkUnitID="{40A4BCE0-66D9-45A1-B992-9A9C6A7C7E4A}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Play_UI_Menu_Click_Into" ID="{E72B1168-8039-4833-885B-EDD0018748E9}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Radar_Ping" ID="{75DE0DB3-7CBF-4AA6-AB3F-7A397CF13694}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Footsteps" ID="{25AC9E5C-5863-4D10-A36F-86C50E0149EB}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Play_UI_Menu_Click_Outfrom" ID="{FBC3B815-C25B-4D25-BBE2-0BFD81FACA9A}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Test_Ambi" ID="{E09C062A-11C1-4D8B-8449-0CEE9B35E7C8}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Menu" ID="{93CEA0B7-4134-481A-A048-D4FB31EB5E04}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_UI_Menu_Hover" ID="{5E097A37-933B-403B-A90C-92A9D2D95026}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Menu_Music" ID="{25B3A14E-7AD0-458E-9721-DD7BFB0F5B3A}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_UI_Menu_Click_Into" ID="{E72B1168-8039-4833-885B-EDD0018748E9}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_UI_Menu_Click_Outfrom" ID="{FBC3B815-C25B-4D25-BBE2-0BFD81FACA9A}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_UI_Menu_Unhover" ID="{9C0411B3-4E33-4E72-87B6-B6719D55D3E8}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Menu_Game_Start" ID="{1AC55F8A-0B80-4FE7-A089-8348982CF57F}" WorkUnitID="{27128233-2F1F-4D23-A693-2F4E05968B78}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
