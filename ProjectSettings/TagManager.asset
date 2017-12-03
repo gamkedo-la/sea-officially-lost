@@ -7,6 +7,7 @@ TagManager:
   - fps cam
   - canPickUp
   - compassTarget
+  - crab mouth
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - heldObject
   - cameraForeGround
   - mapIcon
-  - 
-  - 
+  - crabAttackTrigger
+  - crabAttackTarget
   - 
   - 
   - 

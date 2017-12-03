@@ -11,7 +11,7 @@ public class MenuButtonBehavoir : MonoBehaviour, IPointerExitHandler {
         anim.SetBool("Normal", true);
     }
 
-    public void OnPointerEnter(PointerEventData eventDate) {
+    public void OnPointerEnter(PointerEventData eventData) {
         AkSoundEngine.PostEvent("Play_UI_Menu_Hover", gameObject);
     }
 }
