@@ -79,6 +79,7 @@ public class InverseKinematicsController : MonoBehaviour
         get { return m_distanceFromTarget; }
     }
 
+
     private float PartialGradient(Vector3 target, Vector3[] angles, int i)
     {
         // Saves the angle,
@@ -114,7 +115,7 @@ public class InverseKinematicsController : MonoBehaviour
             // Gradient descent
             // Update : Solution -= LearningRate * Gradient
             float gradient = PartialGradient(target, angles, i);
-            angles[i] -= Joints[i].Axis * LearningRate * gradient;
+            angles[i] -= Joints[i].Axis * LearningRate * gradient * Time.deltaTime * 60f;
 
             // Clamp
             float axisAngle = AxisAngle(angles[i], Joints[i].Axis);
