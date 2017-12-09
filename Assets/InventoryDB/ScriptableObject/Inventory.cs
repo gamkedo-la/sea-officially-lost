@@ -9,11 +9,9 @@ public class Inventory : ScriptableObject {
 
 	public int OxygenCapacity;
 	public int SwimSpeed;
-	public int SonarRange;
-    public int AnxietyConstraint;
-    [Range(12, 24)]
+    [Range(2, 24)]
 	public int TotalBagSlots;
-	public enum attrEnum {OXYGEN_CAPACITY,SWIM_SPEED,SONAR_RANGE,ANXIETY_CONSTRAINT};//TODO: EXPLORE ENUM
+	public enum attrEnum {OXYGEN_CAPACITY,SWIM_SPEED};//TODO: EXPLORE ENUM
 
 	public int [] GetItemAttributeAmount()
     {
@@ -23,8 +21,6 @@ public class Inventory : ScriptableObject {
 
         itemAttribute[0] = OxygenCapacity;
         itemAttribute[1] = SwimSpeed;
-        itemAttribute[2] = SonarRange;
-        itemAttribute[3] = AnxietyConstraint;
 
         return itemAttribute;//WHY CAN'T USE return currency;??
     }

@@ -14,6 +14,4 @@ MonoBehaviour:
   AvailableWorldItems:
   - {fileID: 11400000, guid: ce11fe00db428154ea2d0ac856163fad, type: 2}
   - {fileID: 11400000, guid: 7c6aa02bd8b29be479b2f40d42e80182, type: 2}
-  - {fileID: 11400000, guid: 3c3bcce39fc32d54087fc50fe7470f03, type: 2}
-  - {fileID: 11400000, guid: e7060aeb93db1b242b4b48616979f03d, type: 2}
   - {fileID: 11400000, guid: 7538aece492c2b1439271b40410724af, type: 2}

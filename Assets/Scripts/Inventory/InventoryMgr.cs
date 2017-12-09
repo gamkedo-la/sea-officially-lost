@@ -23,8 +23,6 @@ public class InventoryMgr : MonoBehaviour
     private Text BagSpaceText;
     private Text oxygenCapacityItemAttributeText;
     private Text swimSpeedItemAttributeText;
-    private Text sonarRangeItemAttributeText;
-    private Text anxietyConstraintItemAttributeText;
     public GameObject playerController;
 
 	public void Awake()
@@ -32,13 +30,9 @@ public class InventoryMgr : MonoBehaviour
         ClearInventoryList();
         inventoryList.OxygenCapacity = 0;
 		inventoryList.SwimSpeed = 0;
-		inventoryList.SonarRange = 0;
-        inventoryList.AnxietyConstraint = 0;
         BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
 		oxygenCapacityItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/OxygenCapacity/Text").GetComponent<Text>();
 		swimSpeedItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/SwimSpeed/Text").GetComponent<Text>();
-		sonarRangeItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/SonarRange/Text").GetComponent<Text>();
-        anxietyConstraintItemAttributeText = inventoryPanel.transform.Find("Footer/ItemAttributeDetails/AnxietyConstraint/Text").GetComponent<Text>();
         onAwakeItemAttributeCalculation();
 	}
 
@@ -62,9 +56,6 @@ public class InventoryMgr : MonoBehaviour
 
 		oxygenCapacityItemAttributeText.text = attr[0].ToString();
 		swimSpeedItemAttributeText.text = attr[1].ToString();
-		sonarRangeItemAttributeText.text = attr[2].ToString();
-        anxietyConstraintItemAttributeText.text = attr[3].ToString();
-
     }
 
 	public void UpdateBagSlotsUsed()
@@ -83,8 +74,6 @@ public class InventoryMgr : MonoBehaviour
 		inventoryList.SwimSpeed += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Swim Speed")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 		//inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmountCalculation();//TODO:which way to have array returned and not run the function 3 times? Currently ItemAttributeIncreaseAmountCalculation only returns NightSight, to set return for each itemattribute
 		//inventoryList.Breath += item.ItemAttributeIncreaseAmountCalculation();
-		inventoryList.SonarRange += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Sonar Range")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-        inventoryList.AnxietyConstraint += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Anxiety Constraint")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 
 
         UpdateItemAttribute();
@@ -179,8 +168,6 @@ public class InventoryMgr : MonoBehaviour
 			inventoryList.SwimSpeed += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Swim Speed")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 			//inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmountCalculation();//TODO:which way to have array returned and not run the function 3 times? Currently ItemAttributeIncreaseAmountCalculation only returns NightSight, to set return for each itemattribute
 			//inventoryList.Breath += item.ItemAttributeIncreaseAmountCalculation();
-			inventoryList.SonarRange += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Sonar Range")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
-            inventoryList.AnxietyConstraint += item.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Anxiety Constraint")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
         }
 	}
 
