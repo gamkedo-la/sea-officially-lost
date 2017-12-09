@@ -11,13 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684ba4c59c6494948b10914d892bce1d, type: 3}
   m_Name: Oxygen Capacity
   m_EditorClassIdentifier: 
-  Name: Oxygen Capacity Enhancer
-  Description: 'This pill halfs the oxygen consumed per minute
-
-
-'
+  Name: Oxygen Enhancement Pills
+  Description: This pill reduces the oxygen you consume
   MinimumPlayerLevel: 0
   Sprite: {fileID: 21300000, guid: 0a0c3365a4065e44bb9ddd9bd12cef96, type: 3}
   ItemAttributeIncreaseAmount:
   - ItemAttribute: {fileID: 11400000, guid: 858f79a4683f4a149889e9ea0c0f1261, type: 2}
-    Amount: 3
+    Amount: 100
