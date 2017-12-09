@@ -16,7 +16,7 @@ MonoBehaviour:
 
 '
   MinimumPlayerLevel: 0
-  Sprite: {fileID: 21300000, guid: 1a88d71bd86bf13459c8cd63f0a55a9d, type: 3}
+  Sprite: {fileID: 21300000, guid: 4dd7eec7f29152d458af96a75219b460, type: 3}
   ItemAttributeIncreaseAmount:
   - ItemAttribute: {fileID: 11400000, guid: 2ea968e844beadd46a0c79831060341d, type: 2}
     Amount: 1
