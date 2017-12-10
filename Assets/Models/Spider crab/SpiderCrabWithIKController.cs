@@ -10,6 +10,7 @@ public class SpiderCrabWithIKController : MonoBehaviour
         Idle,
         Food,
         Mouth,
+        AttackWindup,
         Attack,
     }
 
@@ -24,6 +25,8 @@ public class SpiderCrabWithIKController : MonoBehaviour
     [SerializeField] float m_idleLearningRate = 2f;
     [SerializeField] float m_feedingDistanceThreshold = 0.1f;
     [SerializeField] float m_feedingLearningRate = 10f;
+    [SerializeField] float m_attackWindupLearningRate = 20f;
+    [SerializeField] float m_attackWindupDistanceThreshold = 0f;
     [SerializeField] float m_attackLearningRate = 20f;
     [SerializeField] float m_attackDistanceThreshold = 0f;
 
@@ -42,6 +45,14 @@ public class SpiderCrabWithIKController : MonoBehaviour
     [SerializeField] float m_restPointGizmoRadius = 0.1f;
     [SerializeField] Transform m_restPointLeft;
     [SerializeField] Transform m_restPointRight;
+
+    [Header("Attack windup points")]
+    [SerializeField] bool m_showAttackWindupPointGizmo;
+    [SerializeField] Color m_attackWindupPointLeftGizmoColour = Color.magenta;
+    [SerializeField] Color m_attackWindupPointRightGizmoColour = Color.magenta;
+    [SerializeField] float m_attackWindupPointGizmoRadius = 0.1f;
+    [SerializeField] Transform m_attackWindupPointLeft;
+    [SerializeField] Transform m_attackWindupPointRight;
 
     [Header("Mouth position")]
     [SerializeField] bool m_showMouthPositionGizmo;
@@ -65,6 +76,7 @@ public class SpiderCrabWithIKController : MonoBehaviour
     [SerializeField] float m_feedingTargetDistanceToTriggerPincer = 0.2f;
 
     [Header("Attack behaviour")]
+    [SerializeField] float m_attackWindupSettlingTime = 2f;
     [SerializeField] float m_attackTargetDistanceToTriggerPincer = 0.5f;
 
 
@@ -149,6 +161,7 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
         switch (m_leftClawTargetType)
         {
+            case TargetType.AttackWindup:
             case TargetType.Idle:
                 m_anim.SetBool(m_leftPincerClosedHash, false);
                 break;
@@ -174,6 +187,7 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
         switch (m_rightClawTargetType)
         {
+            case TargetType.AttackWindup:
             case TargetType.Idle:
                 m_anim.SetBool(m_rightPincerClosedHash, false);
                 break;
@@ -331,21 +345,46 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
         if (distanceFromLeftPincer < distanceFromRightPincer)
         {
-            SetTargetPosition(m_targetLeft, other.transform);
-            SetIkSettings(m_ikControllerLeft, m_attackDistanceThreshold, m_attackLearningRate);
-            m_leftClawTargetType = TargetType.Attack;
+            StartCoroutine(AttackWindupLeft(other));
         }
         else
         {
-            SetTargetPosition(m_targetRight, other.transform);
-            SetIkSettings(m_ikControllerRight, m_attackDistanceThreshold, m_attackLearningRate);
-            m_rightClawTargetType = TargetType.Attack;
+            StartCoroutine(AttackWindupRight(other));
         }
+    }
+
+
+    private IEnumerator AttackWindupLeft(Collider other)
+    {
+        SetTargetPosition(m_targetLeft, m_attackWindupPointLeft);
+        SetIkSettings(m_ikControllerLeft, m_attackWindupDistanceThreshold, m_attackWindupLearningRate);
+        m_leftClawTargetType = TargetType.AttackWindup;
+
+        yield return new WaitForSeconds(m_attackWindupSettlingTime);
+
+        SetTargetPosition(m_targetLeft, other.transform);
+        SetIkSettings(m_ikControllerLeft, m_attackDistanceThreshold, m_attackLearningRate);
+        m_leftClawTargetType = TargetType.Attack;
+    }
+
+
+    private IEnumerator AttackWindupRight(Collider other)
+    {
+        SetTargetPosition(m_targetRight, m_attackWindupPointRight);
+        SetIkSettings(m_ikControllerRight, m_attackWindupDistanceThreshold, m_attackWindupLearningRate);
+        m_rightClawTargetType = TargetType.AttackWindup;
+
+        yield return new WaitForSeconds(m_attackWindupSettlingTime);
+
+        SetTargetPosition(m_targetRight, other.transform);
+        SetIkSettings(m_ikControllerRight, m_attackDistanceThreshold, m_attackLearningRate);
+        m_rightClawTargetType = TargetType.Attack;
     }
 
 
     public void AttackTriggerExit(Collider other)
     {
+        StopAllCoroutines();
         SetDefaultState();
     }
 
@@ -399,6 +438,18 @@ public class SpiderCrabWithIKController : MonoBehaviour
         {
             Gizmos.color = m_restPointRightGizmoColour;
             Gizmos.DrawSphere(m_restPointRight.position, m_restPointGizmoRadius);
+        }
+
+        if (m_showAttackWindupPointGizmo && m_attackWindupPointLeft != null)
+        {
+            Gizmos.color = m_attackWindupPointLeftGizmoColour;
+            Gizmos.DrawSphere(m_attackWindupPointLeft.position, m_attackWindupPointGizmoRadius);
+        }
+
+        if (m_showAttackWindupPointGizmo && m_attackWindupPointRight != null)
+        {
+            Gizmos.color = m_attackWindupPointRightGizmoColour;
+            Gizmos.DrawSphere(m_attackWindupPointRight.position, m_attackWindupPointGizmoRadius);
         }
     }
 }
