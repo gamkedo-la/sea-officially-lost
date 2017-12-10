@@ -595,7 +595,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4057624253601498}
-  - component: {fileID: 114079418073929206}
   m_Layer: 0
   m_Name: Attack windup point.L
   m_TagString: Untagged
@@ -1096,7 +1095,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4423165313442710}
-  - component: {fileID: 114836435730333660}
   m_Layer: 0
   m_Name: Attack windup point.R
   m_TagString: Untagged
@@ -1815,7 +1813,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1394978931240766}
   m_LocalRotation: {x: -0.000000037252903, y: 2.842171e-14, z: -1.5738522e-12, w: 1}
-  m_LocalPosition: {x: 0.0272, y: 0.0331, z: -0.0013}
+  m_LocalPosition: {x: 0.03, y: 0.045099985, z: 0.01970001}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 4035777599980838}
@@ -2291,7 +2289,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1640531390215984}
   m_LocalRotation: {x: -0.000000037252903, y: 2.842171e-14, z: -1.5738522e-12, w: 1}
-  m_LocalPosition: {x: -0.0272, y: 0.033099998, z: -0.0012999987}
+  m_LocalPosition: {x: -0.03, y: 0.0451, z: 0.0197}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 4035777599980838}
@@ -3382,19 +3380,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114079418073929206
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1394978931240766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e09c690685951ed4aa9069c63c54cc33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_driftRadius: 0.5
-  m_driftRate: 0.5
 --- !u!114 &114095228536265112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3408,7 +3393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Axis: {x: 0, y: 0, z: 1}
   MinAngle: 10
-  MaxAngle: 50
+  MaxAngle: 70
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
 --- !u!114 &114181416572114834
@@ -3494,7 +3479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Axis: {x: 1, y: 0, z: 0}
   MinAngle: 0
-  MaxAngle: 40
+  MaxAngle: 50
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
 --- !u!114 &114391287937079250
@@ -3570,7 +3555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Axis: {x: 0, y: 0, z: 1}
-  MinAngle: -50
+  MinAngle: -70
   MaxAngle: -10
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
@@ -3708,7 +3693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Axis: {x: 1, y: 0, z: 0}
   MinAngle: 0
-  MaxAngle: 40
+  MaxAngle: 50
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
 --- !u!114 &114806563005873788
@@ -3752,19 +3737,6 @@ MonoBehaviour:
   SamplingDistance: 1
   DistanceThreshold: 0.1
   LearningRate: 10
---- !u!114 &114836435730333660
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1640531390215984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e09c690685951ed4aa9069c63c54cc33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_driftRadius: 0.5
-  m_driftRate: 0.5
 --- !u!114 &114870846312153752
 MonoBehaviour:
   m_ObjectHideFlags: 1

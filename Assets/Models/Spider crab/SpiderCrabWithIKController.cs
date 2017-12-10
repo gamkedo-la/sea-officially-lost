@@ -339,7 +339,15 @@ public class SpiderCrabWithIKController : MonoBehaviour
     {
         StopAllCoroutines();
         SetDefaultSettings();
-        
+
+        SetTargetPosition(m_targetLeft, m_attackWindupPointLeft);
+        SetIkSettings(m_ikControllerLeft, m_attackWindupDistanceThreshold, m_attackWindupLearningRate);
+        m_leftClawTargetType = TargetType.AttackWindup;
+
+        SetTargetPosition(m_targetRight, m_attackWindupPointRight);
+        SetIkSettings(m_ikControllerRight, m_attackWindupDistanceThreshold, m_attackWindupLearningRate);
+        m_rightClawTargetType = TargetType.AttackWindup;
+
         float distanceFromLeftPincer = m_ikControllerLeft.FindDistanceFromTartget(other.transform);
         float distanceFromRightPincer = m_ikControllerRight.FindDistanceFromTartget(other.transform);
 
@@ -356,10 +364,6 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     private IEnumerator AttackWindupLeft(Collider other)
     {
-        SetTargetPosition(m_targetLeft, m_attackWindupPointLeft);
-        SetIkSettings(m_ikControllerLeft, m_attackWindupDistanceThreshold, m_attackWindupLearningRate);
-        m_leftClawTargetType = TargetType.AttackWindup;
-
         yield return new WaitForSeconds(m_attackWindupSettlingTime);
 
         SetTargetPosition(m_targetLeft, other.transform);
@@ -370,10 +374,6 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     private IEnumerator AttackWindupRight(Collider other)
     {
-        SetTargetPosition(m_targetRight, m_attackWindupPointRight);
-        SetIkSettings(m_ikControllerRight, m_attackWindupDistanceThreshold, m_attackWindupLearningRate);
-        m_rightClawTargetType = TargetType.AttackWindup;
-
         yield return new WaitForSeconds(m_attackWindupSettlingTime);
 
         SetTargetPosition(m_targetRight, other.transform);
