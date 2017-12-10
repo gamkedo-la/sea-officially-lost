@@ -624,7 +624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.36, y: 380.78}
+  m_AnchoredPosition: {x: 22.36, y: 345}
   m_SizeDelta: {x: 750.02, y: 144.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &35408351
@@ -675,7 +675,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Inventory
+  m_Text: Enhanced Attributes
 --- !u!222 &35408353
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -701,7 +701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &35819836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -719,7 +719,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.92800003, y: 1}
   m_AnchorMax: {x: 0.92800003, y: 1}
-  m_AnchoredPosition: {x: 16.099998, y: -17.1}
+  m_AnchoredPosition: {x: 53, y: -6.100006}
   m_SizeDelta: {x: 81.74, y: 50.9}
   m_Pivot: {x: 0.6923034, y: 0.5}
 --- !u!114 &35819837
@@ -14444,7 +14444,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 3
     m_Right: 8
-    m_Top: 0
+    m_Top: 80
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 5
