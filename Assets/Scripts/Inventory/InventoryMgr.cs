@@ -54,7 +54,8 @@ public class InventoryMgr : MonoBehaviour
     {
         int[] attr = inventoryList.GetItemAttributeAmount();
 
-		oxygenCapacityItemAttributeText.text = attr[0].ToString();
+		//update Attribute value in UI on right hand side box next to description of item 
+        oxygenCapacityItemAttributeText.text = attr[0].ToString();
 		swimSpeedItemAttributeText.text = attr[1].ToString();
     }
 
@@ -90,7 +91,7 @@ public class InventoryMgr : MonoBehaviour
 		newItem.transform.Find("Image/ItemImage").GetComponent<Image>().sprite = addedItem.Sprite;
 		newItem.transform.Find("ItemName").GetComponent<Text>().text = addedItem.Name;
 		newItem.transform.Find("Description").GetComponent<Text>().text = addedItem.Description;
-		populateAttributesForItem(addedItem, newItem);
+		//populateAttributesForItem(addedItem, newItem);
 	}
 
 	private void Update()
@@ -140,7 +141,7 @@ public class InventoryMgr : MonoBehaviour
             newItem.transform.Find("Image/ItemImage").GetComponent<Image>().sprite = item.Sprite;
             newItem.transform.Find("ItemName").GetComponent<Text>().text = item.Name;
             newItem.transform.Find("Description").GetComponent<Text>().text = item.Description;
-			populateAttributesForItem(item, newItem);
+			//populateAttributesForItem(item, newItem);
             
         }
     }

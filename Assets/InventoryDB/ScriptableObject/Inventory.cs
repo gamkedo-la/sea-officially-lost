@@ -17,7 +17,7 @@ public class Inventory : ScriptableObject {
     {
         /*int currency=inventoryList.CopperCoins;//need to set this to abilities
         return currency;*/
-        int[] itemAttribute = new int[] { 0, 0, 0, 0 };
+        int[] itemAttribute = new int[] { 0, 0};
 
         itemAttribute[0] = OxygenCapacity;
         itemAttribute[1] = SwimSpeed;

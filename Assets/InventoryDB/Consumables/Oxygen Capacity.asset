@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: Oxygen Capacity
   m_EditorClassIdentifier: 
   Name: Oxygen Capacity
-  Description: 'Oxygen Capacity Increased !!
+  Description: 'Your Oxygen Capacity Under Water Has Increased !!
 
 '
   MinimumPlayerLevel: 0
-  Sprite: {fileID: 21300000, guid: 0a0c3365a4065e44bb9ddd9bd12cef96, type: 3}
+  Sprite: {fileID: 21300000, guid: 8b041d4afec8c14428efe99d2a6bc806, type: 3}
   ItemAttributeIncreaseAmount:
   - ItemAttribute: {fileID: 11400000, guid: 858f79a4683f4a149889e9ea0c0f1261, type: 2}
-    Amount: 100
+    Amount: 50
