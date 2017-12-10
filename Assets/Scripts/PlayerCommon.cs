@@ -20,7 +20,7 @@ public class PlayerCommon : MonoBehaviour {
     private GameObject summonedShark;
 
     //inventory related declarations pick-up item variables
-    float m_MaxInteractDistance = 2.0f;
+    public float m_MaxInteractDistance = 2.0f;
     GameObject pickedUpItem;
     public GameObject inventoryMgr;
    
@@ -53,7 +53,7 @@ public class PlayerCommon : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.Tab))
+		if (Input.GetKeyDown(KeyCode.Minus))
 		{
 			ReleaseMouse();
 		}

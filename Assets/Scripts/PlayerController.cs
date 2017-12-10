@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour {
 
         rb.AddForce(Vector3.up * speedRise);
 
-        if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Minus))
         {
             ReleaseMouse();
         }
