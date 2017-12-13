@@ -29,6 +29,23 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{C4A47AA9-6094-4E14-8330-6693C24CB981}" ShortID="253962887">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{285BF9F5-3D33-4ED2-B3F8-740022CBFA54}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crazy_Top" ID="{E84B7D2A-1E29-4B01-82BF-2DCC9094867F}" WorkUnitID="{7FE219E3-67B3-49BC-AF7F-459EB63E88FB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_UI_Menu_Click_Into" ID="{E72B1168-8039-4833-885B-EDD0018748E9}">

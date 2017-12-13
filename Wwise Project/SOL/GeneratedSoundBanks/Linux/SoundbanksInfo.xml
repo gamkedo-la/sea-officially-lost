@@ -27,17 +27,97 @@
 				<Event Id="1234110288" Name="Play_Test_Ambi" ObjectPath="\Events\Default Work Unit\Play_Test_Ambi"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="58144877" Language="SFX">
+					<ShortName>Eugene Weeping.wav</ShortName>
+					<Path>SFX\Eugene Weeping_89830CB1.wem</Path>
+				</File>
+				<File Id="64546027" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_B91DF2DF.wem</Path>
+				</File>
+				<File Id="64757065" Language="SFX">
+					<ShortName>Eugene Laughing.wav</ShortName>
+					<Path>SFX\Eugene Laughing_D859A49B.wem</Path>
+				</File>
+				<File Id="91139658" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_607CED42.wem</Path>
+				</File>
+				<File Id="92015523" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_28704E9F.wem</Path>
+				</File>
 				<File Id="112427783" Language="SFX">
 					<ShortName>temp_footstep_sealab_02.wav</ShortName>
 					<Path>SFX\temp_footstep_sealab_02_1C9C67B2.wem</Path>
+				</File>
+				<File Id="118832449" Language="SFX">
+					<ShortName>Eugene Laughing.wav</ShortName>
+					<Path>SFX\Eugene Laughing_4A9A93FE.wem</Path>
+				</File>
+				<File Id="189632366" Language="SFX">
+					<ShortName>Eugene Laughing.wav</ShortName>
+					<Path>SFX\Eugene Laughing_FEA72DC6.wem</Path>
+				</File>
+				<File Id="191890763" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_E1B47B47.wem</Path>
+				</File>
+				<File Id="192892137" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_0DAE5C9C.wem</Path>
+				</File>
+				<File Id="205793072" Language="SFX">
+					<ShortName>Eugene Weeping.wav</ShortName>
+					<Path>SFX\Eugene Weeping_BC9A1687.wem</Path>
+				</File>
+				<File Id="208639327" Language="SFX">
+					<ShortName>whisper2.wav</ShortName>
+					<Path>SFX\whisper2_C0A22659.wem</Path>
+				</File>
+				<File Id="225902449" Language="SFX">
+					<ShortName>Eugene Weeping.wav</ShortName>
+					<Path>SFX\Eugene Weeping_2AA94FF4.wem</Path>
+				</File>
+				<File Id="307339204" Language="SFX">
+					<ShortName>crz_Eugene Maze.wav</ShortName>
+					<Path>SFX\crz_Eugene Maze_9F7706AC.wem</Path>
+				</File>
+				<File Id="336076170" Language="SFX">
+					<ShortName>Eugene Weeping.wav</ShortName>
+					<Path>SFX\Eugene Weeping_2BADA4E9.wem</Path>
 				</File>
 				<File Id="415836917" Language="SFX">
 					<ShortName>temp_footstep_sealab_03.wav</ShortName>
 					<Path>SFX\temp_footstep_sealab_03_1C9C67B2.wem</Path>
 				</File>
+				<File Id="517972830" Language="SFX">
+					<ShortName>Eugene Weeping.wav</ShortName>
+					<Path>SFX\Eugene Weeping_1742C59B.wem</Path>
+				</File>
+				<File Id="542509495" Language="SFX">
+					<ShortName>Eugene Laughing.wav</ShortName>
+					<Path>SFX\Eugene Laughing_3A9CA511.wem</Path>
+				</File>
+				<File Id="555448851" Language="SFX">
+					<ShortName>Eugene Laughing.wav</ShortName>
+					<Path>SFX\Eugene Laughing_3B44C3D7.wem</Path>
+				</File>
 				<File Id="560838616" Language="SFX">
 					<ShortName>temp_footstep_sealab_04.wav</ShortName>
 					<Path>SFX\temp_footstep_sealab_04_1C9C67B2.wem</Path>
+				</File>
+				<File Id="577102619" Language="SFX">
+					<ShortName>Eugene Weeping.wav</ShortName>
+					<Path>SFX\Eugene Weeping_AF9A7A8F.wem</Path>
+				</File>
+				<File Id="613090743" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_D5C24FD9.wem</Path>
+				</File>
+				<File Id="641432873" Language="SFX">
+					<ShortName>Eugene Laughing.wav</ShortName>
+					<Path>SFX\Eugene Laughing_A37329DC.wem</Path>
 				</File>
 				<File Id="642063104" Language="SFX">
 					<ShortName>radar_ping_01.wav</ShortName>
@@ -47,9 +127,25 @@
 					<ShortName>radar_ping_05.wav</ShortName>
 					<Path>SFX\radar_ping_05_1C9C67B2.wem</Path>
 				</File>
+				<File Id="659737790" Language="SFX">
+					<ShortName>whisper2.wav</ShortName>
+					<Path>SFX\whisper2_CE612D17.wem</Path>
+				</File>
 				<File Id="679807533" Language="SFX">
 					<ShortName>radar_ping_02.wav</ShortName>
 					<Path>SFX\radar_ping_02_1C9C67B2.wem</Path>
+				</File>
+				<File Id="683729560" Language="SFX">
+					<ShortName>Eugene Laughing.wav</ShortName>
+					<Path>SFX\Eugene Laughing_E1B426F8.wem</Path>
+				</File>
+				<File Id="701087685" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_E556D660.wem</Path>
+				</File>
+				<File Id="712007310" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_61EB48C1.wem</Path>
 				</File>
 				<File Id="714356039" Language="SFX">
 					<ShortName>test1.wav</ShortName>
@@ -59,6 +155,26 @@
 					<ShortName>temp_footstep_sealab_01.wav</ShortName>
 					<Path>SFX\temp_footstep_sealab_01_1C9C67B2.wem</Path>
 				</File>
+				<File Id="747460788" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_91D6D8DF.wem</Path>
+				</File>
+				<File Id="781532771" Language="SFX">
+					<ShortName>Eugene Weeping.wav</ShortName>
+					<Path>SFX\Eugene Weeping_FA09B7DC.wem</Path>
+				</File>
+				<File Id="788433393" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_137410DA.wem</Path>
+				</File>
+				<File Id="797843718" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_92996E47.wem</Path>
+				</File>
+				<File Id="838048614" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_EC761848.wem</Path>
+				</File>
 				<File Id="906555434" Language="SFX">
 					<ShortName>test3.wav</ShortName>
 					<Path>SFX\test3_1C9C67B2.wem</Path>
@@ -66,6 +182,14 @@
 				<File Id="945657493" Language="SFX">
 					<ShortName>radar_ping_06.wav</ShortName>
 					<Path>SFX\radar_ping_06_1C9C67B2.wem</Path>
+				</File>
+				<File Id="960938794" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_D9AAA9D0.wem</Path>
+				</File>
+				<File Id="970623570" Language="SFX">
+					<ShortName>Eugene Laughing.wav</ShortName>
+					<Path>SFX\Eugene Laughing_73BD5FDD.wem</Path>
 				</File>
 				<File Id="994356738" Language="SFX">
 					<ShortName>Shortlogreading.wav</ShortName>
@@ -79,9 +203,21 @@
 					<ShortName>radar_ping_04.wav</ShortName>
 					<Path>SFX\radar_ping_04_1C9C67B2.wem</Path>
 				</File>
+				<File Id="1035985111" Language="SFX">
+					<ShortName>Eugene Laughing.wav</ShortName>
+					<Path>SFX\Eugene Laughing_092A2DE9.wem</Path>
+				</File>
+				<File Id="1046311954" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_0484CCD1.wem</Path>
+				</File>
 				<File Id="1066899461" Language="SFX">
 					<ShortName>radar_ping_03.wav</ShortName>
 					<Path>SFX\radar_ping_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1068072771" Language="SFX">
+					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
+					<Path>SFX\crz_whispers(VigneshRamesh)_29D379BE.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

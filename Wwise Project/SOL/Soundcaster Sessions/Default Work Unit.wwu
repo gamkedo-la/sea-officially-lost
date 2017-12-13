@@ -31,6 +31,10 @@
 							<GameParameterRef Name="Volume_Music" ID="{DF01F42D-7669-48B0-81D2-9E83F0B7F60D}"/>
 							<Value>100</Value>
 						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Insanity" ID="{B87CAE9D-4347-4A09-8EC7-FDFF4BD8147D}"/>
+							<Value>100</Value>
+						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
