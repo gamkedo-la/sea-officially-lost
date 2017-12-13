@@ -33,7 +33,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Insanity" ID="{B87CAE9D-4347-4A09-8EC7-FDFF4BD8147D}"/>
-							<Value>100</Value>
+							<Value>1</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
