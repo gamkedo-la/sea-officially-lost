@@ -189,9 +189,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4174444889565470}
+  - component: {fileID: 65427518775511726}
   m_Layer: 0
   m_Name: BoxPillsPrefab
-  m_TagString: Untagged
+  m_TagString: canPickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,8 +282,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732615247616654}
-  m_LocalRotation: {x: 0.7072864, y: 0.05078935, z: 0.011761008, w: 0.7050022}
-  m_LocalPosition: {x: 0.0689, y: 12.71, z: 0.3526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 225.647, y: 1.347, z: 75.608}
   m_LocalScale: {x: 2.3248856, y: 2.9486587, z: 2.3248854}
   m_Children:
   - {fileID: 4190567057470268}
@@ -299,7 +300,7 @@ Transform:
   - {fileID: 4764617139669444}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 84.927, y: 93.674, z: 90.508}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4190567057470268
 Transform:
   m_ObjectHideFlags: 1
@@ -978,3 +979,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519712994205368}
   m_Mesh: {fileID: 4300014, guid: ae7a6d8bab3010e41abb6f86b63230e9, type: 3}
+--- !u!65 &65427518775511726
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732615247616654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08, y: 0.05, z: 0.17}
+  m_Center: {x: 0, y: 0.08, z: 0}

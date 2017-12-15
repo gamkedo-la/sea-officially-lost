@@ -1195,7 +1195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebeb4a03a6640a641ae0a5822f56af6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  master: {fileID: 1064358144}
 --- !u!95 &217203207
 Animator:
   serializedVersion: 3
@@ -1443,7 +1442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -247.15706}
+  m_AnchoredPosition: {x: 400.00006, y: -247.15704}
   m_SizeDelta: {x: 800.0001, y: 42.862823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359652237
@@ -1932,7 +1931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -21.431412}
+  m_AnchoredPosition: {x: 400.00006, y: -21.431396}
   m_SizeDelta: {x: 800.0001, y: 42.862823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439212712
@@ -2121,7 +2120,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -465.72565}
+  m_AnchoredPosition: {x: 400.00006, y: -465.72562}
   m_SizeDelta: {x: 800.0001, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &477945202
@@ -2297,7 +2296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -256.28793}
+  m_AnchoredPosition: {x: 400.00006, y: -256.28796}
   m_SizeDelta: {x: 800.0001, y: 94.890656}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &489402670
@@ -2838,7 +2837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebeb4a03a6640a641ae0a5822f56af6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  master: {fileID: 903350896}
 --- !u!95 &592065374
 Animator:
   serializedVersion: 3
@@ -3100,7 +3098,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -355.72565}
+  m_AnchoredPosition: {x: 400.00006, y: -355.72568}
   m_SizeDelta: {x: 800.0001, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &630567304
@@ -3153,7 +3151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebeb4a03a6640a641ae0a5822f56af6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  master: {fileID: 1198937544}
 --- !u!95 &630567307
 Animator:
   serializedVersion: 3
@@ -3401,7 +3398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -303.58847}
+  m_AnchoredPosition: {x: 400.00006, y: -303.5885}
   m_SizeDelta: {x: 800.0001, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696009953
@@ -3454,7 +3451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebeb4a03a6640a641ae0a5822f56af6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  master: {fileID: 359652235}
 --- !u!95 &696009956
 Animator:
   serializedVersion: 3
@@ -3506,7 +3502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -212.86282}
+  m_AnchoredPosition: {x: 400.00006, y: -212.86284}
   m_SizeDelta: {x: 800.0001, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696031984
@@ -3559,7 +3555,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebeb4a03a6640a641ae0a5822f56af6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  master: {fileID: 706034577}
 --- !u!95 &696031987
 Animator:
   serializedVersion: 3
@@ -7998,7 +7993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebeb4a03a6640a641ae0a5822f56af6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  master: {fileID: 489402668}
 --- !u!95 &938597067
 Animator:
   serializedVersion: 3
@@ -8296,7 +8290,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Main
+          m_StringArgument: Modular Base Staging
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 891301740}
@@ -8508,7 +8502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac73615964d46be4f9ee12c5bb9cd8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio\GeneratedSoundBanks
+  basePath: Audio/GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048
@@ -9160,7 +9154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -284.29422}
+  m_AnchoredPosition: {x: 400.00006, y: -284.29425}
   m_SizeDelta: {x: 800.0001, y: 42.86282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1237157449
@@ -9269,7 +9263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -376.94443}
+  m_AnchoredPosition: {x: 400.00006, y: -376.9444}
   m_SizeDelta: {x: 800.0001, y: 145.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1245560956
@@ -15176,7 +15170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebeb4a03a6640a641ae0a5822f56af6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  master: {fileID: 439212710}
 --- !u!95 &1944218981
 Animator:
   serializedVersion: 3
@@ -15296,7 +15289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -21.586998}
+  m_AnchoredPosition: {x: 400.00006, y: -21.587006}
   m_SizeDelta: {x: 800.0001, y: 42.86282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1969508778
@@ -15445,7 +15438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebeb4a03a6640a641ae0a5822f56af6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  master: {fileID: 1969508776}
 --- !u!95 &1985930350
 Animator:
   serializedVersion: 3

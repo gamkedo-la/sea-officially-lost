@@ -89,7 +89,7 @@ public class SharkManSwimmingTestController : MonoBehaviour
 
         if (direction.magnitude < 7.0f) {
             Debug.Log("You died!");
-            SceneManager.LoadScene("sealab v2");
+            SceneManager.LoadScene("Modular Base Staging");
         }
     }
 }
