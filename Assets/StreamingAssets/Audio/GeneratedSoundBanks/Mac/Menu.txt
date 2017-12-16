@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	676271428	Play_UI_Menu_Click_Into			\Default Work Unit\Play_UI_Menu_Click_Into	
+	1694011421	Play_Menu_Game_Start			\Default Work Unit\Play_Menu_Game_Start	
+	2228153899	Play_Menu_Music			\Default Work Unit\Play_Menu_Music	
+	2880217405	Play_UI_Menu_Hover			\Default Work Unit\Play_UI_Menu_Hover	
+	3244201150	Play_UI_Menu_Unhover			\Default Work Unit\Play_UI_Menu_Unhover	
+	4230331670	Play_UI_Menu_Click_Outfrom			\Default Work Unit\Play_UI_Menu_Click_Outfrom	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	62193752	KAIB_WATR_CU_Single Water Drop_000799	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\KAIB_WATR_CU_Single Water Drop_000799_4BA0873D.wem		\Actor-Mixer Hierarchy\UI\Menu_Unhover\KAIB_WATR_CU_Single Water Drop_000799		4621
+	115028901	KAIB_WATR_CU_Single Water Drop Tiny Bubble Sizzle_000798	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\KAIB_WATR_CU_Single Water Drop Tiny Bubble Sizzle_000798_415BE3CF.wem		\Actor-Mixer Hierarchy\UI\Menu_Click_Into\KAIB_WATR_CU_Single Water Drop Tiny Bubble Sizzle_000798		14500
+	121551250	KAIB_WATR_CU_Water Drip Two Plops_000811	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\KAIB_WATR_CU_Water Drip Two Plops_000811_B283AE01.wem		\Actor-Mixer Hierarchy\UI\Menu_Click_Outfrom\KAIB_WATR_CU_Water Drip Two Plops_000811		11737
+	193534015	WATER  BUBBLES BLOW UNDER WATER 01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\WATER  BUBBLES BLOW UNDER WATER 01_28DEB0C8.wem		\Actor-Mixer Hierarchy\UI\Menu_Game_Start\WATER  BUBBLES BLOW UNDER WATER 01		23119
+	914446825	Menu_Music	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\scaryqueen_D6D8C6C0.wem		\Actor-Mixer Hierarchy\Ambient Music\Menu_Music		720631
+	945168352	KAIB_WATR_CU_Small Rock Water Impact Plop Underwater Perspective_000801	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\KAIB_WATR_CU_Small Rock Water Impact Plop Underwater Perspective_000801_10178CF1.wem		\Actor-Mixer Hierarchy\UI\Menu_Game_Start\KAIB_WATR_CU_Small Rock Water Impact Plop Underwater Perspective_000801		5773
+	1037656393	KAIB_WATR_CU_Single Water Drip_000797	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\KAIB_WATR_CU_Single Water Drip_000797_9B9FAB67.wem		\Actor-Mixer Hierarchy\UI\Menu_Hover\KAIB_WATR_CU_Single Water Drip_000797		4610
+

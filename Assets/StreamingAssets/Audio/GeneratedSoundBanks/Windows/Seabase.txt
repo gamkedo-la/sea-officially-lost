@@ -1,0 +1,26 @@
+Event	ID	Name			Wwise Object Path	Notes
+	811497892	Play_Airlock_Drain			\Default Work Unit\Play_Airlock_Drain	
+	1785420617	Play_Airlock_Fill			\Default Work Unit\Play_Airlock_Fill	
+	2547633870	Play_Door			\Default Work Unit\Play_Door	
+	2748311587	Play_Roomtone			\Default Work Unit\Play_Roomtone	
+	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	56939465	Airlock_Fill	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Airlock_Fill_5sec_28DEB0C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Airlock_Fill		66525
+	112427783	temp_footstep_sealab_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\temp_footstep_sealab_02_28DEB0C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_02		9644
+	182429327	Layer1	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Room tone in a stairwell with a wall heater rattle_604E4DCB.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Layer1		1845261
+	200280789	Door	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Metal_door_E95B9F0B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door		44731
+	365004861	Metal_05	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\metal ambi_DB4B571B.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Metal Creak\Metal_05		82369
+	368174866	Metal_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\metal ambi_248BF172.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Metal Creak\Metal_02		77263
+	415836917	temp_footstep_sealab_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\temp_footstep_sealab_03_28DEB0C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_03		10086
+	502014789	Layer2	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann_D9D88642.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Layer2		3185852
+	560838616	temp_footstep_sealab_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\temp_footstep_sealab_04_28DEB0C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_04		16228
+	679625213	Metal_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\metal ambi_CE32F9A6.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Metal Creak\Metal_01		100006
+	694168963	Metal_07	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\metal ambi_0AE318D7.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Metal Creak\Metal_07		78967
+	699929201	Metal_06	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\metal ambi_0D22C9A0.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Metal Creak\Metal_06		54862
+	723103660	temp_footstep_sealab_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\temp_footstep_sealab_01_28DEB0C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_01		10405
+	823586267	Metal_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\metal ambi_94AC2389.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Metal Creak\Metal_03		210054
+	873945536	Airlock_Drain	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Airlock_Drain_5sec_28DEB0C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Airlock_Drain		66249
+	984762101	Metal_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\metal ambi_E180E0E0.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Metal Creak\Metal_04		83513
+	1009448015	Metal_08	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\metal ambi_5C1908FF.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Metal Creak\Metal_08		254379
+

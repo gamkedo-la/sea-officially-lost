@@ -1,0 +1,61 @@
+Event	ID	Name			Wwise Object Path	Notes
+	556212125	Play_Radar_Ping			\Default Work Unit\Play_Radar_Ping	
+	811497892	Play_Airlock_Drain			\Default Work Unit\Play_Airlock_Drain	
+	1234110288	Play_Test_Ambi			\Default Work Unit\Play_Test_Ambi	
+	1785420617	Play_Airlock_Fill			\Default Work Unit\Play_Airlock_Fill	
+	2547633870	Play_Door			\Default Work Unit\Play_Door	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	34996162	Insanity			\Default Work Unit\Insanity	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2038996943	Plate_Sizzle	Wwise RoomVerb			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	56939465	Airlock_Fill	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Airlock_Fill_5sec_28DEB0C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Airlock_Fill		66525
+	58144877	Eugene Weeping_06	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Weeping_7CC9137E.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping_06		34297
+	64546027	crz_whispers(VigneshRamesh)_07	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_D24CDE1B.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_07		35671
+	64757065	Eugene Laughing_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Laughing_8A71709B.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_02		21483
+	91139658	crz_whispers(VigneshRamesh)_10	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_326E7317.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_10		30431
+	92015523	crz_whispers(VigneshRamesh)_05	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_64DC4475.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_05		20597
+	118832449	Eugene Laughing_06	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Laughing_3325064F.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_06		25921
+	189632366	Eugene Laughing_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Laughing_C9F771C8.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_04		26032
+	191890763	crz_whispers(VigneshRamesh)_06	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_0CF9B56D.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_06		41293
+	192892137	crz_whispers(VigneshRamesh)_13	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_3036F0AE.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_13		22657
+	200280789	Door	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Metal_door_E95B9F0B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door		44731
+	205793072	Eugene Weeping_05	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Weeping_C754AA27.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping_05		27524
+	208639327	whisper2_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\whisper2_2E12F0FE.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\whisper2_01		13667
+	225902449	Eugene Weeping_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Weeping_F8E7FF3B.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping_03		22558
+	307339204	crz_Eugene Maze	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_Eugene Maze_261AB987.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_04\crz_Eugene Maze		125572
+	336076170	Eugene Weeping_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Weeping_A719130B.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping_01		10746
+	517972830	Eugene Weeping_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Weeping_50DDC7BF.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping_02		24666
+	542509495	Eugene Laughing_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Laughing_27731387.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_03		29301
+	555448851	Eugene Laughing_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Laughing_471CC0FE.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_01		14831
+	577102619	Eugene Weeping_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Weeping_F25A9394.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping_04		14211
+	613090743	crz_whispers(VigneshRamesh)	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_47C02AAA.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)		22405
+	641432873	Eugene Laughing_05	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Laughing_F01EC23A.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_05		24818
+	642063104	radar_ping_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\radar_ping_01_28DEB0C8.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_01		55634
+	642514946	radar_ping_05	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\radar_ping_05_28DEB0C8.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_05		47541
+	659737790	whisper2	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\whisper2_E48A43C3.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\whisper2		21992
+	679807533	radar_ping_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\radar_ping_02_28DEB0C8.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_02		50521
+	683729560	Eugene Laughing	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Laughing_7F74A65A.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing		12868
+	701087685	crz_whispers(VigneshRamesh)_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_6FCFDFFD.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_04		50432
+	712007310	crz_whispers(VigneshRamesh)_11	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_4F770ABF.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_11		62785
+	714356039	test1	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test1_28DEB0C8.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test1		435652
+	747460788	crz_whispers(VigneshRamesh)_14	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_8D4F99C7.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_14		38172
+	781532771	Eugene Weeping	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Weeping_CC61553D.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping		7624
+	788433393	crz_whispers(VigneshRamesh)_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_C638B383.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_01		24836
+	797843718	crz_whispers(VigneshRamesh)_12	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_F99BFB10.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_12		41479
+	838048614	crz_whispers(VigneshRamesh)_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_F0332E33.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_02		46667
+	873945536	Airlock_Drain	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Airlock_Drain_5sec_28DEB0C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Airlock_Drain		66249
+	906555434	test3	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test3_28DEB0C8.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test3		426177
+	945657493	radar_ping_06	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\radar_ping_06_28DEB0C8.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_06		61865
+	960938794	crz_whispers(VigneshRamesh)_08	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_A9736AC5.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_08		34370
+	970623570	Eugene Laughing_08	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Laughing_7840F894.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_08		12047
+	1022138157	test2	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\test2_28DEB0C8.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test2		419214
+	1030448513	radar_ping_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\radar_ping_04_28DEB0C8.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_04		49997
+	1035985111	Eugene Laughing_07	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\Eugene Laughing_39974EF1.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_07		35599
+	1046311954	crz_whispers(VigneshRamesh)_09	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_45C3F8AB.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_09		26482
+	1066899461	radar_ping_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\radar_ping_03_28DEB0C8.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_03		61791
+	1068072771	crz_whispers(VigneshRamesh)_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Mac\SFX\crz_whispers(VigneshRamesh)_10FE9166.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_03		45866
+
