@@ -44,9 +44,13 @@
 							<Language>SFX</Language>
 							<AudioFile>Airlock_fill.wav</AudioFile>
 						</AudioFileSource>
+						<AudioFileSource Name="Airlock_Fill_5sec" ID="{066B474F-FE2A-4765-87D7-7419ABBDE15B}" ShortID="56939465">
+							<Language>SFX</Language>
+							<AudioFile>Airlock_Fill_5sec.wav</AudioFile>
+						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Airlock_fill" ID="{C8A78703-1147-4ED2-BCA6-A026144B48AF}" Platform="Linked"/>
+						<ActiveSource Name="Airlock_Fill_5sec" ID="{066B474F-FE2A-4765-87D7-7419ABBDE15B}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Airlock_Drain" ID="{42F2F66F-CB6C-4403-93BB-365B6129A8E4}" ShortID="870022559">
@@ -67,9 +71,13 @@
 							<Language>SFX</Language>
 							<AudioFile>Airlock_drain2.wav</AudioFile>
 						</AudioFileSource>
+						<AudioFileSource Name="Airlock_Drain_5sec" ID="{0F865301-3FFA-4D4A-9860-BA7F9BAAEB00}" ShortID="873945536">
+							<Language>SFX</Language>
+							<AudioFile>Airlock_Drain_5sec.wav</AudioFile>
+						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Airlock_drain2" ID="{46EA5328-ADDE-4D9C-8C74-F205B8743C9C}" Platform="Linked"/>
+						<ActiveSource Name="Airlock_Drain_5sec" ID="{0F865301-3FFA-4D4A-9860-BA7F9BAAEB00}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

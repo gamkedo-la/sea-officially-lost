@@ -30,6 +30,10 @@
 				<Event Id="1234110288" Name="Play_Test_Ambi" ObjectPath="\Events\Default Work Unit\Play_Test_Ambi"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="56939465" Language="SFX">
+					<ShortName>Airlock_Fill_5sec.wav</ShortName>
+					<Path>SFX\Airlock_Fill_5sec_1C9C67B2.wem</Path>
+				</File>
 				<File Id="58144877" Language="SFX">
 					<ShortName>Eugene Weeping.wav</ShortName>
 					<Path>SFX\Eugene Weeping_CEB708B8.wem</Path>
@@ -72,7 +76,7 @@
 				</File>
 				<File Id="200280789" Language="SFX">
 					<ShortName>Metal_door.wav</ShortName>
-					<Path>SFX\Metal_door_47AFC75E.wem</Path>
+					<Path>SFX\Metal_door_F1C2E855.wem</Path>
 				</File>
 				<File Id="205793072" Language="SFX">
 					<ShortName>Eugene Weeping.wav</ShortName>
@@ -166,17 +170,9 @@
 					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
 					<Path>SFX\crz_whispers(VigneshRamesh)_B0111D1D.wem</Path>
 				</File>
-				<File Id="763565710" Language="SFX">
-					<ShortName>Airlock_fill.wav</ShortName>
-					<Path>SFX\Airlock_fill_1C9C67B2.wem</Path>
-				</File>
 				<File Id="781532771" Language="SFX">
 					<ShortName>Eugene Weeping.wav</ShortName>
 					<Path>SFX\Eugene Weeping_AB309CC7.wem</Path>
-				</File>
-				<File Id="782062693" Language="SFX">
-					<ShortName>Airlock_drain2.wav</ShortName>
-					<Path>SFX\Airlock_drain2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="788433393" Language="SFX">
 					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
@@ -189,6 +185,10 @@
 				<File Id="838048614" Language="SFX">
 					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
 					<Path>SFX\crz_whispers(VigneshRamesh)_97F3D8D5.wem</Path>
+				</File>
+				<File Id="873945536" Language="SFX">
+					<ShortName>Airlock_Drain_5sec.wav</ShortName>
+					<Path>SFX\Airlock_Drain_5sec_1C9C67B2.wem</Path>
 				</File>
 				<File Id="906555434" Language="SFX">
 					<ShortName>test3.wav</ShortName>

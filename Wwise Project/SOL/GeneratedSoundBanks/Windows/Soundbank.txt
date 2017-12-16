@@ -14,6 +14,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	2038996943	Plate_Sizzle	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	56939465	Airlock_Fill	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Airlock_Fill_5sec_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Airlock_Fill		1058976
 	58144877	Eugene Weeping_06	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Eugene Weeping_CEB708B8.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping_06		582112
 	64546027	crz_whispers(VigneshRamesh)_07	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\crz_whispers(VigneshRamesh)_E015E3B5.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_07		341512
 	64757065	Eugene Laughing_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Eugene Laughing_4C3AAD95.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_02		284316
@@ -24,7 +25,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	189632366	Eugene Laughing_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Eugene Laughing_E3C2EF6A.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_04		410656
 	191890763	crz_whispers(VigneshRamesh)_06	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\crz_whispers(VigneshRamesh)_DE7BF167.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_06		420308
 	192892137	crz_whispers(VigneshRamesh)_13	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\crz_whispers(VigneshRamesh)_FA68EDB8.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_13		216752
-	200280789	Door	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Metal_door_47AFC75E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door		487504
+	200280789	Door	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Metal_door_F1C2E855.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door		487504
 	205793072	Eugene Weeping_05	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Eugene Weeping_717611F5.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping_05		424188
 	208639327	whisper2_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\whisper2_D1007260.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\whisper2_01		137876
 	225902449	Eugene Weeping_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Eugene Weeping_A1B4AED1.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping_03		361024
@@ -48,12 +49,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	714356039	test1	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\test1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test1		5303872
 	723103660	temp_footstep_sealab_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\temp_footstep_sealab_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_01		348114
 	747460788	crz_whispers(VigneshRamesh)_14	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\crz_whispers(VigneshRamesh)_B0111D1D.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_14		374344
-	763565710	Airlock_Fill	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Airlock_fill_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Airlock_Fill		518996
 	781532771	Eugene Weeping	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Eugene Weeping_AB309CC7.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping		121888
-	782062693	Airlock_Drain	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Airlock_drain2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Airlock_Drain		695396
 	788433393	crz_whispers(VigneshRamesh)_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\crz_whispers(VigneshRamesh)_A78800AD.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_01		229884
 	797843718	crz_whispers(VigneshRamesh)_12	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\crz_whispers(VigneshRamesh)_B9AD3CCA.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_12		380912
 	838048614	crz_whispers(VigneshRamesh)_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\crz_whispers(VigneshRamesh)_97F3D8D5.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_02		446574
+	873945536	Airlock_Drain	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Airlock_Drain_5sec_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Airlock_Drain		1058976
 	906555434	test3	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\test3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Ambient Music\Test Ambi\test3		5303872
 	945657493	radar_ping_06	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\radar_ping_06_1C9C67B2.wem		\Actor-Mixer Hierarchy\Overworld_SFX\Radar_Ping\radar_ping_06		758296
 	960938794	crz_whispers(VigneshRamesh)_08	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\crz_whispers(VigneshRamesh)_CD66FBEF.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_08		334948
