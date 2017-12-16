@@ -79,6 +79,11 @@ public class SpiderCrabWithIKController : MonoBehaviour
     [SerializeField] float m_attackWindupSettlingTime = 2f;
     [SerializeField] float m_attackTargetDistanceToTriggerPincer = 0.5f;
 
+    [Header("Insanity properties")]
+    [SerializeField] InsanityFacts m_leftPincerInsanityFacts;
+    [SerializeField] InsanityFacts m_rightPincerInsanityFacts;
+    [SerializeField] float m_insanityLevelWhenAttacking = 1f;
+
 
     private Animator m_anim;
     private int m_chewHash;
@@ -115,6 +120,12 @@ public class SpiderCrabWithIKController : MonoBehaviour
         SetTargetPosition(m_targetLeft, m_restPointLeft);
         SetTargetPosition(m_targetRight, m_restPointRight);
         SetIkSettings(m_idleDistanceThreshold, m_idleLearningRate);
+
+        if (m_leftPincerInsanityFacts != null)
+            m_leftPincerInsanityFacts.insanityImpact = 0f;
+
+        if (m_rightPincerInsanityFacts != null)
+            m_rightPincerInsanityFacts.insanityImpact = 0f;
     }
 
 
@@ -369,6 +380,9 @@ public class SpiderCrabWithIKController : MonoBehaviour
         SetTargetPosition(m_targetLeft, other.transform);
         SetIkSettings(m_ikControllerLeft, m_attackDistanceThreshold, m_attackLearningRate);
         m_leftClawTargetType = TargetType.Attack;
+
+        if (m_leftPincerInsanityFacts != null)
+            m_leftPincerInsanityFacts.insanityImpact = m_insanityLevelWhenAttacking;
     }
 
 
@@ -379,6 +393,9 @@ public class SpiderCrabWithIKController : MonoBehaviour
         SetTargetPosition(m_targetRight, other.transform);
         SetIkSettings(m_ikControllerRight, m_attackDistanceThreshold, m_attackLearningRate);
         m_rightClawTargetType = TargetType.Attack;
+
+        if (m_rightPincerInsanityFacts != null)
+            m_rightPincerInsanityFacts.insanityImpact = m_insanityLevelWhenAttacking;
     }
 
 

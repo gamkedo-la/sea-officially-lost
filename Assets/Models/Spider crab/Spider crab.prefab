@@ -269,7 +269,8 @@ GameObject:
   - component: {fileID: 135822278319321594}
   - component: {fileID: 54028898157146908}
   - component: {fileID: 114907178469132554}
-  m_Layer: 0
+  - component: {fileID: 114714786278552242}
+  m_Layer: 12
   m_Name: Claw tip.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,7 +1584,8 @@ GameObject:
   - component: {fileID: 135323362650080398}
   - component: {fileID: 54046190446794744}
   - component: {fileID: 114649897127847428}
-  m_Layer: 0
+  - component: {fileID: 114878863476410170}
+  m_Layer: 12
   m_Name: Claw tip.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3669,6 +3671,9 @@ MonoBehaviour:
   m_feedingTargetDistanceToTriggerPincer: 0.2
   m_attackWindupSettlingTime: 2
   m_attackTargetDistanceToTriggerPincer: 0.5
+  m_leftPincerInsanityFacts: {fileID: 114714786278552242}
+  m_rightPincerInsanityFacts: {fileID: 114878863476410170}
+  m_insanityLevelWhenAttacking: 1
 --- !u!114 &114685337528353838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3680,6 +3685,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a36ebb47f0a10f48ae24e4e16854409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114714786278552242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198335928225992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fb3d495f1fa4077b20e381e79c0671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  insanityImpact: 0
 --- !u!114 &114782663122074806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3753,6 +3770,18 @@ MonoBehaviour:
   MaxAngle: 0
   StartOffset: {x: 0, y: 0, z: 0}
   RootJoint: 0
+--- !u!114 &114878863476410170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925104789587488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fb3d495f1fa4077b20e381e79c0671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  insanityImpact: 0
 --- !u!114 &114907178469132554
 MonoBehaviour:
   m_ObjectHideFlags: 1
