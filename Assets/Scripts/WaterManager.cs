@@ -131,9 +131,11 @@ public class WaterManager : MonoBehaviour {
 	        PlayerController inbasePlayerController = PlayerCommon.instance.GetComponent<PlayerController>();
             if (underwaterPlayerController != null){
                 underwaterPlayerController.enabled = false;
+                AkSoundEngine.PostEvent("Play_Airlock_Fill", gameObject);
             }
             if (inbasePlayerController != null) {
                 inbasePlayerController.enabled = false;
+                AkSoundEngine.PostEvent("Play_Airlock_Drain", gameObject);
             }
             playerStartLook = Camera.main.transform.rotation;
             playerStartPosition = PlayerCommon.instance.transform.position;
