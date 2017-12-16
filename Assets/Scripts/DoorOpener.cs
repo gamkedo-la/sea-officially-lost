@@ -22,6 +22,7 @@ public class DoorOpener : MonoBehaviour {
         {
             m_open = !m_open;
             ADC.OpenDoor(m_open);
+            AkSoundEngine.PostEvent("Play_Door", gameObject);
         }
     }
 }
