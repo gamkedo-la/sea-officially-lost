@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID PLAY_MENU_GAME_START = 1694011421U;
         static const AkUniqueID PLAY_MENU_MUSIC = 2228153899U;
         static const AkUniqueID PLAY_RADAR_PING = 556212125U;
+        static const AkUniqueID PLAY_ROOMTONE = 2748311587U;
         static const AkUniqueID PLAY_TEST_AMBI = 1234110288U;
         static const AkUniqueID PLAY_UI_MENU_CLICK_INTO = 676271428U;
         static const AkUniqueID PLAY_UI_MENU_CLICK_OUTFROM = 4230331670U;

@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1785420617	Play_Airlock_Fill			\Default Work Unit\Play_Airlock_Fill	
 	1936257133	Audio_Log_Test			\Audio logs\Audio_Log_Test	
 	2547633870	Play_Door			\Default Work Unit\Play_Door	
+	2748311587	Play_Roomtone			\Default Work Unit\Play_Roomtone	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -22,6 +23,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	92015523	crz_whispers(VigneshRamesh)_05	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\crz_whispers(VigneshRamesh)_3905D0A3.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_05		203620
 	112427783	temp_footstep_sealab_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\temp_footstep_sealab_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_02		348114
 	118832449	Eugene Laughing_06	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\Eugene Laughing_326B03AD.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_06		293344
+	182429327	Layer1	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\Room tone in a stairwell with a wall heater rattle_2F07E711.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Layer1		22149012
 	189632366	Eugene Laughing_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\Eugene Laughing_E3C2EF6A.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_04		410656
 	191890763	crz_whispers(VigneshRamesh)_06	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\crz_whispers(VigneshRamesh)_DE7BF167.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_06		420308
 	192892137	crz_whispers(VigneshRamesh)_13	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\crz_whispers(VigneshRamesh)_FA68EDB8.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\crz_whispers(VigneshRamesh)_13		216752
@@ -32,6 +34,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	307339204	crz_Eugene Maze	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\crz_Eugene Maze_47529065.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_04\crz_Eugene Maze		1122906
 	336076170	Eugene Weeping_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\Eugene Weeping_CDF6501D.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping_01		167008
 	415836917	temp_footstep_sealab_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\temp_footstep_sealab_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_03		348114
+	502014789	Layer2	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann_B31F02AC.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Layer2		36274240
 	517972830	Eugene Weeping_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\Eugene Weeping_7C0BC069.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Weeping_02		388092
 	542509495	Eugene Laughing_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\Eugene Laughing_2C962F05.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_03		446752
 	555448851	Eugene Laughing_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Linux\SFX\Eugene Laughing_57DFC138.wem		\Actor-Mixer Hierarchy\Insanity\Crazy_Top\Crazy_Sounds_01\Eugene Laughing_01		239196

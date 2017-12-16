@@ -122,6 +122,81 @@
 						<ActiveSource Name="scaryqueen" ID="{D89AC2A0-1509-439A-913F-5E4B78E8AE78}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<BlendContainer Name="Roomtone" ID="{92661B00-C6A9-4A41-B773-73604CF913EE}" ShortID="560489548">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Layer1" ID="{CE5062FB-CE12-4CAC-A6B0-EB4AEE037CB7}" ShortID="581357817">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Room tone in a stairwell with a wall heater rattle" ID="{D9742E18-B0A8-44C0-B8A0-7092F9128BCC}" ShortID="182429327">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="125.560932944606"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Room tone in a stairwell with a wall heater rattle.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Room tone in a stairwell with a wall heater rattle" ID="{D9742E18-B0A8-44C0-B8A0-7092F9128BCC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Layer2" ID="{FA5F2D93-1537-4279-8350-E563E1FD8A53}" ShortID="115208206">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann" ID="{9DAD812E-5E39-4B88-B0FE-7B60951EE583}" ShortID="502014789">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann" ID="{9DAD812E-5E39-4B88-B0FE-7B60951EE583}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

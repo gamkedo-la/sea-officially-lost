@@ -27,6 +27,7 @@
 				<Event Id="2547633870" Name="Play_Door" ObjectPath="\Events\Default Work Unit\Play_Door"/>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
 				<Event Id="556212125" Name="Play_Radar_Ping" ObjectPath="\Events\Default Work Unit\Play_Radar_Ping"/>
+				<Event Id="2748311587" Name="Play_Roomtone" ObjectPath="\Events\Default Work Unit\Play_Roomtone"/>
 				<Event Id="1234110288" Name="Play_Test_Ambi" ObjectPath="\Events\Default Work Unit\Play_Test_Ambi"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -61,6 +62,10 @@
 				<File Id="118832449" Language="SFX">
 					<ShortName>Eugene Laughing.wav</ShortName>
 					<Path>SFX\Eugene Laughing_326B03AD.wem</Path>
+				</File>
+				<File Id="182429327" Language="SFX">
+					<ShortName>Room tone in a stairwell with a wall heater rattle.wav</ShortName>
+					<Path>SFX\Room tone in a stairwell with a wall heater rattle_2F07E711.wem</Path>
 				</File>
 				<File Id="189632366" Language="SFX">
 					<ShortName>Eugene Laughing.wav</ShortName>
@@ -101,6 +106,10 @@
 				<File Id="415836917" Language="SFX">
 					<ShortName>temp_footstep_sealab_03.wav</ShortName>
 					<Path>SFX\temp_footstep_sealab_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="502014789" Language="SFX">
+					<ShortName>Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann.wav</ShortName>
+					<Path>SFX\Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann_B31F02AC.wem</Path>
 				</File>
 				<File Id="517972830" Language="SFX">
 					<ShortName>Eugene Weeping.wav</ShortName>

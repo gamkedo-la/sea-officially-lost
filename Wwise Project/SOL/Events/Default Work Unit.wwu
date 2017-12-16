@@ -22,6 +22,7 @@
 						<Action Name="" ID="{94CB3745-374B-44EF-8D6A-4D3C0FB9B976}" ShortID="142451440">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -43,6 +44,18 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Crazy_Top" ID="{E84B7D2A-1E29-4B01-82BF-2DCC9094867F}" WorkUnitID="{7FE219E3-67B3-49BC-AF7F-459EB63E88FB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2BDFC40B-DAE9-4D74-875A-3CFA7120D280}" ShortID="594710163">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Roomtone" ID="{92661B00-C6A9-4A41-B773-73604CF913EE}" WorkUnitID="{8AF64202-61F0-4502-B197-45BC5B9C15C3}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -183,6 +196,33 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Airlock_Drain" ID="{42F2F66F-CB6C-4403-93BB-365B6129A8E4}" WorkUnitID="{9B858B06-54AD-40D7-B0D0-1B72E3DAC5CB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Roomtone" ID="{5FFFD3F4-480D-4BC2-98EB-C8FCCAC28B44}">
+					<ChildrenList>
+						<Action Name="" ID="{E7A22F6A-5168-48E4-AADD-D6941315E4FF}" ShortID="1053732712">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Roomtone" ID="{92661B00-C6A9-4A41-B773-73604CF913EE}" WorkUnitID="{8AF64202-61F0-4502-B197-45BC5B9C15C3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{488273C5-DA5B-4119-803D-E3B893EB2F44}" ShortID="716280967">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Test Ambi" ID="{0E39244C-A154-48F2-8D31-80CBA01E11CA}" WorkUnitID="{8AF64202-61F0-4502-B197-45BC5B9C15C3}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
