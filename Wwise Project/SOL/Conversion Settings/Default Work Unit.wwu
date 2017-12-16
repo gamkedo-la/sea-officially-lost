@@ -21,9 +21,9 @@
 						</Property>
 						<Property Name="MaxSampleRate" Type="int32">
 							<ValueList>
-								<Value Platform="Mac">0</Value>
-								<Value Platform="Windows">0</Value>
-								<Value Platform="Linux">0</Value>
+								<Value Platform="Mac">44100</Value>
+								<Value Platform="Windows">44100</Value>
+								<Value Platform="Linux">44100</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MinSampleRate" Type="int32">
@@ -43,13 +43,13 @@
 					</PropertyList>
 					<ConversionPluginInfoList>
 						<ConversionPluginInfo Platform="Mac">
-							<ConversionPlugin Name="" ID="{F1530609-B627-4431-8E13-078F30EDBEC4}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{98A0E16F-E80C-41C9-96EA-24C081DF91F8}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Windows">
-							<ConversionPlugin Name="" ID="{9C61DBEF-901E-43EC-850B-CE32DA2A7ECD}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{035CFA3F-5047-43B7-9691-402DE116DFD6}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Linux">
-							<ConversionPlugin Name="" ID="{6C7262BF-4BB5-4C28-8DC6-16BA64C2DF17}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{12D3417D-9A48-4117-A049-5859232AB3DD}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 						</ConversionPluginInfo>
 					</ConversionPluginInfoList>
 				</Conversion>

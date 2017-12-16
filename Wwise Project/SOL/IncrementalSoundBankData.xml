@@ -4,14 +4,14 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="4091616663" Timestamp="131579179631205671"/>
-				<File Name="Menu" Hash="4236402668" Timestamp="131579179629135553"/>
-				<File Name="Seabase" Hash="1905566419" Timestamp="131579190830586239"/>
-				<File Name="Soundbank" Hash="642466520" Timestamp="131579190828636128"/>
+				<File Name="Menu" Hash="22317637" Timestamp="131579370002144266"/>
+				<File Name="Seabase" Hash="1342410257" Timestamp="131579370002044261"/>
+				<File Name="Soundbank" Hash="387892395" Timestamp="131579370001734243"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2142708449" Timestamp="131579190830656243"/>
+				<File Name="" Hash="813367283" Timestamp="131579370002214270"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -19,14 +19,14 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="1539178513" Timestamp="131579179652116867"/>
-				<File Name="Menu" Hash="4236402668" Timestamp="131579179648046635"/>
-				<File Name="Seabase" Hash="1905566419" Timestamp="131579190838536694"/>
-				<File Name="Soundbank" Hash="642466520" Timestamp="131579190834896486"/>
+				<File Name="Menu" Hash="22317637" Timestamp="131579370003514345"/>
+				<File Name="Seabase" Hash="1342410257" Timestamp="131579370003434340"/>
+				<File Name="Soundbank" Hash="387892395" Timestamp="131579370003134323"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2487853735" Timestamp="131579190838606698"/>
+				<File Name="" Hash="3552816565" Timestamp="131579370003574348"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -34,14 +34,14 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="1090777664" Timestamp="131579179614184698"/>
-				<File Name="Menu" Hash="4236402668" Timestamp="131579179609684440"/>
-				<File Name="Seabase" Hash="1905566419" Timestamp="131579190824325881"/>
-				<File Name="Soundbank" Hash="642466520" Timestamp="131579190822385770"/>
+				<File Name="Menu" Hash="22317637" Timestamp="131579370000724185"/>
+				<File Name="Seabase" Hash="1342410257" Timestamp="131579370000624179"/>
+				<File Name="Soundbank" Hash="387892395" Timestamp="131579370000354164"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2442813576" Timestamp="131579190824395885"/>
+				<File Name="" Hash="2485524318" Timestamp="131579370000784188"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
