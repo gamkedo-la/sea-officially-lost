@@ -1,0 +1,18 @@
+Event	ID	Name			Wwise Object Path	Notes
+	811497892	Play_Airlock_Drain			\Default Work Unit\Play_Airlock_Drain	
+	1785420617	Play_Airlock_Fill			\Default Work Unit\Play_Airlock_Fill	
+	2547633870	Play_Door			\Default Work Unit\Play_Door	
+	2748311587	Play_Roomtone			\Default Work Unit\Play_Roomtone	
+	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	56939465	Airlock_Fill	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Airlock_Fill_5sec_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Airlock_Fill		1058976
+	112427783	temp_footstep_sealab_02	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\temp_footstep_sealab_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_02		348114
+	182429327	Layer1	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Room tone in a stairwell with a wall heater rattle_2F07E711.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Layer1		22149012
+	200280789	Door	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Metal_door_F1C2E855.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door		487504
+	415836917	temp_footstep_sealab_03	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\temp_footstep_sealab_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_03		348114
+	502014789	Layer2	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann_B31F02AC.wem		\Actor-Mixer Hierarchy\Ambient Music\Roomtone\Layer2		36274240
+	560838616	temp_footstep_sealab_04	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\temp_footstep_sealab_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_04		348114
+	723103660	temp_footstep_sealab_01	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\temp_footstep_sealab_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sealab_Player\Footsteps\temp_footstep_sealab_01		348114
+	873945536	Airlock_Drain	C:\Users\Misha\Documents\GitHub\sea-officially-lost\Wwise Project\SOL\.cache\Windows\SFX\Airlock_Drain_5sec_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Airlock_Drain		1058976
+

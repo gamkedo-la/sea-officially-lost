@@ -13,7 +13,6 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID AUDIO_LOG_TEST = 1936257133U;
         static const AkUniqueID PLAY_AIRLOCK_DRAIN = 811497892U;
         static const AkUniqueID PLAY_AIRLOCK_FILL = 1785420617U;
         static const AkUniqueID PLAY_DOOR = 2547633870U;
@@ -41,6 +40,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MENU = 2607556080U;
+        static const AkUniqueID SEABASE = 4174176313U;
         static const AkUniqueID SOUNDBANK = 1661994096U;
     } // namespace BANKS
 

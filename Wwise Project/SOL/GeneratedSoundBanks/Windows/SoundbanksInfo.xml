@@ -21,13 +21,10 @@
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1936257133" Name="Audio_Log_Test" ObjectPath="\Events\Audio logs\Audio_Log_Test"/>
 				<Event Id="811497892" Name="Play_Airlock_Drain" ObjectPath="\Events\Default Work Unit\Play_Airlock_Drain"/>
 				<Event Id="1785420617" Name="Play_Airlock_Fill" ObjectPath="\Events\Default Work Unit\Play_Airlock_Fill"/>
 				<Event Id="2547633870" Name="Play_Door" ObjectPath="\Events\Default Work Unit\Play_Door"/>
-				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
 				<Event Id="556212125" Name="Play_Radar_Ping" ObjectPath="\Events\Default Work Unit\Play_Radar_Ping"/>
-				<Event Id="2748311587" Name="Play_Roomtone" ObjectPath="\Events\Default Work Unit\Play_Roomtone"/>
 				<Event Id="1234110288" Name="Play_Test_Ambi" ObjectPath="\Events\Default Work Unit\Play_Test_Ambi"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -55,17 +52,9 @@
 					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
 					<Path>SFX\crz_whispers(VigneshRamesh)_3905D0A3.wem</Path>
 				</File>
-				<File Id="112427783" Language="SFX">
-					<ShortName>temp_footstep_sealab_02.wav</ShortName>
-					<Path>SFX\temp_footstep_sealab_02_1C9C67B2.wem</Path>
-				</File>
 				<File Id="118832449" Language="SFX">
 					<ShortName>Eugene Laughing.wav</ShortName>
 					<Path>SFX\Eugene Laughing_326B03AD.wem</Path>
-				</File>
-				<File Id="182429327" Language="SFX">
-					<ShortName>Room tone in a stairwell with a wall heater rattle.wav</ShortName>
-					<Path>SFX\Room tone in a stairwell with a wall heater rattle_2F07E711.wem</Path>
 				</File>
 				<File Id="189632366" Language="SFX">
 					<ShortName>Eugene Laughing.wav</ShortName>
@@ -103,14 +92,6 @@
 					<ShortName>Eugene Weeping.wav</ShortName>
 					<Path>SFX\Eugene Weeping_CDF6501D.wem</Path>
 				</File>
-				<File Id="415836917" Language="SFX">
-					<ShortName>temp_footstep_sealab_03.wav</ShortName>
-					<Path>SFX\temp_footstep_sealab_03_1C9C67B2.wem</Path>
-				</File>
-				<File Id="502014789" Language="SFX">
-					<ShortName>Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann.wav</ShortName>
-					<Path>SFX\Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann_B31F02AC.wem</Path>
-				</File>
 				<File Id="517972830" Language="SFX">
 					<ShortName>Eugene Weeping.wav</ShortName>
 					<Path>SFX\Eugene Weeping_7C0BC069.wem</Path>
@@ -122,10 +103,6 @@
 				<File Id="555448851" Language="SFX">
 					<ShortName>Eugene Laughing.wav</ShortName>
 					<Path>SFX\Eugene Laughing_57DFC138.wem</Path>
-				</File>
-				<File Id="560838616" Language="SFX">
-					<ShortName>temp_footstep_sealab_04.wav</ShortName>
-					<Path>SFX\temp_footstep_sealab_04_1C9C67B2.wem</Path>
 				</File>
 				<File Id="577102619" Language="SFX">
 					<ShortName>Eugene Weeping.wav</ShortName>
@@ -171,10 +148,6 @@
 					<ShortName>test1.wav</ShortName>
 					<Path>SFX\test1_1C9C67B2.wem</Path>
 				</File>
-				<File Id="723103660" Language="SFX">
-					<ShortName>temp_footstep_sealab_01.wav</ShortName>
-					<Path>SFX\temp_footstep_sealab_01_1C9C67B2.wem</Path>
-				</File>
 				<File Id="747460788" Language="SFX">
 					<ShortName>crz_whispers(VigneshRamesh).wav</ShortName>
 					<Path>SFX\crz_whispers(VigneshRamesh)_B0111D1D.wem</Path>
@@ -214,10 +187,6 @@
 				<File Id="970623570" Language="SFX">
 					<ShortName>Eugene Laughing.wav</ShortName>
 					<Path>SFX\Eugene Laughing_25D622CE.wem</Path>
-				</File>
-				<File Id="994356738" Language="SFX">
-					<ShortName>Shortlogreading.wav</ShortName>
-					<Path>SFX\Shortlogreading_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1022138157" Language="SFX">
 					<ShortName>test2.wav</ShortName>
@@ -285,6 +254,56 @@
 				<File Id="1037656393" Language="SFX">
 					<ShortName>KAIB_WATR_CU_Single Water Drip_000797.wav</ShortName>
 					<Path>SFX\KAIB_WATR_CU_Single Water Drip_000797_97E7EBF9.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="4174176313" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Seabase</ObjectPath>
+			<ShortName>Seabase</ShortName>
+			<Path>Seabase.bnk</Path>
+			<IncludedEvents>
+				<Event Id="811497892" Name="Play_Airlock_Drain" ObjectPath="\Events\Default Work Unit\Play_Airlock_Drain"/>
+				<Event Id="1785420617" Name="Play_Airlock_Fill" ObjectPath="\Events\Default Work Unit\Play_Airlock_Fill"/>
+				<Event Id="2547633870" Name="Play_Door" ObjectPath="\Events\Default Work Unit\Play_Door"/>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
+				<Event Id="2748311587" Name="Play_Roomtone" ObjectPath="\Events\Default Work Unit\Play_Roomtone"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="56939465" Language="SFX">
+					<ShortName>Airlock_Fill_5sec.wav</ShortName>
+					<Path>SFX\Airlock_Fill_5sec_1C9C67B2.wem</Path>
+				</File>
+				<File Id="112427783" Language="SFX">
+					<ShortName>temp_footstep_sealab_02.wav</ShortName>
+					<Path>SFX\temp_footstep_sealab_02_1C9C67B2.wem</Path>
+				</File>
+				<File Id="182429327" Language="SFX">
+					<ShortName>Room tone in a stairwell with a wall heater rattle.wav</ShortName>
+					<Path>SFX\Room tone in a stairwell with a wall heater rattle_2F07E711.wem</Path>
+				</File>
+				<File Id="200280789" Language="SFX">
+					<ShortName>Metal_door.wav</ShortName>
+					<Path>SFX\Metal_door_F1C2E855.wem</Path>
+				</File>
+				<File Id="415836917" Language="SFX">
+					<ShortName>temp_footstep_sealab_03.wav</ShortName>
+					<Path>SFX\temp_footstep_sealab_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="502014789" Language="SFX">
+					<ShortName>Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann.wav</ShortName>
+					<Path>SFX\Room Tone-Washroom-Gym-Small-Vent-Deep-Water Trickles-Neumann_B31F02AC.wem</Path>
+				</File>
+				<File Id="560838616" Language="SFX">
+					<ShortName>temp_footstep_sealab_04.wav</ShortName>
+					<Path>SFX\temp_footstep_sealab_04_1C9C67B2.wem</Path>
+				</File>
+				<File Id="723103660" Language="SFX">
+					<ShortName>temp_footstep_sealab_01.wav</ShortName>
+					<Path>SFX\temp_footstep_sealab_01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="873945536" Language="SFX">
+					<ShortName>Airlock_Drain_5sec.wav</ShortName>
+					<Path>SFX\Airlock_Drain_5sec_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

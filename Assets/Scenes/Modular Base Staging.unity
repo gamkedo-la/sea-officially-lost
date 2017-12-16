@@ -89956,8 +89956,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: f7e1664c
   useOtherObject: 0
-  valueGuid: e927382bd0523e4294288d09aaef9f73
-  bankName: Soundbank
+  valueGuid: 300d2249fed13f4aa40bd62e30faf008
+  bankName: Seabase
   loadAsynchronous: 0
   decodeBank: 0
   saveDecodedBank: 0
