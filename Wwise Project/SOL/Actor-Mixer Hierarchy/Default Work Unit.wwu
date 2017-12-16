@@ -4,6 +4,74 @@
 		<WorkUnit Name="Default Work Unit" ID="{9B858B06-54AD-40D7-B0D0-1B72E3DAC5CB}" PersistMode="Standalone">
 			<ChildrenList>
 				<WorkUnit Name="Sealab_Player" ID="{4F758AE0-9966-4A47-8818-72236072D625}" PersistMode="Reference"/>
+				<Sound Name="Door" ID="{C5CF647C-2969-45BB-9B08-5262491EC45F}" ShortID="108988787">
+					<PropertyList>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Metal_door" ID="{C3139350-7F6F-4A2B-A75F-DAF17787C95E}" ShortID="200280789">
+							<PropertyList>
+								<Property Name="TrimBegin" Type="Real64" Value="5.90987204405571"/>
+								<Property Name="TrimEnd" Type="Real64" Value="11.4364010366051"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Metal_door.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Metal_door" ID="{C3139350-7F6F-4A2B-A75F-DAF17787C95E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Airlock_Fill" ID="{F88E8086-B115-4E33-84A0-BEC2B707F0CA}" ShortID="969160506">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Airlock_fill" ID="{C8A78703-1147-4ED2-BCA6-A026144B48AF}" ShortID="763565710">
+							<Language>SFX</Language>
+							<AudioFile>Airlock_fill.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Airlock_fill" ID="{C8A78703-1147-4ED2-BCA6-A026144B48AF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Airlock_Drain" ID="{42F2F66F-CB6C-4403-93BB-365B6129A8E4}" ShortID="870022559">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E27E65B-348C-4567-90ED-D8215332F8E9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{34D38DAE-6232-4F7F-96A1-3D098FAE9D6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Airlock_drain" ID="{10B375EC-0D48-40EF-B0A3-A78A563DF284}" ShortID="313095325">
+							<Language>SFX</Language>
+							<AudioFile>Airlock_drain.wav</AudioFile>
+						</AudioFileSource>
+						<AudioFileSource Name="Airlock_drain2" ID="{46EA5328-ADDE-4D9C-8C74-F205B8743C9C}" ShortID="782062693">
+							<Language>SFX</Language>
+							<AudioFile>Airlock_drain2.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Airlock_drain2" ID="{46EA5328-ADDE-4D9C-8C74-F205B8743C9C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

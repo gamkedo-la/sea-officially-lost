@@ -14,6 +14,9 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID AUDIO_LOG_TEST = 1936257133U;
+        static const AkUniqueID PLAY_AIRLOCK_DRAIN = 811497892U;
+        static const AkUniqueID PLAY_AIRLOCK_FILL = 1785420617U;
+        static const AkUniqueID PLAY_DOOR = 2547633870U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_MENU_GAME_START = 1694011421U;
         static const AkUniqueID PLAY_MENU_MUSIC = 2228153899U;

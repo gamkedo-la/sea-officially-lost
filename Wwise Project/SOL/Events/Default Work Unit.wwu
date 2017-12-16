@@ -146,6 +146,48 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Door" ID="{BB9E75B8-0B3A-4C6E-B04A-049DBDB0D7B7}">
+					<ChildrenList>
+						<Action Name="" ID="{9C8016C0-01EE-4E69-B849-D8191AE341F0}" ShortID="809247852">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Door" ID="{C5CF647C-2969-45BB-9B08-5262491EC45F}" WorkUnitID="{9B858B06-54AD-40D7-B0D0-1B72E3DAC5CB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Airlock_Fill" ID="{031B109C-9520-44F2-9F4D-F1376B033D6E}">
+					<ChildrenList>
+						<Action Name="" ID="{E1284555-CF58-455C-B9D0-76A9C92CFB94}" ShortID="221993445">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Airlock_Fill" ID="{F88E8086-B115-4E33-84A0-BEC2B707F0CA}" WorkUnitID="{9B858B06-54AD-40D7-B0D0-1B72E3DAC5CB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Airlock_Drain" ID="{0A1CEF12-588B-434C-AB01-BD7D44F91207}">
+					<ChildrenList>
+						<Action Name="" ID="{AD552D1A-3F74-4BD9-A7EE-4DDD328356C5}" ShortID="526680188">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Airlock_Drain" ID="{42F2F66F-CB6C-4403-93BB-365B6129A8E4}" WorkUnitID="{9B858B06-54AD-40D7-B0D0-1B72E3DAC5CB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -5,12 +5,12 @@
 			<Language ID="393239870">
 				<File Name="Init" Hash="4091616663" Timestamp="131576656205698799"/>
 				<File Name="Menu" Hash="4074900470" Timestamp="131567768196817635"/>
-				<File Name="Soundbank" Hash="1424509857" Timestamp="131578494184843811"/>
+				<File Name="Soundbank" Hash="3905289525" Timestamp="131579072716838189"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2366106324" Timestamp="131578494184953818"/>
+				<File Name="" Hash="4219823007" Timestamp="131579072716928194"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -19,12 +19,12 @@
 			<Language ID="393239870">
 				<File Name="Init" Hash="1539178513" Timestamp="131576656209638918"/>
 				<File Name="Menu" Hash="4074900470" Timestamp="131567768197437648"/>
-				<File Name="Soundbank" Hash="1424509857" Timestamp="131578494186123885"/>
+				<File Name="Soundbank" Hash="3905289525" Timestamp="131579072718368276"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3432078670" Timestamp="131578494186243891"/>
+				<File Name="" Hash="4054387645" Timestamp="131579072718448281"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -33,12 +33,12 @@
 			<Language ID="393239870">
 				<File Name="Init" Hash="1090777664" Timestamp="131576656201548623"/>
 				<File Name="Menu" Hash="4074900470" Timestamp="131567768196141633"/>
-				<File Name="Soundbank" Hash="1424509857" Timestamp="131578494183273722"/>
+				<File Name="Soundbank" Hash="3905289525" Timestamp="131579072715188095"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="443228005" Timestamp="131578494183403729"/>
+				<File Name="" Hash="366826822" Timestamp="131579072715268099"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
