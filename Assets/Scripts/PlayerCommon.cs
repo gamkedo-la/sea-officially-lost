@@ -59,9 +59,9 @@ public class PlayerCommon : MonoBehaviour {
 			ReleaseMouse();
 		}
 
-        if(Input.GetKeyDown(KeyCode.F)) {
+        /* if(Input.GetKeyDown(KeyCode.F)) {
             insanityCounter = 5.0f;
-        }
+        } */
 
         //pick up item for attributes inventory
         if (Input.GetButtonDown("PickUpItem"))
