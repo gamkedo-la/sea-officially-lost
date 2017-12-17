@@ -8,6 +8,7 @@ public class TextScroller : MonoBehaviour {
 
 	public float scrollSpeedPerSecond = 50.0f;
 	public string LevelToloadWhenDone = "MainMenu";
+	public float offsetWhenToLoad = 2400;
 	private float currentY = 0.0f;
 
 	// Use this for initialization
@@ -23,9 +24,9 @@ public class TextScroller : MonoBehaviour {
 		if (Input.GetKey(KeyCode.Escape) ||
 			Input.GetKey(KeyCode.Return) ||
 			Input.GetKey(KeyCode.Space) ||
-			currentY > 2400) // FIXME - hardcoded: measure the size of the text?
+			currentY > offsetWhenToLoad) // measure the size of the text?
 		{
-			Debug.Log("Credits are done. Loading: " + LevelToloadWhenDone);
+			Debug.Log("Text scroll is done. Loading: " + LevelToloadWhenDone);
 			SceneManager.LoadScene(LevelToloadWhenDone);
 		}
 	}
