@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     public float swimSpeed = 10.0f;
     public float strafeSpeed = 5.0f;
     public float riseSpeed = 10.0f;
+    public float playerHeight = 5.0f;
 
 
     public float scanRange = 500.0f;
@@ -104,10 +105,10 @@ public class PlayerController : MonoBehaviour {
         speedLateral += Input.GetAxis("Horizontal") * strafeSpeed * Time.deltaTime;
         rb.AddForce(transform.right * speedLateral);
 
-        if (Input.GetButton("Jump"))
-        {
-            speedRise += riseSpeed * Time.deltaTime;
-        }
+        //if (Input.GetButton("Swim and Open"))
+        //{
+        //    speedRise += riseSpeed * Time.deltaTime;
+        //}
 
         rb.AddForce(Vector3.up * speedRise);
 
@@ -116,10 +117,16 @@ public class PlayerController : MonoBehaviour {
             ReleaseMouse();
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            SceneManager.LoadScene("sealab v2");
+        if (transform.position.y < Terrain.activeTerrain.SampleHeight(transform.position) + playerHeight) {
+            Vector3 fixedPos = transform.position;
+            fixedPos.y = Terrain.activeTerrain.SampleHeight(transform.position) + playerHeight;
+            transform.position = fixedPos;
         }
+
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    SceneManager.LoadScene("sealab v2");
+        //}
 
         //pick-up item testing for inventory
         //Debug.DrawRay(transform.position, Vector3.forward * 10, Color.red);

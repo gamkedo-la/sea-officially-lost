@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OxygenSystem : MonoBehaviour {
     [SerializeField]
@@ -35,7 +36,9 @@ public class OxygenSystem : MonoBehaviour {
         while (currentOxygenUnits > 0) {
             yield return new WaitForSeconds(0.1f);
             currentOxygenUnits -= unitsPerSecond / 10;
-
+            if (currentOxygenUnits <= 0){
+                SceneManager.LoadScene("Modular Base Staging");
+            }
             //Oxygen bar.
             oxygenBar.rectTransform.sizeDelta = new Vector2(oxygenBar.rectTransform.sizeDelta.x, currentOxygenUnits);
         }

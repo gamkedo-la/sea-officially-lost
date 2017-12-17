@@ -44,7 +44,7 @@ public class PlayerCommon : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Action"))
 		{
 			RaycastHit rhInfo;
 			if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out rhInfo, 5.0f, ~LayerMask.GetMask("Ignore Raycast")))
@@ -64,7 +64,7 @@ public class PlayerCommon : MonoBehaviour {
         } */
 
         //pick up item for attributes inventory
-        if (Input.GetButtonDown("PickUpItem"))
+        if (Input.GetButtonDown("Action"))
         {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, Camera.main.transform.forward, out hit, m_MaxInteractDistance))
