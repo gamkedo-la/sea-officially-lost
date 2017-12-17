@@ -979,8 +979,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 799.99963, y: -674.9997}
-  m_SizeDelta: {x: 1600, y: 450}
+  m_AnchoredPosition: {x: 799.99963, y: -523.6364}
+  m_SizeDelta: {x: 1600, y: 1047.2728}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &142866871
 CanvasGroup:
@@ -1026,11 +1026,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Cindy Lee: mug and plate models\r\n\r\nEugene Meidinger: voice acting\r\n\r\nChris
-    DeLeon: compass icons\n\r\nSimon Hoffiz: design documentation including base layout,
-    seabed terrain, modelling - Base entrance, Base props - lockers, tables etc.\n\r\nDana
-    Alcala: world and character design\r\n\r\nNicholas Fewkes: notebook model, beaker
-    model, picture frame model\r\n\r\nVignesh Ramesh: flask, beaker, and bunsen burner
-    models, voice acting\r, music"
+    DeLeon: compass icons\n\r\nSimon Hoffiz: design documentation, base layout, seabed
+    terrain, base entrance, lockers, tables, props\n\r\nDana Alcala: world and character
+    design\r\n\r\nNicholas Fewkes: notebook model, beaker model, picture frame model\r\n\r\nVignesh
+    Ramesh: flask, beaker, and bunsen burner models, voice acting\r, music"
 --- !u!222 &142866873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1533,7 +1532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -247.15704}
+  m_AnchoredPosition: {x: 400.00006, y: -247.15706}
   m_SizeDelta: {x: 800.0001, y: 42.862823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359652237
@@ -3593,7 +3592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -212.86284}
+  m_AnchoredPosition: {x: 400.00006, y: -212.86282}
   m_SizeDelta: {x: 800.0001, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696031984
@@ -10035,10 +10034,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Sea: Officially Lost\na gamkedo.com game\r\n\r\nJeremy Kenyon: project
-    lead, programming, art, design\n\r\nAndy King: radio model, airlock door, ambient
-    sound, glowing glyphs, seabase environment models and textures, seabase mockups
-    ,voice acting\r\n\r\nMichael \"Misha\" Fewkes: audio programming, sound effects\n"
+  m_Text: "a gamkedo.com game\r\n\r\nJeremy Kenyon: project lead,\nprogramming, art,
+    design\n\r\nAndy King: radio model, airlock door, ambient sound, glowing glyphs,
+    seabase models and textures, voice acting\r\n\r\nMichael \"Misha\" Fewkes: audio\nprogramming,
+    sound effects\n"
 --- !u!222 &1352223561
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10288,8 +10287,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 799.99963, y: -674.9999}
-  m_SizeDelta: {x: 1600, y: 450}
+  m_AnchoredPosition: {x: 799.99963, y: -523.6364}
+  m_SizeDelta: {x: 1600, y: 1047.2728}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1401050211
 CanvasGroup:
@@ -15106,8 +15105,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 799.9999, y: -675}
-  m_SizeDelta: {x: 1600, y: 450}
+  m_AnchoredPosition: {x: 799.9999, y: -523.6364}
+  m_SizeDelta: {x: 1600, y: 1047.2728}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1791506365
 CanvasGroup:
@@ -15152,11 +15151,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Nick Polchies: flashlight coding, lighting, character controller polish,
-    lighting design, main menu, sealab design, sonar scan effect\r\n\r\nChrister \"McFunkypants\"
+  m_Text: "Nick Polchies: flashlight coding, character controller polish, lighting
+    design, main menu, sealab design, sonar scan effect\r\n\r\nChrister \"McFunkypants\"
     Kaitila: greebles, pipes, wires, control panels, tubular habitat meshes, crashed
-    airplane mesh, schools of fish, particle systems\r\n\r\nTim Waskett: goblin shark
-    and spider crab models, procedural creature animation, airlock door animations\r\r"
+    airplane mesh, schools of fish, particle systems\r\n\r\nTim Waskett: shark man,
+    goblin shark, and spider crab models, procedural creature animation, airlock door
+    animations\r\r"
 --- !u!222 &1791506367
 CanvasRenderer:
   m_ObjectHideFlags: 0
