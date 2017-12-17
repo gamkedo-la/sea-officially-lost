@@ -1026,10 +1026,11 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Cindy Lee: mug and plate models\r\n\r\nEugene Meidinger: voice acting\r\n\r\nChris
-    DeLeon: compass icons\n\r\nSimon Hoffiz: design documentation, seabed terrain,
-    lab spaces and models \r\n\r\nDana Alcala: world and character design\r\n\r\nNicholas
-    Fewkes: notebook model, beaker model, picture frame model\r\n\r\nVignesh Ramesh:
-    flask, beaker, and bunsen burner models, voice acting\r, music"
+    DeLeon: compass icons\n\r\nSimon Hoffiz: design documentation including base layout,
+    seabed terrain, modelling - Base entrance, Base props - lockers, tables etc.\n\r\nDana
+    Alcala: world and character design\r\n\r\nNicholas Fewkes: notebook model, beaker
+    model, picture frame model\r\n\r\nVignesh Ramesh: flask, beaker, and bunsen burner
+    models, voice acting\r, music"
 --- !u!222 &142866873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10036,8 +10037,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Sea: Officially Lost\na gamkedo.com game\r\n\r\nJeremy Kenyon: project
     lead, programming, art, design\n\r\nAndy King: radio model, airlock door, ambient
-    sound, lighting, glowing glyphs, seabase mockups, texture art, voice acting\r\n\r\nMichael
-    \"Misha\" Fewkes: audio programming, sound effects\n"
+    sound, glowing glyphs, seabase environment models and textures, seabase mockups
+    ,voice acting\r\n\r\nMichael \"Misha\" Fewkes: audio programming, sound effects\n"
 --- !u!222 &1352223561
 CanvasRenderer:
   m_ObjectHideFlags: 0
