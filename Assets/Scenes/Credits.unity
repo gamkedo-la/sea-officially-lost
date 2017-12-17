@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.30692166, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -253,24 +253,25 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\rSea: Officially Lost\r\na gamkedo.com game\r\n\r\nJeremy Kenyon: Lead
-    Developer\r\n\r\nAndy King: radio model, airlock door, ambient sound, lighting,
-    glowing glyphs, seabase mockups, texture art, voice acting\r\n\r\nMichael \"Misha\"
-    Fewkes: audio programming, sound effects, music\r\n\r\ndtderosa: tube worm model\r\n\r\nNick
-    Polchies: flashlight coding, lighting, character controller polish, lighting design,
-    main menu, sealab design, sonar scan effect\r\n\r\nChrister \"McFunkypants\" Kaitila:
+  m_Text: "\rSea: Officially Lost\r\na Gamkedo.com game\r\n\r\nJeremy Kenyon: lead
+    developer, concept design, main programmer\r\n\r\nAndy King: radio model, airlock
+    door, ambient sound, lighting, glowing glyphs, seabase mockups, texture art, voice
+    acting\r\n\r\nTim Waskett: goblin shark and spider crab models, procedural creature
+    animation, airlock door animations\r\n\r\r\nNick Polchies: flashlight coding,
+    lighting, character controller polish, lighting design, main menu, sealab design,
+    sonar scan effect\r\n\r\nSergio Solorzano: inventory programming and art, underwater
+    carrier background, arm chair model, diving propellor model\r\n\nMichael \"Misha\"
+    Fewkes: audio programming, sound effects, music\r\n\r\nSimon J Hoffiz: world design,
+    seabed terrain, lab spaces and models \r\n\r\nChrister \"McFunkypants\" Kaitila:
     greebles, pipes, wires, control panels, tubular habitat meshes, crashed airplane
-    mesh, schools of fish, particle systems\r\n\r\nTim Waskett: goblin shark and spider
-    crab models, procedural creature animation, airlock door animations\r\n\r\nCameron
-    Button: enemy swarning A.I., creature spawning code, swaring logic and gameplay\r\n\r\nSergio
-    Solorzano: inventory programming and art, underwater \r\ncarrier background, skybox,
-    arm chail model, skills UI, diving propellor model\r\n\r\nMarcus Silva: diving
-    helmet HUD design, \r\n\r\nbrk_zp: flashlight improvements, UI polish\r\n\r\nCindy
-    Lee: mug and plate models\r\n\r\nEugene Meidinger: voice acting\r\n\r\nChris DeLeon:
-    event system, compass icons, particle systems\r\n\r\nSimon Hoffiz: design documentation,
-    seabed terrain, lab spaces and models \r\n\r\nDana Alcala: world and character
-    design\r\n\r\nNicholas Fewkes: notebook model, beaker model, picture frame model\r\n\r\nVignesh
-    Ramesh: flask, beaker, and bunsen burner models, voice acting\r\n"
+    mesh, schools of fish, particle systems\r\n\r\nVignesh Ramesh: flask, beaker,
+    and bunsen burner models, voice acting\r\n\nCameron Button: enemy swarning A.I.,
+    creature spawning code, swarming logic and gameplay\r\n\r\n\rMarcus Silva: diving
+    helmet HUD design\n\r\nNicholas Fewkes: notebook model, beaker model, picture
+    frame model\r\n\nDana Alcala: additional character design\r\n\r\nEugene Meidinger:
+    voice acting\r\n\nbrk_zp: flashlight improvements, UI polish\r\n\nCindy Rey Lee:
+    mug and plate models\r\n\ndtderosa: tube worm model\r\n\nChris DeLeon: compass
+    icons, portal particles"
 --- !u!222 &2974609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -318,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac73615964d46be4f9ee12c5bb9cd8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePath: Audio\GeneratedSoundBanks
+  basePath: Audio/GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048
