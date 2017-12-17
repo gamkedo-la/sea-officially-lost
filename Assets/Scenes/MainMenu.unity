@@ -389,7 +389,7 @@ RectTransform:
   - {fileID: 117698266}
   - {fileID: 1773544054}
   m_Father: {fileID: 790454287}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.1}
   m_AnchorMax: {x: 0.75, y: 0.6}
@@ -928,7 +928,7 @@ RectTransform:
   - {fileID: 696009952}
   - {fileID: 1621550030}
   m_Father: {fileID: 790454287}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.1}
   m_AnchorMax: {x: 0.75, y: 0.6}
@@ -1026,11 +1026,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Cindy Lee: mug and plate models\r\n\r\nEugene Meidinger: voice acting\r\n\r\nChris
-    DeLeon: event system, compass icons, particle systems\r\n\r\nSimon Hoffiz: design
-    documentation, seabed terrain, lab spaces and models \r\n\r\nDana Alcala: world
-    and character design\r\n\r\nNicholas Fewkes: notebook model, beaker model, picture
-    frame model\r\n\r\nVignesh Ramesh: flask, beaker, and bunsen burner models, voice
-    acting\r"
+    DeLeon: compass icons\n\r\nSimon Hoffiz: design documentation, seabed terrain,
+    lab spaces and models \r\n\r\nDana Alcala: world and character design\r\n\r\nNicholas
+    Fewkes: notebook model, beaker model, picture frame model\r\n\r\nVignesh Ramesh:
+    flask, beaker, and bunsen burner models, voice acting\r, music"
 --- !u!222 &142866873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1181,7 +1180,7 @@ RectTransform:
   - {fileID: 489402669}
   - {fileID: 1245560955}
   m_Father: {fileID: 790454287}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.1}
   m_AnchorMax: {x: 0.75, y: 0.6}
@@ -1533,7 +1532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -247.15706}
+  m_AnchoredPosition: {x: 400.00006, y: -247.15704}
   m_SizeDelta: {x: 800.0001, y: 42.862823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359652237
@@ -3448,7 +3447,7 @@ RectTransform:
   - {fileID: 630567303}
   - {fileID: 477945201}
   m_Father: {fileID: 790454287}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.1}
   m_AnchorMax: {x: 0.75, y: 0.6}
@@ -3593,7 +3592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -212.86282}
+  m_AnchoredPosition: {x: 400.00006, y: -212.86284}
   m_SizeDelta: {x: 800.0001, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696031984
@@ -7251,6 +7250,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1532905605}
+  - {fileID: 1973972185}
   - {fileID: 72978128}
   - {fileID: 997087419}
   - {fileID: 690982112}
@@ -7303,7 +7304,7 @@ MonoBehaviour:
   lookSensitivitySlider: {fileID: 1969508778}
   lookInversionY: {fileID: 903350898}
   lookInversionX: {fileID: 489402670}
-  creditsPageDuration: 4
+  creditsPageDuration: 6
   creditsPages:
   - {fileID: 1352223557}
   - {fileID: 1791506363}
@@ -7572,7 +7573,7 @@ RectTransform:
   - {fileID: 1401050210}
   - {fileID: 142866870}
   m_Father: {fileID: 790454287}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8281,7 +8282,7 @@ RectTransform:
   - {fileID: 1452065949}
   - {fileID: 419878648}
   m_Father: {fileID: 790454287}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.1}
   m_AnchorMax: {x: 0.75, y: 0.6}
@@ -9987,8 +9988,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 800, y: -450}
-  m_SizeDelta: {x: 1600, y: 900}
+  m_AnchoredPosition: {x: 800, y: -523.6364}
+  m_SizeDelta: {x: 1600, y: 1047.2728}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1352223559
 CanvasGroup:
@@ -10033,10 +10034,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\rSea: Officially Lost\r\na gamkedo.com game\r\n\r\nJeremy Kenyon: Lead
-    Developer\r\n\r\nAndy King: radio model, airlock door, ambient sound, lighting,
-    glowing glyphs, seabase mockups, texture art, voice acting\r\n\r\nMichael \"Misha\"
-    Fewkes: audio programming, sound effects\n"
+  m_Text: "Sea: Officially Lost\na gamkedo.com game\r\n\r\nJeremy Kenyon: project
+    lead, programming, art, design\n\r\nAndy King: radio model, airlock door, ambient
+    sound, lighting, glowing glyphs, seabase mockups, texture art, voice acting\r\n\r\nMichael
+    \"Misha\" Fewkes: audio programming, sound effects\n"
 --- !u!222 &1352223561
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11130,6 +11131,73 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1505626849}
+--- !u!1 &1532905604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1532905605}
+  - component: {fileID: 1532905607}
+  - component: {fileID: 1532905606}
+  m_Layer: 5
+  m_Name: bg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1532905605
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1532905604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000193, y: 1.0000193, z: 1.0000193}
+  m_Children: []
+  m_Father: {fileID: 790454287}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 799.99994, y: -256.00006}
+  m_SizeDelta: {x: 1600, y: 1600}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1532905606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1532905604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.60294116, g: 0.5852076, b: 0.5852076, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 2800000, guid: 7c107d9038aea7044aac43e5c88dac32, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1532905607
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1532905604}
 --- !u!1 &1540199709
 GameObject:
   m_ObjectHideFlags: 0
@@ -15538,6 +15606,73 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1973972184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1973972185}
+  - component: {fileID: 1973972187}
+  - component: {fileID: 1973972186}
+  m_Layer: 5
+  m_Name: sol_logo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1973972185
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1973972184}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 790454287}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 800, y: -256}
+  m_SizeDelta: {x: 800, y: 400}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1973972186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1973972184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 2800000, guid: b193762a6fac78844860512a5b18b232, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1973972187
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1973972184}
 --- !u!1 &1985930345
 GameObject:
   m_ObjectHideFlags: 0

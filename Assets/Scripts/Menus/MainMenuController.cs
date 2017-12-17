@@ -17,6 +17,8 @@ public class MainMenuController : MonoBehaviour {
     ColorGradingModel.Settings colorGrading;
     private bool mouseInput;
 
+    private RawImage logo_image;
+
     [Header("OptionsMenu")]
     public GameObject graphicsQualityPanel;
     public Button graphicsQualityDecrease;
@@ -60,6 +62,8 @@ public class MainMenuController : MonoBehaviour {
         activeMenu = menus[0];
         activeMenu.SetActive(true);
         currentMenuObject = FindFirstEnabledSelectable(activeMenu);
+
+        logo_image =  GameObject.Find("sol_logo").GetComponent<RawImage>();
 
         brightnessMessage = brightnessText.text;
         fieldOfViewMessage = fieldOfViewText.text;
@@ -226,12 +230,15 @@ public class MainMenuController : MonoBehaviour {
     IEnumerator Credits() {
         creditsActive = true;
 
+        if (logo_image) logo_image.enabled = false;
+
         foreach(GameObject creditsPage in creditsPages) {
             SwitchToMenu(creditsPage);
 
             for(float waitTimer = creditsPageDuration; waitTimer > 0; waitTimer -= Time.deltaTime) {
                 if (nextCredits) {
                     nextCredits = false;
+                    logo_image.enabled = true;
                     break;
                 }
                 yield return null;
@@ -247,6 +254,7 @@ public class MainMenuController : MonoBehaviour {
     public void StopCredits() {
         StopCoroutine(creditsCoroutine);
         SwitchToMenu(menus[0]);
+        logo_image.enabled = true;
     }
 
     public void DecreaseGraphicsQuality() {
