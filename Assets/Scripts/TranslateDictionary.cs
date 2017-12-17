@@ -73,9 +73,9 @@ public class TranslateDictionary : MonoBehaviour {
             if (matchGO) {
                 Text matchText = matchGO.GetComponentInChildren<Text>();
                 if (matchText) {
-                    matchText.text = (PlayerController.instance.knowledgeLevel >= eachCard.arcaneNeeded ?
+                    matchText.text = (PlayerCommon.instance.knowledgeLevel >= eachCard.arcaneNeeded ?
                                       eachCard.englishText : eachCard.codedText);
-                    Debug.Log("Comparing knowledge level " + PlayerController.instance.knowledgeLevel + " to arcane level " +
+                    Debug.Log("Comparing knowledge level " + PlayerCommon.instance.knowledgeLevel + " to arcane level " +
                               eachCard.arcaneNeeded + " on object " + matchGO.name);
                 } else {
                     Debug.Log("Couldn't find text object for " + matchGO.name);

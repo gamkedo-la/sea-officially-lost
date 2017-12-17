@@ -18,6 +18,7 @@ public class PlayerCommon : MonoBehaviour {
     public float insanityTimeBeforeSharkSummon = 10.0f;
     public GameObject sharkMan;
     private GameObject summonedShark;
+    public int knowledgeLevel = 5;
 
     //inventory related declarations pick-up item variables
     public float m_MaxInteractDistance = 2.0f;
