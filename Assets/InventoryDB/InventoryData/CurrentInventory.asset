@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryItems:
   - {fileID: 11400000, guid: ce11fe00db428154ea2d0ac856163fad, type: 2}
-  - {fileID: 11400000, guid: 7c6aa02bd8b29be479b2f40d42e80182, type: 2}
-  OxygenCapacity: 50
-  SwimSpeed: 50
-  TotalBagSlots: 2
+  - {fileID: 0}
+  OxygenCapacity: 0
+  SwimSpeed: 0
+  JewelryBox: 0
+  TotalBagSlots: 3

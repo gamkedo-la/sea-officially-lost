@@ -73,6 +73,7 @@ public class InventoryMgr : MonoBehaviour
         //inventoryList.NightSight= Mathf.Max(inventoryList.NightSight+ addedItem.ItemAttributeIncreaseAmountCalculation(),0);
         inventoryList.OxygenCapacity += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Oxygen Capacity")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 		inventoryList.SwimSpeed += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Swim Speed")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
+        inventoryList.JewelryBox += addedItem.ItemAttributeIncreaseAmount.Where(x => x.ItemAttribute.Name.Equals("Jewelry Box")).Select(s => s.Amount).DefaultIfEmpty(0).Single();
 		//inventoryList.PhelpsFins += item.ItemAttributeIncreaseAmountCalculation();//TODO:which way to have array returned and not run the function 3 times? Currently ItemAttributeIncreaseAmountCalculation only returns NightSight, to set return for each itemattribute
 		//inventoryList.Breath += item.ItemAttributeIncreaseAmountCalculation();
 
