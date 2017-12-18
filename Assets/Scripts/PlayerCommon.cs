@@ -67,9 +67,9 @@ public class PlayerCommon : MonoBehaviour {
         if (Input.GetButtonDown("Action"))
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, Camera.main.transform.forward, out hit, m_MaxInteractDistance))
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, m_MaxInteractDistance))
             {
-                Debug.Log("I can see " + hit.transform.gameObject.name);
+                Debug.Log("I can see " + hit.transform.gameObject.name + "and it has tag " + hit.transform.gameObject.tag);
                 if (hit.transform.gameObject.CompareTag("canPickUp"))
                 {
                     pickedUpItem = hit.transform.gameObject;
