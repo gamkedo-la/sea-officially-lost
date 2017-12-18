@@ -11,10 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d8fddeff567614f8a450723b4e3189, type: 3}
   m_Name: CurrentInventory
   m_EditorClassIdentifier: 
-  InventoryItems:
-  - {fileID: 11400000, guid: ce11fe00db428154ea2d0ac856163fad, type: 2}
-  - {fileID: 0}
-  OxygenCapacity: 0
-  SwimSpeed: 0
-  JewelryBox: 0
+  InventoryItems: []
+  OxygenCapacity: 100
+  SwimSpeed: 100
+  JewelryBox: 1
   TotalBagSlots: 3

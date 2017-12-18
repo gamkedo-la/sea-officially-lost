@@ -26,6 +26,10 @@ public class OxygenSystem : MonoBehaviour {
         
     }
 
+    public void SetOxygenUnits(int newMax) {
+        maxOxygenUnits = newMax;
+    }
+
     //Starts depleting oxygen at one unit person second.
     private void Start() {
         StartCoroutine(OxygenDepletion(oxygenUnit));

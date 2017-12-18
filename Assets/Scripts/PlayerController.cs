@@ -64,7 +64,21 @@ public class PlayerController : MonoBehaviour {
         m_MouseLook.YSensitivity = 1 + PlayerPrefs.GetInt("LookSensitivityY", 20)/20;
         m_MouseLook.invertedX = PlayerPrefs.GetInt("LookInveredX", 0) > 0;
         m_MouseLook.invertedY = PlayerPrefs.GetInt("LookInveredY", 0) > 0;
+        InventoryMgr tempIM = GameObject.FindWithTag("InventoryManager").GetComponent<InventoryMgr>();
+        OxygenSystem tempOS = gameObject.GetComponent<OxygenSystem>();
+        if (tempIM != null && tempOS != null) {
+            if (tempIM.HasOxygen()) {
+                tempOS.SetOxygenUnits(300);
+            } else {
+                tempOS.SetOxygenUnits(10);
+            }
 
+            if (tempIM.HasSwimSpeedBoost()) {
+                swimSpeed = 30;
+            } else {
+                swimSpeed = 10;
+            }
+        }
 
     }
 

@@ -27,7 +27,7 @@ public class InventoryMgr : MonoBehaviour
 
 	public void Awake()
     {
-        ClearInventoryList();
+        //ClearInventoryList();
         inventoryList.OxygenCapacity = 0;
 		inventoryList.SwimSpeed = 0;
         BagSpaceText = inventoryPanel.transform.Find("Footer/BagDetails/Stats").GetComponent<Text>();
@@ -102,6 +102,15 @@ public class InventoryMgr : MonoBehaviour
             ToggleInventoryWindow();
         }   
     }
+
+    public bool HasOxygen(){
+        return inventoryList.OxygenCapacity > 0;
+    }
+
+    public bool HasSwimSpeedBoost() {
+        return inventoryList.SwimSpeed > 0;
+    }
+
     private void ToggleInventoryWindow()
     {
         ClearBufferInventory();
