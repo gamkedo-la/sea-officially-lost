@@ -2586,6 +2586,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c7912bf341043118b4cf7486f9cbdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oxygenBooster: {fileID: 1047050386}
+  swimSpeedBooster: {fileID: 2127196890}
 --- !u!4 &199211404
 Transform:
   m_ObjectHideFlags: 0
@@ -13062,6 +13064,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1045796101}
   m_Mesh: {fileID: 4300000, guid: d40fce54748a0e342bef13702d1a1602, type: 3}
+--- !u!1 &1047050386 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1732615247616654, guid: e533b07805eb4424ab45c1f02961d59c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1868759192}
 --- !u!1 &1077206762
 GameObject:
   m_ObjectHideFlags: 0
