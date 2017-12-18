@@ -67,9 +67,12 @@ public class PlayerController : MonoBehaviour {
         InventoryMgr tempIM = GameObject.FindWithTag("InventoryManager").GetComponent<InventoryMgr>();
         OxygenSystem tempOS = gameObject.GetComponent<OxygenSystem>();
         if (tempIM != null && tempOS != null) {
+            Debug.Log("Found oxygen system and inventory manager");
             if (tempIM.HasOxygen()) {
-                tempOS.SetOxygenUnits(300);
+                Debug.Log("Setting oxygen level high because we got them pills!");
+                tempOS.SetOxygenUnits(260);
             } else {
+                Debug.Log("Setting to low because nothing found");
                 tempOS.SetOxygenUnits(10);
             }
 

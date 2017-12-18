@@ -104,6 +104,7 @@ public class InventoryMgr : MonoBehaviour
     }
 
     public bool HasOxygen(){
+        Debug.Log("Oxygen level is " + inventoryList.OxygenCapacity);
         return inventoryList.OxygenCapacity > 0;
     }
 

@@ -33,7 +33,7 @@ public class CompassUIManager : MonoBehaviour {
 
 			for (int i = 0; i < sonarHits.Length; i++)
 			{
-                Debug.Log("I am a thing that was found in sonarHits " + sonarHits[i].gameObject.name);
+                //Debug.Log("I am a thing that was found in sonarHits " + sonarHits[i].gameObject.name);
                 float thisDist = Vector3.Distance(transform.position, sonarHits[i].transform.position);
 				if (thisDist < nearestFoundDist)
 				{

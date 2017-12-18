@@ -15,9 +15,7 @@ public class OxygenSystem : MonoBehaviour {
     private void Awake() {
         if (oxygenBar)
         {
-            oxygenUnit = oxygenBar.rectTransform.sizeDelta.y / maxOxygenUnits;
-            currentOxygenUnits = oxygenBar.rectTransform.sizeDelta.y;
-         
+            SetOxygenSystem();
         }
         else
         {
@@ -26,8 +24,22 @@ public class OxygenSystem : MonoBehaviour {
         
     }
 
+    void SetOxygenSystem() {
+        Debug.LogWarning("rectTransform.y " + oxygenBar.rectTransform.sizeDelta.y + " maxXyGenUnits " + maxOxygenUnits);
+        oxygenUnit = oxygenBar.rectTransform.sizeDelta.y / maxOxygenUnits;
+
+        Debug.LogWarning("Set Oxygen unit to " + oxygenUnit);
+
+        currentOxygenUnits = oxygenBar.rectTransform.sizeDelta.y;
+
+        Debug.LogWarning("Max Oxygen Units " + maxOxygenUnits);
+    }
+
     public void SetOxygenUnits(int newMax) {
         maxOxygenUnits = newMax;
+        StopCoroutine("OxygenDepletion");
+        SetOxygenSystem();
+        StartCoroutine(OxygenDepletion(oxygenUnit));
     }
 
     //Starts depleting oxygen at one unit person second.
@@ -40,6 +52,7 @@ public class OxygenSystem : MonoBehaviour {
         while (currentOxygenUnits > 0) {
             yield return new WaitForSeconds(0.1f);
             currentOxygenUnits -= unitsPerSecond / 10;
+            Debug.LogWarning("currentOxygenUnits " + currentOxygenUnits);
             if (currentOxygenUnits <= 0){
                 SceneManager.LoadScene("Modular Base Staging");
             }
