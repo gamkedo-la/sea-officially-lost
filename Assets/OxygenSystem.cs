@@ -8,7 +8,7 @@ public class OxygenSystem : MonoBehaviour {
     [SerializeField]
     Image oxygenBar;
     [SerializeField]
-    float maxOxygenUnits = 30;
+    public float maxOxygenUnits = 30;
 
     float currentOxygenUnits;
     float oxygenUnit;

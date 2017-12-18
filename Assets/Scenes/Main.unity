@@ -8862,6 +8862,11 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 12.34
       objectReference: {fileID: 0}
+    - target: {fileID: 95737653328035356, guid: 348613d24acc642038475f5e4503e98f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 348613d24acc642038475f5e4503e98f, type: 2}
   m_IsPrefabParent: 0
@@ -13748,6 +13753,11 @@ Prefab:
       propertyPath: playerHeight
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114087246269919276, guid: af48f265192fefc42accef760a2f5239,
+        type: 2}
+      propertyPath: maxOxygenUnits
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af48f265192fefc42accef760a2f5239, type: 2}
   m_IsPrefabParent: 0
@@ -13760,15 +13770,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 196cc1c04f2a264448474b9b143f850b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.722251
+      value: 5.716
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 196cc1c04f2a264448474b9b143f850b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1957638
+      value: -1.158
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 196cc1c04f2a264448474b9b143f850b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.1715919
+      value: 1.188
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 196cc1c04f2a264448474b9b143f850b, type: 3}
       propertyPath: m_LocalRotation.x

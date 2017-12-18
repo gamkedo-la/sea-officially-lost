@@ -13,6 +13,9 @@ public class DoorOpener : MonoBehaviour {
     void Start() {
         ADC = transform.parent.GetComponentInParent<AirlockDoorController>();
         Debug.Log("ADC is not null: " + ADC != null);
+        if (isExit == false) {
+            OpenDoor();
+        }
     }
 
     public void ClickAction()
@@ -20,9 +23,13 @@ public class DoorOpener : MonoBehaviour {
         Debug.Log("You clicked me!");
         if (isExit == false)
         {
-            m_open = !m_open;
-            ADC.OpenDoor(m_open);
-            AkSoundEngine.PostEvent("Play_Door", gameObject);
+            OpenDoor();
         }
+    }
+
+    public void OpenDoor() {
+        m_open = !m_open;
+        ADC.OpenDoor(m_open);
+        AkSoundEngine.PostEvent("Play_Door", gameObject);
     }
 }

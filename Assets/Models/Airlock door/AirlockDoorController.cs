@@ -14,6 +14,10 @@ public class AirlockDoorController : MonoBehaviour
         m_openBoolHash = Animator.StringToHash("Open");
     }
 
+    void Start() {
+        OpenDoor(true);
+    }
+
     public void OpenDoor(bool open)
     {
         Debug.Log("Open door got called");
