@@ -10,6 +10,8 @@ public class OxygenSystem : MonoBehaviour {
     [SerializeField]
     public float maxOxygenUnits = 30;
 
+	Coroutine oldCoroutineAlreadyRunning = null;
+
     float currentOxygenUnits;
     float oxygenUnit;
     private void Awake() {
@@ -36,15 +38,20 @@ public class OxygenSystem : MonoBehaviour {
     }
 
     public void SetOxygenUnits(int newMax) {
-        maxOxygenUnits = newMax;
-        StopCoroutine("OxygenDepletion");
-        SetOxygenSystem();
-        StartCoroutine(OxygenDepletion(oxygenUnit));
+		if(oldCoroutineAlreadyRunning != null) {
+			Debug.Log("Halting previous Oxygen coroutine");
+			StopCoroutine(oldCoroutineAlreadyRunning);
+		}
+
+		maxOxygenUnits = newMax;
+		SetOxygenSystem();
+
+		oldCoroutineAlreadyRunning = StartCoroutine(OxygenDepletion(oxygenUnit));
     }
 
     //Starts depleting oxygen at one unit person second.
     private void Start() {
-        StartCoroutine(OxygenDepletion(oxygenUnit));
+		oldCoroutineAlreadyRunning = StartCoroutine(OxygenDepletion(oxygenUnit));
     }
 
     //How many units will be depleted per second. Ex: "oxygenUnit" will result in 1 unit per second.
@@ -52,7 +59,7 @@ public class OxygenSystem : MonoBehaviour {
         while (currentOxygenUnits > 0) {
             yield return new WaitForSeconds(0.1f);
             currentOxygenUnits -= unitsPerSecond / 10;
-            Debug.LogWarning("currentOxygenUnits " + currentOxygenUnits);
+            // Debug.LogWarning("currentOxygenUnits " + currentOxygenUnits);
             if (currentOxygenUnits <= 0){
                 SceneManager.LoadScene("Modular Base Staging");
             }

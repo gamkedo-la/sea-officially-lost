@@ -104,7 +104,7 @@ public class PlayerCommon : MonoBehaviour {
             GrainModel.Settings grainSettings = ppProfile.grain.settings;
             VignetteModel.Settings vignetteSettings = ppProfile.vignette.settings;
 
-            Debug.Log("Intensity is: " + grainSettings.intensity);
+            // Debug.Log("Intensity is: " + grainSettings.intensity);
             Collider[] insanityHits = Physics.OverlapSphere(transform.position, insanityRange, LayerMask.GetMask("insanityDetects"));
             //Debug.Log("Insanity hits = " + insanityHits.Length);
             float insanitySum = 0.0f;
@@ -144,7 +144,7 @@ public class PlayerCommon : MonoBehaviour {
 
                 }
             } else {
-                Debug.Log("Resetting threshold to 0");
+                // Debug.Log("Resetting threshold to 0");
                 insanityTimeAboveThreshold = 0.0f;
             }
             grainSettings.intensity = insanityCounter;

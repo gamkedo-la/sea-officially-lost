@@ -70,17 +70,18 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("Found oxygen system and inventory manager");
             if (tempIM.HasOxygen()) {
                 Debug.Log("Setting oxygen level high because we got them pills!");
-                tempOS.SetOxygenUnits(260);
+                tempOS.SetOxygenUnits(300);
             } else {
                 Debug.Log("Setting to low because nothing found");
-                tempOS.SetOxygenUnits(10);
+                tempOS.SetOxygenUnits(20);
             }
 
             if (tempIM.HasSwimSpeedBoost()) {
-                swimSpeed = 30;
+                swimSpeed = 50;
             } else {
-                swimSpeed = 10;
+                swimSpeed = 15;
             }
+			Debug.Log("Swim speed: "+swimSpeed);
         }
 
     }
