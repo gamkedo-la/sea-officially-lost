@@ -20,7 +20,7 @@ public class AirlockDoorController : MonoBehaviour
 
     public void OpenDoor(bool open)
     {
-        Debug.Log("Open door got called");
+        //Debug.Log("Open door got called");
         m_anim.SetBool(m_openBoolHash, open);
     }
 }

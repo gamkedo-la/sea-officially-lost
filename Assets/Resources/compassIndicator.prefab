@@ -69,9 +69,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compassImageSprites:
   - {fileID: 21300000, guid: f024b09570dff443491ac18bd04c9993, type: 3}
-  - {fileID: 21300008, guid: 5b32c2d36abe44540bed74c1f787033b, type: 3}
+  - {fileID: 21300000, guid: c94b55bb9bfe44e5b9edfc5173846170, type: 3}
   - {fileID: 21300004, guid: f024b09570dff443491ac18bd04c9993, type: 3}
-  - {fileID: 21300006, guid: f024b09570dff443491ac18bd04c9993, type: 3}
+  - {fileID: 21300000, guid: 583074db784914a0aa45f8e2991b2a55, type: 3}
   - {fileID: 21300006, guid: f024b09570dff443491ac18bd04c9993, type: 3}
   - {fileID: 21300000, guid: 9da8bde055f4c0c4c81e15d8dc8d640f, type: 3}
   - {fileID: 21300006, guid: f024b09570dff443491ac18bd04c9993, type: 3}
