@@ -189,7 +189,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			//m_FootstepSounds[0] = m_AudioSource.clip;
 
 			AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
-			Debug.Log("Foot");
+			// Debug.Log("Foot");
 		}
 
 
