@@ -50,7 +50,7 @@ public class MainMenuController : MonoBehaviour {
     public GameObject[] creditsPages;
     private bool creditsActive;
     private IEnumerator creditsCoroutine;
-    private bool nextCredits;
+	private bool nextCredits;
 
     [Header("SpecialEffects")]
     public Animator lightBeamAnimator;
@@ -101,10 +101,9 @@ public class MainMenuController : MonoBehaviour {
 
     private void Update() {
         if (Input.anyKeyDown) {
-            //Skips to next credits page
-            if (creditsActive) {
-                nextCredits = true;
-            }
+			if(creditsActive) {
+				nextCredits = true;
+			}
 
             //If nothing is selected on vertical navigation then select the top item
             if (Input.GetAxisRaw("Vertical") != 0 && menuEventSystem.currentSelectedGameObject == null) {
@@ -222,7 +221,6 @@ public class MainMenuController : MonoBehaviour {
     }
 
     public void StartCredits() {
-        nextCredits = false;
         creditsCoroutine = Credits();
         StartCoroutine(creditsCoroutine);
     }
@@ -234,27 +232,29 @@ public class MainMenuController : MonoBehaviour {
 
         foreach(GameObject creditsPage in creditsPages) {
             SwitchToMenu(creditsPage);
+			logo_image.enabled = false;
 
             for(float waitTimer = creditsPageDuration; waitTimer > 0; waitTimer -= Time.deltaTime) {
-                if (nextCredits) {
-                    nextCredits = false;
-                    logo_image.enabled = true;
-                    break;
-                }
+				if(nextCredits) {
+					waitTimer = -0.1f;
+					nextCredits = false;
+				}
                 yield return null;
             }
 
             Camera.main.GetComponent<RippleImageEffect>().Ripple(0.5f, 0.5f);
-        }
+		}
+
+		logo_image.enabled = true;
 
         creditsActive = false;
         StopCredits();
     }
 
     public void StopCredits() {
-        StopCoroutine(creditsCoroutine);
-        SwitchToMenu(menus[0]);
-        logo_image.enabled = true;
+		StopCoroutine(creditsCoroutine);
+		SwitchToMenu(menus[0]);
+		logo_image.enabled = true;
     }
 
     public void DecreaseGraphicsQuality() {
