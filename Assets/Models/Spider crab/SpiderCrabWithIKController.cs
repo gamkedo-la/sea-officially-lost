@@ -138,6 +138,19 @@ public class SpiderCrabWithIKController : MonoBehaviour
 
     void Update()
     {
+		Vector3 playerAtCrabEyeLevel = PlayerCommon.instance.transform.position;
+		playerAtCrabEyeLevel.y = transform.position.y;
+		float distToPlayer = (playerAtCrabEyeLevel - transform.position).magnitude;
+
+		Vector3 onCameraPos = Camera.main.WorldToViewportPoint(transform.position);
+		bool isInPlayerView = (onCameraPos.z > 0.0f &&
+			onCameraPos.x >= 0.0f && onCameraPos.x <= 1.0f &&
+			onCameraPos.y >= 0.0f && onCameraPos.y <= 1.0f);
+
+		if(isInPlayerView == false || distToPlayer > 35.0f) {
+			transform.LookAt(playerAtCrabEyeLevel);
+		}
+
         CheckLeftPincerState();
         CheckRightPincerState();
 
