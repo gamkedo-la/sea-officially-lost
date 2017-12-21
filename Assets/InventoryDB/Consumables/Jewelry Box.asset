@@ -14,7 +14,7 @@ MonoBehaviour:
   Name: Jewelry Box
   Description: You can close the portal now!
   MinimumPlayerLevel: 0
-  Sprite: {fileID: 21300000, guid: eebb8bba60d4ca34eaa4a447051965b6, type: 3}
+  Sprite: {fileID: 21300000, guid: 2a3539b0c547243ee82df444ac20007a, type: 3}
   ItemAttributeIncreaseAmount:
   - ItemAttribute: {fileID: 11400000, guid: b453d59bd6688483fa467640e967b3c2, type: 2}
     Amount: 1
