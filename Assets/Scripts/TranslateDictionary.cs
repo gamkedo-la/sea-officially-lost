@@ -51,9 +51,13 @@ public class TranslateDictionary : MonoBehaviour {
 			Debug.Log (stringRows [i]);   // Shows data being loaded
 
 			stringCard nextCard = new stringCard();
+            Debug.Log("parsing gameobject name");
             nextCard.gameObjectName = Regex.Replace(stringCols[0], @"\t|\n|\r", "");
+            Debug.Log("parsing english text");
             nextCard.englishText = stringCols[1];
+            Debug.Log("parsing encoded text");
             nextCard.codedText = stringCols[2];
+            Debug.Log("parsing needed knowledge level");
             nextCard.arcaneNeeded = int.Parse(stringCols[3]);
             Debug.Log("The object name is " + nextCard.gameObjectName);
 

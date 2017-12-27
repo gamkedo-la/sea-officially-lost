@@ -19,6 +19,8 @@ public class PlayerCommon : MonoBehaviour {
     public GameObject sharkMan;
     private GameObject summonedShark;
     public int knowledgeLevel = 5;
+    public GameObject reader;
+    public Reader readerScript;
 
     //inventory related declarations pick-up item variables
     public float m_MaxInteractDistance = 2.0f;
@@ -68,6 +70,15 @@ public class PlayerCommon : MonoBehaviour {
                     Debug.Log("Picked up " + hit.transform.gameObject.name);
                     inventoryMgr.GetComponent<InventoryMgr>().GetItem(pickedUpItem);
                 }
+            }
+            if (ReaderManager.instance.isOpen == true) {
+                if (ReaderManager.instance.justClicked == true) {
+                    ReaderManager.instance.justClicked = false;
+                } else {
+                    ReaderManager.instance.ToggleReader();
+                    ReaderManager.instance.justClicked = true;
+                }
+
             }
         }
     }
