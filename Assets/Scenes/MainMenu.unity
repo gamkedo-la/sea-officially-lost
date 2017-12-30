@@ -1541,7 +1541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -247.15706}
+  m_AnchoredPosition: {x: 400.00006, y: -247.15704}
   m_SizeDelta: {x: 800.0001, y: 42.862823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359652237
@@ -3601,7 +3601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00006, y: -212.86284}
+  m_AnchoredPosition: {x: 400.00006, y: -212.86282}
   m_SizeDelta: {x: 800.0001, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696031984
@@ -10107,8 +10107,8 @@ MonoBehaviour:
     and textures, voice acting
 
 
-    Tim Waskett: goblin shark and spider crab models, procedural creature animation,
-    airlock door animations
+    Tim Waskett: Giant shark man, goblin shark and spider crab models, procedural
+    creature animation, airlock door animations
 
 
     Credits Page 1 of 5'
@@ -10411,7 +10411,7 @@ MonoBehaviour:
     modelling - Base entrance, Base props - lockers, tables \n\nChrister \"McFunkypants\"
     Kaitila: greebles, pipes, wires, control panels, tubular habitat meshes, crashed
     airplane mesh, schools of fish, particle systems\n\nVignesh Ramesh: flask, beaker,
-    and bunsen burner models, voice acting\n\nCredits Page 3 of 5"
+    and bunsen burner models, voice acting, main menu music\n\nCredits Page 3 of 5"
 --- !u!222 &1401050213
 CanvasRenderer:
   m_ObjectHideFlags: 0
