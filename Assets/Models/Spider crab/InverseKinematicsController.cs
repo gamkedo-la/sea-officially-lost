@@ -14,7 +14,7 @@ public class InverseKinematicsController : MonoBehaviour
     public float LearningRate = 10f;
 
     private Vector3 m_startOffsetFromRoot;
-    private float m_startRotationFromRoot;
+    private float m_startRootRotationY;
     private Vector3[] m_angles;
     private Vector3 testPoint;
     private Quaternion rotation;
@@ -23,7 +23,8 @@ public class InverseKinematicsController : MonoBehaviour
 
     void Awake()
     {
-        //m_startOffsetFromRoot = Joints[0].transform.position - m_rootTransform.position;
+        m_startRootRotationY = m_rootTransform.rotation.eulerAngles.y;
+        m_startOffsetFromRoot = Joints[0].transform.position - m_rootTransform.position;
     }
 
 
@@ -51,10 +52,18 @@ public class InverseKinematicsController : MonoBehaviour
 
     private Vector3 ForwardKinematics(Vector3[] angles)
     {
-        Vector3 prevPoint = Joints[0].transform.position;
-        //Vector3 offsetFromRoot = prevPoint - m_rootTransform.position;
+        Vector3 prevPoint = m_rootTransform.position;
+
+        float rootRotationY = m_rootTransform.rotation.eulerAngles.y;
+        float rootRotationSinceStart = rootRotationY - m_startRootRotationY;
 
         Quaternion rotation = Quaternion.identity;
+
+        // This doesn't quite work perfectly because of the idle animation moves the root 
+        // of the claws relative to the root transform, but it's pretty close.
+        // It'll do for now untilI can work out a better way.
+        rotation *= Quaternion.Euler(0, rootRotationSinceStart, 0);
+        prevPoint += rotation * m_startOffsetFromRoot;
 
         for (int i = 1; i < Joints.Length; i++)
         {
@@ -64,8 +73,6 @@ public class InverseKinematicsController : MonoBehaviour
 
             prevPoint = nextPoint;
         }
-
-        //prevPoint += m_startOffsetFromRoot - offsetFromRoot;
 
         testPoint = prevPoint;
 
