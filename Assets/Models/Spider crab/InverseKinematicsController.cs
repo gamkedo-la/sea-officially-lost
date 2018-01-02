@@ -6,16 +6,25 @@ public class InverseKinematicsController : MonoBehaviour
 {
     [SerializeField] bool m_showGizmos;
     [SerializeField] float m_gizmoRadius = 0.2f;
+    [SerializeField] Transform m_rootTransform;
     [SerializeField] Transform m_target;
     [SerializeField] RobotJoint[] Joints;
     [SerializeField] float SamplingDistance = 1f;
     public float DistanceThreshold = 0.1f;
     public float LearningRate = 10f;
 
+    private Vector3 m_startOffsetFromRoot;
+    private float m_startRotationFromRoot;
     private Vector3[] m_angles;
     private Vector3 testPoint;
     private Quaternion rotation;
     private float m_distanceFromTarget;
+
+
+    void Awake()
+    {
+        //m_startOffsetFromRoot = Joints[0].transform.position - m_rootTransform.position;
+    }
 
 
     void LateUpdate()
@@ -43,17 +52,20 @@ public class InverseKinematicsController : MonoBehaviour
     private Vector3 ForwardKinematics(Vector3[] angles)
     {
         Vector3 prevPoint = Joints[0].transform.position;
+        //Vector3 offsetFromRoot = prevPoint - m_rootTransform.position;
 
         Quaternion rotation = Quaternion.identity;
+
         for (int i = 1; i < Joints.Length; i++)
         {
             // Rotates around a new axis
             rotation *= Quaternion.Euler(angles[i - 1]);
-            //rotation *= Quaternion.AngleAxis(angles[i - 1], Joints[i - 1].Axis);
             Vector3 nextPoint = prevPoint + rotation * Joints[i].StartOffset;
 
             prevPoint = nextPoint;
         }
+
+        //prevPoint += m_startOffsetFromRoot - offsetFromRoot;
 
         testPoint = prevPoint;
 

@@ -9,7 +9,7 @@ public class RobotJoint : MonoBehaviour
     public float MinAngle = -360f;
     public float MaxAngle = 360f;
 
-    [HideInInspector]
+    //[HideInInspector]
     public Vector3 StartOffset;
 
     [HideInInspector]
